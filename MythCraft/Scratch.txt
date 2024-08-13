@@ -1,0 +1,15 @@
+<div class="sheet-row">
+						<div class="sheet-col-2-2 sheet-center ">
+							<div class="sheet-col-2-2 sheet-center sheet-small-label">HP Block</div>
+				
+							<div class="sheet-col-1-1 sheet-center sheet-small-label">HP</div>
+							<div class="sheet-col-1-1 sheet-center sheet-small-label">HP MAX</div>
+						</div>
+						<div class="sheet-col-2-2 sheet-center ">
+							<div class="sheet-col-1-1 sheet-center sheet-small-label">Shield</div>
+							<div class="sheet-col-1-1 sheet-center sheet-small-label">Armour Rating</div>
+							<div class="sheet-col-1-1 sheet-center sheet-small-label">Speed</div>
+							<div class="sheet-col-1-1 sheet-center sheet-small-label">Death Points</div>
+							<div class="sheet-col-1-1 sheet-center sheet-small-label">AP/Round</div>
+						</div>
+					</div>
