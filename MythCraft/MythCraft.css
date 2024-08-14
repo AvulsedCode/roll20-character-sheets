@@ -50,12 +50,73 @@ div[class^="sheet-legend"] {
 	position: relative;
 	top: 0px;
 	margin: 0% 33%;
+	letter-spacing: normal;
   }
 		  
 
-  
+  div[class^="sheet-legend"]>div[class^="sheet-center"] { 
+	
+  letter-spacing: normal !important;
+}
+	  
 
 
+
+/* Room Settings */
+
+
+div[class^="sheet-room"] {
+	display: none;
+}
+
+input.sheet-room1:checked ~ div.sheet-room-player-sheet,
+input.sheet-room2:checked ~ div.sheet-room-npc-sheet,
+input.sheet-room3:checked ~ div.sheet-room-workshop{
+	display: block;
+	background: #F4EFE4;
+}
+
+input.sheet-room99:checked ~ div[class^="sheet-room"] {
+	display: block;
+}
+
+input.sheet-room {
+	width: 87px;
+	height: 20px;
+	cursor: pointer;
+	position: relative;
+	opacity: 0;
+	z-index: 9999;
+}
+
+span.sheet-room {
+	text-align: center;
+	display: inline-block;
+	font-size: 13px;
+	background: #4a6486;
+	color: white;
+	font-weight: bold;
+	border-radius: 4px;
+	width: 87px;
+	height: 20px;
+	cursor: pointer;
+	position: relative;
+	margin-left: -91px;
+}
+
+input.sheet-room1:checked + span.sheet-room1,
+input.sheet-room2:checked + span.sheet-room2,
+input.sheet-room3:checked + span.sheet-room3,
+input.sheet-room99:checked + span.sheet-room99 {
+	background: #F4EFE4;
+	color: white;
+	border-radius: 4px;
+}
+
+
+/* END Main sheet tabs */
+
+/* END player/npc button Settings */
 
 
 
@@ -307,7 +368,7 @@ div[class="repcontainer editmode"] ~ div[class^="repcontrol"] button[class="btn 
 
 
 /* player/npc button Settings */
-
+/*
 div.sheet-player,
 div.sheet-npc {
 	display: none;
@@ -355,7 +416,7 @@ input.sheet-is-npc:checked + span.sheet-is-npc-tab::before {
 	content: "NPC Sheet"
 }
 
-
+*/
 /* END player/npc button Settings */
 
 
@@ -368,15 +429,7 @@ div[class^="sheet-section"] {
 input.sheet-tab1:checked ~ div.sheet-section-combat,
 input.sheet-tab2:checked ~ div.sheet-section-talents,
 input.sheet-tab3:checked ~ div.sheet-section-magic,
-input.sheet-tab4:checked ~ div.sheet-section-bio,
-input.sheet-tab5:checked ~ div.sheet-section-workshop,
-input.sheet-tab6:checked ~ div.sheet-section-spellbook,
-input.sheet-tab8:checked ~ div.sheet-section-armour,
-input.sheet-tab7:checked ~ div.sheet-section-inventory,
-input.sheet-tab10:checked ~ div.sheet-section-combat,
-input.sheet-tab11:checked ~ div.sheet-section-tfa,
-input.sheet-tab12:checked ~ div.sheet-section-magic,
-input.sheet-tab13:checked ~ div.sheet-section-bio  {
+input.sheet-tab4:checked ~ div.sheet-section-bio{
 	display: block;
 	background: #F4EFE4;
 }
@@ -415,12 +468,6 @@ input.sheet-tab3:checked + span.sheet-tab3,
 input.sheet-tab4:checked + span.sheet-tab4,
 input.sheet-tab5:checked + span.sheet-tab5,
 input.sheet-tab6:checked + span.sheet-tab6,
-input.sheet-tab7:checked + span.sheet-tab7,
-input.sheet-tab8:checked + span.sheet-tab8,
-input.sheet-tab10:checked + span.sheet-tab10,
-input.sheet-tab11:checked + span.sheet-tab11,
-input.sheet-tab12:checked + span.sheet-tab12,
-input.sheet-tab132:checked + span.sheet-tab13,
 input.sheet-tab99:checked + span.sheet-tab99 {
 	background: #F4EFE4;
 	color: white;
@@ -1359,6 +1406,9 @@ span.sheet-ignored-roll {
 
 
 /* Custom Pure Grid CSS (24 cols) DO NOT EDIT BELOW THIS LINE OR RISK BREAKING FORMATTING */
+
+
+
 
 .sheet-row,
 .sheet-rolltemplate-5eDefault .sheet-row {
@@ -3788,4 +3838,30 @@ span.sheet-ignored-roll {
 
 /* End custom Pure grid css (24 cols) */
 
+ /* start print instructions See: https://help.roll20.net/hc/en-us/articles/10823045719063-Making-Your-Character-Sheet-Print-Friendly#media-queries-0-0 */
  
+ /* Your sheet CSS file: */
+p {
+	column-count: 2;
+}
+	/* Your sheet CSS file: */
+.section__container {
+	/* Makes each section start on a new page */
+	break-before: page;
+}
+.section__thumbnail {
+	/* indicates that whenever possible, the browser should avoid splitting the content inside the section thumbnail across multiple pages. In that way the caption stays close to the relevant picture. */
+	break-inside: avoid;
+}
+/* Your sheet CSS file: */
+
+@page {
+	size: letter portrait;  /* specifies sheet will be printed on letter size in portrait orientation */
+	margin: 0.25in /* specifies a page margin of 0.25 inches */
+}
+
+/* The page rule accepts the following pseudo-selectors:*/
+
+	@page page :first {  /* first-page of the document */ }
+	@page page :last {  /* last-page of the document */ }
+	@page page :left {  /* even-numbered pages */ }

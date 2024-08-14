@@ -4,6 +4,7 @@
 	"authors": "Quasireal LLC.",
 	"roll20userid": "228295",
 	"preview": "preview.jpg",
-	"instructions": "# Basic Mythcraft SRD\r BlAH BLAh blAH;)",
-	"legacy": true
+	"instructions": "# Basic Mythcraft SRD\r BlAH BLAh blAH;) **This sheet is print fiendlyt**\n\nYou can put Markdown-formatted instructions here for how to use your sheet.",
+	"legacy": false,
+	"printable": true
 }
