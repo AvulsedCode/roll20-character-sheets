@@ -1,49 +1,59 @@
+:root {
+	--attribute-exterior-ring: 75px; /* should be less than 86px (~col-1-8:width) */
+	--attribute-interior-content: 70px;
+	--derived-attribute-exterior-ring: 55px; /* should be less than attribute-interior-content */
+	--derived-attribute-interior-content: 50px;
+	--derived-attribute-offset: 10px; /* shoudl be half the differeence */
+}
+
 
 .sheet-pc-background {
-    background-image: url("https://irp.cdn-website.com/a2239e04/dms3rep/multi/Page_1.png");
-     background-size: contain;
-    background-repeat: no-repeat;
+	background-image: url("https://irp.cdn-website.com/a2239e04/dms3rep/multi/Page_1.png");
+	background-size: contain;
+	background-repeat: no-repeat;
 }
+
 .sheet-pageborder {
-    background-image: url("https://irp.cdn-website.com/a2239e04/dms3rep/multi/PageBorder.png");
-     background-size: contain;
-    background-repeat: no-repeat;
+	background-image: url("https://irp.cdn-website.com/a2239e04/dms3rep/multi/PageBorder.png");
+	background-size: contain;
+	background-repeat: no-repeat;
 }
+
 .sheet-mythcraft-border {
 	border: 15px solid transparent;
-	/* border-image-source | slice-width | border-width | outset-width | border-image-repeat */
-
 	border-image: url('https://irp.cdn-website.com/a2239e04/dms3rep/multi/PageBorder-cc4dcf4f.png') 340 / 50px / 5px repeat;
 
 }
 
-.sheet-attribute-border { 
+.sheet-attribute-border {
 	border: 15px solid transparent;
-	border-image:url('https://irp.cdn-website.com/a2239e04/dms3rep/multi/Attribute_p1.png') 300 /  75px / 5px  stretch;
-
+	border-image: url('https://irp.cdn-website.com/a2239e04/dms3rep/multi/Attribute_p1.png') 300 / 75px / 5px stretch;
 	margin: 5px 5px;
-	
+
 }
 
 .sheet-small-box-border {
 	border: 15px solid transparent;
-	
 	border-image: url('https://irp.cdn-website.com/a2239e04/dms3rep/multi/Small_Frame-69bc8c7b.png') 340 / 25px / 5px stretch;
-
-
 	margin: 5px 5px;
 }
-	
-	
+.charmancerlogo{
+	height: 45px !important;
+	width: 45px !important;
+} 
 
+.mythcraft-logo>img{
+	max-width: 50% !important;
+	float:right;
+}
 
 div[class^="sheet-fieldset"] {
 
 	background-color: #F4EFE4;
 }
-  
-div[class^="sheet-legend"] { 
-	  text-align:center; 
+
+div[class^="sheet-legend"] {
+	text-align: center;
 	background-color: #F4EFE4;
 	color: Black;
 	padding: 5px 10px;
@@ -51,14 +61,14 @@ div[class^="sheet-legend"] {
 	top: 0px;
 	margin: 0% 33%;
 	letter-spacing: normal;
-  }
-		  
-
-  div[class^="sheet-legend"]>div[class^="sheet-center"] { 
-	
-  letter-spacing: normal !important;
 }
-	  
+
+
+div[class^="sheet-legend"]>div[class^="sheet-center"] {
+
+	letter-spacing: normal !important;
+}
+
 
 
 
@@ -69,14 +79,14 @@ div[class^="sheet-room"] {
 	display: none;
 }
 
-input.sheet-room1:checked ~ div.sheet-room-player-sheet,
-input.sheet-room2:checked ~ div.sheet-room-npc-sheet,
-input.sheet-room3:checked ~ div.sheet-room-workshop{
+input.sheet-room1:checked~div.sheet-room-player-sheet,
+input.sheet-room2:checked~div.sheet-room-npc-sheet,
+input.sheet-room3:checked~div.sheet-room-workshop {
 	display: block;
 	background: #F4EFE4;
 }
 
-input.sheet-room99:checked ~ div[class^="sheet-room"] {
+input.sheet-room99:checked~div[class^="sheet-room"] {
 	display: block;
 }
 
@@ -104,17 +114,168 @@ span.sheet-room {
 	margin-left: -91px;
 }
 
-input.sheet-room1:checked + span.sheet-room1,
-input.sheet-room2:checked + span.sheet-room2,
-input.sheet-room3:checked + span.sheet-room3,
-input.sheet-room99:checked + span.sheet-room99 {
+input.sheet-room1:checked+span.sheet-room1,
+input.sheet-room2:checked+span.sheet-room2,
+input.sheet-room3:checked+span.sheet-room3,
+input.sheet-room99:checked+span.sheet-room99 {
 	background: #F4EFE4;
 	color: white;
 	border-radius: 4px;
 }
 
 
-/* END Main sheet tabs */
+/* END Main room tabs */
+
+/* Workshop Settings */
+
+
+div[class^="sheet-wrkshp"] {
+	display: none;
+}
+
+input.sheet-wrkshp1:checked~div.sheet-wrkshp-details-step,
+input.sheet-wrkshp2:checked~div.sheet-wrkshp-stats-step,
+input.sheet-wrkshp3:checked~div.sheet-wrkshp-backstory-step,
+input.sheet-wrkshp4:checked~div.sheet-wrkshp-inventory-step,
+input.sheet-wrkshp5:checked~div.sheet-wrkshp-lineage-step,
+input.sheet-wrkshp6:checked~div.sheet-wrkshp-talents-step,
+input.sheet-wrkshp7:checked~div.sheet-wrkshp-abilities-step,
+input.sheet-wrkshp8:checked~div.sheet-wrkshp-magic-step,
+input.sheet-wrkshp9:checked~div.sheet-wrkshp-skills-step,
+input.sheet-wrkshp10:checked~div.sheet-wrkshp-occupation-step,
+input.sheet-wrkshp11:checked~div.sheet-wrkshp-resources-step,
+input.sheet-wrkshp12:checked~div.sheet-wrkshp-journal-step {
+	display: block;
+	background: #F4EFE4;
+}
+
+input.sheet-wrkshp99:checked~div[class^="sheet-wrkshp"] {
+	display: block;
+}
+
+input.sheet-wrkshp {
+	width: 87px;
+	height: 20px;
+	cursor: pointer;
+	position: relative;
+	opacity: 0;
+	z-index: 9999;
+}
+
+span.sheet-wrkshp {
+	text-align: center;
+	display: inline-block;
+	font-size: 13px;
+	background: #4a6486;
+	color: white;
+	font-weight: bold;
+	border-radius: 4px;
+	width: 87px;
+	height: 20px;
+	cursor: pointer;
+	position: relative;
+	margin-left: -91px;
+}
+
+input.sheet-wrkshp1:checked+span.sheet-wrkshp1,
+input.sheet-wrkshp2:checked+span.sheet-wrkshp2,
+input.sheet-wrkshp3:checked+span.sheet-wrkshp3,
+input.sheet-wrkshp4:checked+span.sheet-wrkshp4,
+input.sheet-wrkshp5:checked+span.sheet-wrkshp5,
+input.sheet-wrkshp6:checked+span.sheet-wrkshp6,
+input.sheet-wrkshp7:checked+span.sheet-wrkshp7,
+input.sheet-wrkshp8:checked+span.sheet-wrkshp8,
+input.sheet-wrkshp9:checked+span.sheet-wrkshp9,
+input.sheet-wrkshp10:checked+span.sheet-wrkshp10,
+input.sheet-wrkshp11:checked+span.sheet-wrkshp11,
+input.sheet-wrkshp12:checked+span.sheet-wrkshp12,
+input.sheet-wrkshp99:checked+span.sheet-wrkshp99 {
+	background: #F4EFE4;
+	color: white;
+	border-radius: 4px;
+}
+
+
+
+/* END workshop  tabs */
+/* Core Mythcraft Stat Row  playground: https://codepen.io/Larry-Louisiana-the-bashful/pen/OJevXva  */
+
+.sheet-core-attribute {
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: var(--attribute-exterior-ring);
+	height: var(--attribute-exterior-ring);
+	background-image: repeating-radial-gradient(black,
+			black 5px,
+			white 5px,
+			white 10px);
+	border: 3px solid black; 
+	border-radius: var(--attribute-exterior-ring);	
+}
+
+
+.sheet-core-attribute-content {
+
+	width: var(--attribute-interior-content);
+	height: var(--attribute-interior-content);
+	background: white;
+	border: 3px solid white;
+	border-radius: var(--attribute-interior-content);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+
+.sheet-core-attribute-label {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	letter-spacing: normal !important;
+}
+.sheet-derived-attribute {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: var(--derived-attribute-exterior-ring);
+	height: var(--derived-attribute-exterior-ring);
+	background-image: repeating-radial-gradient(black,
+			black 5px,
+			white 5px,
+			white 10px);
+	border: 3px solid black;	 
+	border-radius: var(--derived-attribute-exterior-ring);	 
+
+	position: relative !important;
+	top: -17px !important;
+	left: var(--derived-attribute-offset) !important;
+}
+
+.sheet-derived-attribute-content {
+
+	width: var(--derived-attribute-interior-content);
+	height: var(--derived-attribute-interior-content);
+	background: white;
+	border: 3px solid white;  
+	border-radius: var(--derived-attribute-interior-content);  
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.sheet-derived-attribute-label {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	letter-spacing: normal !important;
+}
+
+ 
+
+
+/* End Core Mythcraft Stat Row */
 
 /* END player/npc button Settings */
 
@@ -316,13 +477,13 @@ input.sheet-room99:checked + span.sheet-room99 {
 	font-size: 1em;
 }
 
-.sheet-rolltemplate-5eDefault .sheet-rt-value .sheet-no-roll-highlight .inlinerollresult .fullfail . .sheet-rolltemplate-5eDefault .sheet-rt-value .sheet-no-roll-highlight .inlinerollresult .fullcrit {
+.sheet-rolltemplate-5eDefault .sheet-rt-value .sheet-no-roll-highlight .inlinerollresult .fullfail .sheet-rolltemplate-5eDefault .sheet-rt-value .sheet-no-roll-highlight .inlinerollresult .fullcrit {
 	border: 0;
 }
 
-.sheet-rolltemplate-5eDefault .sheet-main-content {
+.sheet-rolltemplate-5eDefault .sheet-main-content { }
 	
-}
+
 
 .sheet-rolltemplate-5eDefault .sheet-main-content hr.sheet-roll {
 	width: 80%;
@@ -361,8 +522,8 @@ div[class^="repcontrol"] {
 	margin-bottom: 5px;
 }
 
-div[class="repcontainer editmode"] ~ div[class^="repcontrol"] button[class="btn repcontrol_add"] {
-	display: inline-block!important;
+div[class="repcontainer editmode"]~div[class^="repcontrol"] button[class="btn repcontrol_add"] {
+	display: inline-block !important;
 	visibility: hidden;
 }
 
@@ -426,15 +587,15 @@ div[class^="sheet-section"] {
 	display: none;
 }
 
-input.sheet-tab1:checked ~ div.sheet-section-combat,
-input.sheet-tab2:checked ~ div.sheet-section-talents,
-input.sheet-tab3:checked ~ div.sheet-section-magic,
-input.sheet-tab4:checked ~ div.sheet-section-bio{
+input.sheet-tab1:checked~div.sheet-section-combat,
+input.sheet-tab2:checked~div.sheet-section-social,
+input.sheet-tab3:checked~div.sheet-section-magic,
+input.sheet-tab4:checked~div.sheet-section-bio {
 	display: block;
 	background: #F4EFE4;
 }
 
-input.sheet-tab99:checked ~ div[class^="sheet-section"] {
+input.sheet-tab99:checked~div[class^="sheet-section"] {
 	display: block;
 }
 
@@ -462,13 +623,13 @@ span.sheet-tab {
 	margin-left: -91px;
 }
 
-input.sheet-tab1:checked + span.sheet-tab1,
-input.sheet-tab2:checked + span.sheet-tab2,
-input.sheet-tab3:checked + span.sheet-tab3,
-input.sheet-tab4:checked + span.sheet-tab4,
-input.sheet-tab5:checked + span.sheet-tab5,
-input.sheet-tab6:checked + span.sheet-tab6,
-input.sheet-tab99:checked + span.sheet-tab99 {
+input.sheet-tab1:checked+span.sheet-tab1,
+input.sheet-tab2:checked+span.sheet-tab2,
+input.sheet-tab3:checked+span.sheet-tab3,
+input.sheet-tab4:checked+span.sheet-tab4,
+input.sheet-tab5:checked+span.sheet-tab5,
+input.sheet-tab6:checked+span.sheet-tab6,
+input.sheet-tab99:checked+span.sheet-tab99 {
 	background: #F4EFE4;
 	color: white;
 	border-radius: 4px;
@@ -479,7 +640,6 @@ input.sheet-tab99:checked + span.sheet-tab99 {
 
 
 */
-
 /* Inspiration button Settings */
 
 input.sheet-inspiration {
@@ -510,13 +670,13 @@ span.sheet-inspiration-tab {
 	margin-left: -80%
 }
 
-input.sheet-inspiration:checked + span.sheet-inspiration-tab {
+input.sheet-inspiration:checked+span.sheet-inspiration-tab {
 	background: #879a6a;
 	color: white;
 	border-radius: 4px;
 }
 
-input.sheet-inspiration:checked + span.sheet-inspiration-tab::before {
+input.sheet-inspiration:checked+span.sheet-inspiration-tab::before {
 	content: "Yes"
 }
 
@@ -536,34 +696,34 @@ div[class^="sheet-spell-page"] {
 	display: none;
 }
 
-input.sheet-spelltab0:checked ~ div.sheet-spell-page0,
-input.sheet-spelltab1:checked ~ div.sheet-spell-page1,
-input.sheet-spelltab2:checked ~ div.sheet-spell-page2,
-input.sheet-spelltab3:checked ~ div.sheet-spell-page3,
-input.sheet-spelltab4:checked ~ div.sheet-spell-page4,
-input.sheet-spelltab5:checked ~ div.sheet-spell-page5,
-input.sheet-spelltab6:checked ~ div.sheet-spell-page6,
-input.sheet-spelltab7:checked ~ div.sheet-spell-page7,
-input.sheet-spelltab8:checked ~ div.sheet-spell-page8,
-input.sheet-spelltab9:checked ~ div.sheet-spell-page9{
+input.sheet-spelltab0:checked~div.sheet-spell-page0,
+input.sheet-spelltab1:checked~div.sheet-spell-page1,
+input.sheet-spelltab2:checked~div.sheet-spell-page2,
+input.sheet-spelltab3:checked~div.sheet-spell-page3,
+input.sheet-spelltab4:checked~div.sheet-spell-page4,
+input.sheet-spelltab5:checked~div.sheet-spell-page5,
+input.sheet-spelltab6:checked~div.sheet-spell-page6,
+input.sheet-spelltab7:checked~div.sheet-spell-page7,
+input.sheet-spelltab8:checked~div.sheet-spell-page8,
+input.sheet-spelltab9:checked~div.sheet-spell-page9 {
 	display: block;
 }
 
-input.sheet-spelltab99:checked ~ div[class^="sheet-spell-page"] {
+input.sheet-spelltab99:checked~div[class^="sheet-spell-page"] {
 	display: block;
 }
 
-input.sheet-spelltab0:checked ~ span.sheet-spelltab0,
-input.sheet-spelltab1:checked ~ span.sheet-spelltab1,
-input.sheet-spelltab2:checked ~ span.sheet-spelltab2,
-input.sheet-spelltab3:checked ~ span.sheet-spelltab3,
-input.sheet-spelltab4:checked ~ span.sheet-spelltab4,
-input.sheet-spelltab5:checked ~ span.sheet-spelltab5,
-input.sheet-spelltab6:checked ~ span.sheet-spelltab6,
-input.sheet-spelltab7:checked ~ span.sheet-spelltab7,
-input.sheet-spelltab8:checked ~ span.sheet-spelltab8,
-input.sheet-spelltab9:checked ~ span.sheet-spelltab9,
-input.sheet-spelltab99:checked ~ span.sheet-spelltab99 {
+input.sheet-spelltab0:checked~span.sheet-spelltab0,
+input.sheet-spelltab1:checked~span.sheet-spelltab1,
+input.sheet-spelltab2:checked~span.sheet-spelltab2,
+input.sheet-spelltab3:checked~span.sheet-spelltab3,
+input.sheet-spelltab4:checked~span.sheet-spelltab4,
+input.sheet-spelltab5:checked~span.sheet-spelltab5,
+input.sheet-spelltab6:checked~span.sheet-spelltab6,
+input.sheet-spelltab7:checked~span.sheet-spelltab7,
+input.sheet-spelltab8:checked~span.sheet-spelltab8,
+input.sheet-spelltab9:checked~span.sheet-spelltab9,
+input.sheet-spelltab99:checked~span.sheet-spelltab99 {
 	background: rgb(0, 158, 115);
 	color: white;
 	border-radius: 4px;
@@ -624,21 +784,21 @@ div[class^="sheet-spell-type"] {
 	display: none;
 }
 
-input.sheet-spelltypeadvanced:checked ~ div.sheet-spell-type-advanced,
-input.sheet-spelltypeattack:checked ~ div.sheet-spell-type-attack,
-input.sheet-spelltypesave:checked ~ div.sheet-spell-type-save,
-input.sheet-spelltypedamage:checked ~ div.sheet-spell-type-damage,
-input.sheet-spelltypeheal:checked ~ div.sheet-spell-type-heal,
-input.sheet-spelltypeeffects:checked ~ div.sheet-spell-type-effects {
+input.sheet-spelltypeadvanced:checked~div.sheet-spell-type-advanced,
+input.sheet-spelltypeattack:checked~div.sheet-spell-type-attack,
+input.sheet-spelltypesave:checked~div.sheet-spell-type-save,
+input.sheet-spelltypedamage:checked~div.sheet-spell-type-damage,
+input.sheet-spelltypeheal:checked~div.sheet-spell-type-heal,
+input.sheet-spelltypeeffects:checked~div.sheet-spell-type-effects {
 	display: block;
 }
 
-input.sheet-spelltypeadvanced:checked ~ span.sheet-spelltypeadvanced,
-input.sheet-spelltypeattack:checked ~ span.sheet-spelltypeattack,
-input.sheet-spelltypesave:checked ~ span.sheet-spelltypesave,
-input.sheet-spelltypedamage:checked ~ span.sheet-spelltypedamage,
-input.sheet-spelltypeheal:checked ~ span.sheet-spelltypeheal,
-input.sheet-spelltypeeffects:checked ~ span.sheet-spelltypeeffects {
+input.sheet-spelltypeadvanced:checked~span.sheet-spelltypeadvanced,
+input.sheet-spelltypeattack:checked~span.sheet-spelltypeattack,
+input.sheet-spelltypesave:checked~span.sheet-spelltypesave,
+input.sheet-spelltypedamage:checked~span.sheet-spelltypedamage,
+input.sheet-spelltypeheal:checked~span.sheet-spelltypeheal,
+input.sheet-spelltypeeffects:checked~span.sheet-spelltypeeffects {
 	background: #879a6a;
 	color: white;
 	border-radius: 4px;
@@ -678,22 +838,22 @@ div[class^="sheet-inventory-page"] {
 	display: none;
 }
 
-input.sheet-inventorytab1:checked ~ div.sheet-inventory-page1,
-input.sheet-inventorytab2:checked ~ div.sheet-inventory-page2,
-input.sheet-inventorytab3:checked ~ div.sheet-inventory-page3,
-input.sheet-inventorytab4:checked ~ div.sheet-inventory-page4 {
+input.sheet-inventorytab1:checked~div.sheet-inventory-page1,
+input.sheet-inventorytab2:checked~div.sheet-inventory-page2,
+input.sheet-inventorytab3:checked~div.sheet-inventory-page3,
+input.sheet-inventorytab4:checked~div.sheet-inventory-page4 {
 	display: block;
 }
 
-input.sheet-inventorytab99:checked ~ div[class^="sheet-inventory-page"] {
+input.sheet-inventorytab99:checked~div[class^="sheet-inventory-page"] {
 	display: block;
 }
 
-input.sheet-inventorytab1:checked ~ span.sheet-inventorytab1,
-input.sheet-inventorytab2:checked ~ span.sheet-inventorytab2,
-input.sheet-inventorytab3:checked ~ span.sheet-inventorytab3,
-input.sheet-inventorytab4:checked ~ span.sheet-inventorytab4,
-input.sheet-inventorytab99:checked ~ span.sheet-inventorytab99 {
+input.sheet-inventorytab1:checked~span.sheet-inventorytab1,
+input.sheet-inventorytab2:checked~span.sheet-inventorytab2,
+input.sheet-inventorytab3:checked~span.sheet-inventorytab3,
+input.sheet-inventorytab4:checked~span.sheet-inventorytab4,
+input.sheet-inventorytab99:checked~span.sheet-inventorytab99 {
 	background: rgb(0, 158, 115);
 	color: white;
 	border-radius: 4px;
@@ -733,22 +893,22 @@ div[class^="sheet-classaction-page"] {
 	display: none;
 }
 
-input.sheet-classactiontab1:checked ~ div.sheet-classaction-page1,
-input.sheet-classactiontab2:checked ~ div.sheet-classaction-page2,
-input.sheet-classactiontab3:checked ~ div.sheet-classaction-page3,
-input.sheet-classactiontab4:checked ~ div.sheet-classaction-page4 {
+input.sheet-classactiontab1:checked~div.sheet-classaction-page1,
+input.sheet-classactiontab2:checked~div.sheet-classaction-page2,
+input.sheet-classactiontab3:checked~div.sheet-classaction-page3,
+input.sheet-classactiontab4:checked~div.sheet-classaction-page4 {
 	display: block;
 }
 
-input.sheet-classactiontab99:checked ~ div[class^="sheet-classaction-page"] {
+input.sheet-classactiontab99:checked~div[class^="sheet-classaction-page"] {
 	display: block;
 }
 
-input.sheet-classactiontab1:checked ~ span.sheet-classactiontab1,
-input.sheet-classactiontab2:checked ~ span.sheet-classactiontab2,
-input.sheet-classactiontab3:checked ~ span.sheet-classactiontab3,
-input.sheet-classactiontab4:checked ~ span.sheet-classactiontab4,
-input.sheet-classactiontab99:checked ~ span.sheet-classactiontab99 {
+input.sheet-classactiontab1:checked~span.sheet-classactiontab1,
+input.sheet-classactiontab2:checked~span.sheet-classactiontab2,
+input.sheet-classactiontab3:checked~span.sheet-classactiontab3,
+input.sheet-classactiontab4:checked~span.sheet-classactiontab4,
+input.sheet-classactiontab99:checked~span.sheet-classactiontab99 {
 	background: rgb(0, 158, 115);
 	color: white;
 	border-radius: 4px;
@@ -782,7 +942,7 @@ span.sheet-classactiontab {
 	display: none;
 }
 
-input[class^="sheet-classactionshowoptions"]:checked ~ div.sheet-classaction-output-options {
+input[class^="sheet-classactionshowoptions"]:checked~div.sheet-classaction-output-options {
 	display: block;
 }
 
@@ -814,14 +974,14 @@ textarea,
 
 .sheet-small-label,
 .sheet-rolltemplate-5eDefault .sheet-small-label {
-	font-size: 85%!important;
+	font-size: 85% !important;
 	font-style: italic;
 	font-weight: bold;
 }
 
 .sheet-last-updated,
 .sheet-rolltemplate-5eDefault .sheet-last-updated {
-	font-size: 85%!important;
+	font-size: 85% !important;
 	font-style: italic;
 	font-weight: bold;
 	margin: 0;
@@ -842,7 +1002,7 @@ textarea,
 .sheet-hd-row,
 .sheet-rolltemplate-5eDefault .sheet-hd-row {
 	margin-top: 5px;
-	font-size: 11px!important;
+	font-size: 11px !important;
 }
 
 .sheet-pictos,
@@ -967,8 +1127,8 @@ textarea,
 input[type=number],
 input[type=text],
 select {
-	width: 100%!important;
-	margin-bottom: 2px!important;
+	width: 100% !important;
+	margin-bottom: 2px !important;
 }
 
 input[type=number] {
@@ -987,7 +1147,7 @@ button.sheet-core-save,
 button.sheet-core-check,
 button.sheet-initiative,
 button.sheet-roll {
-	font-size: 12px!important;
+	font-size: 12px !important;
 }
 
 button.sheet-initiative {
@@ -1025,12 +1185,12 @@ span.sheet-spacer,
 
 .sheet-vert-middle,
 .sheet-rolltemplate-5eDefault .sheet-vert-middle {
-	vertical-align: middle!important;
+	vertical-align: middle !important;
 }
 
 .sheet-vert-bottom,
 .sheet-rolltemplate-5eDefault .sheet-vert-bottom {
-	vertical-align: bottom!important;
+	vertical-align: bottom !important;
 }
 
 .sheet-center,
@@ -1090,6 +1250,7 @@ input[disabled] {
 	border-color: #ddd;
 	cursor: not-allowed;
 	-moz-appearance: textfield;
+	appearance: textfield;;
 }
 
 input[disabled].sheet-passive-skill-score {
@@ -1097,6 +1258,7 @@ input[disabled].sheet-passive-skill-score {
 	border-color: #ddd;
 	cursor: not-allowed;
 	-moz-appearance: textfield;
+	appearance: textfield;
 }
 
 input[disabled]::-webkit-inner-spin-button,
@@ -1108,7 +1270,7 @@ input[disabled]::-webkit-outer-spin-button {
 .sheet-small-note {
 	text-align: center;
 	font-family: Arial;
-	font-size: 10px!important;
+	font-size: 10px !important;
 }
 
 select {
@@ -1159,7 +1321,7 @@ img.sheet-icon {
 .sheet-core-stat-label {
 	background-color: #000000;
 	color: #ffffff;
-	font-size: 14px!important;
+	font-size: 14px !important;
 	font-weight: bold;
 	text-transform: uppercase;
 	vertical-align: middle;
@@ -1203,13 +1365,13 @@ span.sheet-death-save-fail-tab {
 	border: 1px solid;
 }
 
-input.sheet-death-save-fail:checked + span.sheet-death-save-fail-tab {
+input.sheet-death-save-fail:checked+span.sheet-death-save-fail-tab {
 	background: #8c6075;
 	color: white;
 	border-radius: 4px;
 }
 
-input.sheet-death-save-fail:checked + span.sheet-death-save-fail-tab::before {
+input.sheet-death-save-fail:checked+span.sheet-death-save-fail-tab::before {
 	content: "Failure";
 }
 
@@ -1243,13 +1405,13 @@ span.sheet-death-save-success-tab {
 	border: 1px solid;
 }
 
-input.sheet-death-save-success:checked + span.sheet-death-save-success-tab {
+input.sheet-death-save-success:checked+span.sheet-death-save-success-tab {
 	background: #879a6a;
 	color: white;
 	border-radius: 4px;
 }
 
-input.sheet-death-save-success:checked + span.sheet-death-save-success-tab::before {
+input.sheet-death-save-success:checked+span.sheet-death-save-success-tab::before {
 	content: "Success"
 }
 
@@ -1261,14 +1423,14 @@ input.sheet-death-save-success:checked + span.sheet-death-save-success-tab::befo
 }
 
 .sheet-skill-roll {
-	padding: 0 5px!important;
+	padding: 0 5px !important;
 	height: 29px;
 	border-radius: 12px;
 }
 
 .sheet-skill-name {
 	margin-top: 5px;
-	font-size: 11px!important;
+	font-size: 11px !important;
 }
 
 .sheet-skill-checkbox {
@@ -1307,12 +1469,12 @@ input.sheet-death-save-success:checked + span.sheet-death-save-success-tab::befo
 	pointer-events: none;
 }
 
-input.sheet-ro-checkbox:checked + span + div {
+input.sheet-ro-checkbox:checked+span+div {
 	opacity: 1;
 	pointer-events: auto;
 }
 
-input.sheet-ro-checkbox:checked + span + div > div {
+input.sheet-ro-checkbox:checked+span+div>div {
 	width: 500px;
 	position: relative;
 	margin: 10% auto;
@@ -1352,7 +1514,7 @@ span.sheet-ro-label {
 }
 
 .sheet-ro-title {
-	font-size: 20px!important;
+	font-size: 20px !important;
 }
 
 .sheet-ro-close-wrapper {
@@ -1413,8 +1575,8 @@ span.sheet-ignored-roll {
 .sheet-row,
 .sheet-rolltemplate-5eDefault .sheet-row {
 	letter-spacing: -0.31em;
-	*letter-spacing: normal;
-	*word-spacing: -0.43em;
+	/*letter-spacing: normal;*/
+	/*word-spacing: -0.43em;*/
 	text-rendering: optimizespeed;
 }
 
@@ -1429,7 +1591,7 @@ span.sheet-ignored-roll {
 .sheet-rolltemplate-5eDefault .sheet-col {
 	display: inline-block;
 	zoom: 1;
-	*display: inline;
+	/*display: inline;*/
 	letter-spacing: normal;
 	word-spacing: normal;
 	vertical-align: top;
@@ -1834,7 +1996,7 @@ span.sheet-ignored-roll {
 .sheet-col-23-24 {
 	display: inline-block;
 	zoom: 1;
-	*display: inline;
+	/*display: inline; */
 	letter-spacing: normal;
 	word-spacing: normal;
 	vertical-align: top;
@@ -3819,7 +3981,7 @@ span.sheet-ignored-roll {
 .sheet-row-r,
 .sheet-rolltemplate-5eDefault .sheet-row-r {
 	letter-spacing: -0.31em;
-	*letter-spacing: normal;
+	/*letter-spacing: normal; */
 	word-spacing: -0.43em;
 }
 
@@ -3838,30 +4000,44 @@ span.sheet-ignored-roll {
 
 /* End custom Pure grid css (24 cols) */
 
- /* start print instructions See: https://help.roll20.net/hc/en-us/articles/10823045719063-Making-Your-Character-Sheet-Print-Friendly#media-queries-0-0 */
- 
- /* Your sheet CSS file: */
+/* start print instructions See: https://help.roll20.net/hc/en-us/articles/10823045719063-Making-Your-Character-Sheet-Print-Friendly#media-queries-0-0 */
+
+/* Your sheet CSS file: */
 p {
 	column-count: 2;
+	letter-spacing: normal;
 }
-	/* Your sheet CSS file: */
+
+/* Your sheet CSS file: */
 .section__container {
 	/* Makes each section start on a new page */
 	break-before: page;
 }
+
 .section__thumbnail {
 	/* indicates that whenever possible, the browser should avoid splitting the content inside the section thumbnail across multiple pages. In that way the caption stays close to the relevant picture. */
 	break-inside: avoid;
 }
+
 /* Your sheet CSS file: */
 
 @page {
-	size: letter portrait;  /* specifies sheet will be printed on letter size in portrait orientation */
-	margin: 0.25in /* specifies a page margin of 0.25 inches */
+	size: letter portrait;
+	/* specifies sheet will be printed on letter size in portrait orientation */
+	margin: 0.25in
+		/* specifies a page margin of 0.25 inches */
 }
 
 /* The page rule accepts the following pseudo-selectors:*/
 
-	@page page :first {  /* first-page of the document */ }
-	@page page :last {  /* last-page of the document */ }
-	@page page :left {  /* even-numbered pages */ }
+@page page :first {
+	/* first-page of the document */
+}
+
+@page page :last {
+	/* last-page of the document */
+}
+
+@page page :left {
+	/* even-numbered pages */
+}

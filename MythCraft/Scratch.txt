@@ -1,15 +1,378 @@
-<div class="sheet-row">
-						<div class="sheet-col-2-2 sheet-center ">
-							<div class="sheet-col-2-2 sheet-center sheet-small-label">HP Block</div>
-				
-							<div class="sheet-col-1-1 sheet-center sheet-small-label">HP</div>
-							<div class="sheet-col-1-1 sheet-center sheet-small-label">HP MAX</div>
-						</div>
-						<div class="sheet-col-2-2 sheet-center ">
-							<div class="sheet-col-1-1 sheet-center sheet-small-label">Shield</div>
-							<div class="sheet-col-1-1 sheet-center sheet-small-label">Armour Rating</div>
-							<div class="sheet-col-1-1 sheet-center sheet-small-label">Speed</div>
-							<div class="sheet-col-1-1 sheet-center sheet-small-label">Death Points</div>
-							<div class="sheet-col-1-1 sheet-center sheet-small-label">AP/Round</div>
-						</div>
-					</div>
+
+
+for (const key in mcStandardLneage) {
+	mcLoadedLineages.push([key, obj[key]]);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    const countPreparedSpells = () => {
+      const doCalc = (level1IDs, level2IDs, level3IDs, level4IDs, level5IDs, level6IDs, level7IDs, level8IDs, level9IDs) => {
+        const attrs = [
+          ...level1IDs.map(id => `repeating_spellbooklevel1_${id}_spellisprepared`),
+          ...level2IDs.map(id => `repeating_spellbooklevel2_${id}_spellisprepared`),
+          ...level3IDs.map(id => `repeating_spellbooklevel3_${id}_spellisprepared`),
+          ...level4IDs.map(id => `repeating_spellbooklevel4_${id}_spellisprepared`),
+          ...level5IDs.map(id => `repeating_spellbooklevel5_${id}_spellisprepared`),
+          ...level6IDs.map(id => `repeating_spellbooklevel6_${id}_spellisprepared`),
+          ...level7IDs.map(id => `repeating_spellbooklevel7_${id}_spellisprepared`),
+          ...level8IDs.map(id => `repeating_spellbooklevel8_${id}_spellisprepared`),
+          ...level9IDs.map(id => `repeating_spellbooklevel9_${id}_spellisprepared`)
+        ];
+        getAttrs(attrs, v => {
+          values = Object.values(v).map(a=>(parseInt(a)));
+          const total = values.reduce((a,b) => a + b, 0);
+          setAttrs({
+            spells_prepared_count: total
+          });
+        });
+      };
+
+      getSectionIDs("repeating_spellbooklevel1", level1IDs => {
+        getSectionIDs("repeating_spellbooklevel2", level2IDs => {
+          getSectionIDs("repeating_spellbooklevel3", level3IDs => {
+            getSectionIDs("repeating_spellbooklevel4", level4IDs => {
+              getSectionIDs("repeating_spellbooklevel5", level5IDs => {
+                getSectionIDs("repeating_spellbooklevel6", level6IDs => {
+                  getSectionIDs("repeating_spellbooklevel7", level7IDs => {
+                    getSectionIDs("repeating_spellbooklevel8", level8IDs => {
+                      getSectionIDs("repeating_spellbooklevel9", level9IDs => doCalc(level1IDs, level2IDs, level3IDs, level4IDs, level5IDs, level6IDs, level7IDs, level8IDs, level9IDs));
+                    });
+                  });
+                });
+              });
+            });
+          });
+        });
+      });
+    };
+
+    on('sheet:opened',function(){
+      countPreparedSpells();
+    });
+
+    on("change:repeating_spellbooklevel1", function(eventInfo) {
+      if(eventInfo.sourceAttribute.match(/spellisprepared/)) {
+        countPreparedSpells();
+      }
+   });
+
+    on("change:repeating_spellbooklevel2", function(eventInfo) {
+      if(eventInfo.sourceAttribute.match(/spellisprepared/)) {
+        countPreparedSpells();
+      }
+   });
+
+    on("change:repeating_spellbooklevel3", function(eventInfo) {
+      if(eventInfo.sourceAttribute.match(/spellisprepared/)) {
+        countPreparedSpells();
+      }
+   });
+
+    on("change:repeating_spellbooklevel4", function(eventInfo) {
+      if(eventInfo.sourceAttribute.match(/spellisprepared/)) {
+        countPreparedSpells();
+      }
+   });
+
+    on("change:repeating_spellbooklevel5", function(eventInfo) {
+      if(eventInfo.sourceAttribute.match(/spellisprepared/)) {
+        countPreparedSpells();
+      }
+   });
+
+    on("change:repeating_spellbooklevel6", function(eventInfo) {
+      if(eventInfo.sourceAttribute.match(/spellisprepared/)) {
+        countPreparedSpells();
+      }
+   });
+
+    on("change:repeating_spellbooklevel7", function(eventInfo) {
+      if(eventInfo.sourceAttribute.match(/spellisprepared/)) {
+        countPreparedSpells();
+      }
+   });
+
+    on("change:repeating_spellbooklevel8", function(eventInfo) {
+      if(eventInfo.sourceAttribute.match(/spellisprepared/)) {
+        countPreparedSpells();
+      }
+   });
+
+    on("change:repeating_spellbooklevel9", function(eventInfo) {
+      if(eventInfo.sourceAttribute.match(/spellisprepared/)) {
+        countPreparedSpells();
+      }
+   });
+
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	const importChummer = character => {
+		//Match Chummer JSON keys with their sheet attribute. 
+		//Chummer name is the key, Roll20 sheet atribute is the value.
+		new Promise((resolve, reject) => {
+		  const Roll20Character = associateChummerData(character)
+		  setCharmancerText(Roll20Character.text);
+		  resolve(Roll20Character.character)
+		}).then(Roll20Character => {
+		  setAttrs(Roll20Character)
+		  return importerHiddenInputsBuilder(Roll20Character)
+		}).then(importerHiddenInputs => {
+		  setCharmancerText(importerHiddenInputs)
+		})
+	  };
+		// APPLY Changes
+		on("clicked:import_launch", function(){ startCharactermancer("importer");});
+		/*
+		  on("mancerfinish:apply", () => {
+			  const mancerData = getCharmancerData();
+			  const mancerValues = mancerData["importer"].values;
+  
+			  Object.keys(mancerValues).forEach((key) => {
+				  if (key == "builder" || key == "jsonData" || key == "hidden") {
+					  delete mancerValues[key];
+				  };
+			  });
+  
+			  clean();
+			  setAttrs(mancerValues, () => {
+				  deleteCharmancerData(["importer"]);
+				  finishCharactermancer();
+			  });
+		  }); 
+	  // CHARACTERMANCER IMPORTER
+  
+		  const buildDirectionsString = characterSoftware => {
+			  const chummerDirections = `
+			  <li>In Chummer mark your character as created</li>
+			  <li>Go to File -> Export -> Export JSON</li>
+			  <li>Copy the JSON in the file</li>`
+  
+			  const herolabDirections = `
+				  <li>Export your character from Hero Lab as XML</li>
+				  <li>Go to the website 
+					  <input style='width:45%' type='text' value='http://beautifytools.com/xml-to-json-converter.php' />
+				  </li>
+				  <li>Copy the XML into the left side</li>
+				  <li>Click the button that says "<b>Convert</b>"</li>
+				  <li>Click the button that says "<b>Minify json</b>"</li>
+				  <li>Copy the Results</li>
+			  `
+  
+			  const directions = `
+			  <ol>
+				  ${characterSoftware === "Chummer" ? chummerDirections : herolabDirections}
+				  <li>Paste it into the textfield below</li>
+				  <li>Click the Import button</li>
+				  <li>Move to the Results section below</li>
+			  </ol>
+			  `
+  
+			  return directions
+		  }
+  
+		  const buildNotesString = characterSoftware => {
+			  const chummerNotes = `
+				  <h3>Chummer Notes</h3>
+				  <ul>
+						  <li>
+							  Chummer frequently has the wrong information for <strong>Weapons</strong>. Review them in the Arms tab after clicking apply.
+						  </li>
+						  <li>
+							  <strong>specialization</strong> will not be applied to Weapons or Magic. You will need to manually update the checkbox.
+						  </li>
+				  </ul>
+			  `
+			  const herolabNotes = `
+				  <h3>Hero Lab Notes</h3>
+				  <ul>
+					  <li>
+						  Drugs and other effects are not accounted for. They will be applied to your base attributes.
+					  </li>
+					  <li>
+						  This will overwrite some data but not all. Be sure to review the character after.
+					  </li>
+				  </ul>
+			  `
+  
+			  return characterSoftware == "Chummer" ? chummerNotes : herolabNotes
+		  }
+  
+		  on("page:importer", () => {
+			  const defaultBuilder = "Chummer"
+			  setAttrs({builder: defaultBuilder});
+			  setCharmancerText({	"directions" : buildDirectionsString(defaultBuilder)	})
+		  });
+  
+		  on("clicked:import", () => {
+			  const mancerData = getCharmancerData();
+			  const mancerValues = mancerData["importer"].values;
+			  let applyEnabled = true;
+			let setText = {};
+  
+			  // Verify the user entered a JSON in the textarea. If not, provide user feedabck.
+			  if (mancerValues.jsonData) {
+				  const parsedData = JSON.parse(mancerValues.jsonData) || false;
+  
+				  setText[`import-feedback`] = "";
+				  // There is a value in the textarea! Check to see if its a valid JSON. Provide users feeadback 
+				  if (parsedData) {
+					  setText[`import-feedback`] += `<p class="feedback">A valid JSON was pasted into the importer for ${mancerValues.builder}.</p>`
+					  // Send the parsed data to the selected importer or let users know something went wrong 
+					  if (mancerValues.builder && mancerValues.builder === "Chummer") {
+						  if (parsedData.characters && parsedData.characters.character) {
+							  importChummer(parsedData.characters.character);
+						  } else {
+							  setText[`import-feedback`] += `<p class="warning">Parsed JSON is missing character data. Was this a exported from Chummer?</p>`;
+							  applyEnabled = false
+						  }
+					  } else if (mancerValues.builder && mancerValues.builder === "Hero Lab") {
+						  if (parsedData.document && parsedData.document.public && parsedData.document.public.character) {
+							  importHeroLab(parsedData.document.public.character);
+						  } else {
+							  setText[`import-feedback`] += `<p class="warning">Parsed JSON did not have the expected object keys. Was this converted with "Minify json" from Beautify Tools ?</p>`;
+							  applyEnabled = false
+						  }
+					  } else {
+						  setText[`import-feedback`] += `<p class="warning">A character builder was not selected. Try changing your selection then change it back if needed.</p>`;
+						  applyEnabled = false
+					  }
+				  } else {
+					  setText[`import-feedback`] += `<p class="warning"><span>The text imported is not a valid JSON. Verify the JSON is formatted correctly. Check the format at,</span> JSONLint.com.</p>`;
+					  applyEnabled = false
+				  };
+			  } else {
+					  setText[`import-feedback`] = `<p class="warning">No information was entered in the JSON text area.</p>`;
+					  applyEnabled = false
+			  };
+  
+			  let buttonStatus = (applyEnabled) ? "" : "disabled";
+			  setText[`finish-button`] = `<button class="finish" type="finish" value="apply" data-i18n="apply" ${buttonStatus}>Apply</button>`;
+  
+			  setCharmancerText(setText);
+		  });
+  
+		  on("mancerchange:builder", eventinfo => setCharmancerText({
+			  directions : buildDirectionsString(eventinfo.newValue),
+			  notes: buildNotesString(eventinfo.newValue)
+		  }))
+  
+		const clean = () => {
+		  ['active', 'knowledge', 'language', 'quality', 'martial',
+			'range', 'melee', 'weapon', 'armor', 'augementations',
+			'items', 'NPCspell', 'spell', 'rituals', 'preps', 'powers',
+			'contacts', 'vehicle', 'lifestyle', "programs", "forms"].forEach(group => {
+			getSectionIDs(`repeating_${group}`, ids => ids.forEach(id => removeRepeatingRow(`repeating_${group}_${id}`)))
+		  });
+		};
+  
+		  //USEFUL FUNCTIONS
+		  const capitialize = (string) => string.charAt(0).toUpperCase() + string.slice(1)
+  
+		  const addFeedback = (attribute, value) => `<p class="feedback"><strong>${capitialize(attribute)}:</strong> ${value} </p>`
+  
+		  const alphabatizeKeys = (unsortedJSON) => {
+			  let alphabeticalKeys = {};
+			  Object.keys(unsortedJSON).sort().forEach((key) => {
+					alphabeticalKeys[key] = unsortedJSON[key];
+			  });
+			  return alphabeticalKeys
+		  };
+  
+		  const getValInParen = value => value.split("(")[1].split(")")[0];
+  
+		  const getArray = array => Array.isArray(array) ? array : [ array ]
+  
+		  const getSplitNum = value => value.split("/")[0]
+		  
+		  const checkForModifiedAttribute = value => value.includes("/") ? getSplitNum(value) : value
+
+
+
+
+*/
+
+
+
+
+
+
+
+
+
