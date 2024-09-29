@@ -81,7 +81,7 @@ input[type="number"] {
 	border: 15px solid transparent;
 	border-image: url('https://irp.cdn-website.com/a2239e04/dms3rep/multi/Attribute_p1.png') 300 / 75px / 5px stretch;
 	margin: 5px 5px;
-
+	min-height: 100px;
 }
 
 .sheet-small-box-border {
