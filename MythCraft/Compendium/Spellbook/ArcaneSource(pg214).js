@@ -140,6 +140,8 @@ const Arcane = {
             ]
         }
     ],
+    Prayers:[],
+    Rituals:[],
 Spells:[
 {
     spellName:"Air Bubble",
