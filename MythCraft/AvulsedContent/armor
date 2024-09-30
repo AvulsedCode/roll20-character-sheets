@@ -1,0 +1,4 @@
+ { "Armor": "Leather Armor",         "AR": 2,  "Tags": ["Light"],                 "REF": "", "FORT": "",      "ANT": "",  "LOG": "",  "WILL": "",         "Resist": "", "Cost": 25},
+        { "Armor": "Padded Armor",          "AR": 1,  "Tags": ["Light", "Concealed"],   "REF": "", "FORT": "",      "ANT": "",  "LOG": "",  "WILL": "",         "Resist": "",  "Cost": 10},
+        { "Armor": "Studded Leather Armor", "AR": 3,  "Tags": ["Light"],                 "REF": "", "FORT": "",     "ANT": "",  "LOG": "",  "WILL": "",         "Resist": "",  "Cost": 45 },
+       
