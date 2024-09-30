@@ -1,47 +1,59 @@
 :root {
-	--attribute-label-height:-70px;/* should be  the negative of attribute-interior-content */
-	--attribute-label-width:-10px;/* should be negative */
-	--attribute-exterior-ring: 75px; /* should be less than 86px (~col-1-8:width) */
+	--attribute-label-height: -70px;
+	/* should be  the negative of attribute-interior-content */
+	--attribute-label-width: -10px;
+	/* should be negative */
+	--attribute-exterior-ring: 75px;
+	/* should be less than 86px (~col-1-8:width) */
 	--attribute-interior-content: 70px;
-	--derived-attribute-exterior-ring: 55px; /* should be less than attribute-interior-content */
+	--derived-attribute-exterior-ring: 55px;
+	/* should be less than attribute-interior-content */
 	--derived-attribute-interior-content: 50px;
-	--derived-attribute-offset: 10px; /* should be half the differeence */
-    --roll-attribute-button: 21px;
-	--roll-attribute-button-top-offset:-90px;
-	--roll-attribute-button-left-offset:55px;
+	--derived-attribute-offset: 10px;
+	/* should be half the differeence */
+	--roll-attribute-button: 21px;
+	--roll-attribute-button-top-offset: -90px;
+	--roll-attribute-button-left-offset: 55px;
 	--attribute-derived-label-height: -115px;
-	--attribute-derived-label-width:-7px;
+	--attribute-derived-label-width: -7px;
+	--sheet-background: #F4EFE4;
+	;
 }
-.sheet-naked{
-appearance:none;
-background: none;
-border: none;
-color: inherit;
-font: inherit;
-cursor: pointer;
-padding: 0;
+
+.sheet-naked {
+	appearance: none;
+	background: none;
+	border: none;
+	color: inherit;
+	font: inherit;
+	cursor: pointer;
+	padding: 0;
 }
 
 /* Begin Section to hide number spinners */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
+	-webkit-appearance: none;
+	margin: 0;
 }
 
 input[type="number"] {
-    -moz-appearance: textfield;
+	-moz-appearance: textfield;
 }
+
 /* End Section to hide number spinners */
 
 
-.sheet-back, .sheet-next, .sheet-finish, .pagecontrol{
+.sheet-back,
+.sheet-next,
+.sheet-finish,
+.pagecontrol {
 	letter-spacing: normal !important;
 
 }
 
 
-.sheet-repeatingitems{
+.sheet-repeatingitems {
 
 	letter-spacing: normal !important;
 }
@@ -51,9 +63,9 @@ input[type="number"] {
   checkbox contained in it is checked or not. Then sets the
   ones that don't contain a checked on to display none.
 */
-.ui-dialog .tab-content .charsheet .filtered-section .repitem:has(.filter-control:not(:checked)){
+.ui-dialog .tab-content .charsheet .filtered-section .repitem:has(.filter-control:not(:checked)) {
 	display: none !important;
-  }
+}
 
 
 
@@ -90,24 +102,25 @@ input[type="number"] {
 	margin: 5px 5px;
 	letter-spacing: normal !important;
 }
-.charmancerlogo{
+
+.charmancerlogo {
 	height: 45px !important;
 	width: 45px !important;
-} 
+}
 
-.mythcraft-logo>img{
+.mythcraft-logo>img {
 	max-width: 50% !important;
-	float:right;
+	float: left;
 }
 
 div[class^="sheet-fieldset"] {
 
-	background-color: #F4EFE4;
+	background-color: var(--sheet-background);
 }
 
 div[class^="sheet-legend"] {
 	text-align: center;
-	background-color: #F4EFE4;
+	background-color:var(--sheet-background);
 	color: Black;
 	padding: 5px 10px;
 	position: relative;
@@ -123,8 +136,8 @@ div[class^="sheet-legend"]>div[class^="sheet-center"] {
 	letter-spacing: normal !important;
 }
 
-div[class^="sheet-legend"]>div[class^="sheet-wide-content"]{
-	
+div[class^="sheet-legend"]>div[class^="sheet-wide-content"] {
+
 	white-space: nowrap;
 	border: 0px 0px !important;
 	margin: 0px 0px !important;
@@ -144,51 +157,57 @@ div[class^="sheet-legend"]>div[class^="sheet-wide-content"]{
 
 
 
-  
+
 
 .sheet-charmancer select span.sheet-initials {
-    font-size: 6px;
+	font-size: 6px;
 }
+
 .sheet-charmancer .sheet-topbar {
-    flex: 100%;
-    margin-bottom: 10px;
-    flex: 100%;
-    margin-bottom: 10px;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    display: flex;
+	flex: 100%;
+	margin-bottom: 10px;
+	flex: 100%;
+	margin-bottom: 10px;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+	display: flex;
 }
+
 .sheet-charmancer .sheet-topbar div {
-    display: inline-block;
-    width: auto;
-    text-align: center;
-    margin: auto;
+	display: inline-block;
+	width: auto;
+	text-align: center;
+	margin: auto;
 }
+
 .sheet-charmancer .sheet-topbar div span {
-    font-size: 1em;
-    line-height: 1em;
-    font-weight: bold;
+	font-size: 1em;
+	line-height: 1em;
+	font-weight: bold;
 }
+
 .sheet-charmancer .sheet-steps {
-    flex: 100%;
-    margin: 0 0 1em;
-    display: flex;
-    flex-flow: row;
-    justify-content: space-between;
-    border-top: 1px dotted rgb(140, 140, 140);
-    border-left: 1px dotted rgb(140, 140, 140);
-    box-shadow: 2px 2px 4px rgb(140, 140, 140);
+	flex: 100%;
+	margin: 0 0 1em;
+	display: flex;
+	flex-flow: row;
+	justify-content: space-between;
+	border-top: 1px dotted rgb(140, 140, 140);
+	border-left: 1px dotted rgb(140, 140, 140);
+	box-shadow: 2px 2px 4px rgb(140, 140, 140);
 }
 
 input[type=number]:disabled::-webkit-outer-spin-button,
 input[type=number]:disabled::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
+	-webkit-appearance: none;
+	margin: 0;
 }
+
 input[type=number]:disabled {
-    -moz-appearance: textfield;
-} 
+	-moz-appearance: textfield;
+}
+
 .sheet-charmancer .sheet-step:hover,
 .sheet-charmancer .sheet-step.sheet-mancer-current:hover,
 .sheet-charmancer .sheet-step.sheet-mancer-current-left:hover,
@@ -196,95 +215,106 @@ input[type=number]:disabled {
 .sheet-charmancer .sheet-step.sheet-done:hover,
 .sheet-charmancer .sheet-nav.sheet-back:hover,
 .sheet-charmancer .sheet-nav.sheet-next:hover {
-    color: #BE202E;
+	color: #BE202E;
 }
+
 .sheet-charmancer .sheet-step.sheet-cancel:hover,
 .sheet-charmancer .sheet-nav.sheet-cancel:hover {
-    color: black;
+	color: black;
 }
+
 .sheet-charmancer .sheet-steps.sheet-center {
-    justify-content: center;
+	justify-content: center;
 }
+
 .sheet-charmancer .sheet-steps.sheet-center .sheet-step.sheet-mancer-current span {
-    padding-left:8px;
-    padding-right:8px;
+	padding-left: 8px;
+	padding-right: 8px;
 }
 
 
 .sheet-charmancer .sheet-step.sheet-mancer-current-right {
-    background: -webkit-radial-gradient(0 0, circle, transparent 14px, rgb(221, 221, 221) 15px), -webkit-radial-gradient(0 100%, circle, transparent 14px, rgb(221, 221, 221) 15px), -webkit-radial-gradient(100% 0, circle, rgb(221, 221, 221), rgb(221, 221, 221)), -webkit-radial-gradient(100% 100%, circle, rgb(221, 221, 221), rgb(221, 221, 221));
-    background-position: top left, bottom left, top right, bottom right;
-    background-size: 55% 55%;
-    background-repeat: no-repeat;
-    color: black;
-    padding: 0px 2px 0px 12px;
+	background: -webkit-radial-gradient(0 0, circle, transparent 14px, rgb(221, 221, 221) 15px), -webkit-radial-gradient(0 100%, circle, transparent 14px, rgb(221, 221, 221) 15px), -webkit-radial-gradient(100% 0, circle, rgb(221, 221, 221), rgb(221, 221, 221)), -webkit-radial-gradient(100% 100%, circle, rgb(221, 221, 221), rgb(221, 221, 221));
+	background-position: top left, bottom left, top right, bottom right;
+	background-size: 55% 55%;
+	background-repeat: no-repeat;
+	color: black;
+	padding: 0px 2px 0px 12px;
 }
+
 .sheet-charmancer .sheet-step.sheet-mancer-current-left {
-    background: -webkit-radial-gradient(0 0, circle, rgb(221, 221, 221), rgb(221, 221, 221)), -webkit-radial-gradient(0 100%, circle, rgb(221, 221, 221), rgb(221, 221, 221)), -webkit-radial-gradient(100% 0, circle, transparent 14px, rgb(221, 221, 221) 15px), -webkit-radial-gradient(100% 100%, circle, transparent 14px, rgb(221, 221, 221) 15px);
-    background-position: top left, bottom left, top right, bottom right;
-    background-size: 55% 55%;
-    background-repeat: no-repeat;
-    color: black;
-    padding: 0px 12px 0px 2px;
+	background: -webkit-radial-gradient(0 0, circle, rgb(221, 221, 221), rgb(221, 221, 221)), -webkit-radial-gradient(0 100%, circle, rgb(221, 221, 221), rgb(221, 221, 221)), -webkit-radial-gradient(100% 0, circle, transparent 14px, rgb(221, 221, 221) 15px), -webkit-radial-gradient(100% 100%, circle, transparent 14px, rgb(221, 221, 221) 15px);
+	background-position: top left, bottom left, top right, bottom right;
+	background-size: 55% 55%;
+	background-repeat: no-repeat;
+	color: black;
+	padding: 0px 12px 0px 2px;
 }
 
 .sheet-charmancer .sheet-step.sheet-done {
-    background: -webkit-radial-gradient(0 0, circle, transparent 14px, rgb(221, 221, 221) 15px), -webkit-radial-gradient(0 100%, circle, transparent 14px, rgb(221, 221, 221) 15px), -webkit-radial-gradient(100% 0, circle, transparent 14px, rgb(221, 221, 221) 15px), -webkit-radial-gradient(100% 100%, circle, transparent 14px, rgb(221, 221, 221) 15px);
-    background-position: top left, bottom left, top right, bottom right;
-    background-size: 55% 55%;
-    background-repeat: no-repeat;
-    color: black;
-    padding: 0px 12px 0px 12px;
+	background: -webkit-radial-gradient(0 0, circle, transparent 14px, rgb(221, 221, 221) 15px), -webkit-radial-gradient(0 100%, circle, transparent 14px, rgb(221, 221, 221) 15px), -webkit-radial-gradient(100% 0, circle, transparent 14px, rgb(221, 221, 221) 15px), -webkit-radial-gradient(100% 100%, circle, transparent 14px, rgb(221, 221, 221) 15px);
+	background-position: top left, bottom left, top right, bottom right;
+	background-size: 55% 55%;
+	background-repeat: no-repeat;
+	color: black;
+	padding: 0px 12px 0px 12px;
 }
+
 .sheet-charmancer .sheet-step.sheet-mancer-current {
-    background: -webkit-radial-gradient(0 0, circle, transparent 14px, black 15px), -webkit-radial-gradient(0 100%, circle, transparent 14px, black 15px), -webkit-radial-gradient(100% 0, circle, transparent 14px, black 15px), -webkit-radial-gradient(100% 100%, circle, transparent 14px, black 15px);
-    background-position: top left, bottom left, top right, bottom right;
-    background-size: 55% 55%;
-    background-repeat: no-repeat;
-    color: white;
+	background: -webkit-radial-gradient(0 0, circle, transparent 14px, black 15px), -webkit-radial-gradient(0 100%, circle, transparent 14px, black 15px), -webkit-radial-gradient(100% 0, circle, transparent 14px, black 15px), -webkit-radial-gradient(100% 100%, circle, transparent 14px, black 15px);
+	background-position: top left, bottom left, top right, bottom right;
+	background-size: 55% 55%;
+	background-repeat: no-repeat;
+	color: white;
 }
+
 .sheet-charmancer .sheet-nav.sheet-back {
-    background: -webkit-radial-gradient(0 0, circle, transparent 14px, black 15px), -webkit-radial-gradient(0 100%, circle, transparent 14px, black 15px), -webkit-radial-gradient(100% 0, circle, black, black), -webkit-radial-gradient(100% 100%, circle, black, black);
-    background-position: top left, bottom left, top right, bottom right;
-    background-size: 55% 55%;
-    background-repeat: no-repeat;
-    color: white;
-    padding: 0px 2px 0px 12px;
+	background: -webkit-radial-gradient(0 0, circle, transparent 14px, black 15px), -webkit-radial-gradient(0 100%, circle, transparent 14px, black 15px), -webkit-radial-gradient(100% 0, circle, black, black), -webkit-radial-gradient(100% 100%, circle, black, black);
+	background-position: top left, bottom left, top right, bottom right;
+	background-size: 55% 55%;
+	background-repeat: no-repeat;
+	color: white;
+	padding: 0px 2px 0px 12px;
 }
+
 .sheet-charmancer div.sheet-nav.sheet-next {
-    background: -webkit-radial-gradient(0 0, circle, black, black), -webkit-radial-gradient(0 100%, circle, black, black), -webkit-radial-gradient(100% 0, circle, transparent 14px, black 15px), -webkit-radial-gradient(100% 100%, circle, transparent 14px, black 15px);
-    background-position: top left, bottom left, top right, bottom right;
-    background-size: 55% 55%;
-    background-repeat: no-repeat;
-    color: white;
-    padding: 0px 12px 0px 2px;
+	background: -webkit-radial-gradient(0 0, circle, black, black), -webkit-radial-gradient(0 100%, circle, black, black), -webkit-radial-gradient(100% 0, circle, transparent 14px, black 15px), -webkit-radial-gradient(100% 100%, circle, transparent 14px, black 15px);
+	background-position: top left, bottom left, top right, bottom right;
+	background-size: 55% 55%;
+	background-repeat: no-repeat;
+	color: white;
+	padding: 0px 12px 0px 2px;
 }
+
 .sheet-charmancer button {
-    display: inline-block;
-    text-align: center;
-    font-family: inherit;
-    font-size: inherit;
-    font-weight: inherit;
-    background-color: transparent;
-    border: none;
-    text-transform: inherit;
-    color: inherit;
+	display: inline-block;
+	text-align: center;
+	font-family: inherit;
+	font-size: inherit;
+	font-weight: inherit;
+	background-color: transparent;
+	border: none;
+	text-transform: inherit;
+	color: inherit;
 }
+
 .sheet-charmancer button:hover {
-    color: #BE202E;
+	color: #BE202E;
 }
+
 .sheet-charmancer button:focus {
-    outline:0;
+	outline: 0;
 }
+
 .sheet-mancer-steps {
-    flex: 100%;
-    margin: 0 0 1em;
-    display: flex;
-    flex-flow: row;
-    justify-content: space-between;
-    border-top: 1px dotted rgb(140, 140, 140);
-    border-left: 1px dotted rgb(140, 140, 140);
-    box-shadow: 2px 2px 4px rgb(140, 140, 140);
+	flex: 100%;
+	margin: 0 0 1em;
+	display: flex;
+	flex-flow: row;
+	justify-content: space-between;
+	border-top: 1px dotted rgb(140, 140, 140);
+	border-left: 1px dotted rgb(140, 140, 140);
+	box-shadow: 2px 2px 4px rgb(140, 140, 140);
 }
 
 .sheet-charmancer-pagecontrol {
@@ -297,53 +327,254 @@ input[type=number]:disabled {
 	background: white;
 	border-radius: 2em;
 }
-	.sheet-charmancer-pagecontrol button[type="back"].sheet-charmancer-pagecontrol__left,
-	.sheet-charmancer-pagecontrol button[type="back"].sheet-charmancer-pagecontrol__right,
-	.sheet-charmancer-pagecontrol button[type="finish"].sheet-charmancer-pagecontrol__right {
-	  width: 4.5rem;
-	  height: 4.5rem;
-	  padding: 0;
-	  background: white;
-	  border: 4px solid #111;
-	  border-radius: 2.5rem;
-	  color: #111;
-	  font-family: "Pictos";
-	  font-size: 0;
-	  line-height: 1; }
-	  .sheet-charmancer-pagecontrol button[type="back"].sheet-charmancer-pagecontrol__left:before,
-	  .sheet-charmancer-pagecontrol button[type="back"].sheet-charmancer-pagecontrol__right:before,
-	  .sheet-charmancer-pagecontrol button[type="finish"].sheet-charmancer-pagecontrol__right:before {
-		display: block;
-		font-size: 20pt; }
-	.sheet-charmancer-pagecontrol button[type="back"].sheet-charmancer-pagecontrol__left {
-	  grid-column: 1; }
-	  .sheet-charmancer-pagecontrol button[type="back"].sheet-charmancer-pagecontrol__left:before {
-		content: "["; }
-	.sheet-charmancer-pagecontrol button[type="back"].sheet-charmancer-pagecontrol__right {
-	  grid-column: 3; }
-	  .sheet-charmancer-pagecontrol button[type="back"].sheet-charmancer-pagecontrol__right:before {
-		content: "]"; }
-	.sheet-charmancer-pagecontrol button[type="finish"].sheet-charmancer-pagecontrol__right {
-	  grid-column: 3;
-	  border-color: green;
-	  color: green; }
-	  .sheet-charmancer-pagecontrol button[type="finish"].sheet-charmancer-pagecontrol__right:before {
-		content: "3"; }
-	.sheet-charmancer-pagecontrol button[type="cancel"].sheet-charmancer-pagecontrol__middle {
-	  grid-column: 2;
-	  height: 4.5rem;
-	  padding: 0 .25rem;
-	  background: white;
-	  border: 4px solid #111;
-	  border-color: red;
-	  border-radius: 2.5rem;
-	  color: red;
-	  font-family: "Montserrat", "Arial Black", sans-serif;
-	  font-size: 16pt;
-	  font-weight: bolder;
-	  text-transform: uppercase;
-	 }
-  
+
+.sheet-charmancer-pagecontrol button[type="back"].sheet-charmancer-pagecontrol__left,
+.sheet-charmancer-pagecontrol button[type="back"].sheet-charmancer-pagecontrol__right,
+.sheet-charmancer-pagecontrol button[type="finish"].sheet-charmancer-pagecontrol__right {
+	width: 4.5rem;
+	height: 4.5rem;
+	padding: 0;
+	background: white;
+	border: 4px solid #111;
+	border-radius: 2.5rem;
+	color: #111;
+	font-family: "Pictos";
+	font-size: 0;
+	line-height: 1;
+}
+
+.sheet-charmancer-pagecontrol button[type="back"].sheet-charmancer-pagecontrol__left:before,
+.sheet-charmancer-pagecontrol button[type="back"].sheet-charmancer-pagecontrol__right:before,
+.sheet-charmancer-pagecontrol button[type="finish"].sheet-charmancer-pagecontrol__right:before {
+	display: block;
+	font-size: 20pt;
+}
+
+.sheet-charmancer-pagecontrol button[type="back"].sheet-charmancer-pagecontrol__left {
+	grid-column: 1;
+}
+
+.sheet-charmancer-pagecontrol button[type="back"].sheet-charmancer-pagecontrol__left:before {
+	content: "[";
+}
+
+.sheet-charmancer-pagecontrol button[type="back"].sheet-charmancer-pagecontrol__right {
+	grid-column: 3;
+}
+
+.sheet-charmancer-pagecontrol button[type="back"].sheet-charmancer-pagecontrol__right:before {
+	content: "]";
+}
+
+.sheet-charmancer-pagecontrol button[type="finish"].sheet-charmancer-pagecontrol__right {
+	grid-column: 3;
+	border-color: green;
+	color: green;
+}
+
+.sheet-charmancer-pagecontrol button[type="finish"].sheet-charmancer-pagecontrol__right:before {
+	content: "3";
+}
+
+.sheet-charmancer-pagecontrol button[type="cancel"].sheet-charmancer-pagecontrol__middle {
+	grid-column: 2;
+	height: 4.5rem;
+	padding: 0 .25rem;
+	background: white;
+	border: 4px solid #111;
+	border-color: red;
+	border-radius: 2.5rem;
+	color: red;
+	font-family: "Montserrat", "Arial Black", sans-serif;
+	font-size: 16pt;
+	font-weight: bolder;
+	text-transform: uppercase;
+}
+
+.sheet-talents {}
+
+.sheet-talent {
+	display: inline-block;
+	width: 100%;
+}
+
+div.sheet-repeatingitems>div.repcontainer>div>div.sheet-talent.sheet-talent {}
+
+div.sheet-repeatingitems.sheet-talents>div.repcontainer>div.repitem {
+	display: inline-block;
+	width: 33%;
+}
+
+div.sheet-repeatingitems.sheet-talents>div.repcontrol>button.btn.repcontrol_add {
+	display: none !important; 
+}
+
+.repcontrol .btn:focus {
+	outline: 0;
+}
+
+.repcontrol {
+	padding: 0px 0px 0px 0px;
+}
+
+input[type="submit"].repcontrol .btn {
+	padding: 0px 0px 0px 0px;
+	margin-left: 10px;
+	display: inline-block;
+	width: 25px;
+	font-size: 0px;
+}
+
+
+.repcontrol .repcontrol_edit:after {
+	content: '(';
+	font-family: pictos;
+	color: black;
+	display: inline-block;
+}
+
+.editmode~.repcontrol .repcontrol_edit:after {
+	content: ')';
+	vertical-align: bottom;
+}
+
+ .repcontrol .repcontrol_add:before,
+ .repcontrol .repcontrol_edit:after {
+	border: 1px solid black;
+	border-radius: 50%;
+	font-size: 13px;
+	padding: 3px;
+	height: 12px;
+	width: 12px;
+	line-height: 12px;
+}
+
+.sheet-statblock .repcontrol .repcontrol_add:before,
+.sheet-statblock .repcontrol .repcontrol_edit:after {
+	font-size: 12px;
+	padding: 2px;
+	height: 10px;
+	width: 10px;
+	line-height: 10px;
+}
+
+.repcontrol .repcontrol_edit:after {
+	content: '(';
+	font-family: pictos;
+	color: black;
+	display: inline-block;
+}
+
+.editmode~.repcontrol .repcontrol_edit:after {
+	content: ')';
+	vertical-align: bottom;
+}
+
+.repcontrol .repcontrol_edit:hover:after,
+.repcontrol .repcontrol_add:hover:before {
+	color: #C3996B;
+	border-color: #C3996B;
+}
+
+
+/* ===== REPEATING SECTIONS CTRL ===== */
+ .repcontrol {
+    margin-top: 2px;
+    min-height: 27px;
+    width: 90%;
+    text-align: center;
+}
+.repcontrol .btn {
+    border: none;
+    color: white !important;
+    background: none;
+    box-shadow: none;
+    font-size: 0;
+}
+ .repcontrol .btn {padding: 0px 0px 0px 0px;}
+ .repcontrol .btn {
+    padding: 0px 0px 0px 0px;
+    margin-left: 10px;
+    display: inline-block;
+    width: 25px;
+    font-size: 0px;
+}
+
+.repcontrol .btn:focus {outline: 0;}
+.repcontrol .repcontrol_add:before {
+    content: '&';
+    font-family: pictos;
+    color: black;
+    display: inline-block;
+}
+ .repcontrol  .repcontrol_add:before,
+ .repcontrol .repcontrol_edit:after {
+    border: 1px solid black;
+    border-radius: 50%;
+    font-size: 13px;
+    padding: 3px;
+    height: 12px;
+    width: 12px;
+    line-height: 12px;
+}
+.sheet-statblock .repcontrol .repcontrol_add:before,
+.sheet-statblock .repcontrol .repcontrol_edit:after {
+    font-size: 12px;
+    padding: 2px;
+    height: 10px;
+    width: 10px;
+    line-height: 10px;
+}
+
+.repcontrol .repcontrol_edit:after {
+    content: '(';
+    font-family: pictos;
+    color: black;
+    display: inline-block;
+}
+.editmode ~ .repcontrol .repcontrol_edit:after {
+    content: ')';
+    vertical-align: bottom;
+}
+
+.repcontrol .repcontrol_edit:hover:after,
+.repcontrol .repcontrol_add:hover:before {
+    color: #C3996B;
+    border-color: #C3996B;
+}
+.repcontainer .repitem .itemcontrol {z-index: 10;}
+.repcontainer .repitem .itemcontrol .repcontrol_del {
+    float: right;
+    font-size: 10px;
+    padding: 0px;
+    height: 18px;
+    width: 18px;
+}
+.repcontainer .repitem .itemcontrol .repcontrol_move {
+    cursor: move;
+    float: left;
+    font-size: 10px;
+    padding: 0px;
+    height: 18px;
+    width: 18px;
+}
+.sheet-statblock .sheet-npcatk .repitem,
+.sheet-statblock .sheet-npcatk .repcontrol,
+.sheet-statblock .sheet-npcatk .repcontainer,
+.sheet-buffs .repitem,
+.sheet-buffs .repcontrol,
+.sheet-buffs .repcontainer {
+    vertical-align: top;
+}
+.sheet-statblock .sheet-npcatk .repitem,
+.sheet-statblock .sheet-npcatk .repcontrol,
+.sheet-buffs .repitem,
+.sheet-buffs .repcontrol {
+    display: inline-block;
+}
+.sheet-statblock .sheet-npcatk .repcontainer {
+    display: inline;
+}
 
 
 
@@ -356,70 +587,66 @@ input[type=number]:disabled {
 
 
 
+.sheet-text-overflow-ellipses {
+	white-space: nowrap;
+	width: 100%;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
 
 
 
-
-	 .sheet-text-overflow-ellipses { 
-		white-space: nowrap;
-		width: 100%;
-		overflow: hidden;
-		text-overflow: ellipsis;
-   }
-   .sheet-block-a
-   {
-	width:25%
-   }
-
-  .sheet-block-a,
-  .charsheet .sheet-block-switch:checked ~ .sheet-block-b {
+.sheet-block-a,
+ .sheet-block-switch:checked~.sheet-block-b {
 	letter-spacing: normal;
 	display: block;
-  }
-  
-  .charsheet .sheet-block-b,
-  .charsheet .sheet-block-switch:checked ~ .sheet-block-a {
+}
+
+.sheet-block-b,
+ .sheet-block-switch:checked~.sheet-block-a {
 	letter-spacing: normal;
 	display: none;
-  }
+}
 
 
 
 
 /* Hide actual checkbox */
-input.sheet-block-switch[type=checkbox]
-{
-    opacity: 0;
-    width: 16px;
-    height: 16px;
-    position: relative;
-    top: 5px;
-    left: 6px;
-    margin: -10px;
-    cursor: pointer;
-    z-index: 1;
+input.sheet-block-switch[type=checkbox] {
+	opacity: 0;
+	width: 16px;
+	height: 16px;
+	position: relative;
+	top: 5px;
+	left: 6px;
+	margin: -10px;
+	cursor: pointer;
+	z-index: 1;
 }
 
 /* Fake checkbox */
-input.sheet-block-switch[type=checkbox] + span::before
-{
-    margin-right: 4px;
-    line-height: 14px;
-    text-align: center;
-    display: inline-block;
-    vertical-align: middle;
-    
-    content: "▼";
-    width: 14px;
-    height: 14px;
-    font-size: 12px;
-}
-input.sheet-block-switch[type=checkbox]:checked + span::before
-{
-    content: "►";
+input.sheet-block-switch[type=checkbox]+span::before {
+	margin-right: 4px;
+	line-height: 14px;
+	text-align: center;
+	display: inline-block;
+	vertical-align: middle;
+font-family: pictos;
+	content: "y";
+	width: 14px;
+	height: 14px;
+	font-size: 12px;
 }
 
-.fixSpacing{
+input.sheet-block-switch[type=checkbox]:checked+span::before {
+	font-family: pictos;
+	content: "2";
+	width: 14px;
+	height: 14px;
+	font-size: 12px;
+}
+
+.fixSpacing {
 	letter-spacing: normal !important;
 }
 
@@ -461,7 +688,7 @@ input.sheet-room1:checked~div.sheet-room-player-sheet,
 input.sheet-room2:checked~div.sheet-room-npc-sheet,
 input.sheet-room3:checked~div.sheet-room-workshop {
 	display: block;
-	background: #F4EFE4;
+	background: var(--sheet-background);
 	font-size: 11px;
 }
 
@@ -500,8 +727,8 @@ input.sheet-room1:checked+span.sheet-room1,
 input.sheet-room2:checked+span.sheet-room2,
 input.sheet-room3:checked+span.sheet-room3,
 input.sheet-room99:checked+span.sheet-room99 {
-	background: #F4EFE4;
-	color: white;
+	background: var(--sheet-background);
+	color: rgb(111, 10, 10);
 	border-radius: 4px;
 }
 
@@ -528,7 +755,7 @@ input.sheet-wrkshp10:checked~div.sheet-wrkshp-occupation-step,
 input.sheet-wrkshp11:checked~div.sheet-wrkshp-resources-step,
 input.sheet-wrkshp12:checked~div.sheet-wrkshp-journal-step {
 	display: block;
-	background: #F4EFE4;
+	background:var(--sheet-background);
 }
 
 input.sheet-wrkshp99:checked~div[class^="sheet-wrkshp"] {
@@ -572,8 +799,8 @@ input.sheet-wrkshp10:checked+span.sheet-wrkshp10,
 input.sheet-wrkshp11:checked+span.sheet-wrkshp11,
 input.sheet-wrkshp12:checked+span.sheet-wrkshp12,
 input.sheet-wrkshp99:checked+span.sheet-wrkshp99 {
-	background: #F4EFE4;
-	color: white;
+	background:var(--sheet-background);
+	color: rgb(71, 15, 15);
 	border-radius: 4px;
 }
 
@@ -786,16 +1013,17 @@ input.sheet-wrkshp99:checked+span.sheet-wrkshp99 {
 	border: 0;
 }
 
-.sheet-rolltemplate-mythcraft .sheet-main-content { }
-	
+.sheet-rolltemplate-mythcraft .sheet-main-content {}
 
-.sheet-wide-content{
+
+.sheet-wide-content {
 	width: 90%;
 	white-space: nowrap;
 	border: 0px 0px !important;
 	margin: 0px 0px !important;
 
 }
+
 .sheet-rolltemplate-mythcraft .sheet-main-content hr.sheet-roll {
 	width: 80%;
 	margin-left: auto;
@@ -824,6 +1052,7 @@ input.sheet-wrkshp99:checked+span.sheet-wrkshp99 {
 
 .sheet-overall-wrapper {
 	max-width: 832px;
+	background-color: var(--sheet-background);
 }
 
 
@@ -903,7 +1132,7 @@ input.sheet-tab2:checked~div.sheet-section-social,
 input.sheet-tab3:checked~div.sheet-section-magic,
 input.sheet-tab4:checked~div.sheet-section-bio {
 	display: block;
-	background: #F4EFE4;
+	background:var(--sheet-background);
 }
 
 input.sheet-tab99:checked~div[class^="sheet-section"] {
@@ -941,8 +1170,8 @@ input.sheet-tab4:checked+span.sheet-tab4,
 input.sheet-tab5:checked+span.sheet-tab5,
 input.sheet-tab6:checked+span.sheet-tab6,
 input.sheet-tab99:checked+span.sheet-tab99 {
-	background: #F4EFE4;
-	color: white;
+	background: var(--sheet-background);
+	color: rgb(77, 20, 20);
 	border-radius: 4px;
 }
 
@@ -1512,7 +1741,8 @@ input[disabled] {
 	border-color: #ddd;
 	cursor: not-allowed;
 	-moz-appearance: textfield;
-	appearance: textfield;;
+	appearance: textfield;
+	;
 }
 
 input[disabled].sheet-passive-skill-score {
@@ -1841,6 +2071,7 @@ span.sheet-ignored-roll {
 	/*word-spacing: -0.43em;*/
 	text-rendering: optimizespeed;
 }
+
 .sheet-row-normal {
 	letter-spacing: normal;
 	text-rendering: optimizespeed;
@@ -2301,6 +2532,7 @@ span.sheet-ignored-roll {
 	text-rendering: auto;
 	width: 41.6666%;
 }
+
 .sheet-offset-1-3,
 .sheet-rolltemplate-mythcraft .sheet-offset-1-3 {
 	margin-left: 33.33333%;
@@ -4339,8 +4571,7 @@ input[name="attr_awareness_awr"].sheet-core-attribute-content,
 input[name="attr_intellegence_int"].sheet-core-attribute-content,
 input[name="attr_charisma_cha"].sheet-core-attribute-content,
 input[name="attr_luck_luck"].sheet-core-attribute-content,
-input[name="attr_coordination_cor"].sheet-core-attribute-content
-{
+input[name="attr_coordination_cor"].sheet-core-attribute-content {
 
 	width: var(--attribute-interior-content);
 	height: var(--attribute-interior-content) !important;
@@ -4351,8 +4582,9 @@ input[name="attr_coordination_cor"].sheet-core-attribute-content
 	align-items: center;
 	justify-content: center;
 	padding: 0 0 !important;
-	margin: 0 0  !important;
+	margin: 0 0 !important;
 	letter-spacing: normal !important;
+	font-size: 35px;
 }
 
 .sheet-core-attribute {
@@ -4366,8 +4598,8 @@ input[name="attr_coordination_cor"].sheet-core-attribute-content
 			black 5px,
 			white 5px,
 			white 20px);
-	border: 3px solid black; 
-	border-radius: var(--attribute-exterior-ring);	
+	border: 3px solid black;
+	border-radius: var(--attribute-exterior-ring);
 }
 
 
@@ -4394,9 +4626,10 @@ input[name="attr_coordination_cor"].sheet-core-attribute-content
 	left: var(--attribute-label-width) !important;
 }
 
-.sheet-core-attribute span:nth-child(2){
-font-size: 18px;
-} 
+.sheet-core-attribute span:nth-child(2) {
+	font-size: 18px;
+}
+
 .sheet-derived-attribute {
 	display: flex;
 	align-items: center;
@@ -4407,8 +4640,8 @@ font-size: 18px;
 			black 5px,
 			white 5px,
 			white 20px);
-	border: 3px solid black;	 
-	border-radius: var(--derived-attribute-exterior-ring);	 
+	border: 3px solid black;
+	border-radius: var(--derived-attribute-exterior-ring);
 
 	position: relative !important;
 	top: -67px !important;
@@ -4420,8 +4653,8 @@ font-size: 18px;
 	width: var(--derived-attribute-interior-content);
 	height: var(--derived-attribute-interior-content);
 	background: white;
-	border: 3px solid white;  
-	border-radius: var(--derived-attribute-interior-content);  
+	border: 3px solid white;
+	border-radius: var(--derived-attribute-interior-content);
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -4431,20 +4664,19 @@ input[name="attr_reflexes_ref"].sheet-derived-attribute-content,
 input[name="attr_fortitude_for"].sheet-derived-attribute-content,
 input[name="attr_anticipation_ant"].sheet-derived-attribute-content,
 input[name="attr_Logic_log"].sheet-derived-attribute-content,
-input[name="attr_willpower_wil"].sheet-derived-attribute-content
-{
+input[name="attr_willpower_wil"].sheet-derived-attribute-content {
 
-	
+
 	width: var(--derived-attribute-interior-content);
 	height: var(--derived-attribute-interior-content) !important;
 	background: white;
 	border: 3px solid white !important;
-	border-radius: var(--derived-attribute-interior-content); 
+	border-radius: var(--derived-attribute-interior-content);
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	padding: 0 0 !important;
-	margin: 0 0  !important;
+	margin: 0 0 !important;
 	letter-spacing: normal !important;
 }
 
@@ -4458,16 +4690,16 @@ input[name="attr_willpower_wil"].sheet-derived-attribute-content
 	left: var(--attribute-derived-label-width) !important;
 }
 
- 
-.sheet-roll-stat{
+
+.sheet-roll-stat {
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	width: var(--roll-attribute-button);
 	height: var(--roll-attribute-button);
-	
-	border: 1px solid gray;	 
-	border-radius: var(--roll-attribute-button);	 
+
+	border: 1px solid gray;
+	border-radius: var(--roll-attribute-button);
 
 	position: relative !important;
 	top: var(--roll-attribute-button-top-offset) !important;
@@ -4476,7 +4708,8 @@ input[name="attr_willpower_wil"].sheet-derived-attribute-content
 
 
 
- div.sheet-row.sheet-attribute-bubbles{
-	height:110px !important;
- }
+div.sheet-row.sheet-attribute-bubbles {
+	height: 110px !important;
+}
+
 /* End Core Mythcraft Stat Row */
