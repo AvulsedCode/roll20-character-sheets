@@ -1,7 +1,7 @@
 entryTalent: {
-    prerequisites: ["Class Entry", "", "Character Level 2"],
-        flavorTest: "",
-            abilities: [
+    "prerequisites": ["Class Entry", "", "Character Level 2"],
+        "FlavorText": "",
+            "abilities": [
                 {
                     name: "",
                     description: "",

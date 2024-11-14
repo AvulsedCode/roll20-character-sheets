@@ -63,7 +63,7 @@ const beasts = [
             tremorsense: "",
             truesight: ""
         },
-        DR: [""],
+        DR: [],
         skills: [
         ],
         traits: ["Unerring Mind"],
@@ -194,7 +194,7 @@ const beasts = [
             tremorsense: "60ft",
             truesight: ""
         },
-        DR: [""],
+        DR: [],
         skills: [
         ],
         traits: ["Steel Mind", "Unerring Mind", "Vigilant"],
@@ -315,11 +315,11 @@ const beasts = [
             tremorsense: "",
             truesight: ""
         },
-        DR: [""],
+        DR: [],
         skills: [
             { skillAttribute: "", SkillName: "", skillBonus: 0 }
         ],
-        traits: [""],
+        traits: [],
         features: [
             { featureName: "", featureDescription: "" },
         ],
@@ -465,11 +465,11 @@ const beasts = [
             tremorsense: "",
             truesight: ""
         },
-        DR: [""],
+        DR: [],
         skills: [
             { skillAttribute: "", SkillName: "", skillBonus: 0 }
         ],
-        traits: [""],
+        traits: [],
         features: [
             { featureName: "", featureDescription: "" },
         ],
@@ -614,11 +614,11 @@ const beasts = [
             tremorsense: "",
             truesight: ""
         },
-        DR: [""],
+        DR: [],
         skills: [
             { skillAttribute: "", SkillName: "", skillBonus: 0 }
         ],
-        traits: [""],
+        traits: [],
         features: [
             { featureName: "", featureDescription: "" },
         ],
@@ -763,11 +763,11 @@ const beasts = [
             tremorsense: "",
             truesight: ""
         },
-        DR: [""],
+        DR: [],
         skills: [
             { skillAttribute: "", SkillName: "", skillBonus: 0 }
         ],
-        traits: [""],
+        traits: [],
         features: [
             { featureName: "", featureDescription: "" },
         ],
@@ -912,11 +912,11 @@ const beasts = [
             tremorsense: "",
             truesight: ""
         },
-        DR: [""],
+        DR: [],
         skills: [
             { skillAttribute: "", SkillName: "", skillBonus: 0 }
         ],
-        traits: [""],
+        traits: [],
         features: [
             { featureName: "", featureDescription: "" },
         ],
@@ -1061,11 +1061,11 @@ const beasts = [
             tremorsense: "",
             truesight: ""
         },
-        DR: [""],
+        DR: [],
         skills: [
             { skillAttribute: "", SkillName: "", skillBonus: 0 }
         ],
-        traits: [""],
+        traits: [],
         features: [
             { featureName: "", featureDescription: "" },
         ],
@@ -1210,11 +1210,11 @@ const beasts = [
             tremorsense: "",
             truesight: ""
         },
-        DR: [""],
+        DR: [],
         skills: [
             { skillAttribute: "", SkillName: "", skillBonus: 0 }
         ],
-        traits: [""],
+        traits: [],
         features: [
             { featureName: "", featureDescription: "" },
         ],
@@ -1359,11 +1359,11 @@ const beasts = [
             tremorsense: "",
             truesight: ""
         },
-        DR: [""],
+        DR: [],
         skills: [
             { skillAttribute: "", SkillName: "", skillBonus: 0 }
         ],
-        traits: [""],
+        traits: [],
         features: [
             { featureName: "", featureDescription: "" },
         ],
@@ -1508,11 +1508,11 @@ const beasts = [
             tremorsense: "",
             truesight: ""
         },
-        DR: [""],
+        DR: [],
         skills: [
             { skillAttribute: "", SkillName: "", skillBonus: 0 }
         ],
-        traits: [""],
+        traits: [],
         features: [
             { featureName: "", featureDescription: "" },
         ],
@@ -1657,11 +1657,11 @@ const beasts = [
             tremorsense: "",
             truesight: ""
         },
-        DR: [""],
+        DR: [],
         skills: [
             { skillAttribute: "", SkillName: "", skillBonus: 0 }
         ],
-        traits: [""],
+        traits: [],
         features: [
             { featureName: "", featureDescription: "" },
         ],
@@ -1806,11 +1806,11 @@ const beasts = [
             tremorsense: "",
             truesight: ""
         },
-        DR: [""],
+        DR: [],
         skills: [
             { skillAttribute: "", SkillName: "", skillBonus: 0 }
         ],
-        traits: [""],
+        traits: [],
         features: [
             { featureName: "", featureDescription: "" },
         ],
@@ -1955,11 +1955,11 @@ const beasts = [
             tremorsense: "",
             truesight: ""
         },
-        DR: [""],
+        DR: [],
         skills: [
             { skillAttribute: "", SkillName: "", skillBonus: 0 }
         ],
-        traits: [""],
+        traits: [],
         features: [
             { featureName: "", featureDescription: "" },
         ],
@@ -2104,11 +2104,11 @@ const beasts = [
             tremorsense: "",
             truesight: ""
         },
-        DR: [""],
+        DR: [],
         skills: [
             { skillAttribute: "", SkillName: "", skillBonus: 0 }
         ],
-        traits: [""],
+        traits: [],
         features: [
             { featureName: "", featureDescription: "" },
         ],
@@ -2253,11 +2253,11 @@ const beasts = [
             tremorsense: "",
             truesight: ""
         },
-        DR: [""],
+        DR: [],
         skills: [
             { skillAttribute: "", SkillName: "", skillBonus: 0 }
         ],
-        traits: [""],
+        traits: [],
         features: [
             { featureName: "", featureDescription: "" },
         ],
@@ -2402,11 +2402,11 @@ const beasts = [
             tremorsense: "",
             truesight: ""
         },
-        DR: [""],
+        DR: [],
         skills: [
             { skillAttribute: "", SkillName: "", skillBonus: 0 }
         ],
-        traits: [""],
+        traits: [],
         features: [
             { featureName: "", featureDescription: "" },
         ],
@@ -2551,11 +2551,11 @@ const beasts = [
             tremorsense: "",
             truesight: ""
         },
-        DR: [""],
+        DR: [],
         skills: [
             { skillAttribute: "", SkillName: "", skillBonus: 0 }
         ],
-        traits: [""],
+        traits: [],
         features: [
             { featureName: "", featureDescription: "" },
         ],
@@ -2700,11 +2700,11 @@ const beasts = [
             tremorsense: "",
             truesight: ""
         },
-        DR: [""],
+        DR: [],
         skills: [
             { skillAttribute: "", SkillName: "", skillBonus: 0 }
         ],
-        traits: [""],
+        traits: [],
         features: [
             { featureName: "", featureDescription: "" },
         ],
@@ -2849,11 +2849,11 @@ const beasts = [
             tremorsense: "",
             truesight: ""
         },
-        DR: [""],
+        DR: [],
         skills: [
             { skillAttribute: "", SkillName: "", skillBonus: 0 }
         ],
-        traits: [""],
+        traits: [],
         features: [
             { featureName: "", featureDescription: "" },
         ],
@@ -2998,11 +2998,11 @@ const beasts = [
             tremorsense: "",
             truesight: ""
         },
-        DR: [""],
+        DR: [],
         skills: [
             { skillAttribute: "", SkillName: "", skillBonus: 0 }
         ],
-        traits: [""],
+        traits: [],
         features: [
             { featureName: "", featureDescription: "" },
         ],
@@ -3147,11 +3147,11 @@ const beasts = [
             tremorsense: "",
             truesight: ""
         },
-        DR: [""],
+        DR: [],
         skills: [
             { skillAttribute: "", SkillName: "", skillBonus: 0 }
         ],
-        traits: [""],
+        traits: [],
         features: [
             { featureName: "", featureDescription: "" },
         ],
@@ -3296,11 +3296,11 @@ const beasts = [
             tremorsense: "",
             truesight: ""
         },
-        DR: [""],
+        DR: [],
         skills: [
             { skillAttribute: "", SkillName: "", skillBonus: 0 }
         ],
-        traits: [""],
+        traits: [],
         features: [
             { featureName: "", featureDescription: "" },
         ],
@@ -3445,11 +3445,11 @@ const beasts = [
             tremorsense: "",
             truesight: ""
         },
-        DR: [""],
+        DR: [],
         skills: [
             { skillAttribute: "", SkillName: "", skillBonus: 0 }
         ],
-        traits: [""],
+        traits: [],
         features: [
             { featureName: "", featureDescription: "" },
         ],
@@ -3594,11 +3594,11 @@ const beasts = [
             tremorsense: "",
             truesight: ""
         },
-        DR: [""],
+        DR: [],
         skills: [
             { skillAttribute: "", SkillName: "", skillBonus: 0 }
         ],
-        traits: [""],
+        traits: [],
         features: [
             { featureName: "", featureDescription: "" },
         ],
@@ -3743,11 +3743,11 @@ const beasts = [
             tremorsense: "",
             truesight: ""
         },
-        DR: [""],
+        DR: [],
         skills: [
             { skillAttribute: "", SkillName: "", skillBonus: 0 }
         ],
-        traits: [""],
+        traits: [],
         features: [
             { featureName: "", featureDescription: "" },
         ],
@@ -3892,11 +3892,11 @@ const beasts = [
             tremorsense: "",
             truesight: ""
         },
-        DR: [""],
+        DR: [],
         skills: [
             { skillAttribute: "", SkillName: "", skillBonus: 0 }
         ],
-        traits: [""],
+        traits: [],
         features: [
             { featureName: "", featureDescription: "" },
         ],
@@ -4041,11 +4041,11 @@ const beasts = [
             tremorsense: "",
             truesight: ""
         },
-        DR: [""],
+        DR: [],
         skills: [
             { skillAttribute: "", SkillName: "", skillBonus: 0 }
         ],
-        traits: [""],
+        traits: [],
         features: [
             { featureName: "", featureDescription: "" },
         ],
@@ -4190,11 +4190,11 @@ const beasts = [
             tremorsense: "",
             truesight: ""
         },
-        DR: [""],
+        DR: [],
         skills: [
             { skillAttribute: "", SkillName: "", skillBonus: 0 }
         ],
-        traits: [""],
+        traits: [],
         features: [
             { featureName: "", featureDescription: "" },
         ],
@@ -4339,11 +4339,11 @@ const beasts = [
             tremorsense: "",
             truesight: ""
         },
-        DR: [""],
+        DR: [],
         skills: [
             { skillAttribute: "", SkillName: "", skillBonus: 0 }
         ],
-        traits: [""],
+        traits: [],
         features: [
             { featureName: "", featureDescription: "" },
         ],
@@ -4488,11 +4488,11 @@ const beasts = [
             tremorsense: "",
             truesight: ""
         },
-        DR: [""],
+        DR: [],
         skills: [
             { skillAttribute: "", SkillName: "", skillBonus: 0 }
         ],
-        traits: [""],
+        traits: [],
         features: [
             { featureName: "", featureDescription: "" },
         ],
@@ -4637,11 +4637,11 @@ const beasts = [
             tremorsense: "",
             truesight: ""
         },
-        DR: [""],
+        DR: [],
         skills: [
             { skillAttribute: "", SkillName: "", skillBonus: 0 }
         ],
-        traits: [""],
+        traits: [],
         features: [
             { featureName: "", featureDescription: "" },
         ],
@@ -4786,11 +4786,11 @@ const beasts = [
             tremorsense: "",
             truesight: ""
         },
-        DR: [""],
+        DR: [],
         skills: [
             { skillAttribute: "", SkillName: "", skillBonus: 0 }
         ],
-        traits: [""],
+        traits: [],
         features: [
             { featureName: "", featureDescription: "" },
         ],
@@ -4935,11 +4935,11 @@ const beasts = [
             tremorsense: "",
             truesight: ""
         },
-        DR: [""],
+        DR: [],
         skills: [
             { skillAttribute: "", SkillName: "", skillBonus: 0 }
         ],
-        traits: [""],
+        traits: [],
         features: [
             { featureName: "", featureDescription: "" },
         ],
@@ -5084,11 +5084,11 @@ const beasts = [
             tremorsense: "",
             truesight: ""
         },
-        DR: [""],
+        DR: [],
         skills: [
             { skillAttribute: "", SkillName: "", skillBonus: 0 }
         ],
-        traits: [""],
+        traits: [],
         features: [
             { featureName: "", featureDescription: "" },
         ],
@@ -5233,11 +5233,11 @@ const beasts = [
             tremorsense: "",
             truesight: ""
         },
-        DR: [""],
+        DR: [],
         skills: [
             { skillAttribute: "", SkillName: "", skillBonus: 0 }
         ],
-        traits: [""],
+        traits: [],
         features: [
             { featureName: "", featureDescription: "" },
         ],
@@ -5382,11 +5382,11 @@ const beasts = [
             tremorsense: "",
             truesight: ""
         },
-        DR: [""],
+        DR: [],
         skills: [
             { skillAttribute: "", SkillName: "", skillBonus: 0 }
         ],
-        traits: [""],
+        traits: [],
         features: [
             { featureName: "", featureDescription: "" },
         ],
@@ -5531,11 +5531,11 @@ const beasts = [
             tremorsense: "",
             truesight: ""
         },
-        DR: [""],
+        DR: [],
         skills: [
             { skillAttribute: "", SkillName: "", skillBonus: 0 }
         ],
-        traits: [""],
+        traits: [],
         features: [
             { featureName: "", featureDescription: "" },
         ],
@@ -5680,11 +5680,11 @@ const beasts = [
             tremorsense: "",
             truesight: ""
         },
-        DR: [""],
+        DR: [],
         skills: [
             { skillAttribute: "", SkillName: "", skillBonus: 0 }
         ],
-        traits: [""],
+        traits: [],
         features: [
             { featureName: "", featureDescription: "" },
         ],
@@ -5829,11 +5829,11 @@ const beasts = [
             tremorsense: "",
             truesight: ""
         },
-        DR: [""],
+        DR: [],
         skills: [
             { skillAttribute: "", SkillName: "", skillBonus: 0 }
         ],
-        traits: [""],
+        traits: [],
         features: [
             { featureName: "", featureDescription: "" },
         ],
@@ -5978,11 +5978,11 @@ const beasts = [
             tremorsense: "",
             truesight: ""
         },
-        DR: [""],
+        DR: [],
         skills: [
             { skillAttribute: "", SkillName: "", skillBonus: 0 }
         ],
-        traits: [""],
+        traits: [],
         features: [
             { featureName: "", featureDescription: "" },
         ],
@@ -6127,11 +6127,11 @@ const beasts = [
             tremorsense: "",
             truesight: ""
         },
-        DR: [""],
+        DR: [],
         skills: [
             { skillAttribute: "", SkillName: "", skillBonus: 0 }
         ],
-        traits: [""],
+        traits: [],
         features: [
             { featureName: "", featureDescription: "" },
         ],
@@ -6276,11 +6276,11 @@ const beasts = [
             tremorsense: "",
             truesight: ""
         },
-        DR: [""],
+        DR: [],
         skills: [
             { skillAttribute: "", SkillName: "", skillBonus: 0 }
         ],
-        traits: [""],
+        traits: [],
         features: [
             { featureName: "", featureDescription: "" },
         ],
@@ -6425,11 +6425,11 @@ const beasts = [
             tremorsense: "",
             truesight: ""
         },
-        DR: [""],
+        DR: [],
         skills: [
             { skillAttribute: "", SkillName: "", skillBonus: 0 }
         ],
-        traits: [""],
+        traits: [],
         features: [
             { featureName: "", featureDescription: "" },
         ],
@@ -6574,11 +6574,11 @@ const beasts = [
             tremorsense: "",
             truesight: ""
         },
-        DR: [""],
+        DR: [],
         skills: [
             { skillAttribute: "", SkillName: "", skillBonus: 0 }
         ],
-        traits: [""],
+        traits: [],
         features: [
             { featureName: "", featureDescription: "" },
         ],
@@ -6723,11 +6723,11 @@ const beasts = [
             tremorsense: "",
             truesight: ""
         },
-        DR: [""],
+        DR: [],
         skills: [
             { skillAttribute: "", SkillName: "", skillBonus: 0 }
         ],
-        traits: [""],
+        traits: [],
         features: [
             { featureName: "", featureDescription: "" },
         ],
@@ -6872,11 +6872,11 @@ const beasts = [
             tremorsense: "",
             truesight: ""
         },
-        DR: [""],
+        DR: [],
         skills: [
             { skillAttribute: "", SkillName: "", skillBonus: 0 }
         ],
-        traits: [""],
+        traits: [],
         features: [
             { featureName: "", featureDescription: "" },
         ],
@@ -7021,11 +7021,11 @@ const beasts = [
             tremorsense: "",
             truesight: ""
         },
-        DR: [""],
+        DR: [],
         skills: [
             { skillAttribute: "", SkillName: "", skillBonus: 0 }
         ],
-        traits: [""],
+        traits: [],
         features: [
             { featureName: "", featureDescription: "" },
         ],
@@ -7170,11 +7170,11 @@ const beasts = [
             tremorsense: "",
             truesight: ""
         },
-        DR: [""],
+        DR: [],
         skills: [
             { skillAttribute: "", SkillName: "", skillBonus: 0 }
         ],
-        traits: [""],
+        traits: [],
         features: [
             { featureName: "", featureDescription: "" },
         ],
@@ -7319,11 +7319,11 @@ const beasts = [
             tremorsense: "",
             truesight: ""
         },
-        DR: [""],
+        DR: [],
         skills: [
             { skillAttribute: "", SkillName: "", skillBonus: 0 }
         ],
-        traits: [""],
+        traits: [],
         features: [
             { featureName: "", featureDescription: "" },
         ],
@@ -7468,11 +7468,11 @@ const beasts = [
             tremorsense: "",
             truesight: ""
         },
-        DR: [""],
+        DR: [],
         skills: [
             { skillAttribute: "", SkillName: "", skillBonus: 0 }
         ],
-        traits: [""],
+        traits: [],
         features: [
             { featureName: "", featureDescription: "" },
         ],
@@ -7617,11 +7617,11 @@ const beasts = [
             tremorsense: "",
             truesight: ""
         },
-        DR: [""],
+        DR: [],
         skills: [
             { skillAttribute: "", SkillName: "", skillBonus: 0 }
         ],
-        traits: [""],
+        traits: [],
         features: [
             { featureName: "", featureDescription: "" },
         ],
@@ -7766,11 +7766,11 @@ const beasts = [
             tremorsense: "",
             truesight: ""
         },
-        DR: [""],
+        DR: [],
         skills: [
             { skillAttribute: "", SkillName: "", skillBonus: 0 }
         ],
-        traits: [""],
+        traits: [],
         features: [
             { featureName: "", featureDescription: "" },
         ],
@@ -7915,11 +7915,11 @@ const beasts = [
             tremorsense: "",
             truesight: ""
         },
-        DR: [""],
+        DR: [],
         skills: [
             { skillAttribute: "", SkillName: "", skillBonus: 0 }
         ],
-        traits: [""],
+        traits: [],
         features: [
             { featureName: "", featureDescription: "" },
         ],
@@ -8064,11 +8064,11 @@ const beasts = [
             tremorsense: "",
             truesight: ""
         },
-        DR: [""],
+        DR: [],
         skills: [
             { skillAttribute: "", SkillName: "", skillBonus: 0 }
         ],
-        traits: [""],
+        traits: [],
         features: [
             { featureName: "", featureDescription: "" },
         ],
@@ -8213,11 +8213,11 @@ const beasts = [
             tremorsense: "",
             truesight: ""
         },
-        DR: [""],
+        DR: [],
         skills: [
             { skillAttribute: "", SkillName: "", skillBonus: 0 }
         ],
-        traits: [""],
+        traits: [],
         features: [
             { featureName: "", featureDescription: "" },
         ],
@@ -8362,11 +8362,11 @@ const beasts = [
             tremorsense: "",
             truesight: ""
         },
-        DR: [""],
+        DR: [],
         skills: [
             { skillAttribute: "", SkillName: "", skillBonus: 0 }
         ],
-        traits: [""],
+        traits: [],
         features: [
             { featureName: "", featureDescription: "" },
         ],
@@ -8511,11 +8511,11 @@ const beasts = [
             tremorsense: "",
             truesight: ""
         },
-        DR: [""],
+        DR: [],
         skills: [
             { skillAttribute: "", SkillName: "", skillBonus: 0 }
         ],
-        traits: [""],
+        traits: [],
         features: [
             { featureName: "", featureDescription: "" },
         ],
@@ -8660,11 +8660,11 @@ const beasts = [
             tremorsense: "",
             truesight: ""
         },
-        DR: [""],
+        DR: [],
         skills: [
             { skillAttribute: "", SkillName: "", skillBonus: 0 }
         ],
-        traits: [""],
+        traits: [],
         features: [
             { featureName: "", featureDescription: "" },
         ],
@@ -8809,11 +8809,11 @@ const beasts = [
             tremorsense: "",
             truesight: ""
         },
-        DR: [""],
+        DR: [],
         skills: [
             { skillAttribute: "", SkillName: "", skillBonus: 0 }
         ],
-        traits: [""],
+        traits: [],
         features: [
             { featureName: "", featureDescription: "" },
         ],
@@ -8963,11 +8963,11 @@ const beasts = [
             tremorsense: "",
             truesight: ""
         },
-        DR: [""],
+        DR: [],
         skills: [
             { skillAttribute: "", SkillName: "", skillBonus: 0 }
         ],
-        traits: [""],
+        traits: [],
         features: [
             { featureName: "", featureDescription: "" },
         ],

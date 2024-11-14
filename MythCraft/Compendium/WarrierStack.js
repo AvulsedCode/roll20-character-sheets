@@ -15,12 +15,12 @@ prerequisites: ["Class Entry", "", "Character Level 2"],
 flavorTest: "",
 abilities: [
 {
-    abilityname: "",
-    abilitydescription: "",
+    "abilityname": "",
+    "abilitydescription": "",
 },
 {
-    abilityname: "",
-    abilitydescription: "",
+    "abilityname": "",
+    "abilitydescription": "",
 }
 ]
 
@@ -32,7 +32,7 @@ description: "You are a proven warrior, capable of adapting to any situation on 
 talents: [
 {
 talentname: "",
-prerequisites: [""],
+prerequisites: [],
 flavorTest: "",
 abilities: [
 {
@@ -52,7 +52,7 @@ description: "An unparalleled sniper, you can offer covering fire to your allies
 talents: [
 {
 talentname: "",
-prerequisites: [""],
+prerequisites: [],
 flavorTest: "",
 abilities: [
 {
@@ -73,7 +73,7 @@ description: "You lead the charge in combat, locking down enemies on the battlef
 talents: [
 {
 talentname: "",
-prerequisites: [""],
+prerequisites: [],
 flavorTest: "",
 abilities: [
 {
@@ -94,7 +94,7 @@ description: ". A master of warfare, you know how and when to issue orders.Help 
 talents: [
 {
 talentname: "",
-prerequisites: [""],
+prerequisites: [],
 flavorTest: "",
 abilities: [
 {

@@ -19,12 +19,12 @@ prerequisites: ["Class Entry", "", "Character Level 2"],
 flavorTest: "",
 abilities: [
 {
-    abilityname: "",
-    abilitydescription: "",
+    "abilityname": "",
+    "abilitydescription": "",
 },
 {
-    abilityname: "",
-    abilitydescription: "",
+    "abilityname": "",
+    "abilitydescription": "",
 }
 ]
 
@@ -36,7 +36,7 @@ description: "You channel your corrupted Essence into a scouring aura that damag
 talents: [
 {
 talentname: "",
-prerequisites: [""],
+prerequisites: [],
 flavorTest: "",
 abilities: [
 {
@@ -57,7 +57,7 @@ description: "By stealing energy from spells and planar creatures around you, yo
 talents: [
 {
 talentname: "",
-prerequisites: [""],
+prerequisites: [],
 flavorTest: "",
 abilities: [
 {
@@ -78,7 +78,7 @@ description: "You use the external energy that you have attached to your soul to
 talents: [
 {
 talentname: "",
-prerequisites: [""],
+prerequisites: [],
 flavorTest: "",
 abilities: [
 {
@@ -99,7 +99,7 @@ description: "Through thievery or trickery, you gain access to one or more divin
 talents: [
 {
 talentname: "",
-prerequisites: [""],
+prerequisites: [],
 flavorTest: "",
 abilities: [
 {

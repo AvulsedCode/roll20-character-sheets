@@ -3,7 +3,7 @@ mcStandardProfessions = [
         name: {
             noun: "Enave",
         },
-        occupations: [""],
+        occupations: [],
         description: "You command a versatile set of skills and an equally versatile personality. A classic jack- of - all - trades, and master of none, you are equally skilled charming your way out of a sticky situation, picking locks, or evading attackers with your quick wits and nimble movements. You have learned to adapt to whatever situation life throws at you and have a pension for being able to handle any job with some amount of success due to your sheer adaptability.",
         StartingEquipment: [],
         skillsEachRank: {
@@ -17,7 +17,7 @@ mcStandardProfessions = [
         name: {
             noun: "Noble title",
         },
-        occupations: [""],
+        occupations: [],
         description: "You might have been born into wealth and privilege, with a strong family lineage and a respected name; or alternatively, through luck or deed, you have been bestowed a title among the aristocracy of your region.With your education, wealth, and connections, you have the capacity to shape the world around you, whether it is through politics, diplomacy, or simply using your family’s wealth and influence to fund worthy causes and projects. You strive to maintain the honor and prestige of your family name, to protect your position, and to ensure your continued prosperity.",
         StartingEquipment: [],
         skillsEachRank: {
@@ -37,7 +37,7 @@ mcStandardProfessions = [
         name: {
             noun: "Outlander",
         },
-        occupations: [""],
+        occupations: [],
         description: "You come from a different place, with different customs and beliefs than those around you.Perhaps you hail from a faroff nation, or maybe you are more at home in the wilderness than in an urban environment.Your unique perspective makes you a valuable asset, as you bring fresh ideas and new ways of thinking to the table.However, it can also make you an outsider, seen as strange or untrustworthy by those who do not understand your ways.",
         StartingEquipment: [],
         skillsEachRank: {

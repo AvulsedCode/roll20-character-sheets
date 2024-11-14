@@ -110,7 +110,7 @@ mcStandardProfessions = [
         name: {
             noun: "Born Warrior",
         },
-        occupations: [""],
+        occupations: [],
         description: "You possess a natural talent for combat and have an unshakable bravery that inspires those around you.With your strong body and quick reflexes, you are a formidable force, always ready to defend those in need and vanquish evil wherever it may lurk.",
         StartingEquipment: [],
         skillsEachRank: {
@@ -140,7 +140,7 @@ mcStandardProfessions = [
         name: {
             noun: "Criminal",
         },
-        occupations: [""],
+        occupations: [],
         description: "You live on the fringes of society, always looking for opportunities to turn a profit through illegal means. Whether it is through thievery, blackmail, or shady deals, you have a knack for manipulating the law to your advantage, constantly staying one step ahead of the authorities.",
         StartingEquipment: [],
         skillsEachRank: {
@@ -168,7 +168,7 @@ mcStandardProfessions = [
         name: {
             noun: "Entrepreneur",
         },
-        occupations: [""],
+        occupations: [],
         description: "You have a keen eye for opportunity and an understanding of commerce. You are always seeking out new and innovative ways to make a profit, whether it’s through trading goods, investing in businesses, or developing new products.Your business savvy has made you one of the most successful individuals in your town, and you’re always looking for new opportunities to expand your wealth and influence.",
         StartingEquipment: [],
         skillsEachRank: {

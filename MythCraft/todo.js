@@ -1569,7 +1569,7 @@ const msStandardMagicItems = [
         damage:[{dice:"1d4", damageType:"fire"}],
         coreAttribute:"CHA",
         actionPointCost:{BaseValue:0,addAttribute:"",subtractFromAttribute:"", min:2},
-        range:"Reach 10 ft",
+        "Range":"Reach 10 ft",
         tags:["One-Handed", "Light", "Special"],
         type:"Magic",
         specialBlerb:"",

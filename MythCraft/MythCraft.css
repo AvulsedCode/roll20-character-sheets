@@ -14,7 +14,7 @@
 	--roll-attribute-button: 21px;
 	--roll-attribute-button-top-offset: -90px;
 	--roll-attribute-button-left-offset: 55px;
-	--attribute-derived-label-height: -115px;
+	--attribute-derived-label-height: -120px;
 	--attribute-derived-label-width: -7px;
 	--sheet-background: #F4EFE4;
 	;
@@ -4678,6 +4678,7 @@ input[name="attr_willpower_wil"].sheet-derived-attribute-content {
 	padding: 0 0 !important;
 	margin: 0 0 !important;
 	letter-spacing: normal !important;
+	font-size: 17px;
 }
 
 .sheet-derived-attribute-label {
@@ -4713,3 +4714,69 @@ div.sheet-row.sheet-attribute-bubbles {
 }
 
 /* End Core Mythcraft Stat Row */
+
+
+
+.sheet-PTH-lbl{
+	
+	letter-spacing: normal;
+	word-spacing: normal;
+	vertical-align: top;
+	text-rendering: auto;
+}
+.sheet-PTH-lab{
+	
+	letter-spacing: normal;
+	word-spacing: normal;
+	vertical-align: top;
+	text-rendering: auto;
+}
+
+.sheet-PTH-labline{
+	line-height:1em;
+	white-space:nowrap;
+	text-align:right;
+	margin-top:2px;}
+.sheet-roll-text{
+
+	}
+
+
+
+
+	.sheet-roll-text,button[type=roll].sheet-roll-text{
+		text-align:center;
+		text-decoration:none;
+		background:0 0;
+		background-image:none;border:none;box-shadow:none;text-shadow:none;
+		padding:inherit;margin:inherit;color:inherit;font-family:inherit;
+		font-size:inherit;line-height:inherit;text-transform:inherit;
+		text-align:inherit;vertical-align:inherit;border-radius:none;
+	}
+	button[type=action].sheet-roll-text:hover,
+	button[type=compendium].sheet-roll-text:hover,
+	button[type=roll].sheet-roll-text:hover,
+	button[type=roll].sheet-roll-text:hover span,
+	button[type=roll].sheet-roll-text:hover span.sheet-pseudoattr{
+		color:#be202e}
+	button[type=roll].sheet-roll-text:before{
+		content:none;
+	}
+	button[type=action].sheet-roll-text:focus,
+	button[type=compendium].sheet-roll-text:focus,
+	button[type=roll].sheet-roll-text:focus{
+		outline:0
+	}
+	.sheet-blacklabel button[type=roll].sheet-roll-text.sheet-big{
+		padding:0;margin:0;font-size:1.3em;line-height:1em
+	}
+	.sheet-blacklabel button[type=roll].sheet-roll-text.sheet-big.sheet-only{flex-grow:2}
+	button[type=roll].sheet-roll-text.sheet-margindent{margin-left:14px!important}
+	.sheet-statblock button[type=roll].sheet-roll-text{margin:0}
+	button[type=roll].sheet-roll-text.sheet-underl{margin-left:14px;border-bottom:1px dotted #999}
+	.sheet-spelllike .sheet-spell button[type=roll].sheet-roll-text.sheet-underl,
+	.sheet-spells .sheet-spell button[type=roll].sheet-roll-text.sheet-underl{font-style:italic}
+	.sheet-spells .sheet-spell button[type=roll].sheet-roll-text.sheet-underl{
+		margin-right:2px;border-bottom:1px dotted transparent}
+		.sheet-spells .sheet-spell button[type=roll].sheet-roll-text.sheet-underl:hover,
+		button[type=roll].sheet-roll-text.sheet-underl:hover{border-bottom:1px dotted #be202e}

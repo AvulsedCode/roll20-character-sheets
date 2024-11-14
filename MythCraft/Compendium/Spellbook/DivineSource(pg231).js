@@ -1,42 +1,42 @@
 const Divine  = {
-    DescriptiveParagraphs: [
+    "DescriptiveParagraphs": [
         "",
         "",
         ""],
-    Focus: "",
-    IntentParagraphs: [
+    "Focus": "",
+    "IntentParagraphs": [
         "",
         ""
     ],
-    BacklashParagraphs:
+    "BacklashParagraphs":
         [
             "",
             "",
             ""
         ],
-    CriticalCasts: "",
-    MagicTypes: {
-        additional: "",
-        cantrip: { hasCantrip: true, cantripText: "" }
+    "CriticalCasts": "",
+    "MagicTypes": {
+        "additional": "",
+        "cantrip": { "HasCantrip": true, "cantripText": "" }
     },
-    ArcaneTags: {
-        descriptionTest: "",
-        tagsList: [
-            { tagName: "", TagDescription: "" },
+    "ArcaneTags": {
+        "DescriptionTest": "",
+        "TagsList": [
+            { "tagName": "", "TagDescription": "" },
         ]
     },
-    TalentStacks: [
+    "TalentStacks": [
       
         
         {
-            displayName: "",
-            StackName: "",
-            prerequisites: [""],
-            isRepeatable: true,
-            incompatableWith: [""],
-            flavortext: "",
-            BenefitList: [  
-                { benefitName: "", BenefitDescription: "" },
+            "DisplayName": "",
+            "StackName": "",
+            "prerequisites": [],
+            "isRepeatable": true,
+            "incompatableWith": [],
+            "flavortext": "",
+            "BenefitList": [  
+               
             ],
         }
 
@@ -48,56 +48,55 @@ const Divine  = {
     },
     Cantrips: [
          {
-            cantripName: "",
-            prerequisites: [""],
-            APC: 2,
-            Range: 0,
-            Requires: "Gesture, Line of Effect",
-            Duration: "Instantaneous",
-            cantripDescription: "",
-            itallics: "",
-            scaling: [
-                { level: "", inproveRange: 0, improveDamage: "", addEffect: "" },
+            "CantripName": "",
+            "prerequisites": [],
+            "APC": 2,
+            "Range": 0,
+            "Requires": "Gesture, Line of Effect",
+            "Duration": "Instantaneous",
+            "CantripDescription": "",
+            "Itallics": "",
+            "scaling": [
            ]
         }
     ],
 Prayers:[{
-    PrayerName: "",
-    prerequisites: [""],
-    APC: 2,
-    Range: 0,
-    Requires: "Gesture, Line of Effect",
-    Duration: "Instantaneous",
-    prayerDescription: "",
-    itallics: "",
-    scaling: [
+    "PrayerName": "",
+    "prerequisites": [],
+    "APC": 2,
+    "Range": 0,
+    "Requires": "Gesture, Line of Effect",
+    "Duration": "Instantaneous",
+    "PrayerDescription": "",
+    "Itallics": "",
+    "scaling": [
         { level: "", inproveRange: 0, improveDamage: "", addEffect: "" },
    ]
 }
 ],
 Rituals:[{
     ritualName:"",
-    prerequisites: [""],
-    APC: 2,
-    SPC: 2,
-    Range: "",
-    Requires: "",
-    Duration: "",
-    ritualDescriptionParagraphs:[""],
-    Upcharges:[ ""],
+    "prerequisites": [],
+    "APC": 2,
+    "SPC": 2,
+    "Range": "",
+    "Requires": "",
+    "Duration": "",
+    ritualDescriptionParagraphs:[],
+    "Upcharges":[ ],
 },
 ],
 Spells:[
 {
-    spellName:"",
-    prerequisites: [""],
-    APC: 2,
-    SPC: 2,
-    Range: "",
-    Requires: "",
-    Duration: "",
-    spellDescriptionParagraphs:[""],
-    Upcharges:[ ""],
+    "SpellName":"",
+    "prerequisites": [],
+    "APC": 2,
+    "SPC": 2,
+    "Range": "",
+    "Requires": "",
+    "Duration": "",
+    "spellDescriptionParagraphs":[],
+    "Upcharges":[ ],
 },      
 ]
 };

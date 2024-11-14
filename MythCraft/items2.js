@@ -3,7 +3,7 @@ const lightArmor = [
         { "Armor": "Gambeson",              "AR": 10, "Tags": ["Light"], "REF": "+1",     "FORT": "+1", "ANT": "",  "LOG": "",  "WILL": "",     "STRmin":"","DEXmax":"",  "Speed":"",     "Resist": "Cold 1, Blunt 1", "Cost": 12, "ARMod":"" ,"flavorText":"",  "XtraActions":[]},
         { "Armor": "Hide",                  "AR": 11, "Tags": ["Light"], "REF": "",       "FORT": "+1",   "ANT": "",  "LOG": "",  "WILL": "",     "STRmin":"","DEXmax":"",  "Speed":"",     "Resist": "Cold 3","Cost": 25, "ARMod":"","flavorText":"",  "XtraActions":[]},
         { "Armor": "Robes (Command)",       "AR": 10, "Tags": ["Light"], "REF": "",       "FORT": "",     "ANT": "",  "LOG": "+1",  "WILL": "+1", "STRmin":"","DEXmax":"",  "Speed":"",     "Resist": "Psychic 3",  "Cost": 22 , "ARMod":"","flavorText":"",  "XtraActions":[]},
-        {  "Armor": "Robes (Corruption)",   "AR": 10, "Tags": ["Light"], "REF": "",       "FORT": "+2",    "ANT": "",  "LOG": "",  "WILL": "",     "STRmin":"","DEXmax":"",  "Speed":"",     "Resist": "Necrotic 3, Corrosive 3, Toxic 3",   "Cost": 55, "ARMod":"" ,"flavorText":"",  "XtraActions":[]},
+        { "Armor": "Robes (Corruption)",   "AR": 10, "Tags": ["Light"], "REF": "",       "FORT": "+2",    "ANT": "",  "LOG": "",  "WILL": "",     "STRmin":"","DEXmax":"",  "Speed":"",     "Resist": "Necrotic 3, Corrosive 3, Toxic 3",   "Cost": 55, "ARMod":"" ,"flavorText":"",  "XtraActions":[]},
         { "Armor": "Robes (Elemental)",     "AR": 11, "Tags": ["Light"], "REF": "+1",     "FORT": "+1", "ANT": "",  "LOG": "",  "WILL": "",     "STRmin":"","DEXmax":"",  "Speed":"",     "Resist": "Elemental 3",                         "Cost": 75 , "ARMod":"","flavorText":"",  "XtraActions":[]},
         { "Armor": "Robes (Mage)",          "AR": 10, "Tags": ["Light"], "REF": "+1",     "FORT": "+1", "ANT": "+1", "LOG": "+1",  "WILL": "+1", "STRmin":"","DEXmax":"",  "Speed":"",    "Resist": "Energy 2, Elemental 2","Cost": 105, "ARMod":"","flavorText":"",  "XtraActions":[]},
         { "Armor": "Robes (Starlight)",     "AR": 11, "Tags": ["Light"], "REF": "",       "FORT": "",     "ANT": "+1",  "LOG": "+1",  "WILL": "+2","STRmin":"","DEXmax":"",  "Speed":"",   "Resist": "Energy 2, Fire 2, Cold 2",  "Cost": 90 , "ARMod":"" ,"flavorText":"",  "XtraActions":[]},
@@ -27,8 +27,8 @@ const lightArmor = [
         { "Armor": "Kite Shield ",     "AR": 0, "Tags": ["Shield"], "REF": "+1",  "FORT": "+1",   "ANT": "",  "LOG": "",  "WILL": "","STRmin":"","DEXmax":"",  "Speed":"",   "Resist": "Physical 2",  "Cost": 60, "ARMod":"+2" , "flavorText":"", "XtraActions":[] },
         { "Armor": "Tower Shield",     "AR": 0, "Tags": ["Shield", "Two-Handed", "Unwieldy"], "REF": "",    "FORT": "",       "ANT": "",  "LOG": "",  "WILL": "","STRmin":"3","DEXmax":"10",  "Speed":"-5",   "Resist": "",  "Cost": 100, "ARMod":"" , "flavorText":"Tower shields have the two-handed and unwieldy tags. Rather than improving your AR or your other defenses, tower shields grant you Total Cover on one side.", "XtraActions":[
             {
-                ActionName:"Brace",
-                APCost:2,
-                Description:"You may spend 2 AP to brace the shield, which grants Partial Cover to a creature standing directly behind you, provided that the creature is your Size or smaller."
+                "ActionName":"Brace",
+                "APCost":2,
+                "Description":"You may spend 2 AP to brace the shield, which grants Partial Cover to a creature standing directly behind you, provided that the creature is your Size or smaller."
         }] },
     ];  

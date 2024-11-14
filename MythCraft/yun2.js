@@ -458,7 +458,7 @@ const mcStandardLineage = [
 				isRepeatable: false,
 				improvesExisting: "Darkvision",
 				frequency: "",
-				tags: [""],
+				tags: [],
 			},
 			{
 				name: "Dwarven Constitution",
@@ -467,7 +467,7 @@ const mcStandardLineage = [
 				isRepeatable: false,
 				improvesExisting: "",
 				frequency: "",
-				tags: [""],
+				tags: [],
 			},
 			{
 				name: "Dwarven Ingenuity",
@@ -476,7 +476,7 @@ const mcStandardLineage = [
 				isRepeatable: false,
 				improvesExisting: "",
 				frequency: "",
-				tags: [""],
+				tags: [],
 			},
 			{
 				name: "Dwarven Ingenuity II",
@@ -485,7 +485,7 @@ const mcStandardLineage = [
 				isRepeatable: false,
 				improvesExisting: "",
 				frequency: "",
-				tags: [""],
+				tags: [],
 			},
 			{
 				name: "Dwarven Ingenuity III",
@@ -494,7 +494,7 @@ const mcStandardLineage = [
 				isRepeatable: false,
 				improvesExisting: "",
 				frequency: "",
-				tags: [""],
+				tags: [],
 			},
 			{
 				name: "Earth-Blood",
@@ -503,7 +503,7 @@ const mcStandardLineage = [
 				isRepeatable: false,
 				improvesExisting: "",
 				frequency: "",
-				tags: [""],
+				tags: [],
 			},
 			{
 				name: "Earth-Blood II",
@@ -512,7 +512,7 @@ const mcStandardLineage = [
 				isRepeatable: false,
 				improvesExisting: "Earth-Blood",
 				frequency: "",
-				tags: [""],
+				tags: [],
 			},
 			{
 				name: "Earth-Blood III",
@@ -521,7 +521,7 @@ const mcStandardLineage = [
 				isRepeatable: false,
 				improvesExisting: "Earth-Blood II",
 				frequency: "",
-				tags: [""],
+				tags: [],
 			},
 			{
 				name: "Steel Heart",
@@ -530,7 +530,7 @@ const mcStandardLineage = [
 				isRepeatable: true,
 				improvesExisting: "",
 				frequency: "",
-				tags: [""],
+				tags: [],
 			},
 			{
 				name: "Stoutling",
@@ -548,7 +548,7 @@ const mcStandardLineage = [
 				isRepeatable: true,
 				improvesExisting: "",
 				frequency: "",
-				tags: [""],
+				tags: [],
 			},
 			{
 		],
@@ -1280,7 +1280,7 @@ const mcStandardLineage = [
 			},
 			{
 				name: "Bludgeon",
-				preReqs: [""],
+				preReqs: [],
 				description: "Your dominant hand grows in size and/ or strength and can be used as a weaponwith the stats of a Club.",
 				isRepeatable: false,
 				improvesExisting: "Razor",
@@ -1325,7 +1325,7 @@ const mcStandardLineage = [
 			},
 			{
 				name: "Hardened Form",
-				preReqs: [""],
+				preReqs: [],
 				description: " While you are not wearing armor, your AR and physical defenses increase by + 2.",
 				isRepeatable: false,
 				improvesExisting: "",
@@ -1352,7 +1352,7 @@ const mcStandardLineage = [
 			},
 			{
 				name: "Multimatter",
-				preReqs: [""],
+				preReqs: [],
 				description: ". Gain one of the following abilities that you did not choose at 1st level: Minor Photosynthesis, Oozing Movement, or Vestigial Life.",
 				isRepeatable: false,
 				improvesExisting: "",
@@ -1370,7 +1370,7 @@ const mcStandardLineage = [
 			},
 			{
 				name: "Iron Lungs",
-				preReqs: [""],
+				preReqs: [],
 				description: "You no longer need to breathe.",
 				isRepeatable: false,
 				improvesExisting: "",
@@ -1379,7 +1379,7 @@ const mcStandardLineage = [
 			},
 			{
 				name: "Rock-Hard Reinforcement",
-				preReqs: [""],
+				preReqs: [],
 				description: ". While you are not wearing armor, gain Resist Physical 3 when attacks target your REF or FORT.",
 				isRepeatable: false,
 				improvesExisting: "",
@@ -1388,7 +1388,7 @@ const mcStandardLineage = [
 			},
 			{
 				name: "Hygroscopy",
-				preReqs: [""],
+				preReqs: [],
 				description: "You no longer need to drink.",
 				isRepeatable: false,
 				improvesExisting: "",
@@ -1397,7 +1397,7 @@ const mcStandardLineage = [
 			},
 			{
 				name: "Silent Sentinel",
-				preReqs: [""],
+				preReqs: [],
 				description: "You no longer sleep in the traditional sense, but instead remain completely motionless for 6 hours in order to rejuvenate yourself.During this time, you are Unconscious, but you retain visual and auditory awareness of your surroundings.",
 				isRepeatable: false,
 				improvesExisting: "",
@@ -1498,7 +1498,7 @@ const mcStandardLineage = [
 			},
 			{
 				name: "Calm Observance",
-				preReqs: [""],
+				preReqs: [],
 				description: "Gain +6 Skill Points to spend on skills with the Observation tag.You cannot spend more than + 4 points on a single skill in this way.",
 				isRepeatable: true,
 				improvesExisting: "",
@@ -1507,7 +1507,7 @@ const mcStandardLineage = [
 			},
 			{
 				name: "Determined",
-				preReqs: [""],
+				preReqs: [],
 				description: "When you are reduced to 0 HP, immediately regain 1 HP. (1 / Rest).",
 				isRepeatable: false,
 				improvesExisting: "",
@@ -1534,7 +1534,7 @@ const mcStandardLineage = [
 			},
 			{
 				name: "Halfling Grace",
-				preReqs: [""],
+				preReqs: [],
 				description: " Gain +6 Skill Points to spend on skills with the Acrobatics tag.You cannot spend more than + 4 points on a single skill in this way.",
 				isRepeatable: true,
 				improvesExisting: "",
@@ -1543,7 +1543,7 @@ const mcStandardLineage = [
 			},
 			{
 				name: "Halfling Charm",
-				preReqs: [""],
+				preReqs: [],
 				description: "e. Gain +6 Skill Points to spend on skills with the Influence tag.You cannot spend more than + 4 points on a single skill in this way",
 				isRepeatable: true,
 				improvesExisting: "",
@@ -1552,7 +1552,7 @@ const mcStandardLineage = [
 			},
 			{
 				name: "Small but Mighty",
-				preReqs: [""],
+				preReqs: [],
 		description: " Whenever you use the Trip maneuver against a creature at least one Size larger than you, you may choose to make the attack using your DEX instead of your STR.If you do so, the target suffers a - 2 to their REF against this attack.",
 				isRepeatable: false,
 				improvesExisting: "",
@@ -2181,7 +2181,7 @@ const mcStandardLineage = [
 				isRepeatable: false,
 				improvesExisting: "",
 				frequency: "",
-				tags: [""],
+				tags: [],
 			},
 			{
 				name: "Natural Survivor",
