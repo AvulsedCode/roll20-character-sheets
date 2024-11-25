@@ -301,4 +301,37 @@ const mcStandardSkills = [
 
 
 
+Outstanding effort on Character Sheet 
+** Layout ** : Nov 26th:
+** Rolls  ** : Nov 30th: 
+- 30 Fields + Calculations for weapons
+  - Rolls
+  - Compendium Integration Drag and Drop
+- ~15 fields for Spells/Cantrips + Calculations
+  - Rolls
+  - Compendium Integration Drag and Drop
+- 3~<10 fields Talents & Abilities
+  - Points or Stats per Rest
+- Rest
+- Turns & Points
+- 2-5 fields (quick items)
+  - BOP
+  - Lineages
+  - Skills (non-roll integrated)
+  - Basic Inventory
+Compendium 
+** 5 Items working ** : Dec 7 : 
+
+Items directly Dependent on Compendium
+** some items from compendium ** : Dec 14 :
+- Spell Cards - even basic use
+- Charactermancer (most steps) - even basic use
+- Integration (clickable) functions
+- Drag-and-Drop
+
+** Reasses progress ** Dec 16th
+
+
+
+
 

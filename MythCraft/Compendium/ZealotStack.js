@@ -314,7 +314,7 @@ const Zealot = {
                 {
                     "TalentName": "Ardent Weapon",
                     "prerequisites": ["Zealot", "Consecrated Blade", "Unwavering"],
-                    "flavorTest": "Your holy weapon also deals +1d6 damage against the creature tag that you chose when you cast the ritual.When you cast the ritual choose whether the damage is physical, fire, radiant, or necrotic.",
+                    "flavorTest": "Your holy weapon also deals +1d6 damage against the creature tag that you chose when you cast the ritual. When you cast the ritual choose whether the damage is physical, fire, radiant, or necrotic.",
                     "abilities": [
 
                     ]
@@ -495,7 +495,7 @@ const Zealot = {
                     "abilities": [
                         {
                             "abilityname": "Divine Infusion",
-                            "abilitydescription": "Spend 1 AP when you touch an allied creature or when you hit with a weapon attack.Choose an ally and heal 1d10 HP, or hit an enemy with the weapon and deal + 1d10 radiant. (2 / Rest) ",
+                            "abilitydescription": "Spend 1 AP when you touch an allied creature or when you hit with a weapon attack. Choose an ally and heal 1d10 HP, or hit an enemy with the weapon and deal + 1d10 radiant. (2 / Rest) ",
                         },
 
                     ],
@@ -515,7 +515,7 @@ const Zealot = {
                     "abilities": [
                         {
                             "abilityname": "Cleanse",
-                            "abilitydescription": " Spend 3 AP to make a magical AWR attack against a creature�s WILL.If you hit, the creature takes 1d6 psychic and you can remove a condition from that creature: Focused, Protected, or Rallied.If you miss, you do not expend a use of this ability. (2 / Rest) ",
+                            "abilitydescription": " Spend 3 AP to make a magical AWR attack against a creature's WILL. If you hit, the creature takes 1d6 psychic and you can remove a condition from that creature: Focused, Protected, or Rallied. If you miss, you do not expend a use of this ability. (2 / Rest) ",
                         },
 
                     ],
@@ -812,7 +812,7 @@ const Zealot = {
                     "abilities": [
                         {
                             "abilityname": "Fervent Leader",
-                            "abilitydescription": "When an allied creature within range of your active aura is hit by an attack that targets their ANT,LOG, or WILL, you may choose for it to hit you instead. (CHA / Rest) ",
+                            "abilitydescription": "When an allied creature within range of your active aura is hit by an attack that targets their ANT, LOG, or WILL, you may choose for it to hit you instead. (CHA / Rest) ",
                         },
 
                     ],
