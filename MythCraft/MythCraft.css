@@ -20,12 +20,26 @@
 	;
 }
 
-* {
 
+html {
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
-	box-sizing: border-box;
-}
+  
+  	box-sizing: border-box;
+  }
+
+  *,
+  *:before,
+  *:after {
+	-webkit-box-sizing: inherit;
+	-moz-box-sizing: inherit;
+  	box-sizing: inherit;
+  }
+
+  button.btn.repcontrol_add::before,
+  button.btn.repcontrol_edit::after{
+  	box-sizing: content-box;
+  }
 
 .sheet-naked {
 	appearance: none;
@@ -145,7 +159,9 @@ div[class^="sheet-legend"]>div[class^="sheet-wide-content"] {
 }
 
 
-
+.sheet-action-point-configuraiton{
+	border-top:1px dashed #bbb;margin-top:6px;
+	border-bottom:1px dashed #bbb;margin-bottom:6px;}
 
 
 
@@ -2502,7 +2518,7 @@ span.sheet-ignored-roll {
 
 .sheet-col-1-2,
 .sheet-rolltemplate-mythcraft .sheet-col-1-2 {
-	width: 48%;
+	width: 49%;
 }
 
 .sheet-offset-1-2,
@@ -4499,12 +4515,7 @@ span.sheet-ignored-roll {
 	letter-spacing: normal;
 }
 
-.sheet-opera-only:-o-prefocus,
-.sheet-row-r,
-.sheet-rolltemplate-mythcraft .sheet-opera-only:-o-prefocus,
-.sheet-rolltemplate-mythcraft .sheet-row-r {
-	/*word-spacing: -0.43em;*/
-}
+
 
 .sheet-row-r img,
 .sheet-rolltemplate-mythcraft .sheet-row-r img {
@@ -4797,17 +4808,7 @@ button[type=compendium].sheet-roll-text:focus,
 button[type=roll].sheet-roll-text:focus {
 	outline: 0
 }
-
-.sheet-blacklabel button[type=roll].sheet-roll-text.sheet-big {
-	padding: 0;
-	margin: 0;
-	font-size: 1.3em;
-	line-height: 1em
-}
-
-.sheet-blacklabel button[type=roll].sheet-roll-text.sheet-big.sheet-only {
-	flex-grow: 2
-}
+ 
 
 button[type=roll].sheet-roll-text.sheet-margindent {
 	margin-left: 14px !important
@@ -4885,10 +4886,10 @@ div.sheet-col-1-2.sheet-border-left {
     min-height: 16px;
     z-index: 2;
 }
+.sheet-options-skill-flag + span,
 .sheet-options-attack-flag + span,
-.sheet-options-flag + span {
-	position: relative;
-    white-space: nowrap;
+.sheet-options-sap-flag + span,
+.sheet-options-flag + span { 
     width: 16px;
     height: 16px;
     font-size: 16px;
@@ -4901,23 +4902,38 @@ div.sheet-col-1-2.sheet-border-left {
 	top:-16px;
 	left: 16px;
 }
+.sheet-options-skill-flag:hover + span,
 .sheet-options-attack-flag:hover + span,
+.sheet-options-sap-flag:hover + span,
 .sheet-options-flag:checked + span {
     color: #C3996B;
     display: block;
 } 
 .sheet-options-attack-flag + span,
+.sheet-options-skill-flag + span,
+.sheet-options-sap-flag + span,
 .sheet-options-flag + span
 {
     display: block;
 }
+.sheet-options-skill-flag:hover + span,
+.sheet-options-skill-flag:checked + span,
 .sheet-options-attack-flag:hover + span,
-.sheet-options-attack-flag:checked + span {
+.sheet-options-sap-flag:checked + span,
+.sheet-options-sap-flag:hover + span,
+.sheet-options-hidden-attack-flag:checked + span,
+.sheet-options-hidden-skill-flag:checked + span,
+.sheet-options-hidden-sap-flag:checked + span {
     color: #C3996B;
     display: block;
 }
 .sheet-options,
-.sheet-options-attack
+.sheet-options-attack,
+.sheet-options-skill,
+.sheet-options-sap,
+.sheet-options-hidden-sap-flag,
+.sheet-options-hidden-attack-flag,
+.sheet-options-hidden-skill-flag
 {
    display: none; 
     margin-top: 2px;
@@ -4931,24 +4947,18 @@ div.sheet-col-1-2.sheet-border-left {
 }
 
 .sheet-options, 
-.sheet-options-attack {
+.sheet-options-attack, 
+.sheet-options-skill, 
+.sheet-options-sap {
     display: block;
 }
 .sheet-options-flag:checked ~ .sheet-options, 
-.sheet-options-attack-flag:checked ~ .sheet-options-attack {
+.sheet-options-attack-flag:checked ~ .sheet-options-attack, 
+.sheet-options-skill-flag:checked ~ .sheet-options-skill,
+.sheet-options-sap-flag:checked ~ .sheet-options-sap,
+.sheet-options-hidden-sap-flag:checked  ~ .sheet-options-sap,
+.sheet-options-hidden-skill-flag:checked  ~ .sheet-options-skill,
+.sheet-options-hidden-attack-flag:checked  ~ .sheet-options-attack {
     display: none;
 }
 
-
-input.sheet-options-attack-flag::before {
-	margin-right: 4px;
-	line-height: 14px;
-	text-align: center;
-	display: inline-block;
-	vertical-align: middle;
-	font-family: pictos;
-	content: "y";
-	width: 14px;
-	height: 14px;
-	font-size: 12px;
-}

@@ -187,61 +187,64 @@
 						<div class=" sheet-fieldset sheet-small-box-border">
 							<div class="sheet-legend sheet-wide-content">Special Action Points</div>
 							<div class="sheet-row">
-
-
-
 								<div class="sheet-repeatingitems">
-									<!-- labels -->
-									<!-- 
-									<div> 
-										<div class="sheet-col-1-8">
-											<span class="sheet-rep-lable">L1</span>
-										</div>
-										<div class="sheet-col-1-18">
-											<span class="sheet-rep-lable">L2</span>
-										</div>
-										<div class="sheet-col-1-18">
-											<span class="sheet-rep-lable">L3</span>
-										</div>
-										<div class="sheet-col-1-18">
-											<span class="sheet-rep-lable">L4</span>
-										</div>
-									</div>
-								-->
 									<fieldset class="repeating_specialActions"> <!-- repeating fieldset -->
-										<div class="sheet-row specialActions-row compendium-drop-target sheet-center">
+										<div class="sheet-row specialActions-row compendium-drop-target">
+											<div class="sheet-col-1-18">
+												<input type="checkbox" name="attr_options-flag-sap" checked="checked" title="Configure Action Point"
+													class=" sheet-options-sap-flag sheet-ro-checkbox" /><span class="sheet-ro-label">y</span>
+											</div>
+											<div class="sheet-col-7-12"><input type="text" name="attr_name" /></div>
+											<div class="sheet-col-1-6"><input type="number" name="attr_pointValue" />
+											</div>
+											<div class="sheet-col-1-18"><button type="compendium" class="sheet-naked sheet-ro-label"
+													value="attr_compendiumLink" accept="uniqueName"></button>
+											</div>
+										</div>
+										<input type="checkbox" name="attr_options-flag-sap" checked="checked" title="Configure Action Point"
+											class="sheet-options-hidden-skill-flag " />
+										<div class="sheet-options-skill">
+											<div class="sheet-row">
+									
+												<div class="sheet-col-7-12"><input type="text" name="attr_name" /></div>
+												<div class="sheet-col-1-6"><input type="number" name="attr_pointValue" /></div>
+												<div class="sheet-row">
+													<div class="sheet-col-1-3">
+														<div class="sheet-label sheet-center">Stat:</div><select class="sheet-col-1-8"
+															name="attr_skillStat">
+															<option value="--" data-18n="--" checked="checked">--</option>
+															<option value="STR" data-18n="str">STR</option>
+															<option value="DEX" data-18n="dex">DEX</option>
+															<option value="END" data-18n="end">END</option>
+															<option value="AWR" data-18n="awr">AWR</option>
+															<option value="INT" data-18n="int">INT</option>
+															<option value="CHA" data-18n="cha">CHA</option>
+															<option value="LUCK" data-18n="luck">LUCK</option>
+															<option value="COR" data-18n="cor">COR</option>
+														</select>
+													</div>
+													<div class="sheet-col-1-2">
+														<div class="sheet-label  sheet-center">Dice:</div>
+														<select class="sheet-col-1-8" name="attr_skillStat">
+															<option value="1d1" data-18n="1d1" checked="checked">1d1</option>
+															<option value="1d2" data-18n="1d2">1d2</option>
+															<option value="1d4" data-18n="1d4">1d4</option>
+															<option value="1d6" data-18n="1d6">1d6</option>
+															<option value="1d8" data-18n="1d8">1d8</option>
+															<option value="1d10" data-18n="1d10">1d10</option>
+															<option value="1d12" data-18n="1d12">1d12</option>
+															<option value="1d20" data-18n="1d20">1d20</option>
+														</select>
+													</div>
+												</div>
+											</div>
+										</div>
+									</fieldset>
 
-											<input type="checkbox" class="sheet-col-1-16 sheet-specialAction-config">
-											<span><!-- empty for css --></span>
-											<div class="sheet-col-1-16"></div>
-											<button type="roll" name="rollSpecial" class="sheet-naked"
-												value="/em uses @{displayName}, and rolls [[1d20]] to hit."></button>
-										</div>
-										<div class="sheet-col-7-12"><input type="text" name="attr_name" /></div>
-										<div class="sheet-col-1-6"><input type="number" name="attr_pointValue" />
-										</div>
-										<div class="sheet-col-1-6"><button type="compendium"
-												class="sheet-naked sheet-ro-label" value="attr_compendiumLink"
-												accept="uniqueName"></button></div>
 								</div>
-								<div class="sheet-col-7-12"><input type="text" name="attr_name" /></div>
-								<div class="sheet-col-1-6"><input type="number" name="attr_pointValue" /></div>
-								<div class="sheet-col-1-6"><button type="compendium" class="sheet-naked sheet-ro-label"
-										value="attr_compendiumLink" accept="uniqueName"></button></div>
-								<div class="sheet-col-7-12"><input type="text" name="attr_targetAttribute" /></div>
-								<div class="sheet-col-1-6"><input type="number" name="attr_damageDice" /></div>
-
-
-
-
-
 							</div>
-							</fieldset>
 						</div>
-
-
 					</div>
-
 				</div>
 
 				<div class="sheet-row sheet-attribute-bubbles"> <!-- Attributes -->
@@ -377,35 +380,125 @@
 								<div class="sheet-row compendium-drop-target">
 									<fieldset class="repeating_actions">
 										<div class="sheet-attack sheet-row">
-											<input type="checkbox" name="attr_options-flag-attack" checked="checked"
-												title="Configure Weapon or Attack"
-												class=" sheet-options-attack-flag sheet-ro-checkbox" /><span
-												class="sheet-ro-label">y</span>
-				
-				
-											<button class="sheet-col-1-2  sheet-roll-text " type="roll" name="roll_fullattack"
-												title="Full Attack & Damage roll" value="@{rollbase}">
-												<span class="sheet-pseudoattr" name="attr_displayName"></span>
-											</button>
-				
-											<button class="sheet-col-1-5 sheet-roll-text" type="roll" name="roll_damage"
-												title="Damage roll" value="@{rollbase_dmg}">
-												<span class="sheet-pseudoattr" name="attr_atkdmgdisplay"></span>
-											</button>
-				
-											<input type="number" class="sheet-ammo sheet-col-1-10" name="attr_atkammo" value="0"
-												title="@{repeating_attacks_$id_atkammo}" />
-				
-				
-				
+											<div class="sheet-col-1-18">
+												<input type="checkbox" name="attr_options-flag-attack" checked="checked" title="Configure Weapon or Attack"
+													class=" sheet-options-attack-flag sheet-ro-checkbox" /><span class="sheet-ro-label">y</span>
+											</div>
+											<div class="sheet-col-1-2">
+												<button class="sheet-roll-text " type="roll" name="roll_fullattack" title="Full Attack & Damage roll"
+													value="@{rollbase}">
+													<span class="sheet-pseudoattr" name="attr_displayName"></span>
+												</button>
+											</div>
+											<div class="sheet-col-1-5">
+												<button class="sheet-roll-text" type="roll" name="roll_damage" title="Damage roll" value="@{rollbase_dmg}">
+													<span class="sheet-pseudoattr" name="attr_atkdmgdisplay"></span>
+												</button>
+											</div>
+											<div class="sheet-col-1-10">
+												<input type="number" class="sheet-ammo " name="attr_atkammo" value="0" title="@{repeating_attacks_$id_atkammo}" />
+											</div>
+											<input type="checkbox" name="attr_options-flag-attack" class="sheet-options-hidden-attack-flag" />
+											
 											<div class="sheet-options-attack">
 												<div class="sheet-row">
-													<span class="sheet-label">Name:</span>
-													<input type="text" class="sheet-col-1-10 sheet-underlined" name="attr_displayName"
-														value="" />
-				
+													<div class="sheet-label sheet-col-6">Name:</div>
+													<div class="sheet-col-1-2">
+														<input type="text" class=" sheet-underlined" name="attr_displayName" value="" />
+													</div>
 												</div>
-				
+												<div  class="sheet-row sheet-action-point-configuraiton">
+													<div class="sheet-col-1-4 ">
+														<div class="sheet-label sheet-center">Action Points:</div>
+														<input type="number" class=" sheet-underlined" name="attr_attack0_ap_base"  value="" />
+													</div>
+													<div class="sheet-col-3-16 ">
+														<div class="sheet-label sheet-center">+</div><select  class="sheet-col-1-8" name="attr_attack0_ap_plus_stat">
+															<option value="--" data-18n="--" checked="checked">--</option>
+															<option value="STR" data-18n="str" >STR</option>
+															<option value="DEX" data-18n="dex" >DEX</option>
+															<option value="END" data-18n="end">END</option>
+															<option value="AWR" data-18n="awr">AWR</option>
+															<option value="INT" data-18n="int">INT</option>
+															<option value="CHA" data-18n="cha">CHA</option>
+															<option value="LUCK" data-18n="luck">LUCK</option>
+															<option value="COR" data-18n="cor">COR</option>
+														</select>
+													</div>
+													<div class="sheet-col-3-16 ">
+														<div class="sheet-label sheet-center">-</div><select  class="sheet-col-1-8" name="attr_attack0_ap_minus_stat">
+															<option value="--" data-18n="--" checked="checked">--</option>
+															<option value="STR" data-18n="str" >STR</option>
+															<option value="DEX" data-18n="dex" >DEX</option>
+															<option value="END" data-18n="end">END</option>
+															<option value="AWR" data-18n="awr">AWR</option>
+															<option value="INT" data-18n="int">INT</option>
+															<option value="CHA" data-18n="cha">CHA</option>
+															<option value="LUCK" data-18n="luck">LUCK</option>
+															<option value="COR" data-18n="cor">COR</option>
+														</select>
+													</div>
+													<div class="sheet-col-3-16 ">
+														<div class="sheet-label sheet-center">Minimum:</div>
+														<input type="number" class=" sheet-underlined" name="attr_attack0_ap_minimum" value="" />
+													</div> 
+													<div class="sheet-col-1-16">
+														<span class="sheet-pseudoattr" name="attr_attack0_ap_calculated" value="##"></span>
+													</div>
+												</div>
+
+												<div class="sheet-row">
+													<div class="sheet-col-3-16">
+														<div class="sheet-label sheet-center">Stat:</div><select  name="attr_skillStat">
+															<option value="Melee" data-18n="melee" checked="Melee">Melee</option>
+															<option value="Ranged" data-18n="ranged" >Ranged</option>
+														</select>
+
+													</div>
+													<div class="sheet-col-1-5">
+														<div class="sheet-label sheet-center">Stat:</div><select  class="sheet-col-1-8" name="attr_skillStat">
+															<option value="--" data-18n="--" checked="checked">--</option>
+															<option value="STR" data-18n="str" >STR</option>
+															<option value="DEX" data-18n="dex" >DEX</option>
+															<option value="END" data-18n="end">END</option>
+															<option value="AWR" data-18n="awr">AWR</option>
+															<option value="INT" data-18n="int">INT</option>
+															<option value="CHA" data-18n="cha">CHA</option>
+															<option value="LUCK" data-18n="luck">LUCK</option>
+															<option value="COR" data-18n="cor">COR</option>
+														</select>
+													</div>
+													<div class="sheet-col-1-6">
+														<div class="sheet-label  sheet-center">Dice:</div>
+														<select  class="sheet-col-1-8" name="attr_skillStat">
+															<option value="1d1" data-18n="1d1" checked="checked">1d1</option>
+															<option value="1d2" data-18n="1d2" >1d2</option>
+															<option value="1d4" data-18n="1d4">1d4</option>
+															<option value="1d6" data-18n="1d6">1d6</option>
+															<option value="1d8" data-18n="1d8">1d8</option>
+															<option value="1d10" data-18n="1d10">1d10</option>
+															<option value="1d12" data-18n="1d12">1d12</option>
+															<option value="1d20" data-18n="1d20">1d20</option>
+														</select>
+													</div>
+													<div class="sheet-col-1-3">
+														<div class="sheet-label sheet-center">Damage Type:</div>
+														<select  class="sheet-col-1-8" name="attr_skillStat">
+															<option value="Blunt" data-18n="blunt" checked="checked">Blunt</option>
+															<option value="Sharp" data-18n="sharp" >Sharp</option>
+															<option value="Cold" data-18n="cold">Cold</option>
+															<option value="Corrosive" data-18n="corrosive">Corrosive</option>
+															<option value="Fire" data-18n="fire">Fire</option>
+															<option value="Lightning" data-18n="lightning">Lightning</option>
+															<option value="Toxic" data-18n="toxic">Toxic</option>
+															<option value="Necrotic" data-18n="necrotic">Necrotic</option>
+															<option value="Psychic" data-18n="psychic">Psychic</option>
+															<option value="Radiant" data-18n="radiant">Radiant</option>
+															<option value="Sonic" data-18n="sonic">Sonic</option>
+														</select>
+													</div>
+												</div>
+										
 											</div>
 										</div>
 									</fieldset>
@@ -422,15 +515,59 @@
 							<div class="sheet-repeatingskills">
 			
 								<fieldset class="repeating_skills"> <!-- repeating fieldset -->
-									<div class="sheet-row sheet-wrksht-inv-item compendium-drop-target sheet-center">
-			
-										<div class="sheet-col-1-2">
-											<button type="roll"
-												value="/roll {{roll1=[[ 1d20 + [[@{strength_str}]] + [[@{global_saving_bonus}]] ]]}} + @{selected|damage_dice}"
-												name="roll_attack"><span name="attr_name">Some
-													Name</span></button>
+									<div class="sheet-row compendium-drop-target">
+										<div class="sheet-col-1-12"><input type="checkbox" name="attr_options-flag-skill" checked="checked"
+												title="Configure skill" class="sheet-ro-checkbox sheet-options-skill-flag " />
+											<span class="sheet-ro-label">y</span>
 										</div>
-										<div class="sheet-col-1-8"><input type="text" name="attr_displayName" />
+										<div class="sheet-col-1-2">
+											<button class=" sheet-roll-text" type="roll" name="roll_skillCheck" title="Roll Check" value="@{rollbase}">
+												<span class="sheet-pseudoattr" name="attr_skillName"></span>
+												&nbsp;<span class="sheet-pictos" name="attr_requiresTool"></span>&nbsp;
+										</div>
+										<div class="sheet-col-1-8">
+											<input type="number" name="attr_skill_modifier" />
+										</div>
+										</button>
+										<input type="checkbox" name="attr_options-flag-skill" checked="checked" class="sheet-options-hidden-skill-flag " />
+										<div class="sheet-options-skill">
+											<div class="sheet-row">
+												<div class="sheet-col-1-2">
+													<span class="sheet-label">Name:</span>
+													<input type="text" name="attr_skillName" class="sheet-col-1-8" value="" />
+												</div>
+										
+												<div class="sheet-col-1-4">
+													<div>Requires Tools:</div>
+														<select class="sheet-col-1-8" name="attr_skillStat">
+														<option value=" " data-18n="false" checked="checked">False</option>
+														<option value="x" data-18n="true">True</option>
+													</select>
+												</div>
+												</div>
+												<div class="sheet-row">
+												<div class="sheet-col-1-6">
+													<span class="sheet-label">Stat:</span><select class="sheet-col-1-8" name="attr_skillStat">
+														<option value="STR" data-18n="str" checked="checked">STR</option>
+														<option value="DEX" data-18n="dex">DEX</option>
+														<option value="END" data-18n="end">END</option>
+														<option value="AWR" data-18n="awr">AWR</option>
+														<option value="INT" data-18n="int">INT</option>
+														<option value="CHA" data-18n="cha">CHA</option>
+														<option value="LUCK" data-18n="luck">LUCK</option>
+														<option value="COR" data-18n="cor">COR</option>
+													</select>
+												</div>
+												<div class="sheet-col-1-3">
+													<span class="sheet-label">Base:</span>
+													<input type="text" name="attr_skillBaseValue" class="sheet-col-1-8" value="" />
+												</div>
+												<div class="sheet-col-1-3">
+													<span class="sheet-label">Result:</span>
+													<input type="text" name="attr_skillUseableValue" class="sheet-col-1-8" value="" />
+												</div>
+											</div>
+			
 										</div>
 									</div>
 								</fieldset>
@@ -2301,83 +2438,84 @@ const mcStandardWeapons = [
 
 const mcStandardSkills = [
 
-    {name:"Animal Handling", requiresTool:false, attribute:"AWR",tag:"Survival", description: "You might use this skill when riding a mount or when trying to train an animal that views you as a friendly creature.",},
-    {name:"Applied Force", requiresTool:false, attribute:"STR",tag:"Athleticism", description: "You can use this skill to break down doors, use a crowbar to leverage heavy weights, and similar applications of pure strength with or without a mechanism to assist you.",},
-    {name:"Appraising", requiresTool:false, attribute:"INT",tag:"Observation", description: "This skill can help you determine how valuable something is or whether the materials are genuine. If you also have a Crafting skill, your MC might let you use that skill when appraising a particular craft, or even let you make an INT/ Appraising check and a skill check using that Crafting skill, taking the higher.",},
-    {name:"Arcana", requiresTool:false, attribute:"INT",tag:"Knowledge", description: "You can use this skill when trying to recall information related to planar entities or factual information about any of the five Sources of Magic. You can also use this skill to manipulate magical devices.",},
-    {name:"Art", requiresTool:false, attribute:"INT",tag:"Knowledge", description: "This skill can help you determine factual information about art, such as the materials used or the message that the artist was trying to convey. Your MC might also let you add 1⁄2 your Art skill when trying to produce art, although if you have any points in a Crafting skill, you are more likely to just use that skill.",},
-    {name:"Astrology", requiresTool:false, attribute:"INT",tag:"Knowledge", description: "You can use this skill when recalling information about astrological symbols and their significance. Your MC might rule that you can make an INT/Astrology check to give you a circumstantial bonus on a CHA/Empathy check or an AWR/Intuiting check when interacting with someone, as your understanding of their astrological signs might lend you insight into their character or unconscious motives.",},
-    {name:"Astronomy", requiresTool:false, attribute:"INT",tag:"Knowledge", description: "You might use this skill whenever you want to recall or infer information related to space and the orbit of planets, satellites, and the like. Your MC might let you add 1⁄2 your Astronomy when trying to navigate, although if you have the Navigating skill you are likely to use that instead.",},
-    {name:"Athletics", requiresTool:false, attribute:"STR",tag:"Athleticism", description: "This skill represents your general athletic capacity. When climbing or swimming, and at your MC&apos;s discretion when jumping, you might use this skill. If you have a climb speed or a swim speed, this skill will not come up as often.",},
-    {name:"Balancing", requiresTool:false, attribute:"DEX",tag:"Acrobatics", description: "You might use this skill when traversing tricky and narrow terrain, such as the lip of a cliff or the pinnacle of a rooftop.",},
-    {name:"Biology", requiresTool:false, attribute:"INT",tag:"Knowledge", description: "This skill will help you to recall or research any information related to biological studies. Your MC may allow you to make an INT/Biology check to gain a circumstantial bonus when making an INT/Nature check or an AWR/Animal Handling check.",},
-    {name:"Brewing", requiresTool:true, attribute:"INT",tag:"Crafting", description: "If you have the appropriate tools, you can attempt to brew craft beers, wines, or spirits. Your MC might also allow you to attempt to make potions, using 1⁄2 of your Brewing skill in place of Alchemy. You may use this skill when trying to recall or discern intellectual information about the practice of brewing, and doing so does not require any tools.",},
-    {name:"Calligraphy", requiresTool:true, attribute:"INT",tag:"Crafting", description: "When you have the appropriate tools, you can use this skill to create beautiful calligraphic works.",},
-    {name:"Carpentry", requiresTool:true, attribute:"INT",tag:"Crafting", description: "When equipped with the relevant tools, you can use this skill to build or repair houses and other structures made primarily of wood.",},
-    {name:"Cartography", requiresTool:true, attribute:"INT",tag:"Crafting", description: "When equipped with the relevant tools, you can use this skill to accurately map out regions or cities.",},
-    {name:"Chemistry", requiresTool:false, attribute:"INT",tag:"Knowledge", description: "You can use this skill to recall or research any information related to chemistry and chemical studies.",},
-    {name:"Cobbling", requiresTool:true, attribute:"INT",tag:"Crafting", description: "If you have the appropriate time and tools, you can use this skill to repair shoes or make new ones.",},
-    {name:"Contorting", requiresTool:false, attribute:"DEX",tag:"Acrobatics", description: "This skill allows you to contort your body and squeeze through spaces that would otherwise be too tight for a creature of your size. Especially tight contortions will be more difficult during combat.",},
-    {name:"Cooking", requiresTool:true, attribute:"INT",tag:"Crafting", description: "Given the appropriate time and tools, you can use this skill to cook delicious food. You can also make checks to determine the quality or sourcing of food and similar cooking-related topics, regardless of whether you have tools.",},
-    {name:"Dancing", requiresTool:false, attribute:"DEX",tag:"Performance", description: "You can use this skill to put on entertaining dance performances.",},
-    {name:"Deceiving", requiresTool:false, attribute:"CHA",tag:"Influence", description: "You might use this skill when trying to mislead someone, tell half-truths, or outright lie in a convincing way.",},
-    {name:"Disguising", requiresTool:true, attribute:"INT",tag:"Subterfuge", description: "Provided that you have the relevant tools, such as makeup, a costume, hair dye, a wig, or similar cosmetics, you can use this skill to disguise yourself. Disguises made under duress will be more difficult than disguises made in leisure.",},
-    {name:"Distance Running", requiresTool:false, attribute:"END",tag:"Stamina", description: "This skill can help you keep up a steady running pace over a prolonged amount of time, allowing you to cover vast distances.",},
-    {name:"Dungeoneering", requiresTool:false, attribute:"INT",tag:"Survival", description: "When exploring a dungeon or subterranean area, you might use this skill to recall information about the area, to make logical inferences, or to know how best to use your gear.",},
-    {name:"Eavesdropping", requiresTool:false, attribute:"AWR",tag:"Observation", description: "You can use this skill when you want to overhear key information that other people are discussing without yourself being part of the conversation. After you succeed on an AWR/Eavesdropping check, your MC might award you a bonus to a check with the influence tag, given your better understanding of the social situation.",},
-    {name:"Economics", requiresTool:false, attribute:"INT",tag:"Knowledge", description: "This skill can help you recall or deduce information about the economy in a settled area and to better understand economic theory.",},
-    {name:"Empathy", requiresTool:false, attribute:"CHA",tag:"Influence", description: "You can use this skill to make other people feel seen and understood, as well as helping you understand what people are feeling.",},
-    {name:"Engineering", requiresTool:false, attribute:"INT",tag:"Knowledge", description: "This skill allows you to improve your knowledge in various types of engineering (architectural, mechanical, etc).",},
-    {name:"Entertaining", requiresTool:false, attribute:"CHA",tag:"Performance", description: "You can use this skill when you want to captivate a crowd by making a public performance of any kind.",},
-    {name:"Evading", requiresTool:false, attribute:"INT",tag:"Subterfuge", description: "You can use this skill to practice the art of hiding in plain sight. By knowing what people look for, you can avoid detection by changing your gait, sticking to crowded areas, or otherwise throwing off those that look for you.",},
-    {name:"Foraging", requiresTool:false, attribute:"AWR",tag:"Survival", description: "You might use this skill when looking for food in the wilderness or finding ingredients.",},
-    {name:"Forced March", requiresTool:false, attribute:"END",tag:"Stamina", description: "You can use this skill when trying to push beyond the normal travel pace that you could manage in a day, whether by walking a greater distance or by walking a normal distance with a greater load.",},
-    {name:"Forging", requiresTool:true, attribute:"INT",tag:"Subterfuge", description: "This skill can help you replicate signatures or create official- looking documents. If you do well on an INT/Forging check, then your MC will likely give you a circumstantial bonus to INT/Disguising or CHA/Savoir Faire checks.",},
-    {name:"Fortuity", requiresTool:false, attribute:"Luck",tag:"", description: "Fortuity represents the likelihood that good things just happen to you. If your MC asks you to make a LUCK check to determine the likelihood of a positive outcome, you can add your Fortuity.",},
-    {name:"Geography", requiresTool:false, attribute:"INT",tag:"Knowledge", description: "You can use this skill when trying to remember where you are in relation to somewhere else, or when you want to deduce information about common geographical patterns in an area.",},
-    {name:"Glassblowing", requiresTool:true, attribute:"INT",tag:"Crafting", description: "When you have the appropriate tools, you can use this skill to create stunning artistic glasswork, such as dining plates and even glass musical instruments.",},
-    {name:"Gossiping", requiresTool:false, attribute:"CHA",tag:"Influence", description: "You can use this skill to seed real or false information about a person, event, etc. among populated areas.",},
-    {name:"History", requiresTool:false, attribute:"INT",tag:"Knowledge", description: "This skill reflects your capacity for remembering historical events and your ability to quickly research historical events when given access to a library, university, or the like. Your MC might let you use this skill in tandem with another Knowledge skill when researching a particular field of knowledge, making an INT/History check and an INT check of the relevant Knowledge type.",},
-    {name:"Instrument", requiresTool:true, attribute:"CHA",tag:"Performance", description: "When you gain points in this skill, specify one type of instrument. When you have that instrument, you can use this skill to make better performances with that instrument. Your MC might rule that you can apply 1⁄2 of your Skill Points to related instruments; for example, if you have Instrument (Lute) +6, then your MC might allow you to play a banjo with a +3 bonus.",},
-    {name:"Intimidating", requiresTool:false, attribute:"CHA",tag:"Influence", description: "You can use this skill when trying to peel back someone&apos;s psyche and frighten them into cooperating with you.",},
-    {name:"Intuiting", requiresTool:false, attribute:"AWR",tag:"Observation", description: "This skill helps you assess when someone is being honest or if they might be hiding something.",},
-    {name:"Investigating", requiresTool:false, attribute:"AWR",tag:"Observation", description: "You might use this skill when looking for physical clues at a crime scene, or when looking for a secret door or hidden compartment in a room.",},
-    {name:"Jeweling", requiresTool:false, attribute:"INT",tag:"Crafting", description: "When you have the appropriate tools, this skill can help you create gorgeous works of jewelry. Your MC might allow you to use your Jeweling skill in place of Appraising when you want to assess the value of a piece of jewelry.",},
-    {name:"Law", requiresTool:false, attribute:"INT",tag:"Knowledge", description: "You can use this skill when you want to recall or acquire information about the legal system in a settled area. You might also use this skill, along with the Entertaining and Persuading skills, to win a case in court.",},
-    {name:"Leadership", requiresTool:false, attribute:"CHA",tag:"Influence", description: "You might use this skill to bolster the resolve of a discouraged person or group of people, or to exert your status and influence over various officials and convince them to follow your commands.",},
-    {name:"Leatherworking", requiresTool:true, attribute:"INT",tag:"Crafting", description: "When you have the appropriate tools, you can use this skill to make leather goods such as clothes, bags, or even armor.",},
-    {name:"Lockpicking", requiresTool:true, attribute:"INT",tag:"Subterfuge", description: "When you have a set of lock picks, you can use this skill to attempt picking any nonmagially sealed lock.",},
-    {name:"Masonry", requiresTool:true, attribute:"INT",tag:"Crafting", description: "When you have the appropriate tools, you can use this skill to carve rock into sculptures or architectural stonework.",},
-    {name:"Medicine", requiresTool:true, attribute:"INT",tag:"Knowledge", description: "You can use this skill when trying to recall factual information about medicines, diseases, and the like, which can help you diagnose someone&apos;s symptoms. If you have bandages, you can make an INT/Medicine check to remove the Bleeding condition from a creature. Attempting this costs 3 AP, and unless otherwise specified from the source of the Bleeding condition, the DC is 14 + the amount of Bleeding damage. If you have the proper medicines, you can attempt to treat someone with a disease. The DC for this treatment, as well as the types of medicine that you need, will be mentioned in the disease&apos;s description.",},
-    {name:"Menacing", requiresTool:false, attribute:"STR",tag:"Stamina", description: "You can use this skill when trying to physically intimidate someone through a show of force.",},
-    {name:"Military", requiresTool:false, attribute:"INT",tag:"Knowledge", description: "This skill will help you know the proper terminology when speaking with members of a military and can help you when trying to recall information about a military institution.",},
-    {name:"Nature", requiresTool:false, attribute:"INT",tag:"Survival", description: "You might use this skill when trying to differentiate between edible and toxic mushrooms, recalling the behavior of wolf packs, or other information about the natural world.",},
-    {name:"Navigating", requiresTool:true, attribute:"AWR",tag:"Survival", description: "If you have a compass, astrolabe, sextant, or even just a map, you can use this skill to find your way through an otherwise confusing area of wilderness. Your MC might rule that you can make this check without the relevant tools, but the DC will be higher.",},
-    {name:"Painting", requiresTool:true, attribute:"INT",tag:"Crafting", description: "When you have the appropriate tools, you can use this skill to create beautiful paintings.",},
-    {name:"Perceiving", requiresTool:false, attribute:"AWR",tag:"Observation", description: "You might make use of this skill when relying on sensory input such as scanning a tree line for enemies, looking for concealed weapons, listening for footsteps, or trying to identify a strange odor.",},
-    {name:"Persuading", requiresTool:false, attribute:"CHA",tag:"Influence", description: "You can use this skill when trying to influence someone through sound arguments or emotional appeal.",},
-    {name:"Politics", requiresTool:false, attribute:"INT",tag:"Knowledge", description: "When you take this skill, choose a specific region. Your MC will determine whether this should be a single city or a whole nation, based on the campaign they intend to run. When making INT checks related to the politics of that region, you can add this skill. When making INT checks related to the politics of another region, you can add 1⁄2 this skill.",},
-    {name:"Pottery", requiresTool:true, attribute:"INT",tag:"Crafting", description: "When you have the appropriate clay and tools, you can use this skill to make decorative and functional pottery.",},
-    {name:"Religion", requiresTool:false, attribute:"INT",tag:"Knowledge", description: "When you take this skill, choose a specific religion. You could pick one of the pantheons listed on Deities, or work with your MC to come up with another religious tradition. When making INT checks related to the customs and beliefs of that religion, you can add this skill. When making INT checks related to the customs and beliefs of any other religion, you can add 1⁄2 this skill.",},
-    {name:"Savoir Faire", requiresTool:false, attribute:"CHA",tag:"Performance", description: "You can use this skill to fit into any sort of situation. You can appear at home both with peasants and with aristocrats.",},
-    {name:"Scavenging", requiresTool:false, attribute:"Luck",tag:"", description: "You can use this skill when trying to find food or supplies in an abandoned area. Your MC might also allow you to use this skill to determine how much loot you find on a body.",},
-    {name:"Sheltering", requiresTool:false, attribute:"AWR",tag:"Survival", description: "You might use this skill when you&apos;re in the wilderness to find a cave, hollow tree, or rocky bluff that can offer shelter from the elements.",},
-    {name:"Sleight of Hand", requiresTool:false, attribute:"INT",tag:"Subterfuge", description: "You can use this skill when attempting to pickpocket someone, or when trying to keep an item undiscovered as you are patted down.",},
-    {name:"Smithing", requiresTool:true, attribute:"INT",tag:"Crafting", description: "When you have the appropriate metal and tools, you can use this skill to make wrought iron artistic works or to repair metal tools, weapons, and armor.",},
-    {name:"Sneaking", requiresTool:false, attribute:"DEX",tag:"Survival", description: "You could use this skill when skulking about and trying to remain physically out of sight.",},
-    {name:"Sprinting", requiresTool:false, attribute:"STR",tag:"Athleticism", description: "You can use this skill when attempting to cover a small distance in an incredibly short amount of time. This is usually not applicable in normal combat, but might be used in a chase sequence.",},
-    {name:"Tracking", requiresTool:false, attribute:"AWR",tag:"Survival", description: "You can use this skill when you are trying to follow a creature&apos;s trail.",},
-    {name:"Tumbling", requiresTool:false, attribute:"DEX",tag:"Acrobatics", description: "This skill helps you fall in such a way that you don&apos;t get hurt. In addition to allowing you to add dramatic flair to any performance you might put on, if you fall 40 ft or less, you can make a Tumbling check with a DC equal to the amount of feet you fell. If you succeed, halve the damage you would take and move 5 ft in a direction of your choice when you land.",},
-    {name:"Vehicles (Land)", requiresTool:true, attribute:"INT",tag:"Knowledge", description: "You can use this skill to efficiently use land vehicles such as carriages or war carts.",},
-    {name:"Vehicles (Water)", requiresTool:true, attribute:"INT",tag:"Knowledge", description: "You can use this skill to operate water vehicles, such as sailboats or galleons, with greater efficiency.",},
-    {name:"Weaving", requiresTool:true, attribute:"INT",tag:"Crafting", description: "When you have the appropriate tools, you can use this skill to make textile goods such as clothing and blankets.",},
-    {name:"Woodcarving", requiresTool:true, attribute:"INT",tag:"Crafting", description: "When you have the appropriate tools, you can use this skill to whittle toys, fletch arrows, repair a wagon wheel, and the like.",},
+    {name:"Animal Handling", requiresTool:" ", attribute:"AWR",tag:"Survival", description: "You might use this skill when riding a mount or when trying to train an animal that views you as a friendly creature.",},
+    {name:"Applied Force", requiresTool:" ", attribute:"STR",tag:"Athleticism", description: "You can use this skill to break down doors, use a crowbar to leverage heavy weights, and similar applications of pure strength with or without a mechanism to assist you.",},
+    {name:"Appraising", requiresTool:" ", attribute:"INT",tag:"Observation", description: "This skill can help you determine how valuable something is or whether the materials are genuine. If you also have a Crafting skill, your MC might let you use that skill when appraising a particular craft, or even let you make an INT/ Appraising check and a skill check using that Crafting skill, taking the higher.",},
+    {name:"Arcana", requiresTool:" ", attribute:"INT",tag:"Knowledge", description: "You can use this skill when trying to recall information related to planar entities or factual information about any of the five Sources of Magic. You can also use this skill to manipulate magical devices.",},
+    {name:"Art", requiresTool:" ", attribute:"INT",tag:"Knowledge", description: "This skill can help you determine factual information about art, such as the materials used or the message that the artist was trying to convey. Your MC might also let you add 1⁄2 your Art skill when trying to produce art, although if you have any points in a Crafting skill, you are more likely to just use that skill.",},
+    {name:"Astrology", requiresTool:" ", attribute:"INT",tag:"Knowledge", description: "You can use this skill when recalling information about astrological symbols and their significance. Your MC might rule that you can make an INT/Astrology check to give you a circumstantial bonus on a CHA/Empathy check or an AWR/Intuiting check when interacting with someone, as your understanding of their astrological signs might lend you insight into their character or unconscious motives.",},
+    {name:"Astronomy", requiresTool:" ", attribute:"INT",tag:"Knowledge", description: "You might use this skill whenever you want to recall or infer information related to space and the orbit of planets, satellites, and the like. Your MC might let you add 1⁄2 your Astronomy when trying to navigate, although if you have the Navigating skill you are likely to use that instead.",},
+    {name:"Athletics", requiresTool:" ", attribute:"STR",tag:"Athleticism", description: "This skill represents your general athletic capacity. When climbing or swimming, and at your MC&apos;s discretion when jumping, you might use this skill. If you have a climb speed or a swim speed, this skill will not come up as often.",},
+    {name:"Balancing", requiresTool:" ", attribute:"DEX",tag:"Acrobatics", description: "You might use this skill when traversing tricky and narrow terrain, such as the lip of a cliff or the pinnacle of a rooftop.",},
+    {name:"Biology", requiresTool:" ", attribute:"INT",tag:"Knowledge", description: "This skill will help you to recall or research any information related to biological studies. Your MC may allow you to make an INT/Biology check to gain a circumstantial bonus when making an INT/Nature check or an AWR/Animal Handling check.",},
+    {name:"Brewing", requiresTool:"x", attribute:"INT",tag:"Crafting", description: "If you have the appropriate tools, you can attempt to brew craft beers, wines, or spirits. Your MC might also allow you to attempt to make potions, using 1⁄2 of your Brewing skill in place of Alchemy. You may use this skill when trying to recall or discern intellectual information about the practice of brewing, and doing so does not require any tools.",},
+    {name:"Calligraphy", requiresTool:"x", attribute:"INT",tag:"Crafting", description: "When you have the appropriate tools, you can use this skill to create beautiful calligraphic works.",},
+    {name:"Carpentry", requiresTool:"x", attribute:"INT",tag:"Crafting", description: "When equipped with the relevant tools, you can use this skill to build or repair houses and other structures made primarily of wood.",},
+    {name:"Cartography", requiresTool:"x", attribute:"INT",tag:"Crafting", description: "When equipped with the relevant tools, you can use this skill to accurately map out regions or cities.",},
+    {name:"Chemistry", requiresTool:" ", attribute:"INT",tag:"Knowledge", description: "You can use this skill to recall or research any information related to chemistry and chemical studies.",},
+    {name:"Cobbling", requiresTool:"x", attribute:"INT",tag:"Crafting", description: "If you have the appropriate time and tools, you can use this skill to repair shoes or make new ones.",},
+    {name:"Contorting", requiresTool:" ", attribute:"DEX",tag:"Acrobatics", description: "This skill allows you to contort your body and squeeze through spaces that would otherwise be too tight for a creature of your size. Especially tight contortions will be more difficult during combat.",},
+    {name:"Cooking", requiresTool:"x", attribute:"INT",tag:"Crafting", description: "Given the appropriate time and tools, you can use this skill to cook delicious food. You can also make checks to determine the quality or sourcing of food and similar cooking-related topics, regardless of whether you have tools.",},
+    {name:"Dancing", requiresTool:" ", attribute:"DEX",tag:"Performance", description: "You can use this skill to put on entertaining dance performances.",},
+    {name:"Deceiving", requiresTool:" ", attribute:"CHA",tag:"Influence", description: "You might use this skill when trying to mislead someone, tell half-truths, or outright lie in a convincing way.",},
+    {name:"Disguising", requiresTool:"x", attribute:"INT",tag:"Subterfuge", description: "Provided that you have the relevant tools, such as makeup, a costume, hair dye, a wig, or similar cosmetics, you can use this skill to disguise yourself. Disguises made under duress will be more difficult than disguises made in leisure.",},
+    {name:"Distance Running", requiresTool:" ", attribute:"END",tag:"Stamina", description: "This skill can help you keep up a steady running pace over a prolonged amount of time, allowing you to cover vast distances.",},
+    {name:"Dungeoneering", requiresTool:" ", attribute:"INT",tag:"Survival", description: "When exploring a dungeon or subterranean area, you might use this skill to recall information about the area, to make logical inferences, or to know how best to use your gear.",},
+    {name:"Eavesdropping", requiresTool:" ", attribute:"AWR",tag:"Observation", description: "You can use this skill when you want to overhear key information that other people are discussing without yourself being part of the conversation. After you succeed on an AWR/Eavesdropping check, your MC might award you a bonus to a check with the influence tag, given your better understanding of the social situation.",},
+    {name:"Economics", requiresTool:" ", attribute:"INT",tag:"Knowledge", description: "This skill can help you recall or deduce information about the economy in a settled area and to better understand economic theory.",},
+    {name:"Empathy", requiresTool:" ", attribute:"CHA",tag:"Influence", description: "You can use this skill to make other people feel seen and understood, as well as helping you understand what people are feeling.",},
+    {name:"Engineering", requiresTool:" ", attribute:"INT",tag:"Knowledge", description: "This skill allows you to improve your knowledge in various types of engineering (architectural, mechanical, etc).",},
+    {name:"Entertaining", requiresTool:" ", attribute:"CHA",tag:"Performance", description: "You can use this skill when you want to captivate a crowd by making a public performance of any kind.",},
+    {name:"Evading", requiresTool:" ", attribute:"INT",tag:"Subterfuge", description: "You can use this skill to practice the art of hiding in plain sight. By knowing what people look for, you can avoid detection by changing your gait, sticking to crowded areas, or otherwise throwing off those that look for you.",},
+    {name:"Foraging", requiresTool:" ", attribute:"AWR",tag:"Survival", description: "You might use this skill when looking for food in the wilderness or finding ingredients.",},
+    {name:"Forced March", requiresTool:" ", attribute:"END",tag:"Stamina", description: "You can use this skill when trying to push beyond the normal travel pace that you could manage in a day, whether by walking a greater distance or by walking a normal distance with a greater load.",},
+    {name:"Forging", requiresTool:"x", attribute:"INT",tag:"Subterfuge", description: "This skill can help you replicate signatures or create official- looking documents. If you do well on an INT/Forging check, then your MC will likely give you a circumstantial bonus to INT/Disguising or CHA/Savoir Faire checks.",},
+    {name:"Fortuity", requiresTool:" ", attribute:"Luck",tag:"", description: "Fortuity represents the likelihood that good things just happen to you. If your MC asks you to make a LUCK check to determine the likelihood of a positive outcome, you can add your Fortuity.",},
+    {name:"Geography", requiresTool:" ", attribute:"INT",tag:"Knowledge", description: "You can use this skill when trying to remember where you are in relation to somewhere else, or when you want to deduce information about common geographical patterns in an area.",},
+    {name:"Glassblowing", requiresTool:"x", attribute:"INT",tag:"Crafting", description: "When you have the appropriate tools, you can use this skill to create stunning artistic glasswork, such as dining plates and even glass musical instruments.",},
+    {name:"Gossiping", requiresTool:" ", attribute:"CHA",tag:"Influence", description: "You can use this skill to seed real or false information about a person, event, etc. among populated areas.",},
+    {name:"History", requiresTool:" ", attribute:"INT",tag:"Knowledge", description: "This skill reflects your capacity for remembering historical events and your ability to quickly research historical events when given access to a library, university, or the like. Your MC might let you use this skill in tandem with another Knowledge skill when researching a particular field of knowledge, making an INT/History check and an INT check of the relevant Knowledge type.",},
+    {name:"Instrument", requiresTool:"x", attribute:"CHA",tag:"Performance", description: "When you gain points in this skill, specify one type of instrument. When you have that instrument, you can use this skill to make better performances with that instrument. Your MC might rule that you can apply 1⁄2 of your Skill Points to related instruments; for example, if you have Instrument (Lute) +6, then your MC might allow you to play a banjo with a +3 bonus.",},
+    {name:"Intimidating", requiresTool:" ", attribute:"CHA",tag:"Influence", description: "You can use this skill when trying to peel back someone&apos;s psyche and frighten them into cooperating with you.",},
+    {name:"Intuiting", requiresTool:" ", attribute:"AWR",tag:"Observation", description: "This skill helps you assess when someone is being honest or if they might be hiding something.",},
+    {name:"Investigating", requiresTool:" ", attribute:"AWR",tag:"Observation", description: "You might use this skill when looking for physical clues at a crime scene, or when looking for a secret door or hidden compartment in a room.",},
+    {name:"Jeweling", requiresTool:" ", attribute:"INT",tag:"Crafting", description: "When you have the appropriate tools, this skill can help you create gorgeous works of jewelry. Your MC might allow you to use your Jeweling skill in place of Appraising when you want to assess the value of a piece of jewelry.",},
+    {name:"Law", requiresTool:" ", attribute:"INT",tag:"Knowledge", description: "You can use this skill when you want to recall or acquire information about the legal system in a settled area. You might also use this skill, along with the Entertaining and Persuading skills, to win a case in court.",},
+    {name:"Leadership", requiresTool:" ", attribute:"CHA",tag:"Influence", description: "You might use this skill to bolster the resolve of a discouraged person or group of people, or to exert your status and influence over various officials and convince them to follow your commands.",},
+    {name:"Leatherworking", requiresTool:"x", attribute:"INT",tag:"Crafting", description: "When you have the appropriate tools, you can use this skill to make leather goods such as clothes, bags, or even armor.",},
+    {name:"Lockpicking", requiresTool:"x", attribute:"INT",tag:"Subterfuge", description: "When you have a set of lock picks, you can use this skill to attempt picking any nonmagially sealed lock.",},
+    {name:"Masonry", requiresTool:"x", attribute:"INT",tag:"Crafting", description: "When you have the appropriate tools, you can use this skill to carve rock into sculptures or architectural stonework.",},
+    {name:"Medicine", requiresTool:"x", attribute:"INT",tag:"Knowledge", description: "You can use this skill when trying to recall factual information about medicines, diseases, and the like, which can help you diagnose someone&apos;s symptoms. If you have bandages, you can make an INT/Medicine check to remove the Bleeding condition from a creature. Attempting this costs 3 AP, and unless otherwise specified from the source of the Bleeding condition, the DC is 14 + the amount of Bleeding damage. If you have the proper medicines, you can attempt to treat someone with a disease. The DC for this treatment, as well as the types of medicine that you need, will be mentioned in the disease&apos;s description.",},
+    {name:"Menacing", requiresTool:" ", attribute:"STR",tag:"Stamina", description: "You can use this skill when trying to physically intimidate someone through a show of force.",},
+    {name:"Military", requiresTool:" ", attribute:"INT",tag:"Knowledge", description: "This skill will help you know the proper terminology when speaking with members of a military and can help you when trying to recall information about a military institution.",},
+    {name:"Nature", requiresTool:" ", attribute:"INT",tag:"Survival", description: "You might use this skill when trying to differentiate between edible and toxic mushrooms, recalling the behavior of wolf packs, or other information about the natural world.",},
+    {name:"Navigating", requiresTool:"x", attribute:"AWR",tag:"Survival", description: "If you have a compass, astrolabe, sextant, or even just a map, you can use this skill to find your way through an otherwise confusing area of wilderness. Your MC might rule that you can make this check without the relevant tools, but the DC will be higher.",},
+    {name:"Painting", requiresTool:"x", attribute:"INT",tag:"Crafting", description: "When you have the appropriate tools, you can use this skill to create beautiful paintings.",},
+    {name:"Perceiving", requiresTool:" ", attribute:"AWR",tag:"Observation", description: "You might make use of this skill when relying on sensory input such as scanning a tree line for enemies, looking for concealed weapons, listening for footsteps, or trying to identify a strange odor.",},
+    {name:"Persuading", requiresTool:" ", attribute:"CHA",tag:"Influence", description: "You can use this skill when trying to influence someone through sound arguments or emotional appeal.",},
+    {name:"Politics", requiresTool:" ", attribute:"INT",tag:"Knowledge", description: "When you take this skill, choose a specific region. Your MC will determine whether this should be a single city or a whole nation, based on the campaign they intend to run. When making INT checks related to the politics of that region, you can add this skill. When making INT checks related to the politics of another region, you can add 1⁄2 this skill.",},
+    {name:"Pottery", requiresTool:"x", attribute:"INT",tag:"Crafting", description: "When you have the appropriate clay and tools, you can use this skill to make decorative and functional pottery.",},
+    {name:"Religion", requiresTool:" ", attribute:"INT",tag:"Knowledge", description: "When you take this skill, choose a specific religion. You could pick one of the pantheons listed on Deities, or work with your MC to come up with another religious tradition. When making INT checks related to the customs and beliefs of that religion, you can add this skill. When making INT checks related to the customs and beliefs of any other religion, you can add 1⁄2 this skill.",},
+    {name:"Savoir Faire", requiresTool:" ", attribute:"CHA",tag:"Performance", description: "You can use this skill to fit into any sort of situation. You can appear at home both with peasants and with aristocrats.",},
+    {name:"Scavenging", requiresTool:" ", attribute:"Luck",tag:"", description: "You can use this skill when trying to find food or supplies in an abandoned area. Your MC might also allow you to use this skill to determine how much loot you find on a body.",},
+    {name:"Sheltering", requiresTool:" ", attribute:"AWR",tag:"Survival", description: "You might use this skill when you&apos;re in the wilderness to find a cave, hollow tree, or rocky bluff that can offer shelter from the elements.",},
+    {name:"Sleight of Hand", requiresTool:" ", attribute:"INT",tag:"Subterfuge", description: "You can use this skill when attempting to pickpocket someone, or when trying to keep an item undiscovered as you are patted down.",},
+    {name:"Smithing", requiresTool:"x", attribute:"INT",tag:"Crafting", description: "When you have the appropriate metal and tools, you can use this skill to make wrought iron artistic works or to repair metal tools, weapons, and armor.",},
+    {name:"Sneaking", requiresTool:" ", attribute:"DEX",tag:"Survival", description: "You could use this skill when skulking about and trying to remain physically out of sight.",},
+    {name:"Sprinting", requiresTool:" ", attribute:"STR",tag:"Athleticism", description: "You can use this skill when attempting to cover a small distance in an incredibly short amount of time. This is usually not applicable in normal combat, but might be used in a chase sequence.",},
+    {name:"Tracking", requiresTool:" ", attribute:"AWR",tag:"Survival", description: "You can use this skill when you are trying to follow a creature&apos;s trail.",},
+    {name:"Tumbling", requiresTool:" ", attribute:"DEX",tag:"Acrobatics", description: "This skill helps you fall in such a way that you don&apos;t get hurt. In addition to allowing you to add dramatic flair to any performance you might put on, if you fall 40 ft or less, you can make a Tumbling check with a DC equal to the amount of feet you fell. If you succeed, halve the damage you would take and move 5 ft in a direction of your choice when you land.",},
+    {name:"Vehicles (Land)", requiresTool:"x", attribute:"INT",tag:"Knowledge", description: "You can use this skill to efficiently use land vehicles such as carriages or war carts.",},
+    {name:"Vehicles (Water)", requiresTool:"x", attribute:"INT",tag:"Knowledge", description: "You can use this skill to operate water vehicles, such as sailboats or galleons, with greater efficiency.",},
+    {name:"Weaving", requiresTool:"x", attribute:"INT",tag:"Crafting", description: "When you have the appropriate tools, you can use this skill to make textile goods such as clothing and blankets.",},
+    {name:"Woodcarving", requiresTool:"x", attribute:"INT",tag:"Crafting", description: "When you have the appropriate tools, you can use this skill to whittle toys, fletch arrows, repair a wagon wheel, and the like.",},
     ];
     
-    function addAllStandardSkillsToWorkshopSkillList(){
+    function populateMythcraftStandardSkills(){
 		console.log("start - addAllStandardSkillsToWorkshopSkillList");
 		//first empty the skills array:
 		getSectionIDs("repeating_skills", function(idarray) {
+
 		for(var i=0; i < idarray.length; i++) {
 			removeRepeatingRow("repeating_skills_" + idarray[i]);
 		}
@@ -2391,13 +2529,13 @@ const mcStandardSkills = [
     
         var newrowid = generateRowID();
         var newrowattrs = {};
-        newrowattrs["repeating_skills_" + newrowid + "_name"] = mcStandardSkills[i].name;
+        newrowattrs["repeating_skills_" + newrowid + "_skillName"] = mcStandardSkills[i].name;
         newrowattrs["repeating_skills_" + newrowid + "_requiresTool"] = mcStandardSkills[i].requiresTool;
         newrowattrs["repeating_skills_" + newrowid + "_attribute"] = mcStandardSkills[i].attribute;
-        newrowattrs["repeating_skills_" + newrowid + "_tag"] = mcStandardSkills[i].tag;
+       // newrowattrs["repeating_skills_" + newrowid + "_tag"] = mcStandardSkills[i].tag;
         newrowattrs["repeating_skills_" + newrowid + "_description"] = mcStandardSkills[i].description;
-        newrowattrs["repeating_skills_" + newrowid + "_showcombat"] = mcStandardSkills[i].showcombat;
-        newrowattrs["repeating_skills_" + newrowid + "_showsocial"] = mcStandardSkills[i].showsocial;
+       // newrowattrs["repeating_skills_" + newrowid + "_showcombat"] = mcStandardSkills[i].showcombat;
+       // newrowattrs["repeating_skills_" + newrowid + "_showsocial"] = mcStandardSkills[i].showsocial;
         setAttrs(newrowattrs);
     
         }
@@ -2420,31 +2558,7 @@ function GetThePouch(pouchName, listofContents){
 	}
 }
 
-
-/*
-on("clicked:wrkshp_next", function() { 
-    console.log("Next button clicked on ");  
-
-    getAttrs(["wrkshp"], function(values) {
-        let step = parseInt(values.wrkshp)||0;
-        if(step ===99){
-            console.log("View all workshop tabs{this should not be accessable code}.");
-            return;}
-        let nextStep = step + 1;
-        if (nextStep < 1 ){
-            console.log("First Step in workshop tabs{this should not be accessable code}.");
-            nextStep = 1;
-        }
-        if (nextStep > 12 ){
-            console.log("Last Step in workshop tabs{this should not be accessable code}.");
-            nextStep = 12;}
-        setAttrs({                            
-            wrkshp: nextStep 
-        });
-    });
-
-});
-*/
+ 
 
 
 log("==> Checkpoint 3... <==");
@@ -2727,7 +2841,7 @@ function retrieveCoreAttributes(){
 	let returnObject =  { };
 
 	console.log("start retrieveCoreAttributes");
-	getAttrs(["strength_str","dexterity_dex","endurance_end","awareness_awr","intellegence_int","charisma_cha"], function(values) {
+	getAttrs(["strength_str","dexterity_dex","endurance_end","awareness_awr","intellegence_int","charisma_cha", "luck_luck", "coordination_cor"], function(values) {
 		console.log("gort core attributes");
 		let strength_STR = !isNaN(parseInt(values.strength_str)) ? parseInt(values.strength_str) : -4 ;
 		let dexterity_DEX = !isNaN(parseInt(values.dexterity_dex)) ? parseInt(values.dexterity_dex) : -4 ;
@@ -2735,6 +2849,8 @@ function retrieveCoreAttributes(){
 		let awareness_AWR = !isNaN(parseInt(values.awareness_awr)) ? parseInt(values.awareness_awr) : -4 ;
 		let intellegence_INT = !isNaN(parseInt(values.intellegence_int)) ? parseInt(values.intellegence_int) : -4 ; 
 		let charisma_CHA = !isNaN(parseInt(values.charisma_cha)) ? parseInt(values.charisma_cha) : -4 ;
+		let luck_LUCK = !isNaN(parseInt(values.luck_luck)) ? parseInt(values.luck_luck) : -4 ;
+		let coordination_COR = !isNaN(parseInt(values.coordination_cor)) ? parseInt(values.coordination_cor) : -4 ;
 		returnObject =  { 
 			str:strength_STR,
 			dex:dexterity_DEX,
@@ -2742,10 +2858,14 @@ function retrieveCoreAttributes(){
 			awr:awareness_AWR,
 			int:intellegence_INT,
 			cha:charisma_CHA,
+			luck:luck_luck,
+			cor:coordination_cor,
 		};
     });
 	return returnObject;
 }
+
+
 function calcAPC(actionPointCost, coreAttrs){
 
 
@@ -2773,6 +2893,34 @@ function calcAPC(actionPointCost, coreAttrs){
 	}
 
 }
+
+
+function getStatModifier(item){
+
+	var coreAttrs = retrieveCoreAttributes();
+	var valueToUse;
+	switch (item) {
+		case "STR":
+		valueToUse = ( coreAttrs.str);
+		case "DEX":
+		valueToUse =  ( coreAttrs.dex);
+		case "END":
+		valueToUse =  ( coreAttrs.end  );
+		case "AWR":
+		valueToUse =  ( coreAttrs.awr  );
+		case "INT":
+		valueToUse =  ( coreAttrs.int  );
+		case "CHA":
+		valueToUse =  ( coreAttrs.cha  );
+		default:
+			console.log("cannot get Stat Modifier "+ item + ".. it's not supported?");
+		return  999;
+	}
+
+	return mcHitPointLookup[valueToUse+3];
+
+}
+
 
 
 function convertWeaponToAction(weapon){
@@ -2823,6 +2971,21 @@ function addWeapons(){
 
 
 }
+//
+on('change:repeating_action:attack0_ap_base change:repeating_action:attack0_ap_plus_stat change:repeating_action:attack0_ap_minus_stat change:repeating_action:attack0_ap_minimum', function (e) {
+    getAttrs(['repeating_action_attack0_ap_base','repeating_action_attack0_ap_plus_stat','repeating_action_attack0_ap_minus_stat','repeating_action_attack0_ap_minimum'], function (item) {
+        var actionPointBlock = {
+			BaseValue:item.repeating_action_attack0_ap_base,
+			addAttribute:item.repeating_action_attack0_ap_plus_stat,
+			subtractFromAttribute:item.repeating_action_attack0_ap_minus_stat,
+			 min:item.repeating_action_attack0_ap_minimum}
+		setAttrs({
+			repeating_action_attack0_ap_calculated:  calcAPC(actionPointBlock,retrieveCoreAttributes() )
+            
+        });
+    });
+});
+
 
 //List of attributes contained in our repeating section that we want to filter by, or that control the filtering. Make sure to update this with the actual attributes that you want to filter by.
 const equipmentFilterAttributes = ['name','filtered'];
@@ -2866,9 +3029,10 @@ const diceProgression =["1d1","1d4","1d6","1d8","1d10", "1d12"];
 on("clicked:doUpdate", function() {
 	console.log("do doUpdate");
 	updateDefenses();
-	addAllStandardSkillsToWorkshopSkillList();
+	//addAllStandardSkillsToWorkshopSkillList();
 	restDeathPoints();
 	addWeapons();
+	populateMythcraftStandardSkills()
 	console.log("finish doUpdate");
 });	
 	
@@ -2883,6 +3047,27 @@ on("clicked:doUpdate", function() {
 
 
 </div>
+
+
+
+<!----------------------------------------------------------------ROLL TEMPLATES -------------------------------------------------------------------------->
+
+<!--
+&{template:mythcraft-dice-roll} ---------------------------------------------------------------------------------------------------------
+-->
+<rolltemplate class="sheet-rolltemplate-mythcraft-dice-roll">
+    <table>
+        <caption>{{name}}</caption>
+        <tr>
+		<td class="template_label" data-i18n="rolled">Rolled:</td><td class="template_value">{{diceroll}}</td>
+	</tr>
+    </table>
+</rolltemplate>
+
+
+<!---------------------------------------------------------------- CHARMANCER -------------------------------------------------------------------------->
+
+
 <charmancer class="sheet-charmancer-intro">
 	<div class="sheet-charmancer">
 		<div class="sheet-mancer-box">
@@ -4009,7 +4194,7 @@ on("clicked:doUpdate", function() {
 		-->
 						<div class="sheet-col-1-8"><input type="text" name="attr_weaponname" /></div>
 						<div class="sheet-col-1-18">
-							<button type="roll" value="@{secret_roll} &{template:coc-attack} {}"
+							<button type="roll" value="@{secret_roll} &{template:mythcraft-dice-roll} {}"
 								name="roll_weaponskill_check"></button>
 						</div>
 						<div class="sheet-col-1-18">
@@ -4167,7 +4352,7 @@ on("clicked:doUpdate", function() {
 
 
 						<div class="sheet-col-1-18">
-							<button type="roll" value="@{secret_roll} &{template:coc-attack} {}"
+							<button type="roll" value="@{secret_roll} &{template:mythcraft-dice-roll} {}"
 								name="roll_weaponskill_check"></button>
 						</div>
 						<!-- ///FRUNKYMONKEY

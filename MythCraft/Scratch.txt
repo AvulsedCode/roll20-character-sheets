@@ -301,6 +301,14 @@ const mcStandardSkills = [
 
 
 
+
+
+
+
+
+
+
+
 Outstanding effort on Character Sheet 
 ** Layout ** : Nov 26th:
 ** Rolls  ** : Nov 30th: 
@@ -334,4 +342,67 @@ Items directly Dependent on Compendium
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+name:"Battle Axe",
+	damage:[{dice:"1d8", damageType:""}],
+	coreAttribute:"STR",
+	actionPointCost:{BaseValue:5,addAttribute:"",subtractFromAttribute:"STR", min:3},
+	range:"Melee",
+	tags:["Hand-and-a-Half"],
+	type:"Axe",
+	specialFeatures:[
+		{
+			tag:"One Handed",damageDice:"1d8", adjustactionPointCost:{BaseValue:0, min:0}, adjustArmorRating:0,adjustRange:"",
+		},
+		{
+			tag:"Two Handed",damageDice:"1d10", adjustactionPointCost:{BaseValue:0, min:0}, adjustArmorRating:0,adjustRange:"",
+		}
+			
+	],
+	cost:35,
+
+
+
+
+  html {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+  
+  	box-sizing: border-box;
+  }
+
+  *,
+  *:before,
+  *:after {
+	-webkit-box-sizing: inherit;
+	-moz-box-sizing: inherit;
+  	box-sizing: inherit;
+  }
+
+  button.btn.repcontrol_add::before,
+  button.btn.repcontrol_edit::after{
+  	box-sizing: content-box;
+  }
+
+attr_attack0_ap_base 
+attr_attack0_ap_plus_stat
+attr_attack0_ap_minus_stat
+attr_attack0_ap_minimum
+attr_attack0_ap_calculated
 
