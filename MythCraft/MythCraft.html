@@ -35,18 +35,18 @@
 						<div>
 							<!-- Modal Title and close button row -->
 							<div class="sheet-row sheet-ro-header sheet-border-bottom sheet-padb">
-								<div class="sheet-col-3-4 sheet-ro-title">Default Roll Options</div>
-								<div class="sheet-col-1-4 sheet-ro-close-wrapper">
-									<input type="checkbox" name="attr_default_ro" class="sheet-ro-close-checkbox"
-										value="1" />
+								<div class="sheet-col-1-3 sheet-ro-title">Default Options</div>
+								<div class="sheet-col-1-8 sheet-ro-close-wrapper">
+									<input type="checkbox" name="attr_default_ro" class="sheet-ro-close-checkbox" value="1" />
 									<span class="sheet-ro-close-label"></span>
 								</div>
 							</div>
 							<!--Help text and copy of roll button-->
+							<div class="sheet-row">
+								<input type="checkbox" name="attr_debug"  />Debug
+							</div>
 							<div class="sheet-row sheet-padb">
-								<div class="sheet-col-2-3 sheet-small-note">The settings here apply to any rolls set to
-									use the
-									default roll options</div>
+								<div class="sheet-col-2-3 sheet-small-note">The settings here are intended for development purposes</div>
 							</div>
 							<hr />
 							<!-- Define options here -->
@@ -54,16 +54,95 @@
 								<div class="sheet-col-1-3 sheet-ro-optionlabel">Roll type</div>
 								<div class="sheet-col-2-3 sheet-padl sheet-ro-option">
 									<select name="attr_ro_default_rolltype">
-										<option value="{{showadvroll=1}} {{roll2=[[ 1d20">Roll 2d20</option>
 										<option value="{{noadvroll=1}}">Roll 1d20</option>
-										<option
-											value="?{Roll type?|Normal,&#123&#123noadvroll=1&#125&#125|Advantage,&#123&#123rollhasadv=1&#125&#125 &#123&#123roll2=[[1d20|Disadvantage,&#123&#123rollhasdisadv=1&#125&#125 &#123&#123roll2=[[1d20}">
-											Prompt for adv/disadv</option>
-										<option value="{{rollhasadv=1}} {{roll2=[[ 1d20">ALWAYS Advantage</option>
-										<option value="{{rollhasdisadv=1}} {{roll2=[[ 1d20">ALWAYS Disadvantage</option>
 									</select>
 								</div>
 							</div>
+							<p>
+								Room: <span name="attr_room"></span><br>
+								Sheet Version: <span name="attr_sheet_version"></span><br>
+								attr_room: <span name="attr_room"></span><br>
+								attr_tab: <span name="tab"></span><br>
+								attr_wrkshp: <span name="attr_wrkshp"></span><br>
+								attr_character_name: <span name="attr_character_name"></span><br>
+								attr_character_lineage: <span name="attr_lineage"></span><br>
+								attr_height: <span name="attr_height"></span><br>
+								attr_weight: <span name="attr_weight"></span><br>
+								attr_eye_color: <span name="attr_eye_color"></span><br>
+								attr_hair_color: <span name="attr_hair_color"></span><br>
+								attr_other: <span name="attr_other"></span><br>
+								attr_ro_default_rolltype: <span name="attr_ro_default_rolltype"></span><br>
+								attr_default_ro: <span name="attr_default_ro"></span><br>
+								attr_tab: <span name="attr_tab"></span><br>
+								attr_tabcurrent: <span name="attr_tabcurrent"></span><br>
+								attr_advantage: <span name="attr_advantage"></span><br>
+								attr_tactics: <span name="attr_tactics"></span><br>
+								attr_strength_str: <span name="attr_strength_str"></span><br>
+								attr_dexterity_dex: <span name="attr_dexterity_dex"></span><br>
+								attr_endurance_end: <span name="attr_endurance_end"></span><br>
+								attr_intellect_int: <span name="attr_intellect_int"></span><br>
+								attr_charisma_cha: <span name="attr_charisma_cha"></span><br>
+								attr_luck_luck: <span name="attr_luck_luck"></span><br>
+								attr_coordination_cor: <span name="attr_coordination_cor"></span><br>
+								attr_hp: <span name="attr_hp"></span><br>
+								attr_hp_base: <span name="attr_hp_base"></span><br>
+								attr_hp_base_max: <span name="attr_hp_base_max"></span><br>
+								attr_HP: <span name="attr_HP"></span><br>
+								attr_hp_bonus: <span name="attr_hp_bonus"></span><br>
+								attr_hp_condition: <span name="attr_hp_condition"></span><br>
+								attr_hp_max: <span name="attr_hp_max"></span><br>
+								attr_hp_current: <span name="attr_hp_current"></span><br>
+								attr_shield: <span name="attr_hp_shield"></span><br>
+								attr_hp_mod: <span name="attr_hp_mod"></span><br>
+								attr_hp_mod_flag: <span name="attr_hp_mod_flag"></span><br>
+								attr_hp_notes: <span name="attr_hp_notes"></span><br>
+								attr_hp_temp: <span name="attr_hp_temp"></span><br>
+								attr_armor_rating_ar: <span name="attr_armor_rating_ar"></span><br>
+								attr_reflexes_ref: <span name="attr_reflexes_ref"></span><br>
+								attr_fortitude_for: <span name="attr_fortitude_for"></span><br>
+								attr_anticipation_ant: <span name="attr_anticipation_ant"></span><br>
+								attr_logic_log: <span name="attr_logic_log"></span><br>
+								attr_endurance_end: <span name="attr_endurance_end"></span><br>
+								attr_awareness_awr: <span name="attr_awareness_awr"></span><br>
+								attr_intellegence_int: <span name="attr_intellegence_int"></span><br>
+						
+								attr_willpower_wil: <span name="attr_willpower_wil"></span><br>
+								attr_luck_luck: <span name="attr_luck_luck"></span><br>
+								attr_coordination_cor: <span name="attr_coordination_cor"></span><br>
+								attr_personality_n_backstory: <span name="attr_personality_n_backstory"></span><br>
+								: <span name=""></span><br>
+								: <span name=""></span><br>
+								: <span name=""></span><br>
+								: <span name=""></span><br>
+								: <span name=""></span><br>
+								: <span name=""></span><br>
+								: <span name=""></span><br>
+								: <span name=""></span><br>
+								: <span name=""></span><br>
+								: <span name=""></span><br>
+								: <span name=""></span><br>
+								: <span name=""></span><br>
+								: <span name=""></span><br>
+								: <span name=""></span><br>
+								attr_hp_max: <span name="attr_hp_max"></span><br>
+								attr_hp_current: <span name="attr_hp_current"></span><br>
+								attr_shield: <span name="attr_shield"></span><br>
+								attr_armour_rating_ar: <span name="attr_armour_rating_ar"></span><br>
+								attr_armour_rating_ar_note: <span name="attr_armour_rating_ar_note"></span><br>
+								attr_speed: <span name="attr_speed"></span><br>
+								attr_spell_points_max: <span name="attr_spell_points_max"></span><br>
+								attr_spell_points_current: <span name="attr_spell_points_current"></span><br>
+								attr_spellcasting_ability: <span name="attr_spellcasting_ability"></span><br>
+								: <span name=""></span><br>
+								: <span name=""></span><br>
+								: <span name=""></span><br>
+								: <span name=""></span><br>
+						
+						
+						
+						
+							</p>
+						
 						</div>
 						<!-- close inner modal div -->
 					</div>
@@ -142,7 +221,7 @@
 									<!-- Speed -->
 									<input type="number" name="attr_speed">
 								</div>
-								<div class="sheet-center fixSpacing">Speed</div>
+								<div class="sheet-center">Speed</div>
 
 							</div>
 						</div>
@@ -225,7 +304,7 @@
 													</div>
 													<div class="sheet-col-1-2">
 														<div class="sheet-label  sheet-center">Dice:</div>
-														<select class="sheet-col-1-8" name="attr_skillStat">
+														<select class="sheet-col-1-8" name="attr_dice">
 															<option value="1d1" data-18n="1d1" checked="checked">1d1</option>
 															<option value="1d2" data-18n="1d2">1d2</option>
 															<option value="1d4" data-18n="1d4">1d4</option>
@@ -360,14 +439,48 @@
 					<div class="sheet-col-1-2 ">
 						<div class="sheet-fieldset sheet-attribute-border"> <!-- Combat  Actions -->
 							<div class="sheet-legend">Attacks &amp; Spellcasting</div>
-							<div class="sheet-row">
-								<div class="sheet-col-1-2">Global Modifier:</div>
-								<div class="sheet-col-1-2"><input type="number" name="attr_global_modifier"></div>
-				
+							<div class="sheet-row"> <!-- Tactical Advantage -->
+								<div class="sheet-col-1-3">Tactical Advantage:</div>
+								<div class="sheet-col-1-8"><button type="action" name="act_bump_up_advantage" >+</button></div>
+								<div class="sheet-col-1-8"><input type="number" name="attr_advantage" value="0"></div>
+								<div class="sheet-col-1-8"><button type="action" name="act_bump_down_advantage"  >-</button></div>
 							</div>
+							<hr> 
+							<div class="sheet-row sheet-center">Global Modifiers</div>
+							<fieldset class="repeating_globals"> <!-- repeating fieldset -->
+								<div class="sheet-row">
+									<div class="sheet-col-1-18">
+										<input type="checkbox" name="attr_options-flag-globals" checked="checked" title="Configure Global Modifier"
+											class=" sheet-options-globals-flag sheet-ro-checkbox" /><span class="sheet-ro-label">y</span>
+									</div>
+									<div class="sheet-col-1-18">
+										<input type="checkbox" name="attr_use_global_to_hit" checked="checked" />
+									</div>
+									<div class="sheet-col-1-3">
+										<input type="number" name="attr_global_to_hit">
+									</div>
+									<div class="sheet-col-1-18">
+										<input type="checkbox" name="attr_use_global_damage" checked="checked" />
+									</div>
+									<div class="sheet-col-1-3">
+										<input type="number" name="attr_global_damage">
+									</div>
+								</div>
+								<input type="checkbox" name="attr_options-flag-globals" checked="checked" class="sheet-options-hidden-globals-flag " />
+								<div class="sheet-options-globals">
+										<div class="sheet-row">
+											<div class="sheet-col-1-2">
+												<span class="sheet-label">Notes:</span>
+												<input type="text" name="attr_notes" class="sheet-col-1-8" value="" />
+											</div>
+									</div>
+								</div>
+							</fieldset>
 							<hr> 
 							<div class="attacks">
 								<div class="sheet-row">
+									<div class="sheet-row">
+								
 									<span class="sheet-attacks sheet-col-1-10"></span>
 									<span class="sheet-col-4-10">Weapons / Attacks</span>
 									<input type="hidden" name="attr_attack_bonus" class="attr-flag" value="0" />
@@ -375,138 +488,143 @@
 									<input type="hidden" name="attr_damage_bonus_flag" class="attr-flag" value="0" />
 									<span class="sheet-med sheet-only sheet-damage-title sheet-col-1-10">DMG</span>
 									<span class="med only ammo-title sheet-col-1-10">Ammo</span>
-								</div>
-				
-								<div class="sheet-row compendium-drop-target">
-									<fieldset class="repeating_actions">
-										<div class="sheet-attack sheet-row">
-											<div class="sheet-col-1-18">
-												<input type="checkbox" name="attr_options-flag-attack" checked="checked" title="Configure Weapon or Attack"
-													class=" sheet-options-attack-flag sheet-ro-checkbox" /><span class="sheet-ro-label">y</span>
-											</div>
-											<div class="sheet-col-1-2">
-												<button class="sheet-roll-text " type="roll" name="roll_fullattack" title="Full Attack & Damage roll"
-													value="@{rollbase}">
-													<span class="sheet-pseudoattr" name="attr_displayName"></span>
-												</button>
-											</div>
-											<div class="sheet-col-1-5">
-												<button class="sheet-roll-text" type="roll" name="roll_damage" title="Damage roll" value="@{rollbase_dmg}">
-													<span class="sheet-pseudoattr" name="attr_atkdmgdisplay"></span>
-												</button>
-											</div>
-											<div class="sheet-col-1-10">
-												<input type="number" class="sheet-ammo " name="attr_atkammo" value="0" title="@{repeating_attacks_$id_atkammo}" />
-											</div>
-											<input type="checkbox" name="attr_options-flag-attack" class="sheet-options-hidden-attack-flag" />
+									</div>
+					
+									<div class="sheet-row compendium-drop-target">
+										<fieldset class="repeating_actions">
+											<div class="sheet-attack sheet-row">
+												<div class="sheet-col-1-18">
+													<input type="checkbox" name="attr_options-flag-attack" checked="checked" title="Configure Weapon or Attack"
+														class=" sheet-options-attack-flag sheet-ro-checkbox" /><span class="sheet-ro-label">y</span>
+												</div>
+												<div class="sheet-col-1-2">
+													<button class="sheet-roll-text " type="roll" name="roll_fullattack" title="Full Attack & Damage roll"
+														value="@{rollbase}">
+														<span class="sheet-pseudoattr" name="attr_displayName"></span>
+													</button>
+												</div>
+												<div class="sheet-col-1-5">
+													<button class="sheet-roll-text" type="roll" name="roll_damage" title="Damage roll" value="@{rollbase_dmg}">
+														<span class="sheet-pseudoattr" name="attr_atkdmgdisplay"></span>
+													</button>
+												</div>
+												<div class="sheet-col-1-10">
+													<input type="number" class="sheet-ammo " name="attr_atkammo" value="0" title="@{repeating_attacks_$id_atkammo}" />
+												</div>
+												<input type="checkbox" name="attr_options-flag-attack" class="sheet-options-hidden-attack-flag" />
+												
+												<div class="sheet-options-attack">
+													<div class="sheet-row">
+														<div class="sheet-label sheet-col-6">Name:</div>
+														<div class="sheet-col-1-2">
+															<input type="text" class=" sheet-underlined" name="attr_displayName" value="" />
+														</div>
+													</div>
+													<div  class="sheet-row sheet-action-point-configuraiton">
+														<div class="sheet-col-1-4 ">
+															<div class="sheet-label sheet-center">Action Points:</div>
+															<input type="number" class=" sheet-underlined" name="attr_attack0_ap_base"  value="" />
+														</div>
+														<div class="sheet-col-3-16 ">
+															<div class="sheet-label sheet-center">+</div><select  class="sheet-col-1-8" name="attr_attack0_ap_plus_stat">
+																<option value="--" data-18n="--" checked="checked">--</option>
+																<option value="STR" data-18n="str" >STR</option>
+																<option value="DEX" data-18n="dex" >DEX</option>
+																<option value="END" data-18n="end">END</option>
+																<option value="AWR" data-18n="awr">AWR</option>
+																<option value="INT" data-18n="int">INT</option>
+																<option value="CHA" data-18n="cha">CHA</option>
+																<option value="LUCK" data-18n="luck">LUCK</option>
+																<option value="COR" data-18n="cor">COR</option>
+															</select>
+														</div>
+														<div class="sheet-col-3-16 ">
+															<div class="sheet-label sheet-center">-</div><select  class="sheet-col-1-8" name="attr_attack0_ap_minus_stat">
+																<option value="--" data-18n="--" checked="checked">--</option>
+																<option value="STR" data-18n="str" >STR</option>
+																<option value="DEX" data-18n="dex" >DEX</option>
+																<option value="END" data-18n="end">END</option>
+																<option value="AWR" data-18n="awr">AWR</option>
+																<option value="INT" data-18n="int">INT</option>
+																<option value="CHA" data-18n="cha">CHA</option>
+																<option value="LUCK" data-18n="luck">LUCK</option>
+																<option value="COR" data-18n="cor">COR</option>
+															</select>
+														</div>
+														<div class="sheet-col-3-16 ">
+															<div class="sheet-label sheet-center">Minimum:</div>
+															<input type="number" class=" sheet-underlined" name="attr_attack0_ap_minimum" value="" />
+														</div> 
+														<div class="sheet-col-1-16">
+															<span class="sheet-pseudoattr" name="attr_attack0_ap_calculated" value="##"></span>
+														</div>
+													</div>
+
+													<div class="sheet-row">
+														<div class="sheet-col-3-16">
+															<div class="sheet-label sheet-center">Stat:</div><select  name="attr_action_range">
+																<option value="Melee" data-18n="melee" checked="Melee">Melee</option>
+																<option value="Ranged" data-18n="ranged" >Ranged</option>
+															</select>
+
+														</div>
+														<div class="sheet-col-1-5">
+															<div class="sheet-label sheet-center">Stat:</div><select name="attr_action_stat">
+																<option value="--" data-18n="--" checked="checked">--</option>
+																<option value="STR" data-18n="str" >STR</option>
+																<option value="DEX" data-18n="dex" >DEX</option>
+																<option value="END" data-18n="end">END</option>
+																<option value="AWR" data-18n="awr">AWR</option>
+																<option value="INT" data-18n="int">INT</option>
+																<option value="CHA" data-18n="cha">CHA</option>
+																<option value="LUCK" data-18n="luck">LUCK</option>
+																<option value="COR" data-18n="cor">COR</option>
+															</select>
+														</div>
+														<div class="sheet-col-1-6">
+															<div class="sheet-label  sheet-center">Dice:</div>
+															<input type="number"   name="attr_action_damagedice_count_modifier" value="1" />
+															
+														</div>
+														<div class="sheet-col-1-8">
+															<div class="sheet-label  sheet-center">Dice:</div>
+															<select  name="attr_action_damagedice_type_selector">
+																<option value="1d1" data-18n="1d1" checked="checked">1d1</option>
+																<option value="1d2" data-18n="1d2" >1d2</option>
+																<option value="1d4" data-18n="1d4">1d4</option>
+																<option value="1d6" data-18n="1d6">1d6</option>
+																<option value="1d8" data-18n="1d8">1d8</option>
+																<option value="1d10" data-18n="1d10">1d10</option>
+																<option value="1d12" data-18n="1d12">1d12</option>
+																<option value="1d20" data-18n="1d20">1d20</option>
+															</select>
+														</div>
+														<div class="sheet-col-1-3">
+															<div class="sheet-label sheet-center">Damage Type:</div>
+															<select  class="sheet-col-1-8" name="attr_damageType">
+																<option value="Blunt" data-18n="blunt" checked="checked">Blunt</option>
+																<option value="Sharp" data-18n="sharp" >Sharp</option>
+																<option value="Cold" data-18n="cold">Cold</option>
+																<option value="Corrosive" data-18n="corrosive">Corrosive</option>
+																<option value="Fire" data-18n="fire">Fire</option>
+																<option value="Lightning" data-18n="lightning">Lightning</option>
+																<option value="Toxic" data-18n="toxic">Toxic</option>
+																<option value="Necrotic" data-18n="necrotic">Necrotic</option>
+																<option value="Psychic" data-18n="psychic">Psychic</option>
+																<option value="Radiant" data-18n="radiant">Radiant</option>
+																<option value="Sonic" data-18n="sonic">Sonic</option>
+															</select>
+														</div>
+													</div>
 											
-											<div class="sheet-options-attack">
-												<div class="sheet-row">
-													<div class="sheet-label sheet-col-6">Name:</div>
-													<div class="sheet-col-1-2">
-														<input type="text" class=" sheet-underlined" name="attr_displayName" value="" />
-													</div>
 												</div>
-												<div  class="sheet-row sheet-action-point-configuraiton">
-													<div class="sheet-col-1-4 ">
-														<div class="sheet-label sheet-center">Action Points:</div>
-														<input type="number" class=" sheet-underlined" name="attr_attack0_ap_base"  value="" />
-													</div>
-													<div class="sheet-col-3-16 ">
-														<div class="sheet-label sheet-center">+</div><select  class="sheet-col-1-8" name="attr_attack0_ap_plus_stat">
-															<option value="--" data-18n="--" checked="checked">--</option>
-															<option value="STR" data-18n="str" >STR</option>
-															<option value="DEX" data-18n="dex" >DEX</option>
-															<option value="END" data-18n="end">END</option>
-															<option value="AWR" data-18n="awr">AWR</option>
-															<option value="INT" data-18n="int">INT</option>
-															<option value="CHA" data-18n="cha">CHA</option>
-															<option value="LUCK" data-18n="luck">LUCK</option>
-															<option value="COR" data-18n="cor">COR</option>
-														</select>
-													</div>
-													<div class="sheet-col-3-16 ">
-														<div class="sheet-label sheet-center">-</div><select  class="sheet-col-1-8" name="attr_attack0_ap_minus_stat">
-															<option value="--" data-18n="--" checked="checked">--</option>
-															<option value="STR" data-18n="str" >STR</option>
-															<option value="DEX" data-18n="dex" >DEX</option>
-															<option value="END" data-18n="end">END</option>
-															<option value="AWR" data-18n="awr">AWR</option>
-															<option value="INT" data-18n="int">INT</option>
-															<option value="CHA" data-18n="cha">CHA</option>
-															<option value="LUCK" data-18n="luck">LUCK</option>
-															<option value="COR" data-18n="cor">COR</option>
-														</select>
-													</div>
-													<div class="sheet-col-3-16 ">
-														<div class="sheet-label sheet-center">Minimum:</div>
-														<input type="number" class=" sheet-underlined" name="attr_attack0_ap_minimum" value="" />
-													</div> 
-													<div class="sheet-col-1-16">
-														<span class="sheet-pseudoattr" name="attr_attack0_ap_calculated" value="##"></span>
-													</div>
-												</div>
-
-												<div class="sheet-row">
-													<div class="sheet-col-3-16">
-														<div class="sheet-label sheet-center">Stat:</div><select  name="attr_skillStat">
-															<option value="Melee" data-18n="melee" checked="Melee">Melee</option>
-															<option value="Ranged" data-18n="ranged" >Ranged</option>
-														</select>
-
-													</div>
-													<div class="sheet-col-1-5">
-														<div class="sheet-label sheet-center">Stat:</div><select  class="sheet-col-1-8" name="attr_skillStat">
-															<option value="--" data-18n="--" checked="checked">--</option>
-															<option value="STR" data-18n="str" >STR</option>
-															<option value="DEX" data-18n="dex" >DEX</option>
-															<option value="END" data-18n="end">END</option>
-															<option value="AWR" data-18n="awr">AWR</option>
-															<option value="INT" data-18n="int">INT</option>
-															<option value="CHA" data-18n="cha">CHA</option>
-															<option value="LUCK" data-18n="luck">LUCK</option>
-															<option value="COR" data-18n="cor">COR</option>
-														</select>
-													</div>
-													<div class="sheet-col-1-6">
-														<div class="sheet-label  sheet-center">Dice:</div>
-														<select  class="sheet-col-1-8" name="attr_skillStat">
-															<option value="1d1" data-18n="1d1" checked="checked">1d1</option>
-															<option value="1d2" data-18n="1d2" >1d2</option>
-															<option value="1d4" data-18n="1d4">1d4</option>
-															<option value="1d6" data-18n="1d6">1d6</option>
-															<option value="1d8" data-18n="1d8">1d8</option>
-															<option value="1d10" data-18n="1d10">1d10</option>
-															<option value="1d12" data-18n="1d12">1d12</option>
-															<option value="1d20" data-18n="1d20">1d20</option>
-														</select>
-													</div>
-													<div class="sheet-col-1-3">
-														<div class="sheet-label sheet-center">Damage Type:</div>
-														<select  class="sheet-col-1-8" name="attr_skillStat">
-															<option value="Blunt" data-18n="blunt" checked="checked">Blunt</option>
-															<option value="Sharp" data-18n="sharp" >Sharp</option>
-															<option value="Cold" data-18n="cold">Cold</option>
-															<option value="Corrosive" data-18n="corrosive">Corrosive</option>
-															<option value="Fire" data-18n="fire">Fire</option>
-															<option value="Lightning" data-18n="lightning">Lightning</option>
-															<option value="Toxic" data-18n="toxic">Toxic</option>
-															<option value="Necrotic" data-18n="necrotic">Necrotic</option>
-															<option value="Psychic" data-18n="psychic">Psychic</option>
-															<option value="Radiant" data-18n="radiant">Radiant</option>
-															<option value="Sonic" data-18n="sonic">Sonic</option>
-														</select>
-													</div>
-												</div>
-										
 											</div>
-										</div>
-									</fieldset>
+										</fieldset>
+									</div>
 								</div>
+				
 							</div>
-				
-						</div>
-				
+						</div>	
 				
 					</div>
 					<div class="sheet-col-1-2 sheet-right "><!-- Skills -->
@@ -514,18 +632,19 @@
 							<div class="sheet-legend">Skills</div>
 							<div class="sheet-repeatingskills">
 			
-								<fieldset class="repeating_skills"> <!-- repeating fieldset -->
-									<div class="sheet-row compendium-drop-target">
+								<fieldset class="repeating_skills sheet-skills"> <!-- repeating fieldset -->
+									<div class="sheet-row compendium-drop-target sheet-right sheet-skill">
+										<div class="sheet-col-1-8 "></div>
 										<div class="sheet-col-1-12"><input type="checkbox" name="attr_options-flag-skill" checked="checked"
 												title="Configure skill" class="sheet-ro-checkbox sheet-options-skill-flag " />
 											<span class="sheet-ro-label">y</span>
 										</div>
-										<div class="sheet-col-1-2">
+										<div class="sheet-col-1-2 ">
 											<button class=" sheet-roll-text" type="roll" name="roll_skillCheck" title="Roll Check" value="@{rollbase}">
 												<span class="sheet-pseudoattr" name="attr_skillName"></span>
 												&nbsp;<span class="sheet-pictos" name="attr_requiresTool"></span>&nbsp;
 										</div>
-										<div class="sheet-col-1-8">
+										<div class="sheet-col-1-8 ">
 											<input type="number" name="attr_skill_modifier" />
 										</div>
 										</button>
@@ -537,18 +656,19 @@
 													<input type="text" name="attr_skillName" class="sheet-col-1-8" value="" />
 												</div>
 										
-												<div class="sheet-col-1-4">
-													<div>Requires Tools:</div>
-														<select class="sheet-col-1-8" name="attr_skillStat">
+												<div class="sheet-col-1-3">
+													<div>Need Tools:</div>
+														<select class="sheet-col-1-8" name="attr_skillTools">
 														<option value=" " data-18n="false" checked="checked">False</option>
 														<option value="x" data-18n="true">True</option>
 													</select>
 												</div>
 												</div>
 												<div class="sheet-row">
-												<div class="sheet-col-1-6">
+												<div class="sheet-col-1-2">
 													<span class="sheet-label">Stat:</span><select class="sheet-col-1-8" name="attr_skillStat">
-														<option value="STR" data-18n="str" checked="checked">STR</option>
+														<option value="--" data-18n="--" checked="checked">--</option>
+														<option value="STR" data-18n="str">STR</option>
 														<option value="DEX" data-18n="dex">DEX</option>
 														<option value="END" data-18n="end">END</option>
 														<option value="AWR" data-18n="awr">AWR</option>
@@ -558,11 +678,11 @@
 														<option value="COR" data-18n="cor">COR</option>
 													</select>
 												</div>
-												<div class="sheet-col-1-3">
+												<div class="sheet-col-1-6">
 													<span class="sheet-label">Base:</span>
 													<input type="text" name="attr_skillBaseValue" class="sheet-col-1-8" value="" />
 												</div>
-												<div class="sheet-col-1-3">
+												<div class="sheet-col-1-6">
 													<span class="sheet-label">Result:</span>
 													<input type="text" name="attr_skillUseableValue" class="sheet-col-1-8" value="" />
 												</div>
@@ -1097,108 +1217,7 @@
 		<!-- OOS  -->
 	</div>
 </div>
-<div class="sheet-room-workshop sheet-mythcraft-border section__container">
-	Workshop
-	<p>
-		Room: <span name="attr_room"></span><br>
-		Sheet Version: <span name="attr_sheet_version"></span><br>
-		attr_room: <span name="attr_room"></span><br>
-		attr_tab: <span name="tab"></span><br>
-		attr_wrkshp: <span name="attr_wrkshp"></span><br>
-		attr_character_name: <span name="attr_character_name"></span><br>
-		attr_character_lineage: <span name="attr_lineage"></span><br>
-		attr_height: <span name="attr_height"></span>
-		<input name="attr_height"><br>
-		attr_weight: <span name="attr_weight"></span>
-		<input type="number" name="attr_weight"><br>
-		attr_eye_color: <span name="attr_eye_color"></span>
-		<input name="attr_eye_color"><br>
-		attr_hair_color: <span name="attr_hair_color"></span><input name="attr_hair_color"><br>
-		attr_other: <span name="attr_other"></span><input name="attr_other"><br>
-		attr_ro_default_rolltype: <span name="attr_ro_default_rolltype"></span>"></span><br>
-		attr_default_ro: <span name="attr_default_ro"></span><br>
-		attr_tab: <span name="attr_tab"></span><br>
-		attr_tabcurrent: <span name="attr_tabcurrent"></span><br>
-		attr_tactics: <span name="attr_tactics"></span><br>
-		attr_strength_str: <span name="attr_strength_str"></span><br>
-		attr_dexterity_dex: <span name="attr_dexterity_dex"></span><br>
-		attr_endurance_end: <span name="attr_endurance_end"></span><br>
-		attr_intellect_int: <span name="attr_intellect_int"></span><br>
-		attr_charisma_cha: <span name="attr_charisma_cha"></span><br>
-		attr_luck_luck: <span name="attr_luck_luck"></span><br>
-		attr_coordination_cor: <span name="attr_coordination_cor"></span><br>
-		attr_hp: <span name="attr_hp"></span><br>
-		attr_hp_base: <span name="attr_hp_base"></span><br>
-		attr_hp_base_max: <span name="attr_hp_base_max"></span><br>
-		attr_HP: <span name="attr_HP"></span><br>
-		attr_hp_bonus: <span name="attr_hp_bonus"></span><br>
-		attr_hp_condition: <span name="attr_hp_condition"></span><br>
-		attr_hp_max: <span name="attr_hp_max"></span><br>
-		attr_hp_current: <span name="attr_hp_current"></span><br>
-		attr_shield: <span name="attr_hp_shield"></span><br>
-		attr_hp_mod: <span name="attr_hp_mod"></span><br>
-		attr_hp_mod_flag: <span name="attr_hp_mod_flag"></span><br>
-		attr_hp_notes: <span name="attr_hp_notes"></span><br>
-		attr_hp_temp: <span name="attr_hp_temp"></span><br>
-		attr_armor_rating_ar: <span name="attr_armor_rating_ar"></span><input type="number" name="attr_armor_rating_ar"
-			value="0" min="-3" step="1"><br>
-		attr_reflexes_ref: <span name="attr_reflexes_ref"></span><input type="number" name="attr_reflexes_ref" value="0"
-			min="-3" step="1"><br>
-		attr_fortitude_for: <span name="attr_fortitude_for"></span><input type="number" name="attr_fortitude_for"
-			value="0" min="-3" step="1"><br>
-		attr_anticipation_ant: <span name="attr_anticipation_ant"></span><input type="number"
-			name="attr_anticipation_ant" value="0" min="-3" step="1"><br>
-		attr_logic_log: <span name="attr_logic_log"></span><input type="number" name="attr_logic_log" value="0" min="-3"
-			step="1"><br>
-		attr_endurance_end: <span name="attr_endurance_end"></span><input type="number" name="attr_endurance_end"
-			value="0" min="-3" step="1"><br>
-		attr_awareness_awr: <span name="attr_awareness_awr"></span><input type="number" name="attr_awareness_awr"
-			value="0" min="-3" step="1"><br>
-		attr_intellegence_int: <span name="attr_intellegence_int"></span><input type="number"
-			name="attr_intellegence_int" value="0" min="-3" step="1"><br>
 
-		attr_willpower_wil: <span name="attr_willpower_wil"></span>
-		<input type="number" name="attr_willpower_wil" value="0" min="-3" step="1"><br>
-		attr_luck_luck: <span name="attr_luck_luck"></span><br>
-		attr_coordination_cor: <span name="attr_coordination_cor"></span><br>
-		attr_personality_n_backstory: <span name="attr_personality_n_backstory"></span><textarea
-			name="attr_personality_n_backstory"></textarea><br>
-		: <span name=""></span><br>
-		: <span name=""></span><br>
-		: <span name=""></span><br>
-		: <span name=""></span><br>
-		: <span name=""></span><br>
-		: <span name=""></span><br>
-		: <span name=""></span><br>
-		: <span name=""></span><br>
-		: <span name=""></span><br>
-		: <span name=""></span><br>
-		: <span name=""></span><br>
-		: <span name=""></span><br>
-		: <span name=""></span><br>
-		: <span name=""></span><br>
-		attr_hp_max: <span name="attr_hp_max"></span><br>
-		attr_hp_current: <span name="attr_hp_current"></span><br>
-		attr_shield: <span name="attr_shield"></span><br>
-		attr_armour_rating_ar: <span name="attr_armour_rating_ar"></span><br>
-		attr_armour_rating_ar_note: <span name="attr_armour_rating_ar_note"></span><br>
-		attr_speed: <span name="attr_speed"></span><br>
-		attr_spell_points_max: <span name="attr_spell_points_max"></span><br>
-		attr_spell_points_current: <span name="attr_spell_points_current"></span><br>
-		attr_spellcasting_ability: <span name="attr_spellcasting_ability"></span><br>
-		: <span name=""></span><br>
-		: <span name=""></span><br>
-		: <span name=""></span><br>
-		: <span name=""></span><br>
-
-
-
-
-	</p>
-
-
-
-</div>
 <hr />
 <hr />
 
@@ -1233,8 +1252,11 @@ on("ready",()=>log("==> API Ready <=="));
 log("==> Checkpoint 1... <==");
 
 function restDeathPoints(){
-	setAttrs({death_points_current:0,
-		death_points_max:9});
+	setAttrs(
+		{
+			death_points_current:0,
+			death_points_max:9}
+			);
 }
 
 
@@ -2532,10 +2554,7 @@ const mcStandardSkills = [
         newrowattrs["repeating_skills_" + newrowid + "_skillName"] = mcStandardSkills[i].name;
         newrowattrs["repeating_skills_" + newrowid + "_requiresTool"] = mcStandardSkills[i].requiresTool;
         newrowattrs["repeating_skills_" + newrowid + "_attribute"] = mcStandardSkills[i].attribute;
-       // newrowattrs["repeating_skills_" + newrowid + "_tag"] = mcStandardSkills[i].tag;
         newrowattrs["repeating_skills_" + newrowid + "_description"] = mcStandardSkills[i].description;
-       // newrowattrs["repeating_skills_" + newrowid + "_showcombat"] = mcStandardSkills[i].showcombat;
-       // newrowattrs["repeating_skills_" + newrowid + "_showsocial"] = mcStandardSkills[i].showsocial;
         setAttrs(newrowattrs);
     
         }
@@ -2562,29 +2581,23 @@ function GetThePouch(pouchName, listofContents){
 
 
 log("==> Checkpoint 3... <==");
-/*
-on("clicked:wrkshp_back", function() { 
-    console.log("Back button clicked");  
 
-    getAttrs(["wrkshp"], function(values) {
-        let step = parseInt(values.wrkshp)||0;
-        if(step ===99){
-            console.log("View all workshop tabs{this cohould not be accessable code}.");
-            return;}
-        let nextStep = step - 1;
-        if (nextStep < 1 ){
-            console.log("First Step in workshop tabs{this should not be accessable code}.");
-            nextStep = 1;
-        }
-        if (nextStep > 12 ){
-            console.log("Last Step in workshop tabs{this should not be accessable code}.");
-            nextStep = 12;}
+on("clicked:bump_down_advantage", function(){incrementAdvantage(-1);});		
+
+on("clicked:bump_up_advantage",    function(){incrementAdvantage(1);});		
+
+function incrementAdvantage(value){
+
+	console.log("Increment Advantage - >"+value);  
+
+    getAttrs(["advantage"], function(values) {
         setAttrs({                            
-            wrkshp: nextStep 
+            advantage: ( !isNaN(parseInt(values.advantage)) ? (parseInt(values.advantage)+value) :0 ) 
         });
     }); 
-});		
-*/
+}
+
+
 log("==> Checkpoint 4... <==");
 
 function updateDefenses(){
@@ -2858,7 +2871,7 @@ function retrieveCoreAttributes(){
 			awr:awareness_AWR,
 			int:intellegence_INT,
 			cha:charisma_CHA,
-			luck:luck_luck,
+			luck:luck_LUCK,
 			cor:coordination_cor,
 		};
     });
@@ -2984,6 +2997,16 @@ on('change:repeating_action:attack0_ap_base change:repeating_action:attack0_ap_p
             
         });
     });
+});
+
+
+on('change:repeating_actions:action_range',(eventInfo) => {
+	if (!eventInfo.newValue) { return;}
+
+	setAttrs(setObj,{repeating_actions_action_display_range : "Ranged" === eventInfo.newValue});
+
+	console.log("changed={"+result);
+	
 });
 
 

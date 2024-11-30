@@ -422,6 +422,27 @@ div.sheet-repeatingitems.sheet-talents>div.repcontrol>button.btn.repcontrol_add 
 	display: none !important;
 }
 
+
+
+.sheet-skills {}
+
+.sheet-skill {
+	display: inline-block;
+	width: 100%;
+}
+div.sheet-repeatingitems>div.repcontainer>div>div.sheet-skills.sheet-skill {}
+
+div.sheet-col-1-2.sheet-right > div > div.sheet-repeatingskills > div.repcontainer > div.repitem,
+div.sheet-repeatingitems.sheet-skills>div.repcontainer>div.repitem {
+	display: inline-block;
+	width: 50%;
+	font-size: 9px;
+	float:left;
+}
+
+
+
+
 .repcontrol .btn:focus {
 	outline: 0;
 }
@@ -573,7 +594,7 @@ input[type="submit"].repcontrol .btn {
 
 .repcontainer .repitem .itemcontrol .repcontrol_del {
 	float: right;
-	font-size: 10px;
+	font-size: 8px;
 	padding: 0px;
 	height: 18px;
 	width: 18px;
@@ -582,7 +603,7 @@ input[type="submit"].repcontrol .btn {
 .repcontainer .repitem .itemcontrol .repcontrol_move {
 	cursor: move;
 	float: left;
-	font-size: 10px;
+	font-size: 8px;
 	padding: 0px;
 	height: 18px;
 	width: 18px;
@@ -655,59 +676,6 @@ input.sheet-block-switch[type=checkbox] {
 	cursor: pointer;
 	z-index: 1;
 }
-
-/* Fake checkbox */
-input.sheet-block-switch[type=checkbox]+span::before {
-	margin-right: 4px;
-	line-height: 14px;
-	text-align: center;
-	display: inline-block;
-	vertical-align: middle;
-	font-family: pictos;
-	content: "y";
-	width: 14px;
-	height: 14px;
-	font-size: 12px;
-}
-
-input.sheet-block-switch[type=checkbox]:checked+span::before {
-	font-family: pictos;
-	content: "2";
-	width: 14px;
-	height: 14px;
-	font-size: 12px;
-}
-
-.fixSpacing {
-	letter-spacing: normal !important;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* Room Settings */
 
@@ -4768,8 +4736,12 @@ div.sheet-row.sheet-attribute-bubbles .sheet-col-1-8 {
 .ui-dialog .charsheet button[type=roll].sheet-roll-text:before {
 	content: "";
 }
-
-
+.charsheet{
+	font-size: 8px;
+}
+div.sheet-row.compendium-drop-target.sheet-skill > div.sheet-col-1-2 > button{
+	font-size: 9px;
+}
 .sheet-roll-text,
 button[type=roll].sheet-roll-text {
 	text-align: center;
@@ -4889,6 +4861,7 @@ div.sheet-col-1-2.sheet-border-left {
 .sheet-options-skill-flag + span,
 .sheet-options-attack-flag + span,
 .sheet-options-sap-flag + span,
+.sheet-options-globals-flag + span,
 .sheet-options-flag + span { 
     width: 16px;
     height: 16px;
@@ -4905,36 +4878,33 @@ div.sheet-col-1-2.sheet-border-left {
 .sheet-options-skill-flag:hover + span,
 .sheet-options-attack-flag:hover + span,
 .sheet-options-sap-flag:hover + span,
+.sheet-options-globals-flag:hover + span,
 .sheet-options-flag:checked + span {
     color: #C3996B;
     display: block;
 } 
-.sheet-options-attack-flag + span,
 .sheet-options-skill-flag + span,
+.sheet-options-attack-flag + span,
 .sheet-options-sap-flag + span,
+.sheet-options-globals-flag + span,
 .sheet-options-flag + span
 {
     display: block;
 }
-.sheet-options-skill-flag:hover + span,
-.sheet-options-skill-flag:checked + span,
-.sheet-options-attack-flag:hover + span,
-.sheet-options-sap-flag:checked + span,
-.sheet-options-sap-flag:hover + span,
-.sheet-options-hidden-attack-flag:checked + span,
-.sheet-options-hidden-skill-flag:checked + span,
-.sheet-options-hidden-sap-flag:checked + span {
+
+.sheet-options-skill-flag:checked + span,   .sheet-options-skill-flag:hover + span,   .sheet-options-hidden-skill-flag:checked + span,
+.sheet-options-attack-flag:checked + span,  .sheet-options-attack-flag:hover + span,  .sheet-options-hidden-attack-flag:checked + span,
+.sheet-options-sap-flag:checked + span,     .sheet-options-sap-flag:hover + span,     .sheet-options-hidden-sap-flag:checked + span, 
+.sheet-options-globals-flag:checked + span, .sheet-options-globals-flag:hover + span, .sheet-options-hidden-globals-flag:checked + span 
+ {
     color: #C3996B;
     display: block;
 }
-.sheet-options,
-.sheet-options-attack,
-.sheet-options-skill,
-.sheet-options-sap,
-.sheet-options-hidden-sap-flag,
-.sheet-options-hidden-attack-flag,
-.sheet-options-hidden-skill-flag
-{
+.sheet-options-skill,   .sheet-options-hidden-skill-flag,
+.sheet-options-attack,  .sheet-options-hidden-attack-flag,
+.sheet-options-sap,     .sheet-options-hidden-sap-flag,
+.sheet-options-globals, .sheet-options-hidden-globals-flag,
+.sheet-options {
    display: none; 
     margin-top: 2px;
     margin-bottom: 2px;
@@ -4947,18 +4917,21 @@ div.sheet-col-1-2.sheet-border-left {
 }
 
 .sheet-options, 
-.sheet-options-attack, 
 .sheet-options-skill, 
-.sheet-options-sap {
+.sheet-options-attack, 
+.sheet-options-sap, 
+.sheet-options-globals {
     display: block;
 }
-.sheet-options-flag:checked ~ .sheet-options, 
-.sheet-options-attack-flag:checked ~ .sheet-options-attack, 
-.sheet-options-skill-flag:checked ~ .sheet-options-skill,
-.sheet-options-sap-flag:checked ~ .sheet-options-sap,
-.sheet-options-hidden-sap-flag:checked  ~ .sheet-options-sap,
-.sheet-options-hidden-skill-flag:checked  ~ .sheet-options-skill,
-.sheet-options-hidden-attack-flag:checked  ~ .sheet-options-attack {
+.sheet-options-flag:checked ~ .sheet-options,  
+.sheet-options-skill-flag:checked ~ .sheet-options-skill,     .sheet-options-hidden-skill-flag:checked  ~ .sheet-options-skill,
+.sheet-options-attack-flag:checked ~ .sheet-options-attack,   .sheet-options-hidden-attack-flag:checked  ~ .sheet-options-attack
+.sheet-options-sap-flag:checked ~ .sheet-options-sap,         .sheet-options-hidden-sap-flag:checked  ~ .sheet-options-sap,
+.sheet-options-globals-flag:checked ~ .sheet-options-globals, .sheet-options-hidden-globals-flag:checked  ~ .sheet-options-globals
+{
     display: none;
 }
 
+.sheet-row [class *="sheet-col"], [class *="sheet-col"]{
+	font-size: 9px;
+}
