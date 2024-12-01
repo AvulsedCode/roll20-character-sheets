@@ -4935,3 +4935,11 @@ div.sheet-col-1-2.sheet-border-left {
 .sheet-row [class *="sheet-col"], [class *="sheet-col"]{
 	font-size: 9px;
 }
+.sheet-hidden{
+    display: none;
+
+}
+.sheet-action-display-range-distance:checked + input{
+    display: none;
+
+}

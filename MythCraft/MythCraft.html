@@ -515,9 +515,23 @@
 												
 												<div class="sheet-options-attack">
 													<div class="sheet-row">
-														<div class="sheet-label sheet-col-6">Name:</div>
 														<div class="sheet-col-1-2">
+															<div class="sheet-label sheet-left">Name:</div>
 															<input type="text" class=" sheet-underlined" name="attr_displayName" value="" />
+														</div>
+														<div class="sheet-col-3-16">
+															<div class="sheet-label sheet-center">Range:</div><select  name="attr_action_range">
+																<option value="Melee" data-18n="melee" checked="Melee">Melee</option>
+																<option value="Ranged" data-18n="ranged" >Ranged</option>
+																<option value="Reach" data-18n="reach" >Reach</option>
+																<option value="Thrown" data-18n="thrown" >Thrown</option>
+															</select>
+														</div>
+														<div class="sheet-col-3-16">
+															<div class="sheet-label sheet-center">Distance:</div>
+															<input type="checkbox" class="sheet-hidden sheet-action-display-range-distance" name="attr_action_display_range_distance" value="0"/>
+															<input type="number" class="sheet-action-range-distance"  name="attr_action_range_distance" value="0"/>
+															
 														</div>
 													</div>
 													<div  class="sheet-row sheet-action-point-configuraiton">
@@ -561,13 +575,6 @@
 													</div>
 
 													<div class="sheet-row">
-														<div class="sheet-col-3-16">
-															<div class="sheet-label sheet-center">Stat:</div><select  name="attr_action_range">
-																<option value="Melee" data-18n="melee" checked="Melee">Melee</option>
-																<option value="Ranged" data-18n="ranged" >Ranged</option>
-															</select>
-
-														</div>
 														<div class="sheet-col-1-5">
 															<div class="sheet-label sheet-center">Stat:</div><select name="attr_action_stat">
 																<option value="--" data-18n="--" checked="checked">--</option>
@@ -615,6 +622,117 @@
 																<option value="Sonic" data-18n="sonic">Sonic</option>
 															</select>
 														</div>
+
+
+
+														<div  class="sheet-row sheet-action-point-configuraiton">
+															<div class="sheet-col-1-18">
+																<div class="sheet-label sheet-center">2<sup>nd</sup></div>
+																<input type="checkbox" name="attr_has_action2">
+															</div>
+															<div class="sheet-col-1-5">
+																<div class="sheet-label sheet-center">Stat:</div>
+																<select name="attr_action2_stat">
+																	<option value="--" data-18n="--" checked="checked">--</option>
+																	<option value="STR" data-18n="str" >STR</option>
+																	<option value="DEX" data-18n="dex" >DEX</option>
+																	<option value="END" data-18n="end">END</option>
+																	<option value="AWR" data-18n="awr">AWR</option>
+																	<option value="INT" data-18n="int">INT</option>
+																	<option value="CHA" data-18n="cha">CHA</option>
+																	<option value="LUCK" data-18n="luck">LUCK</option>
+																	<option value="COR" data-18n="cor">COR</option>
+																</select>
+															</div>
+															<div class="sheet-col-1-6">
+																<div class="sheet-label  sheet-center">Dice:</div>
+																<input type="number"   name="attr_action2_damagedice_count_modifier" value="1" />
+																
+															</div>
+															<div class="sheet-col-1-8">
+																<div class="sheet-label  sheet-center">Dice:</div>
+																<select  name="attr_action2_damagedice_type_selector">
+																	<option value="1d1" data-18n="1d1" checked="checked">1d1</option>
+																	<option value="1d2" data-18n="1d2" >1d2</option>
+																	<option value="1d4" data-18n="1d4">1d4</option>
+																	<option value="1d6" data-18n="1d6">1d6</option>
+																	<option value="1d8" data-18n="1d8">1d8</option>
+																	<option value="1d10" data-18n="1d10">1d10</option>
+																	<option value="1d12" data-18n="1d12">1d12</option>
+																	<option value="1d20" data-18n="1d20">1d20</option>
+																</select>
+															</div>
+															<div class="sheet-col-1-3">
+																<div class="sheet-label sheet-center">Damage Type:</div>
+																<select  class="sheet-col-1-8" name="attr_action2_damageType">
+																	<option value="Blunt" data-18n="blunt" checked="checked">Blunt</option>
+																	<option value="Sharp" data-18n="sharp" >Sharp</option>
+																	<option value="Cold" data-18n="cold">Cold</option>
+																	<option value="Corrosive" data-18n="corrosive">Corrosive</option>
+																	<option value="Fire" data-18n="fire">Fire</option>
+																	<option value="Lightning" data-18n="lightning">Lightning</option>
+																	<option value="Toxic" data-18n="toxic">Toxic</option>
+																	<option value="Necrotic" data-18n="necrotic">Necrotic</option>
+																	<option value="Psychic" data-18n="psychic">Psychic</option>
+																	<option value="Radiant" data-18n="radiant">Radiant</option>
+																	<option value="Sonic" data-18n="sonic">Sonic</option>
+																</select>
+															</div>	
+														</div>
+														<div  class="sheet-row sheet-action-point-configuraiton">
+															<div class="sheet-col-1-18">
+																<div class="sheet-label sheet-center">3<sup>rd</sup></div>
+																<input type="checkbox" name="attr_has_action3">
+															</div>
+															<div class="sheet-col-1-5">
+																<div class="sheet-label sheet-center">Stat:</div><select name="attr_action3_stat">
+																	<option value="--" data-18n="--" checked="checked">--</option>
+																	<option value="STR" data-18n="str" >STR</option>
+																	<option value="DEX" data-18n="dex" >DEX</option>
+																	<option value="END" data-18n="end">END</option>
+																	<option value="AWR" data-18n="awr">AWR</option>
+																	<option value="INT" data-18n="int">INT</option>
+																	<option value="CHA" data-18n="cha">CHA</option>
+																	<option value="LUCK" data-18n="luck">LUCK</option>
+																	<option value="COR" data-18n="cor">COR</option>
+																</select>
+															</div>
+															<div class="sheet-col-1-6">
+																<div class="sheet-label  sheet-center">Dice:</div>
+																<input type="number"   name="attr_action3_damagedice_count_modifier" value="1" />
+																
+															</div>
+															<div class="sheet-col-1-8">
+																<div class="sheet-label  sheet-center">Dice:</div>
+																<select  name="attr_action3_damagedice_type_selector">
+																	<option value="1d1" data-18n="1d1" checked="checked">1d1</option>
+																	<option value="1d2" data-18n="1d2" >1d2</option>
+																	<option value="1d4" data-18n="1d4">1d4</option>
+																	<option value="1d6" data-18n="1d6">1d6</option>
+																	<option value="1d8" data-18n="1d8">1d8</option>
+																	<option value="1d10" data-18n="1d10">1d10</option>
+																	<option value="1d12" data-18n="1d12">1d12</option>
+																	<option value="1d20" data-18n="1d20">1d20</option>
+																</select>
+															</div>
+															<div class="sheet-col-1-3">
+																<div class="sheet-label sheet-center">Damage Type:</div>
+																<select  class="sheet-col-1-8" name="attr_action3_damageType">
+																	<option value="Blunt" data-18n="blunt" checked="checked">Blunt</option>
+																	<option value="Sharp" data-18n="sharp" >Sharp</option>
+																	<option value="Cold" data-18n="cold">Cold</option>
+																	<option value="Corrosive" data-18n="corrosive">Corrosive</option>
+																	<option value="Fire" data-18n="fire">Fire</option>
+																	<option value="Lightning" data-18n="lightning">Lightning</option>
+																	<option value="Toxic" data-18n="toxic">Toxic</option>
+																	<option value="Necrotic" data-18n="necrotic">Necrotic</option>
+																	<option value="Psychic" data-18n="psychic">Psychic</option>
+																	<option value="Radiant" data-18n="radiant">Radiant</option>
+																	<option value="Sonic" data-18n="sonic">Sonic</option>
+																</select>
+															</div>	
+														</div>
+
 													</div>
 											
 												</div>
@@ -666,7 +784,8 @@
 												</div>
 												<div class="sheet-row">
 												<div class="sheet-col-1-2">
-													<span class="sheet-label">Stat:</span><select class="sheet-col-1-8" name="attr_skillStat">
+													<span class="sheet-label">Stat:</span>
+													<select class="sheet-col-1-8" class="skillstat" name="attr_skillStat">
 														<option value="--" data-18n="--" checked="checked">--</option>
 														<option value="STR" data-18n="str">STR</option>
 														<option value="DEX" data-18n="dex">DEX</option>
@@ -680,11 +799,11 @@
 												</div>
 												<div class="sheet-col-1-6">
 													<span class="sheet-label">Base:</span>
-													<input type="text" name="attr_skillBaseValue" class="sheet-col-1-8" value="" />
+													<input type="text" name="attr_skillBaseValue" class="skillbaseValue" value="" />
 												</div>
 												<div class="sheet-col-1-6">
 													<span class="sheet-label">Result:</span>
-													<input type="text" name="attr_skillUseableValue" class="sheet-col-1-8" value="" />
+													<input type="text" name="attr_skillUseableValue" class="skillUseableValue" value="" />
 												</div>
 											</div>
 			
@@ -1333,7 +1452,7 @@ const mcStandardWeapons = [
 	name:"Hatchet",
 	damage:[{dice:"1d4", damageType:"sharp"}],
 	coreAttribute:"STR",
-	actionPointCost:{BaseValue:0,addAttribute:"STR",subtractFromAttribute:"", min:2},
+	actionPointCost:{BaseValue:2,addAttribute:"",subtractFromAttribute:"", min:2},
 	range:"Thrown 20 ft",
 	tags:["One-Handed"],
 	type:"Axe",
@@ -1357,7 +1476,7 @@ const mcStandardWeapons = [
 	name:"Throwing Axe",
 	damage:[{dice:"1d4", damageType:"sharp"}],
 	coreAttribute:"STR",
-	actionPointCost:{BaseValue:0,addAttribute:"STR",subtractFromAttribute:"", min:2},
+	actionPointCost:{BaseValue:0,addAttribute:"",subtractFromAttribute:"", min:2},
 	range:"Thrown 30 ft",
 	tags:["One-Handed", "Light"],
 	type:"Axe",
@@ -2850,21 +2969,39 @@ const sample={
 	],
 	cost:35};
 
-function retrieveCoreAttributes(){
-	let returnObject =  { };
+function parseIntDefault(value, valueIfNotParseable){
+	return !isNaN(parseInt(value)) ? parseInt(value) : valueIfNotParseable ;
+}
 
+
+function retrieveCoreAttributes(){
+	
 	console.log("start retrieveCoreAttributes");
-	getAttrs(["strength_str","dexterity_dex","endurance_end","awareness_awr","intellegence_int","charisma_cha", "luck_luck", "coordination_cor"], function(values) {
+	getAttrs(["strength_str","dexterity_dex",
+	"endurance_end","awareness_awr",
+	"intellegence_int","charisma_cha",
+	"luck_luck", "coordination_cor"], function(values) {
 		console.log("gort core attributes");
-		let strength_STR = !isNaN(parseInt(values.strength_str)) ? parseInt(values.strength_str) : -4 ;
-		let dexterity_DEX = !isNaN(parseInt(values.dexterity_dex)) ? parseInt(values.dexterity_dex) : -4 ;
-		let endurance_END = !isNaN(parseInt(values.endurance_end)) ? parseInt(values.endurance_end) : -4 ; 
-		let awareness_AWR = !isNaN(parseInt(values.awareness_awr)) ? parseInt(values.awareness_awr) : -4 ;
-		let intellegence_INT = !isNaN(parseInt(values.intellegence_int)) ? parseInt(values.intellegence_int) : -4 ; 
-		let charisma_CHA = !isNaN(parseInt(values.charisma_cha)) ? parseInt(values.charisma_cha) : -4 ;
-		let luck_LUCK = !isNaN(parseInt(values.luck_luck)) ? parseInt(values.luck_luck) : -4 ;
-		let coordination_COR = !isNaN(parseInt(values.coordination_cor)) ? parseInt(values.coordination_cor) : -4 ;
-		returnObject =  { 
+		let strength_STR = parseIntDefault(values.strength_str, -4);
+		let dexterity_DEX = parseIntDefault(values.dexterity_dex, -4 );
+		let endurance_END = parseIntDefault(values.endurance_end, -4 ); 
+		let awareness_AWR = parseIntDefault(values.awareness_awr, -4 );
+		let intellegence_INT = parseIntDefault(values.intellegence_int, -4 ); 
+		let charisma_CHA = parseIntDefault(values.charisma_cha, -4 );
+		let luck_LUCK = parseIntDefault(values.luck_luck, -4 );
+		let coordination_COR = parseIntDefault(values.coordination_cor, -4 );
+		
+		console.log("strength_STR: " +  strength_STR + " | "+ values.strength_str);
+		console.log("dexterity_DEX: " +  dexterity_DEX + " | "+ values.dexterity_dex);
+		console.log("endurance_END: " +   endurance_END  + " | "+  values.endurance_end);
+		console.log("awareness_AWR: " +   awareness_AWR  + " | "+  values.awareness_awr);
+		console.log("intellegence_INT: " +   intellegence_INT + " | "+  values.intellegence_int);
+		console.log("charisma_CHA: " +   charisma_CHA  + " | "+   values.charisma_cha);
+		console.log("luck_LUCK: " +   luck_LUCK  + " | "+   values.luck_luck);
+		console.log("coordination_COR: " +   coordination_COR  + " | "+   values.coordination_cor);
+		
+		
+		return  { 
 			str:strength_STR,
 			dex:dexterity_DEX,
 			end:endurance_END,
@@ -2872,10 +3009,10 @@ function retrieveCoreAttributes(){
 			int:intellegence_INT,
 			cha:charisma_CHA,
 			luck:luck_LUCK,
-			cor:coordination_cor,
+			cor:coordination_COR,
 		};
     });
-	return returnObject;
+	return {};
 }
 
 
@@ -2908,49 +3045,10 @@ function calcAPC(actionPointCost, coreAttrs){
 }
 
 
-function getStatModifier(item){
-
-	var coreAttrs = retrieveCoreAttributes();
-	var valueToUse;
-	switch (item) {
-		case "STR":
-		valueToUse = ( coreAttrs.str);
-		case "DEX":
-		valueToUse =  ( coreAttrs.dex);
-		case "END":
-		valueToUse =  ( coreAttrs.end  );
-		case "AWR":
-		valueToUse =  ( coreAttrs.awr  );
-		case "INT":
-		valueToUse =  ( coreAttrs.int  );
-		case "CHA":
-		valueToUse =  ( coreAttrs.cha  );
-		default:
-			console.log("cannot get Stat Modifier "+ item + ".. it's not supported?");
-		return  999;
-	}
-
-	return mcHitPointLookup[valueToUse+3];
-
-}
 
 
 
-function convertWeaponToAction(weapon){
-	let coreAttrs = retrieveCoreAttributes();
 
-	console.log("gotCoreAttrib");
-	return  {
-		apc:calcAPC(weapon.actionPointCost, coreAttrs),
-		displayName:weapon.name,
-		rollToHit:"",
-		range:"",
-		damage:"",
-		damageDice:"",
-		damageType:"",
-
-	};
-};
 
 console.log("Checkpoint Omega" );
 
@@ -2962,9 +3060,9 @@ function addWeapons(){
 	console.log("start - repeating_actions");
 	//first empty the actions array:
 	getSectionIDs("repeating_actions", function(idarray) {
-	for(var i=0; i < idarray.length; i++) {
-		removeRepeatingRow("repeating_actions_" + idarray[i]);
-	}
+		for(var i=0; i < idarray.length; i++) {
+			removeRepeatingRow("repeating_actions_" + idarray[i]);
+		}
 	});
 
 
@@ -2972,9 +3070,7 @@ function addWeapons(){
 	var newrowid = generateRowID();
 	var newrowattrs = {};
 	newrowattrs["repeating_actions_" + newrowid + "_apc"] = varAction.apc;
-	newrowattrs["repeating_actions_" + newrowid + "_displayName"] = varAction.displayName;
-	//newrowattrs["repeating_actions_" + newrowid + "_rollToHit"] = varAction.rollToHit;
-	//newrowattrs["repeating_actions_" + newrowid + "_range"] = varAction.range;
+	newrowattrs["repeating_actions_" + newrowid + "_displayName"] = varAction.displayName; 
 	newrowattrs["repeating_actions_" + newrowid + "_damage"] = varAction.damage;
 	newrowattrs["repeating_actions_" + newrowid + "_damage_dice"] = varAction.damageDice;
 	setAttrs(newrowattrs);
@@ -3002,12 +3098,112 @@ on('change:repeating_action:attack0_ap_base change:repeating_action:attack0_ap_p
 
 on('change:repeating_actions:action_range',(eventInfo) => {
 	if (!eventInfo.newValue) { return;}
+	let hasRange = ("Melee" === eventInfo.newValue)?0:1;
+	setAttrs(
+		{repeating_actions_action_display_range_distance : hasRange}
+		);
 
-	setAttrs(setObj,{repeating_actions_action_display_range : "Ranged" === eventInfo.newValue});
-
-	console.log("changed={"+result);
+	console.log("changed={"+eventInfo.newValue+" - "+ hasRange);
 	
 });
+
+
+
+
+on('change:repeating_skills:skillstat change:repeating_skills:skillbaseValue',(eventInfo) => {
+	getAttrs(['repeating_skills_skillstat', 'repeating_skills_skillbaseValue',"strength_str","dexterity_dex",
+	"endurance_end","awareness_awr",
+	"intellegence_int","charisma_cha",
+	"luck_luck", "coordination_cor"], function(values) {
+		console.log("xyxe core attributes");
+		let strength_STR = parseIntDefault(values.strength_str, -4);
+		let dexterity_DEX = parseIntDefault(values.dexterity_dex, -4 );
+		let endurance_END = parseIntDefault(values.endurance_end, -4 ); 
+		let awareness_AWR = parseIntDefault(values.awareness_awr, -4 );
+		let intellegence_INT = parseIntDefault(values.intellegence_int, -4 ); 
+		let charisma_CHA = parseIntDefault(values.charisma_cha, -4 );
+		let luck_LUCK = parseIntDefault(values.luck_luck, -4 );
+		let coordination_COR = parseIntDefault(values.coordination_cor, -4 );
+		
+		console.log("strength_STR: " +  strength_STR + " | "+ values.strength_str);
+		console.log("dexterity_DEX: " +  dexterity_DEX + " | "+ values.dexterity_dex);
+		console.log("endurance_END: " +   endurance_END  + " | "+  values.endurance_end);
+		console.log("awareness_AWR: " +   awareness_AWR  + " | "+  values.awareness_awr);
+		console.log("intellegence_INT: " +   intellegence_INT + " | "+  values.intellegence_int);
+		console.log("charisma_CHA: " +   charisma_CHA  + " | "+   values.charisma_cha);
+		console.log("luck_LUCK: " +   luck_LUCK  + " | "+   values.luck_luck);
+		console.log("coordination_COR: " +   coordination_COR  + " | "+   values.coordination_cor);
+		
+		console.log("Skill Stat selected: "+ values.repeating_skills_skillstat );
+				
+		var skillstat=-999;
+		switch (values.repeating_skills_skillstat) {
+			case "STR":
+			skillstat = strength_STR;break;
+			case "DEX":
+			skillstat = dexterity_DEX;break;
+			case "END":
+			skillstat = endurance_END;break;
+			case "AWR":
+			skillstat = awareness_AWR;break;
+			case "INT":
+			skillstat = intellegence_INT;break;
+			case "CHA":
+			skillstat = charisma_CHA;break;
+			case "LUCK":
+			skillstat = luck_LUCK;break;
+			case "COR":
+			skillstat = coordination_COR;break;
+			 
+			default:
+				console.log("cannot get Stat Modifier "+ values.repeating_skills_skillstat + ".. it's not supported?");
+				return  999;
+		}
+
+		skillstat = mcHitPointLookup[skillstat + 3][1];
+		let skillbaseValue = parseIntDefault(values.repeating_skills_skillbaseValue , 0);
+		console.log("skillbaseValue={"+skillstat+","+ skillbaseValue+"}");
+				setAttrs({
+			repeating_skills_skillUseableValue : skillstat + skillbaseValue
+		}); 
+	});
+});
+
+
+on('change:repeating_actions:action_range',(eventInfo) => {
+	if (!eventInfo.newValue) { return;}
+	let hasRange = ("Melee" === eventInfo.newValue)?0:1;
+	setAttrs(
+		{repeating_actions_action_display_range_distance : hasRange}
+		);
+
+	console.log("changed={"+eventInfo.newValue+" - "+ hasRange);
+	
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 //List of attributes contained in our repeating section that we want to filter by, or that control the filtering. Make sure to update this with the actual attributes that you want to filter by.
