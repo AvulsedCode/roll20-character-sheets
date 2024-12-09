@@ -151,3 +151,31 @@ sync_sheets.sh
 **/*/dist/*.html
 **/*/dist/*.css
 **/*/dist/*.json
+/.vs/ProjectSettings.json
+/.vs/roll20-character-sheets/config
+/.vs/roll20-character-sheets/config/applicationhost.config
+/.vs/roll20-character-sheets/FileContentIndex
+/.vs/roll20-character-sheets/FileContentIndex/0e11b8fe-76d9-47ad-8c35-3801c3786d03.vsidx
+/.vs/roll20-character-sheets/FileContentIndex/155c3b81-8800-49e1-a492-8eabca800028.vsidx
+/.vs/roll20-character-sheets/FileContentIndex/166895c1-7cf3-4bab-9099-64ad89642a89.vsidx
+/.vs/roll20-character-sheets/FileContentIndex/393d5808-51b0-471d-a8af-bc2e26fa5c4d.vsidx
+/.vs/roll20-character-sheets/FileContentIndex/3e265b71-26a9-460e-96fd-b3efa9519fa0.vsidx
+/.vs/roll20-character-sheets/FileContentIndex/4357eccf-2d70-4fef-8c6f-698587c7de55.vsidx
+/.vs/roll20-character-sheets/FileContentIndex/7d6c1127-34f2-4139-b283-ae7e6005810c.vsidx
+/.vs/roll20-character-sheets/FileContentIndex/a868bbab-872b-4aee-bd46-643fcb43e77a.vsidx
+/.vs/roll20-character-sheets/FileContentIndex/c1c1c390-6ab3-4c75-bc89-558583c76910.vsidx
+/.vs/roll20-character-sheets/FileContentIndex/c6e69807-a496-41da-8335-6a53054b21b6.vsidx
+/.vs/roll20-character-sheets/FileContentIndex/ca6b5227-c24e-490f-9d0a-9325c2867f4e.vsidx
+/.vs/roll20-character-sheets/FileContentIndex/d28359ee-557b-4146-ae7e-10006c463241.vsidx
+/.vs/roll20-character-sheets/v17
+/.vs/roll20-character-sheets/v17/.wsuo
+/.vs/roll20-character-sheets/v17/DocumentLayout.backup.json
+/.vs/roll20-character-sheets/v17/DocumentLayout.json
+/.vs/roll20-character-sheets/v17/workspaceFileList.bin
+/.vs/slnx.sqlite
+/.vs/VSWorkspaceState.json
+/Dirty System/Dishonored
+/Dirty System/Dishonored/Dishonored.css
+/Dirty System/Dishonored/Dishonored.html
+/Dirty System/Dishonored/preview.png
+/Dirty System/Dishonored/sheet.json
