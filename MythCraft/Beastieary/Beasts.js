@@ -198,8 +198,8 @@
             tremorsense: "60ft",
             truesight: ""
         },
-        "DR": [""],
-        "skills": [
+        DR: [""],
+        skills: [
         ],
         "traits": ["Steel Mind", "Unerring Mind", "Vigilant"],
 
@@ -321,11 +321,11 @@
             tremorsense: "60 ft",
             truesight: ""
         },
-        "DR": [""],
-        "skills": [
-            { skillAttribute: "", Skill"name": "", skillBonus: 0 }
+        DR: [""],
+        skills: [
+            { skillAttribute: "", SkillName: "", skillBonus: 0 }
         ],
-        "traits": ["Features"],
+        traits: [""],
         features: [
             { feature"name": "Illusory Lure", feature"description": "The Akateko can create a visual illusion within 20ft.This illusion takes the form of something that will incentivize an observer to approach." },
             { feature"name": "Unassuming Form", feature"description": "When the Akateko is motionless, it is indistinguishable from a normal tree." },
@@ -474,11 +474,11 @@
             tremorsense: "",
             truesight: ""
         },
-        "DR": [""],
-        "skills": [
-            { skillAttribute: "", Skill"name": "", skillBonus: 0 }
+        DR: [""],
+        skills: [
+            { skillAttribute: "", SkillName: "", skillBonus: 0 }
         ],
-        "traits": [""],
+        traits: [""],
         features: [
             { feature"name": "", feature"description": "" },
         ],
@@ -528,6 +528,121 @@
                     },
 
                 ]
+            }
+        ],
+        reactions: [
+            { reactionName: "", perRound: 1, reactionDescription: "" },
+        ]
+    },, 
+    {
+        name: "",
+        description: "",
+        monsterLevel: 0,
+        size: "Small",
+        type: "",
+        attributes: {
+            STR: 0,
+            DEX: 0, Ref: 10,
+            END: 0, Fort: 10,
+            AWR: 0, Ant: 10,
+            INT: 0, Log: 10,
+            CHA: 0,
+            Will: 0
+        },
+        hitPoints: 50,
+        armorRating: 10,
+        armorRatingType: "",
+        speed: {
+            climb: "",
+            fly: "",
+            jump: "",
+            hover: "",
+            swim: "",
+            walk: "30ft",
+        },
+        resist: {
+            arcane: 0,
+            blunt: 0,
+            sharp: 0,
+            cold: 0,
+            corrosive: 0,
+            divine: 0,
+            fire: 0,
+            lightning: 0,
+            necrotic: 0,
+            occult: 0,
+            psychic: 0,
+            radiant: 0,
+            sonic: 0,
+            toxic: 0,
+            special: [],
+        },
+        vulnerable: {
+            arcane: 0,
+            blunt: 0,
+            sharp: 0,
+            cold: 0,
+            corrosive: 0,
+            divine: 0,
+            fire: 0,
+            lightning: 0,
+            necrotic: 0,
+            occult: 0,
+            psychic: 0,
+            radiant: 1,
+            sonic: 0,
+            toxic: 0,
+            special: [],
+        },
+        senses: {
+            blindsight: "",
+            darkvision: "",
+            lowLight: "",
+            tremorsense: "",
+            truesight: ""
+        },
+        DR: [""],
+        skills: [
+            { skillAttribute: "", SkillName: "", skillBonus: 0 }
+        ],
+        traits: [""],
+        features: [
+            { featureName: "", featureDescription: "" },
+        ],
+        actionsOptions: [
+            {
+                optionText: "",
+                orActions: [
+                    {
+                        actionName: "Move",
+                        actionDescription: "",
+                        rollmodifier: 0,
+                        hit: "",
+                    },
+                    {
+                        actionName: "",
+                        actionDescription: "",
+                        rollmodifier: 0,
+                        hit: "",
+                    },
+
+                ],
+                andText:"",
+                andActions: [
+                    {
+                        actionName: "Move",
+                        actionDescription: "",
+                        rollmodifier: 0,
+                        hit: "",
+                    },
+                    {
+                        actionName: "",
+                        actionDescription: "",
+                        rollmodifier: 0,
+                        hit: "",
+                    },
+
+                ]
             },
             , {
                 orOptionText: "the Anzu can MOVE and take ONE of the following actions.",
@@ -539,10 +654,153 @@
                         "hit": "",
                     },
                     {
-                        "actionName": "Fire Breath (Recharge 6)",
-                        "actionDescription": " 30ft Cone Natural Weapon. +4 vs FORT of each creature in the cone."hit": 18(4d8) fire.",
-                        "rollmodifier": 4,
-                        "hit": "",
+                        actionName: "",
+                        actionDescription: "",
+                        rollmodifier: 0,
+                        hit: "",
+                    },
+
+                ],
+                andText:"",
+                andActions: [
+                    {
+                        actionName: "Move",
+                        actionDescription: "",
+                        rollmodifier: 0,
+                        hit: "",
+                    },
+                    {
+                        actionName: "",
+                        actionDescription: "",
+                        rollmodifier: 0,
+                        hit: "",
+                    },
+
+                ]
+            }
+        ],
+        reactions: [
+            { reactionName: "", perRound: 1, reactionDescription: "" },
+        ]
+    },, 
+    {
+        name: "",
+        description: "",
+        monsterLevel: 0,
+        size: "Small",
+        type: "",
+        attributes: {
+            STR: 0,
+            DEX: 0, Ref: 10,
+            END: 0, Fort: 10,
+            AWR: 0, Ant: 10,
+            INT: 0, Log: 10,
+            CHA: 0,
+            Will: 0
+        },
+        hitPoints: 50,
+        armorRating: 10,
+        armorRatingType: "",
+        speed: {
+            climb: "",
+            fly: "",
+            jump: "",
+            hover: "",
+            swim: "",
+            walk: "30ft",
+        },
+        resist: {
+            arcane: 0,
+            blunt: 0,
+            sharp: 0,
+            cold: 0,
+            corrosive: 0,
+            divine: 0,
+            fire: 0,
+            lightning: 0,
+            necrotic: 0,
+            occult: 0,
+            psychic: 0,
+            radiant: 0,
+            sonic: 0,
+            toxic: 0,
+            special: [],
+        },
+        vulnerable: {
+            arcane: 0,
+            blunt: 0,
+            sharp: 0,
+            cold: 0,
+            corrosive: 0,
+            divine: 0,
+            fire: 0,
+            lightning: 0,
+            necrotic: 0,
+            occult: 0,
+            psychic: 0,
+            radiant: 1,
+            sonic: 0,
+            toxic: 0,
+            special: [],
+        },
+        senses: {
+            blindsight: "",
+            darkvision: "",
+            lowLight: "",
+            tremorsense: "",
+            truesight: ""
+        },
+        DR: [""],
+        skills: [
+            { skillAttribute: "", SkillName: "", skillBonus: 0 }
+        ],
+        traits: [""],
+        features: [
+            { featureName: "", featureDescription: "" },
+        ],
+        actionsOptions: [
+            {
+                optionText: "",
+                orActions: [
+                    {
+                        actionName: "Move",
+                        actionDescription: "",
+                        rollmodifier: 0,
+                        hit: "",
+                    },
+                    {
+                        actionName: "",
+                        actionDescription: "",
+                        rollmodifier: 0,
+                        hit: "",
+                    },
+
+                ],
+                andText:"",
+                andActions: [
+                    {
+                        actionName: "Move",
+                        actionDescription: "",
+                        rollmodifier: 0,
+                        hit: "",
+                    },
+                    {
+                        actionName: "",
+                        actionDescription: "",
+                        rollmodifier: 0,
+                        hit: "",
+                    },
+
+                ]
+            },
+            , {
+                orOptionText: "",
+                orActions: [
+                    {
+                        actionName: "Move",
+                        actionDescription: "",
+                        rollmodifier: 0,
+                        hit: "",
                     },
                     {
                         "actionName": "Waters of Life (1/Day)",
@@ -570,9 +828,157 @@
                 ]
             }
         ],
-        "reactions": [
+        reactions: [
+            { reactionName: "", perRound: 1, reactionDescription: "" },
+        ]
+    },, 
+    {
+        name: "",
+        description: "",
+        monsterLevel: 0,
+        size: "Small",
+        type: "",
+        attributes: {
+            STR: 0,
+            DEX: 0, Ref: 10,
+            END: 0, Fort: 10,
+            AWR: 0, Ant: 10,
+            INT: 0, Log: 10,
+            CHA: 0,
+            Will: 0
+        },
+        hitPoints: 50,
+        armorRating: 10,
+        armorRatingType: "",
+        speed: {
+            climb: "",
+            fly: "",
+            jump: "",
+            hover: "",
+            swim: "",
+            walk: "30ft",
+        },
+        resist: {
+            arcane: 0,
+            blunt: 0,
+            sharp: 0,
+            cold: 0,
+            corrosive: 0,
+            divine: 0,
+            fire: 0,
+            lightning: 0,
+            necrotic: 0,
+            occult: 0,
+            psychic: 0,
+            radiant: 0,
+            sonic: 0,
+            toxic: 0,
+            special: [],
+        },
+        vulnerable: {
+            arcane: 0,
+            blunt: 0,
+            sharp: 0,
+            cold: 0,
+            corrosive: 0,
+            divine: 0,
+            fire: 0,
+            lightning: 0,
+            necrotic: 0,
+            occult: 0,
+            psychic: 0,
+            radiant: 1,
+            sonic: 0,
+            toxic: 0,
+            special: [],
+        },
+        senses: {
+            blindsight: "",
+            darkvision: "",
+            lowLight: "",
+            tremorsense: "",
+            truesight: ""
+        },
+        DR: [""],
+        skills: [
+            { skillAttribute: "", SkillName: "", skillBonus: 0 }
+        ],
+        traits: [""],
+        features: [
+            { featureName: "", featureDescription: "" },
+        ],
+        actionsOptions: [
             {
-                re"actionName": "Exploit", perRound: 1, re"actionDescription": "If the Anzu used Pursue on its last turn, it can Exploit." },
+                optionText: "",
+                orActions: [
+                    {
+                        actionName: "Move",
+                        actionDescription: "",
+                        rollmodifier: 0,
+                        hit: "",
+                    },
+                    {
+                        actionName: "",
+                        actionDescription: "",
+                        rollmodifier: 0,
+                        hit: "",
+                    },
+
+                ],
+                andText:"",
+                andActions: [
+                    {
+                        actionName: "Move",
+                        actionDescription: "",
+                        rollmodifier: 0,
+                        hit: "",
+                    },
+                    {
+                        actionName: "",
+                        actionDescription: "",
+                        rollmodifier: 0,
+                        hit: "",
+                    },
+
+                ]
+            },
+            , {
+                orOptionText: "",
+                orActions: [
+                    {
+                        actionName: "Move",
+                        actionDescription: "",
+                        rollmodifier: 0,
+                        hit: "",
+                    },
+                    {
+                        actionName: "",
+                        actionDescription: "",
+                        rollmodifier: 0,
+                        hit: "",
+                    },
+
+                ],
+                andText:"",
+                andActions: [
+                    {
+                        actionName: "Move",
+                        actionDescription: "",
+                        rollmodifier: 0,
+                        hit: "",
+                    },
+                    {
+                        actionName: "",
+                        actionDescription: "",
+                        rollmodifier: 0,
+                        hit: "",
+                    },
+
+                ]
+            }
+        ],
+        reactions: [
+            { reactionName: "", perRound: 1, reactionDescription: "" },
         ]
     },, 
     {
@@ -643,11 +1049,11 @@
             tremorsense: "",
             truesight: ""
         },
-        "DR": [""],
-        "skills": [
-            { skillAttribute: " (STR) Applied Force +3", Skill"name": "str", skillBonus: 3 }
+        DR: [""],
+        skills: [
+            { skillAttribute: "", SkillName: "", skillBonus: 0 }
         ],
-        "traits": ["Immutable"],
+        traits: [""],
         features: [
             { feature"name": "Restoration (1/Rest)", feature"description": "Using CHA, the Arborean can cast the Greater Restoration divine ritual. It counts as a primal invocation when cast by the Arborean" },
             { feature"name": "Voice of the Forest.", feature"description": "The Arborean can communicate with plants at will." },
@@ -693,11 +1099,104 @@
                         "rollmodifier": 0,
                         "hit": "",
                     },
+
+                ]
+            }
+        ],
+        reactions: [
+            { reactionName: "", perRound: 1, reactionDescription: "" },
+        ]
+    },, 
+    {
+        name: "",
+        description: "",
+        monsterLevel: 0,
+        size: "Small",
+        type: "",
+        attributes: {
+            STR: 0,
+            DEX: 0, Ref: 10,
+            END: 0, Fort: 10,
+            AWR: 0, Ant: 10,
+            INT: 0, Log: 10,
+            CHA: 0,
+            Will: 0
+        },
+        hitPoints: 50,
+        armorRating: 10,
+        armorRatingType: "",
+        speed: {
+            climb: "",
+            fly: "",
+            jump: "",
+            hover: "",
+            swim: "",
+            walk: "30ft",
+        },
+        resist: {
+            arcane: 0,
+            blunt: 0,
+            sharp: 0,
+            cold: 0,
+            corrosive: 0,
+            divine: 0,
+            fire: 0,
+            lightning: 0,
+            necrotic: 0,
+            occult: 0,
+            psychic: 0,
+            radiant: 0,
+            sonic: 0,
+            toxic: 0,
+            special: [],
+        },
+        vulnerable: {
+            arcane: 0,
+            blunt: 0,
+            sharp: 0,
+            cold: 0,
+            corrosive: 0,
+            divine: 0,
+            fire: 0,
+            lightning: 0,
+            necrotic: 0,
+            occult: 0,
+            psychic: 0,
+            radiant: 1,
+            sonic: 0,
+            toxic: 0,
+            special: [],
+        },
+        senses: {
+            blindsight: "",
+            darkvision: "",
+            lowLight: "",
+            tremorsense: "",
+            truesight: ""
+        },
+        DR: [""],
+        skills: [
+            { skillAttribute: "", SkillName: "", skillBonus: 0 }
+        ],
+        traits: [""],
+        features: [
+            { featureName: "", featureDescription: "" },
+        ],
+        actionsOptions: [
+            {
+                optionText: "",
+                orActions: [
                     {
-                        "actionName": "",
-                        "actionDescription": "",
-                        "rollmodifier": 0,
-                        "hit": "",
+                        actionName: "Move",
+                        actionDescription: "",
+                        rollmodifier: 0,
+                        hit: "",
+                    },
+                    {
+                        actionName: "",
+                        actionDescription: "",
+                        rollmodifier: 0,
+                        hit: "",
                     },
 
                 ]
@@ -809,11 +1308,11 @@
             tremorsense: "",
             truesight: ""
         },
-        "DR": [""],
-        "skills": [
-            { skillAttribute: "(STR) Applied Force +6", Skill"name": "", skillBonus: 6 }
+        DR: [""],
+        skills: [
+            { skillAttribute: "", SkillName: "", skillBonus: 0 }
         ],
-        "traits": ["Immutable"],
+        traits: [""],
         features: [
             { feature"name": "Aura of R", feature"description": "Any plant or creature that starts its turn within 10ft of the Hollow Arborean must make DC 15 END check or take 6 (1d4+4) necrotic damage. This damage is doubled against plants." },
             { feature"name": "Spreading Curse", feature"description": "Once per day, if the Arborean spends one hour in a forest biome it summons 1d4 Blightweeds. These Blightweeds obey the direct command of the Hollow Arborean and take their turn immedately after it in initiative." },
@@ -869,11 +1368,104 @@
                         "rollmodifier": 5,
                         "hit": "19 (2d12+6) blunt and the creature is Stunned",
                     },
+
+                ]
+            }
+        ],
+        reactions: [
+            { reactionName: "", perRound: 1, reactionDescription: "" },
+        ]
+    },, 
+    {
+        name: "",
+        description: "",
+        monsterLevel: 0,
+        size: "Small",
+        type: "",
+        attributes: {
+            STR: 0,
+            DEX: 0, Ref: 10,
+            END: 0, Fort: 10,
+            AWR: 0, Ant: 10,
+            INT: 0, Log: 10,
+            CHA: 0,
+            Will: 0
+        },
+        hitPoints: 50,
+        armorRating: 10,
+        armorRatingType: "",
+        speed: {
+            climb: "",
+            fly: "",
+            jump: "",
+            hover: "",
+            swim: "",
+            walk: "30ft",
+        },
+        resist: {
+            arcane: 0,
+            blunt: 0,
+            sharp: 0,
+            cold: 0,
+            corrosive: 0,
+            divine: 0,
+            fire: 0,
+            lightning: 0,
+            necrotic: 0,
+            occult: 0,
+            psychic: 0,
+            radiant: 0,
+            sonic: 0,
+            toxic: 0,
+            special: [],
+        },
+        vulnerable: {
+            arcane: 0,
+            blunt: 0,
+            sharp: 0,
+            cold: 0,
+            corrosive: 0,
+            divine: 0,
+            fire: 0,
+            lightning: 0,
+            necrotic: 0,
+            occult: 0,
+            psychic: 0,
+            radiant: 1,
+            sonic: 0,
+            toxic: 0,
+            special: [],
+        },
+        senses: {
+            blindsight: "",
+            darkvision: "",
+            lowLight: "",
+            tremorsense: "",
+            truesight: ""
+        },
+        DR: [""],
+        skills: [
+            { skillAttribute: "", SkillName: "", skillBonus: 0 }
+        ],
+        traits: [""],
+        features: [
+            { featureName: "", featureDescription: "" },
+        ],
+        actionsOptions: [
+            {
+                optionText: "",
+                orActions: [
                     {
-                        "actionName": "Sweep",
-                        "actionDescription": "10ft Radius Natural Weapon. +5 vs REF of each creature in range."hit": 12(1d12+ 6) blunt and the creature falls Prone",
-                        "rollmodifier": 5,
-                        "hit": " 12 (1d12+6) blunt and the creature falls Prone.",
+                        actionName: "Move",
+                        actionDescription: "",
+                        rollmodifier: 0,
+                        hit: "",
+                    },
+                    {
+                        actionName: "",
+                        actionDescription: "",
+                        rollmodifier: 0,
+                        hit: "",
                     },
 
                 ]
@@ -900,6 +1492,105 @@
                         "hit": "",
                     },
 
+                ]
+            }
+        ],
+        reactions: [
+            { reactionName: "", perRound: 1, reactionDescription: "" },
+        ]
+    },, 
+    {
+        name: "",
+        description: "",
+        monsterLevel: 0,
+        size: "Small",
+        type: "",
+        attributes: {
+            STR: 0,
+            DEX: 0, Ref: 10,
+            END: 0, Fort: 10,
+            AWR: 0, Ant: 10,
+            INT: 0, Log: 10,
+            CHA: 0,
+            Will: 0
+        },
+        hitPoints: 50,
+        armorRating: 10,
+        armorRatingType: "",
+        speed: {
+            climb: "",
+            fly: "",
+            jump: "",
+            hover: "",
+            swim: "",
+            walk: "30ft",
+        },
+        resist: {
+            arcane: 0,
+            blunt: 0,
+            sharp: 0,
+            cold: 0,
+            corrosive: 0,
+            divine: 0,
+            fire: 0,
+            lightning: 0,
+            necrotic: 0,
+            occult: 0,
+            psychic: 0,
+            radiant: 0,
+            sonic: 0,
+            toxic: 0,
+            special: [],
+        },
+        vulnerable: {
+            arcane: 0,
+            blunt: 0,
+            sharp: 0,
+            cold: 0,
+            corrosive: 0,
+            divine: 0,
+            fire: 0,
+            lightning: 0,
+            necrotic: 0,
+            occult: 0,
+            psychic: 0,
+            radiant: 1,
+            sonic: 0,
+            toxic: 0,
+            special: [],
+        },
+        senses: {
+            blindsight: "",
+            darkvision: "",
+            lowLight: "",
+            tremorsense: "",
+            truesight: ""
+        },
+        DR: [""],
+        skills: [
+            { skillAttribute: "", SkillName: "", skillBonus: 0 }
+        ],
+        traits: [""],
+        features: [
+            { featureName: "", featureDescription: "" },
+        ],
+        actionsOptions: [
+            {
+                optionText: "",
+                orActions: [
+                    {
+                        actionName: "Move",
+                        actionDescription: "",
+                        rollmodifier: 0,
+                        hit: "",
+                    },
+                    {
+                        actionName: "",
+                        actionDescription: "",
+                        rollmodifier: 0,
+                        hit: "",
+                    },
+
                 ],
                 andText:"",
                 andActions: [
@@ -919,9 +1610,157 @@
                 ]
             }
         ],
-        "reactions": [
+        reactions: [
+            { reactionName: "", perRound: 1, reactionDescription: "" },
+        ]
+    },, 
+    {
+        name: "",
+        description: "",
+        monsterLevel: 0,
+        size: "Small",
+        type: "",
+        attributes: {
+            STR: 0,
+            DEX: 0, Ref: 10,
+            END: 0, Fort: 10,
+            AWR: 0, Ant: 10,
+            INT: 0, Log: 10,
+            CHA: 0,
+            Will: 0
+        },
+        hitPoints: 50,
+        armorRating: 10,
+        armorRatingType: "",
+        speed: {
+            climb: "",
+            fly: "",
+            jump: "",
+            hover: "",
+            swim: "",
+            walk: "30ft",
+        },
+        resist: {
+            arcane: 0,
+            blunt: 0,
+            sharp: 0,
+            cold: 0,
+            corrosive: 0,
+            divine: 0,
+            fire: 0,
+            lightning: 0,
+            necrotic: 0,
+            occult: 0,
+            psychic: 0,
+            radiant: 0,
+            sonic: 0,
+            toxic: 0,
+            special: [],
+        },
+        vulnerable: {
+            arcane: 0,
+            blunt: 0,
+            sharp: 0,
+            cold: 0,
+            corrosive: 0,
+            divine: 0,
+            fire: 0,
+            lightning: 0,
+            necrotic: 0,
+            occult: 0,
+            psychic: 0,
+            radiant: 1,
+            sonic: 0,
+            toxic: 0,
+            special: [],
+        },
+        senses: {
+            blindsight: "",
+            darkvision: "",
+            lowLight: "",
+            tremorsense: "",
+            truesight: ""
+        },
+        DR: [""],
+        skills: [
+            { skillAttribute: "", SkillName: "", skillBonus: 0 }
+        ],
+        traits: [""],
+        features: [
+            { featureName: "", featureDescription: "" },
+        ],
+        actionsOptions: [
             {
-                re"actionName": "Engage (1/Round)", perRound: 1, re"actionDescription": " If a creature that the Arborean has Engaged attempts to move out of reach of the Arborean’s Slam, the Arborean can make a reactive Slam attack.If it hits with this attack, the creature’s speed also becomes 0ft until the end of its turn." },
+                optionText: "",
+                orActions: [
+                    {
+                        actionName: "Move",
+                        actionDescription: "",
+                        rollmodifier: 0,
+                        hit: "",
+                    },
+                    {
+                        actionName: "",
+                        actionDescription: "",
+                        rollmodifier: 0,
+                        hit: "",
+                    },
+
+                ],
+                andText:"",
+                andActions: [
+                    {
+                        actionName: "Move",
+                        actionDescription: "",
+                        rollmodifier: 0,
+                        hit: "",
+                    },
+                    {
+                        actionName: "",
+                        actionDescription: "",
+                        rollmodifier: 0,
+                        hit: "",
+                    },
+
+                ]
+            },
+            , {
+                orOptionText: "",
+                orActions: [
+                    {
+                        actionName: "Move",
+                        actionDescription: "",
+                        rollmodifier: 0,
+                        hit: "",
+                    },
+                    {
+                        actionName: "",
+                        actionDescription: "",
+                        rollmodifier: 0,
+                        hit: "",
+                    },
+
+                ],
+                andText:"",
+                andActions: [
+                    {
+                        actionName: "Move",
+                        actionDescription: "",
+                        rollmodifier: 0,
+                        hit: "",
+                    },
+                    {
+                        actionName: "",
+                        actionDescription: "",
+                        rollmodifier: 0,
+                        hit: "",
+                    },
+
+                ]
+            }
+        ],
+        reactions: [
+            { reactionName: "", perRound: 1, reactionDescription: "" },
         ]
     },, 
     {
@@ -993,11 +1832,11 @@
             tremorsense: "",
             truesight: ""
         },
-        "DR": [""],
-        "skills": [
-            { skillAttribute: " (STR) Applied Force +6", Skill"name": "", skillBonus: 6 }
+        DR: [""],
+        skills: [
+            { skillAttribute: "", SkillName: "", skillBonus: 0 }
         ],
-        "traits": ["Immutable"],
+        traits: [""],
         features: [
             { feature"name": "Forest Defender", feature"description": " The Arborean can animate 3 (1d4+1) trees, who remain animated for 1 hour, obey the mental commands of the Arborean, and take their turns immediately after it in combat. Trees animated in this way can have the physical stats of any Arborean or other plant monsters at the MC’s discretion. However, trees animated in this way gain no magical abilities and have -3 to all mental stats." },
             { feature"name": "Primeval Defender", feature"description": "Using END, the Arborean can cast the Photosynthesis, Rapid Growth, Warden’s Navigation, and Warden’s Trap invocations each once per day." },
@@ -1043,8 +1882,89 @@
                         "hit": "",
                     },
 
-                ],
-            },
+                ]
+            }
+        ],
+        reactions: [
+            { reactionName: "", perRound: 1, reactionDescription: "" },
+        ]
+    },, 
+    {
+        name: "",
+        description: "",
+        monsterLevel: 0,
+        size: "Small",
+        type: "",
+        attributes: {
+            STR: 0,
+            DEX: 0, Ref: 10,
+            END: 0, Fort: 10,
+            AWR: 0, Ant: 10,
+            INT: 0, Log: 10,
+            CHA: 0,
+            Will: 0
+        },
+        hitPoints: 50,
+        armorRating: 10,
+        armorRatingType: "",
+        speed: {
+            climb: "",
+            fly: "",
+            jump: "",
+            hover: "",
+            swim: "",
+            walk: "30ft",
+        },
+        resist: {
+            arcane: 0,
+            blunt: 0,
+            sharp: 0,
+            cold: 0,
+            corrosive: 0,
+            divine: 0,
+            fire: 0,
+            lightning: 0,
+            necrotic: 0,
+            occult: 0,
+            psychic: 0,
+            radiant: 0,
+            sonic: 0,
+            toxic: 0,
+            special: [],
+        },
+        vulnerable: {
+            arcane: 0,
+            blunt: 0,
+            sharp: 0,
+            cold: 0,
+            corrosive: 0,
+            divine: 0,
+            fire: 0,
+            lightning: 0,
+            necrotic: 0,
+            occult: 0,
+            psychic: 0,
+            radiant: 1,
+            sonic: 0,
+            toxic: 0,
+            special: [],
+        },
+        senses: {
+            blindsight: "",
+            darkvision: "",
+            lowLight: "",
+            tremorsense: "",
+            truesight: ""
+        },
+        DR: [""],
+        skills: [
+            { skillAttribute: "", SkillName: "", skillBonus: 0 }
+        ],
+        traits: [""],
+        features: [
+            { featureName: "", featureDescription: "" },
+        ],
+        actionsOptions: [
             {
                 orOptionText: "OR the Arborean can take TWO of the following actions, or take the same action twice…",
                 orActions: [
@@ -1082,8 +2002,90 @@
                         "rollmodifier": 0,
                         "hit": "",
                     },
-                ],
-            },
+
+                ]
+            }
+        ],
+        reactions: [
+            { reactionName: "", perRound: 1, reactionDescription: "" },
+        ]
+    },, 
+    {
+        name: "",
+        description: "",
+        monsterLevel: 0,
+        size: "Small",
+        type: "",
+        attributes: {
+            STR: 0,
+            DEX: 0, Ref: 10,
+            END: 0, Fort: 10,
+            AWR: 0, Ant: 10,
+            INT: 0, Log: 10,
+            CHA: 0,
+            Will: 0
+        },
+        hitPoints: 50,
+        armorRating: 10,
+        armorRatingType: "",
+        speed: {
+            climb: "",
+            fly: "",
+            jump: "",
+            hover: "",
+            swim: "",
+            walk: "30ft",
+        },
+        resist: {
+            arcane: 0,
+            blunt: 0,
+            sharp: 0,
+            cold: 0,
+            corrosive: 0,
+            divine: 0,
+            fire: 0,
+            lightning: 0,
+            necrotic: 0,
+            occult: 0,
+            psychic: 0,
+            radiant: 0,
+            sonic: 0,
+            toxic: 0,
+            special: [],
+        },
+        vulnerable: {
+            arcane: 0,
+            blunt: 0,
+            sharp: 0,
+            cold: 0,
+            corrosive: 0,
+            divine: 0,
+            fire: 0,
+            lightning: 0,
+            necrotic: 0,
+            occult: 0,
+            psychic: 0,
+            radiant: 1,
+            sonic: 0,
+            toxic: 0,
+            special: [],
+        },
+        senses: {
+            blindsight: "",
+            darkvision: "",
+            lowLight: "",
+            tremorsense: "",
+            truesight: ""
+        },
+        DR: [""],
+        skills: [
+            { skillAttribute: "", SkillName: "", skillBonus: 0 }
+        ],
+        traits: [""],
+        features: [
+            { featureName: "", featureDescription: "" },
+        ],
+        actionsOptions: [
             {
                 orOptionText: "OR the Arborean can take TWO of the following actions, or take the same action twice.",
                 orActions: [
@@ -1183,11 +2185,11 @@
             tremorsense: "",
             truesight: ""
         },
-        "DR": [""],
-        "skills": [
-            { skillAttribute: "(STR) Applied Force +4", Skill"name": "", skillBonus: 4 }
+        DR: [""],
+        skills: [
+            { skillAttribute: "", SkillName: "", skillBonus: 0 }
         ],
-        "traits": ["Immutable"],
+        traits: [""],
         features: [
             { feature"name": "Unassuming Form", feature"description": "When the Arborean is motionless, it is indistinguishable from a normal pine." },
             { feature"name": "Voice of the Forest", feature"description": "The Arborean may communicate with plants at will." },
@@ -1245,6 +2247,121 @@
                         "actionDescription": "The Arborean sheds conifer needles in a 30ft radius around itself. Each creature that breathes and starts its turn within the radius must make a DC 16 END check; on a fail, they are Shaken and Chilled.",
                         "rollmodifier": 0,
                         "hit": "",
+                    },
+
+                ]
+            }
+        ],
+        reactions: [
+            { reactionName: "", perRound: 1, reactionDescription: "" },
+        ]
+    },, 
+    {
+        name: "",
+        description: "",
+        monsterLevel: 0,
+        size: "Small",
+        type: "",
+        attributes: {
+            STR: 0,
+            DEX: 0, Ref: 10,
+            END: 0, Fort: 10,
+            AWR: 0, Ant: 10,
+            INT: 0, Log: 10,
+            CHA: 0,
+            Will: 0
+        },
+        hitPoints: 50,
+        armorRating: 10,
+        armorRatingType: "",
+        speed: {
+            climb: "",
+            fly: "",
+            jump: "",
+            hover: "",
+            swim: "",
+            walk: "30ft",
+        },
+        resist: {
+            arcane: 0,
+            blunt: 0,
+            sharp: 0,
+            cold: 0,
+            corrosive: 0,
+            divine: 0,
+            fire: 0,
+            lightning: 0,
+            necrotic: 0,
+            occult: 0,
+            psychic: 0,
+            radiant: 0,
+            sonic: 0,
+            toxic: 0,
+            special: [],
+        },
+        vulnerable: {
+            arcane: 0,
+            blunt: 0,
+            sharp: 0,
+            cold: 0,
+            corrosive: 0,
+            divine: 0,
+            fire: 0,
+            lightning: 0,
+            necrotic: 0,
+            occult: 0,
+            psychic: 0,
+            radiant: 1,
+            sonic: 0,
+            toxic: 0,
+            special: [],
+        },
+        senses: {
+            blindsight: "",
+            darkvision: "",
+            lowLight: "",
+            tremorsense: "",
+            truesight: ""
+        },
+        DR: [""],
+        skills: [
+            { skillAttribute: "", SkillName: "", skillBonus: 0 }
+        ],
+        traits: [""],
+        features: [
+            { featureName: "", featureDescription: "" },
+        ],
+        actionsOptions: [
+            {
+                optionText: "",
+                orActions: [
+                    {
+                        actionName: "Move",
+                        actionDescription: "",
+                        rollmodifier: 0,
+                        hit: "",
+                    },
+                    {
+                        actionName: "",
+                        actionDescription: "",
+                        rollmodifier: 0,
+                        hit: "",
+                    },
+
+                ],
+                andText:"",
+                andActions: [
+                    {
+                        actionName: "Move",
+                        actionDescription: "",
+                        rollmodifier: 0,
+                        hit: "",
+                    },
+                    {
+                        actionName: "",
+                        actionDescription: "",
+                        rollmodifier: 0,
+                        hit: "",
                     },
 
                 ]
@@ -1357,11 +2474,11 @@
             tremorsense: "",
             truesight: ""
         },
-        "DR": [""],
-        "skills": [
-            { skillAttribute: " (STR) Applied Force +2", Skill"name": "", skillBonus: 2 }
+        DR: [""],
+        skills: [
+            { skillAttribute: "", SkillName: "", skillBonus: 0 }
         ],
-        "traits": ["Immutable"],
+        traits: [""],
         features: [
             { feature"name": "Unassuming Form", feature"description": "When the Arborean is motionless, it is indistinguishable from a normal willow." },
             { feature"name": "Voice of the Forest", feature"description": "The Arborean may communicate with plants at will." },
@@ -1407,6 +2524,121 @@
                     },
 
                 ]
+            }
+        ],
+        reactions: [
+            { reactionName: "", perRound: 1, reactionDescription: "" },
+        ]
+    },, 
+    {
+        name: "",
+        description: "",
+        monsterLevel: 0,
+        size: "Small",
+        type: "",
+        attributes: {
+            STR: 0,
+            DEX: 0, Ref: 10,
+            END: 0, Fort: 10,
+            AWR: 0, Ant: 10,
+            INT: 0, Log: 10,
+            CHA: 0,
+            Will: 0
+        },
+        hitPoints: 50,
+        armorRating: 10,
+        armorRatingType: "",
+        speed: {
+            climb: "",
+            fly: "",
+            jump: "",
+            hover: "",
+            swim: "",
+            walk: "30ft",
+        },
+        resist: {
+            arcane: 0,
+            blunt: 0,
+            sharp: 0,
+            cold: 0,
+            corrosive: 0,
+            divine: 0,
+            fire: 0,
+            lightning: 0,
+            necrotic: 0,
+            occult: 0,
+            psychic: 0,
+            radiant: 0,
+            sonic: 0,
+            toxic: 0,
+            special: [],
+        },
+        vulnerable: {
+            arcane: 0,
+            blunt: 0,
+            sharp: 0,
+            cold: 0,
+            corrosive: 0,
+            divine: 0,
+            fire: 0,
+            lightning: 0,
+            necrotic: 0,
+            occult: 0,
+            psychic: 0,
+            radiant: 1,
+            sonic: 0,
+            toxic: 0,
+            special: [],
+        },
+        senses: {
+            blindsight: "",
+            darkvision: "",
+            lowLight: "",
+            tremorsense: "",
+            truesight: ""
+        },
+        DR: [""],
+        skills: [
+            { skillAttribute: "", SkillName: "", skillBonus: 0 }
+        ],
+        traits: [""],
+        features: [
+            { featureName: "", featureDescription: "" },
+        ],
+        actionsOptions: [
+            {
+                optionText: "",
+                orActions: [
+                    {
+                        actionName: "Move",
+                        actionDescription: "",
+                        rollmodifier: 0,
+                        hit: "",
+                    },
+                    {
+                        actionName: "",
+                        actionDescription: "",
+                        rollmodifier: 0,
+                        hit: "",
+                    },
+
+                ],
+                andText:"",
+                andActions: [
+                    {
+                        actionName: "Move",
+                        actionDescription: "",
+                        rollmodifier: 0,
+                        hit: "",
+                    },
+                    {
+                        actionName: "",
+                        actionDescription: "",
+                        rollmodifier: 0,
+                        hit: "",
+                    },
+
+                ]
             },
             , {
                 orOptionText: "OR the Arborean can take THREE of the following actions, or take the same action three times…",
@@ -1443,9 +2675,157 @@
                 ]
             }
         ],
-        "reactions": [
+        reactions: [
+            { reactionName: "", perRound: 1, reactionDescription: "" },
+        ]
+    },, 
+    {
+        name: "",
+        description: "",
+        monsterLevel: 0,
+        size: "Small",
+        type: "",
+        attributes: {
+            STR: 0,
+            DEX: 0, Ref: 10,
+            END: 0, Fort: 10,
+            AWR: 0, Ant: 10,
+            INT: 0, Log: 10,
+            CHA: 0,
+            Will: 0
+        },
+        hitPoints: 50,
+        armorRating: 10,
+        armorRatingType: "",
+        speed: {
+            climb: "",
+            fly: "",
+            jump: "",
+            hover: "",
+            swim: "",
+            walk: "30ft",
+        },
+        resist: {
+            arcane: 0,
+            blunt: 0,
+            sharp: 0,
+            cold: 0,
+            corrosive: 0,
+            divine: 0,
+            fire: 0,
+            lightning: 0,
+            necrotic: 0,
+            occult: 0,
+            psychic: 0,
+            radiant: 0,
+            sonic: 0,
+            toxic: 0,
+            special: [],
+        },
+        vulnerable: {
+            arcane: 0,
+            blunt: 0,
+            sharp: 0,
+            cold: 0,
+            corrosive: 0,
+            divine: 0,
+            fire: 0,
+            lightning: 0,
+            necrotic: 0,
+            occult: 0,
+            psychic: 0,
+            radiant: 1,
+            sonic: 0,
+            toxic: 0,
+            special: [],
+        },
+        senses: {
+            blindsight: "",
+            darkvision: "",
+            lowLight: "",
+            tremorsense: "",
+            truesight: ""
+        },
+        DR: [""],
+        skills: [
+            { skillAttribute: "", SkillName: "", skillBonus: 0 }
+        ],
+        traits: [""],
+        features: [
+            { featureName: "", featureDescription: "" },
+        ],
+        actionsOptions: [
             {
-                re"actionName": "Engage (2/Round)", perRound: 2, re"actionDescription": " If a creature that the Arborean has Engaged moves more than 15ft away from the Arborean, the Arborean can make a reactive Branch Whip attack.If it hits with this attack, the creature’s speed also becomes 0ft until the end of its turn." },
+                optionText: "",
+                orActions: [
+                    {
+                        actionName: "Move",
+                        actionDescription: "",
+                        rollmodifier: 0,
+                        hit: "",
+                    },
+                    {
+                        actionName: "",
+                        actionDescription: "",
+                        rollmodifier: 0,
+                        hit: "",
+                    },
+
+                ],
+                andText:"",
+                andActions: [
+                    {
+                        actionName: "Move",
+                        actionDescription: "",
+                        rollmodifier: 0,
+                        hit: "",
+                    },
+                    {
+                        actionName: "",
+                        actionDescription: "",
+                        rollmodifier: 0,
+                        hit: "",
+                    },
+
+                ]
+            },
+            , {
+                orOptionText: "",
+                orActions: [
+                    {
+                        actionName: "Move",
+                        actionDescription: "",
+                        rollmodifier: 0,
+                        hit: "",
+                    },
+                    {
+                        actionName: "",
+                        actionDescription: "",
+                        rollmodifier: 0,
+                        hit: "",
+                    },
+
+                ],
+                andText:"",
+                andActions: [
+                    {
+                        actionName: "Move",
+                        actionDescription: "",
+                        rollmodifier: 0,
+                        hit: "",
+                    },
+                    {
+                        actionName: "",
+                        actionDescription: "",
+                        rollmodifier: 0,
+                        hit: "",
+                    },
+
+                ]
+            }
+        ],
+        reactions: [
+            { reactionName: "", perRound: 1, reactionDescription: "" },
         ]
     },, 
     {
@@ -1517,11 +2897,11 @@
             tremorsense: "",
             truesight: ""
         },
-        "DR": [""],
-        "skills": [
-            { skillAttribute: "(AWR) Perceiving +2", Skill"name": "", skillBonus: 2 }
+        DR: [""],
+        skills: [
+            { skillAttribute: "", SkillName: "", skillBonus: 0 }
         ],
-        "traits": [""],
+        traits: [""],
         features: [
             { feature"name": "Timberborn", feature"description": "When held by an ally, the Axehandle Hound may be wielded as a weapon with the same characteristics as a handaxe." },
             { feature"name": "Tree-Cutter", feature"description": "The Axehandle Hound is able to cut through solid wood at a rate of 5ft on each of its turns and is not affected by plant-based difficult terrain." },
@@ -1563,6 +2943,121 @@
                         "actionDescription": "",
                         "rollmodifier": 0,
                         "hit": "",
+                    },
+
+                ]
+            }
+        ],
+        reactions: [
+            { reactionName: "", perRound: 1, reactionDescription: "" },
+        ]
+    },, 
+    {
+        name: "",
+        description: "",
+        monsterLevel: 0,
+        size: "Small",
+        type: "",
+        attributes: {
+            STR: 0,
+            DEX: 0, Ref: 10,
+            END: 0, Fort: 10,
+            AWR: 0, Ant: 10,
+            INT: 0, Log: 10,
+            CHA: 0,
+            Will: 0
+        },
+        hitPoints: 50,
+        armorRating: 10,
+        armorRatingType: "",
+        speed: {
+            climb: "",
+            fly: "",
+            jump: "",
+            hover: "",
+            swim: "",
+            walk: "30ft",
+        },
+        resist: {
+            arcane: 0,
+            blunt: 0,
+            sharp: 0,
+            cold: 0,
+            corrosive: 0,
+            divine: 0,
+            fire: 0,
+            lightning: 0,
+            necrotic: 0,
+            occult: 0,
+            psychic: 0,
+            radiant: 0,
+            sonic: 0,
+            toxic: 0,
+            special: [],
+        },
+        vulnerable: {
+            arcane: 0,
+            blunt: 0,
+            sharp: 0,
+            cold: 0,
+            corrosive: 0,
+            divine: 0,
+            fire: 0,
+            lightning: 0,
+            necrotic: 0,
+            occult: 0,
+            psychic: 0,
+            radiant: 1,
+            sonic: 0,
+            toxic: 0,
+            special: [],
+        },
+        senses: {
+            blindsight: "",
+            darkvision: "",
+            lowLight: "",
+            tremorsense: "",
+            truesight: ""
+        },
+        DR: [""],
+        skills: [
+            { skillAttribute: "", SkillName: "", skillBonus: 0 }
+        ],
+        traits: [""],
+        features: [
+            { featureName: "", featureDescription: "" },
+        ],
+        actionsOptions: [
+            {
+                optionText: "",
+                orActions: [
+                    {
+                        actionName: "Move",
+                        actionDescription: "",
+                        rollmodifier: 0,
+                        hit: "",
+                    },
+                    {
+                        actionName: "",
+                        actionDescription: "",
+                        rollmodifier: 0,
+                        hit: "",
+                    },
+
+                ],
+                andText:"",
+                andActions: [
+                    {
+                        actionName: "Move",
+                        actionDescription: "",
+                        rollmodifier: 0,
+                        hit: "",
+                    },
+                    {
+                        actionName: "",
+                        actionDescription: "",
+                        rollmodifier: 0,
+                        hit: "",
                     },
 
                 ]
@@ -1675,11 +3170,11 @@
             tremorsense: "",
             truesight: ""
         },
-        "DR": [""],
-        "skills": [
-            { skillAttribute: "(DEX) Sneaking +2; (AWR) Perceiving +10", Skill"name": "", skillBonus: 10 }
+        DR: [""],
+        skills: [
+            { skillAttribute: "", SkillName: "", skillBonus: 0 }
         ],
-        "traits": ["Vigilant"],
+        traits: [""],
         features: [
             { feature"name": "Dual Headed", feature"description": "While conscious, the Asagi cannot be Surprised." },
         ],
@@ -1688,11 +3183,120 @@
                 optionText: "The Asagi can MOVE and take TWO of the following actions, or take the same action twice.",
                 orActions: [
                     {
-                        "actionName": "Move",
-                        "actionDescription": "The Asagi can move up to its speed.",
-                        "rollmodifier": 0,
-                        "hit": "",
+                        actionName: "Move",
+                        actionDescription: "",
+                        rollmodifier: 0,
+                        hit: "",
                     },
+                    {
+                        actionName: "",
+                        actionDescription: "",
+                        rollmodifier: 0,
+                        hit: "",
+                    },
+
+                ],
+                andText:"",
+                andActions: [
+                    {
+                        actionName: "Move",
+                        actionDescription: "",
+                        rollmodifier: 0,
+                        hit: "",
+                    },
+                    {
+                        actionName: "",
+                        actionDescription: "",
+                        rollmodifier: 0,
+                        hit: "",
+                    },
+
+                ]
+            }
+        ],
+        reactions: [
+            { reactionName: "", perRound: 1, reactionDescription: "" },
+        ]
+    },, 
+    {
+        name: "",
+        description: "",
+        monsterLevel: 0,
+        size: "Small",
+        type: "",
+        attributes: {
+            STR: 0,
+            DEX: 0, Ref: 10,
+            END: 0, Fort: 10,
+            AWR: 0, Ant: 10,
+            INT: 0, Log: 10,
+            CHA: 0,
+            Will: 0
+        },
+        hitPoints: 50,
+        armorRating: 10,
+        armorRatingType: "",
+        speed: {
+            climb: "",
+            fly: "",
+            jump: "",
+            hover: "",
+            swim: "",
+            walk: "30ft",
+        },
+        resist: {
+            arcane: 0,
+            blunt: 0,
+            sharp: 0,
+            cold: 0,
+            corrosive: 0,
+            divine: 0,
+            fire: 0,
+            lightning: 0,
+            necrotic: 0,
+            occult: 0,
+            psychic: 0,
+            radiant: 0,
+            sonic: 0,
+            toxic: 0,
+            special: [],
+        },
+        vulnerable: {
+            arcane: 0,
+            blunt: 0,
+            sharp: 0,
+            cold: 0,
+            corrosive: 0,
+            divine: 0,
+            fire: 0,
+            lightning: 0,
+            necrotic: 0,
+            occult: 0,
+            psychic: 0,
+            radiant: 1,
+            sonic: 0,
+            toxic: 0,
+            special: [],
+        },
+        senses: {
+            blindsight: "",
+            darkvision: "",
+            lowLight: "",
+            tremorsense: "",
+            truesight: ""
+        },
+        DR: [""],
+        skills: [
+            { skillAttribute: "", SkillName: "", skillBonus: 0 }
+        ],
+        traits: [""],
+        features: [
+            { featureName: "", featureDescription: "" },
+        ],
+        actionsOptions: [
+            {
+                optionText: "",
+                orActions: [
                     {
                         "actionName": "Bite",
                         "actionDescription": "Reach 5ft Natural Weapon. +2 vs AR. "hit": 5 (1d6+2) sharp.",
@@ -1759,10 +3363,159 @@
                 ]
             }
         ],
-        "reactions": [
-            { re"actionName": "", perRound: 1, re"actionDescription": "" },
+        reactions: [
+            { reactionName: "", perRound: 1, reactionDescription: "" },
         ]
-    }, 
+    },, 
+    {
+        name: "",
+        description: "",
+        monsterLevel: 0,
+        size: "Small",
+        type: "",
+        attributes: {
+            STR: 0,
+            DEX: 0, Ref: 10,
+            END: 0, Fort: 10,
+            AWR: 0, Ant: 10,
+            INT: 0, Log: 10,
+            CHA: 0,
+            Will: 0
+        },
+        hitPoints: 50,
+        armorRating: 10,
+        armorRatingType: "",
+        speed: {
+            climb: "",
+            fly: "",
+            jump: "",
+            hover: "",
+            swim: "",
+            walk: "30ft",
+        },
+        resist: {
+            arcane: 0,
+            blunt: 0,
+            sharp: 0,
+            cold: 0,
+            corrosive: 0,
+            divine: 0,
+            fire: 0,
+            lightning: 0,
+            necrotic: 0,
+            occult: 0,
+            psychic: 0,
+            radiant: 0,
+            sonic: 0,
+            toxic: 0,
+            special: [],
+        },
+        vulnerable: {
+            arcane: 0,
+            blunt: 0,
+            sharp: 0,
+            cold: 0,
+            corrosive: 0,
+            divine: 0,
+            fire: 0,
+            lightning: 0,
+            necrotic: 0,
+            occult: 0,
+            psychic: 0,
+            radiant: 1,
+            sonic: 0,
+            toxic: 0,
+            special: [],
+        },
+        senses: {
+            blindsight: "",
+            darkvision: "",
+            lowLight: "",
+            tremorsense: "",
+            truesight: ""
+        },
+        DR: [""],
+        skills: [
+            { skillAttribute: "", SkillName: "", skillBonus: 0 }
+        ],
+        traits: [""],
+        features: [
+            { featureName: "", featureDescription: "" },
+        ],
+        actionsOptions: [
+            {
+                optionText: "",
+                orActions: [
+                    {
+                        actionName: "Move",
+                        actionDescription: "",
+                        rollmodifier: 0,
+                        hit: "",
+                    },
+                    {
+                        actionName: "",
+                        actionDescription: "",
+                        rollmodifier: 0,
+                        hit: "",
+                    },
+
+                ],
+                andText:"",
+                andActions: [
+                    {
+                        actionName: "Move",
+                        actionDescription: "",
+                        rollmodifier: 0,
+                        hit: "",
+                    },
+                    {
+                        actionName: "",
+                        actionDescription: "",
+                        rollmodifier: 0,
+                        hit: "",
+                    },
+
+                ]
+            },
+            , {
+                orOptionText: "",
+                orActions: [
+                    {
+                        actionName: "Move",
+                        actionDescription: "",
+                        rollmodifier: 0,
+                        hit: "",
+                    },
+                    {
+                        actionName: "",
+                        actionDescription: "",
+                        rollmodifier: 0,
+                        hit: "",
+                    },
+
+                ],
+                andText:"",
+                andActions: [
+                    {
+                        actionName: "Move",
+                        actionDescription: "",
+                        rollmodifier: 0,
+                        hit: "",
+                    },
+                    {
+                        actionName: "",
+                        actionDescription: "",
+                        rollmodifier: 0,
+                        hit: "",
+                    },
+
+                ]
+            }
+        ],
+        reactions: [
+            { reactionName: "", perRound: 1, reactionDescription: "" },
+        ]
+    },, 
     {
         "name": "Basilisk",
         "description": "The dreadful Basilisk is a terrifying lizard with gray or green scales, curved black claws, and glowing eyes that can cause creatures to drop dead if they make eye contact.",
@@ -1832,25 +3585,282 @@
             tremorsense: "",
             truesight: ""
         },
-        "DR": [""],
-        "skills": [
-            { skillAttribute: "(DEX) Sneaking +4", Skill"name": "", skillBonus:4 }
+        DR: [""],
+        skills: [
+            { skillAttribute: "", SkillName: "", skillBonus: 0 }
         ],
-        "traits": [""],
+        traits: [""],
         features: [
+            { featureName: "", featureDescription: "" },
+        ],
+        actionsOptions: [
             {
-                feature"name": "Deadly Secretions", feature"description": "The skin of the Basilisk secretes a toxin that burns any exposed flesh or plant matter. Any creature that comes into direct physical contact with the Basilisk through Unarmed Attacks or Grappling must make a DC 13 END check or take 3 (1d6) corrosive.A Basilisk’s diet consists primarily of meat that it dissolves with its acidic saliva.They often dwell in abandoned mines or ancient ruins, preying on unsuspecting treasure hunters." },
+                optionText: "",
+                orActions: [
+                    {
+                        actionName: "Move",
+                        actionDescription: "",
+                        rollmodifier: 0,
+                        hit: "",
+                    },
+                    {
+                        actionName: "",
+                        actionDescription: "",
+                        rollmodifier: 0,
+                        hit: "",
+                    },
+
+                ],
+                andText:"",
+                andActions: [
+                    {
+                        actionName: "Move",
+                        actionDescription: "",
+                        rollmodifier: 0,
+                        hit: "",
+                    },
+                    {
+                        actionName: "",
+                        actionDescription: "",
+                        rollmodifier: 0,
+                        hit: "",
+                    },
+
+                ]
+            },
+            , {
+                orOptionText: "",
+                orActions: [
+                    {
+                        actionName: "Move",
+                        actionDescription: "",
+                        rollmodifier: 0,
+                        hit: "",
+                    },
+                    {
+                        actionName: "",
+                        actionDescription: "",
+                        rollmodifier: 0,
+                        hit: "",
+                    },
+
+                ],
+                andText:"",
+                andActions: [
+                    {
+                        actionName: "Move",
+                        actionDescription: "",
+                        rollmodifier: 0,
+                        hit: "",
+                    },
+                    {
+                        actionName: "",
+                        actionDescription: "",
+                        rollmodifier: 0,
+                        hit: "",
+                    },
+
+                ]
+            }
+        ],
+        reactions: [
+            { reactionName: "", perRound: 1, reactionDescription: "" },
+        ]
+    },, 
+    {
+        name: "",
+        description: "",
+        monsterLevel: 0,
+        size: "Small",
+        type: "",
+        attributes: {
+            STR: 0,
+            DEX: 0, Ref: 10,
+            END: 0, Fort: 10,
+            AWR: 0, Ant: 10,
+            INT: 0, Log: 10,
+            CHA: 0,
+            Will: 0
+        },
+        hitPoints: 50,
+        armorRating: 10,
+        armorRatingType: "",
+        speed: {
+            climb: "",
+            fly: "",
+            jump: "",
+            hover: "",
+            swim: "",
+            walk: "30ft",
+        },
+        resist: {
+            arcane: 0,
+            blunt: 0,
+            sharp: 0,
+            cold: 0,
+            corrosive: 0,
+            divine: 0,
+            fire: 0,
+            lightning: 0,
+            necrotic: 0,
+            occult: 0,
+            psychic: 0,
+            radiant: 0,
+            sonic: 0,
+            toxic: 0,
+            special: [],
+        },
+        vulnerable: {
+            arcane: 0,
+            blunt: 0,
+            sharp: 0,
+            cold: 0,
+            corrosive: 0,
+            divine: 0,
+            fire: 0,
+            lightning: 0,
+            necrotic: 0,
+            occult: 0,
+            psychic: 0,
+            radiant: 1,
+            sonic: 0,
+            toxic: 0,
+            special: [],
+        },
+        senses: {
+            blindsight: "",
+            darkvision: "",
+            lowLight: "",
+            tremorsense: "",
+            truesight: ""
+        },
+        DR: [""],
+        skills: [
+            { skillAttribute: "", SkillName: "", skillBonus: 0 }
+        ],
+        traits: [""],
+        features: [
+            { featureName: "", featureDescription: "" },
         ],
         actionsOptions: [
             {
                 optionText: "The Basilisk can take THREE of the following actions, or take the same action three times.",
                 orActions: [
                     {
-                        "actionName": "Move",
-                        "actionDescription": "The Basilisk can move up to its speed.",
-                        "rollmodifier": 0,
-                        "hit": "",
+                        actionName: "Move",
+                        actionDescription: "",
+                        rollmodifier: 0,
+                        hit: "",
                     },
+                    {
+                        actionName: "",
+                        actionDescription: "",
+                        rollmodifier: 0,
+                        hit: "",
+                    },
+
+                ],
+                andText:"",
+                andActions: [
+                    {
+                        actionName: "Move",
+                        actionDescription: "",
+                        rollmodifier: 0,
+                        hit: "",
+                    },
+                    {
+                        actionName: "",
+                        actionDescription: "",
+                        rollmodifier: 0,
+                        hit: "",
+                    },
+
+                ]
+            }
+        ],
+        reactions: [
+            { reactionName: "", perRound: 1, reactionDescription: "" },
+        ]
+    },, 
+    {
+        name: "",
+        description: "",
+        monsterLevel: 0,
+        size: "Small",
+        type: "",
+        attributes: {
+            STR: 0,
+            DEX: 0, Ref: 10,
+            END: 0, Fort: 10,
+            AWR: 0, Ant: 10,
+            INT: 0, Log: 10,
+            CHA: 0,
+            Will: 0
+        },
+        hitPoints: 50,
+        armorRating: 10,
+        armorRatingType: "",
+        speed: {
+            climb: "",
+            fly: "",
+            jump: "",
+            hover: "",
+            swim: "",
+            walk: "30ft",
+        },
+        resist: {
+            arcane: 0,
+            blunt: 0,
+            sharp: 0,
+            cold: 0,
+            corrosive: 0,
+            divine: 0,
+            fire: 0,
+            lightning: 0,
+            necrotic: 0,
+            occult: 0,
+            psychic: 0,
+            radiant: 0,
+            sonic: 0,
+            toxic: 0,
+            special: [],
+        },
+        vulnerable: {
+            arcane: 0,
+            blunt: 0,
+            sharp: 0,
+            cold: 0,
+            corrosive: 0,
+            divine: 0,
+            fire: 0,
+            lightning: 0,
+            necrotic: 0,
+            occult: 0,
+            psychic: 0,
+            radiant: 1,
+            sonic: 0,
+            toxic: 0,
+            special: [],
+        },
+        senses: {
+            blindsight: "",
+            darkvision: "",
+            lowLight: "",
+            tremorsense: "",
+            truesight: ""
+        },
+        DR: [""],
+        skills: [
+            { skillAttribute: "", SkillName: "", skillBonus: 0 }
+        ],
+        traits: [""],
+        features: [
+            { featureName: "", featureDescription: "" },
+        ],
+        actionsOptions: [
+            {
+                optionText: "",
+                orActions: [
                     {
                         "actionName": "Bite",
                         "actionDescription": "Reach 5ft Natural Weapon. +5 vs AR. "hit": 8 (1d6+5) sharp and 4(1d8) toxic.",
@@ -1917,9 +3927,157 @@
                 ]
             }
         ],
-        "reactions": [
+        reactions: [
+            { reactionName: "", perRound: 1, reactionDescription: "" },
+        ]
+    },, 
+    {
+        name: "",
+        description: "",
+        monsterLevel: 0,
+        size: "Small",
+        type: "",
+        attributes: {
+            STR: 0,
+            DEX: 0, Ref: 10,
+            END: 0, Fort: 10,
+            AWR: 0, Ant: 10,
+            INT: 0, Log: 10,
+            CHA: 0,
+            Will: 0
+        },
+        hitPoints: 50,
+        armorRating: 10,
+        armorRatingType: "",
+        speed: {
+            climb: "",
+            fly: "",
+            jump: "",
+            hover: "",
+            swim: "",
+            walk: "30ft",
+        },
+        resist: {
+            arcane: 0,
+            blunt: 0,
+            sharp: 0,
+            cold: 0,
+            corrosive: 0,
+            divine: 0,
+            fire: 0,
+            lightning: 0,
+            necrotic: 0,
+            occult: 0,
+            psychic: 0,
+            radiant: 0,
+            sonic: 0,
+            toxic: 0,
+            special: [],
+        },
+        vulnerable: {
+            arcane: 0,
+            blunt: 0,
+            sharp: 0,
+            cold: 0,
+            corrosive: 0,
+            divine: 0,
+            fire: 0,
+            lightning: 0,
+            necrotic: 0,
+            occult: 0,
+            psychic: 0,
+            radiant: 1,
+            sonic: 0,
+            toxic: 0,
+            special: [],
+        },
+        senses: {
+            blindsight: "",
+            darkvision: "",
+            lowLight: "",
+            tremorsense: "",
+            truesight: ""
+        },
+        DR: [""],
+        skills: [
+            { skillAttribute: "", SkillName: "", skillBonus: 0 }
+        ],
+        traits: [""],
+        features: [
+            { featureName: "", featureDescription: "" },
+        ],
+        actionsOptions: [
             {
-                re"actionName": "Exploit (1/Round)", perRound: 1, re"actionDescription": "If the Basilisk used Pursue on its last turn, it can Exploit." },
+                optionText: "",
+                orActions: [
+                    {
+                        actionName: "Move",
+                        actionDescription: "",
+                        rollmodifier: 0,
+                        hit: "",
+                    },
+                    {
+                        actionName: "",
+                        actionDescription: "",
+                        rollmodifier: 0,
+                        hit: "",
+                    },
+
+                ],
+                andText:"",
+                andActions: [
+                    {
+                        actionName: "Move",
+                        actionDescription: "",
+                        rollmodifier: 0,
+                        hit: "",
+                    },
+                    {
+                        actionName: "",
+                        actionDescription: "",
+                        rollmodifier: 0,
+                        hit: "",
+                    },
+
+                ]
+            },
+            , {
+                orOptionText: "",
+                orActions: [
+                    {
+                        actionName: "Move",
+                        actionDescription: "",
+                        rollmodifier: 0,
+                        hit: "",
+                    },
+                    {
+                        actionName: "",
+                        actionDescription: "",
+                        rollmodifier: 0,
+                        hit: "",
+                    },
+
+                ],
+                andText:"",
+                andActions: [
+                    {
+                        actionName: "Move",
+                        actionDescription: "",
+                        rollmodifier: 0,
+                        hit: "",
+                    },
+                    {
+                        actionName: "",
+                        actionDescription: "",
+                        rollmodifier: 0,
+                        hit: "",
+                    },
+
+                ]
+            }
+        ],
+        reactions: [
+            { reactionName: "", perRound: 1, reactionDescription: "" },
         ]
     },, 
     {
@@ -1991,12 +4149,11 @@
             tremorsense: "",
             truesight: ""
         },
-    "DR": ["10/Magical Weapons, Arcane, Occult"],
-            special: [], "],
-        "skills": [
-            { skillAttribute: "(CHA) Empathy +20", Skill"name": "", skillBonus: 20 }
+        DR: [""],
+        skills: [
+            { skillAttribute: "", SkillName: "", skillBonus: 0 }
         ],
-        "traits": ["Iron Will, Steel Mind"],
+        traits: [""],
         features: [
             { feature"name": "Empath (1/Recoup)", feature"description": "The Bekael may choose one creature. For the next hour while the Bekael can see that creature with its blindsight, whenever that creature takes damage, it halves the amount of damage that it takes and the Bekael takes the other half." },
             { feature"name": "Mask of Sorrow", feature"description": " The Bekael wears a sorrowful mask that dampens the morale of all who behold it. At the start of its turns, the Bekael chooses which direction it is facing. For a 60ft cone in that direction, no creature can benefit from magical effects that would enhance their stats, HP, attacks, or damage. Ongoing effects that offer such benefits are suppressed (but not canceled outright) while in the cone." },
@@ -2069,17 +4226,98 @@
                         "rollmodifier": 0,
                         "hit": "",
                     },
+
+                ]
+            }
+        ],
+        reactions: [
+            { reactionName: "", perRound: 1, reactionDescription: "" },
+        ]
+    },, 
+    {
+        name: "",
+        description: "",
+        monsterLevel: 0,
+        size: "Small",
+        type: "",
+        attributes: {
+            STR: 0,
+            DEX: 0, Ref: 10,
+            END: 0, Fort: 10,
+            AWR: 0, Ant: 10,
+            INT: 0, Log: 10,
+            CHA: 0,
+            Will: 0
+        },
+        hitPoints: 50,
+        armorRating: 10,
+        armorRatingType: "",
+        speed: {
+            climb: "",
+            fly: "",
+            jump: "",
+            hover: "",
+            swim: "",
+            walk: "30ft",
+        },
+        resist: {
+            arcane: 0,
+            blunt: 0,
+            sharp: 0,
+            cold: 0,
+            corrosive: 0,
+            divine: 0,
+            fire: 0,
+            lightning: 0,
+            necrotic: 0,
+            occult: 0,
+            psychic: 0,
+            radiant: 0,
+            sonic: 0,
+            toxic: 0,
+            special: [],
+        },
+        vulnerable: {
+            arcane: 0,
+            blunt: 0,
+            sharp: 0,
+            cold: 0,
+            corrosive: 0,
+            divine: 0,
+            fire: 0,
+            lightning: 0,
+            necrotic: 0,
+            occult: 0,
+            psychic: 0,
+            radiant: 1,
+            sonic: 0,
+            toxic: 0,
+            special: [],
+        },
+        senses: {
+            blindsight: "",
+            darkvision: "",
+            lowLight: "",
+            tremorsense: "",
+            truesight: ""
+        },
+        DR: [""],
+        skills: [
+            { skillAttribute: "", SkillName: "", skillBonus: 0 }
+        ],
+        traits: [""],
+        features: [
+            { featureName: "", featureDescription: "" },
+        ],
+        actionsOptions: [
+            {
+                optionText: "",
+                orActions: [
                     {
-                        "actionName": "Dirge",
-                        "actionDescription": " The Bekael may only use this ability if one of its allies has died since the end of its last turn.The Bekael and up to 10 allied creatures within 60ft of it gain TA for the next minute, gain 5(2d4) Shield HP, and their crit ranges each increase by 1 during this time.",
-                        "rollmodifier": 0,
-                        "hit": "",
-                    },
-                    {
-                        "actionName": "",
-                        "actionDescription": "",
-                        "rollmodifier": 0,
-                        "hit": "",
+                        actionName: "Move",
+                        actionDescription: "",
+                        rollmodifier: 0,
+                        hit: "",
                     },
 
                 ]
@@ -2158,11 +4396,11 @@
             tremorsense: "",
             truesight: ""
         },
-        "DR": [""],
-        "skills": [
-            { skillAttribute: "s (DEX) Sneaking +6; (INT) Evading +9", Skill"name": "", skillBonus: 6 }
+        DR: [""],
+        skills: [
+            { skillAttribute: "", SkillName: "", skillBonus: 0 }
         ],
-        "traits": [""],
+        traits: [""],
         features: [
             { feature"name": "Cytokinesis", feature"description": " If the Bendelex has emerged from a mammalian host in the last 24 hours, it may split into 1d4 new Bendelexes" },
             { re"actionName": "Feed", perRound: 1, re"actionDescription": "If the Bendelex has been consumed by a mammalian host in the last 24 hours, then that host must eat twice as much food to avoid risking Fatigue. This lasts for 2d4 days, then the Bendelex can use its Hatch feature." },
@@ -2312,11 +4550,11 @@
             tremorsense: "",
             truesight: ""
         },
-        "DR": [""],
-        "skills": [
-            { skillAttribute: " (DEX) Sneaking +6; (INT) Evading +9; (CHA) Deceiving +4", Skill"name": "", skillBonus: 0 }
+        DR: [""],
+        skills: [
+            { skillAttribute: "", SkillName: "", skillBonus: 0 }
         ],
-        "traits": [""],
+        traits: [""],
         features: [
             { feature"name": "Feed", feature"description": "If the Bendelex has been consumed by a mammalian host in the last 24 hours, then that host must eat twice as much food to avoid risking Fatigue. This lasts for 2d4 days, whereupon the Bendelex can use its Psion feature and may choose to Hatch whenever it wishes." },
             { feature"name": "Cytokinesis", feature"description": "If the Bendelex has emerged from a mammalian host in the last 24 hours, it may split into 1d4 new Bendelexes. There is a 75% chance that one of the new Bendelexes is a Bendelex Psion." },
@@ -2456,6 +4694,138 @@
             occult: 0,
             primal:0,
             psychic: 0,
+            radiant: 1,
+            sonic: 0,
+            toxic: 0,
+            special: [],
+        },
+        senses: {
+            blindsight: "",
+            darkvision: "",
+            lowLight: "",
+            tremorsense: "",
+            truesight: ""
+        },
+        DR: [""],
+        skills: [
+            { skillAttribute: "", SkillName: "", skillBonus: 0 }
+        ],
+        traits: [""],
+        features: [
+            { featureName: "", featureDescription: "" },
+        ],
+        actionsOptions: [
+            {
+                optionText: "",
+                orActions: [
+                    {
+                        actionName: "Move",
+                        actionDescription: "",
+                        rollmodifier: 0,
+                        hit: "",
+                    },
+                    {
+                        actionName: "",
+                        actionDescription: "",
+                        rollmodifier: 0,
+                        hit: "",
+                    },
+
+                ],
+                andText:"",
+                andActions: [
+                    {
+                        actionName: "Move",
+                        actionDescription: "",
+                        rollmodifier: 0,
+                        hit: "",
+                    },
+                    {
+                        actionName: "",
+                        actionDescription: "",
+                        rollmodifier: 0,
+                        hit: "",
+                    },
+
+                ]
+            },
+            , {
+                orOptionText: "",
+                orActions: [
+                    {
+                        actionName: "Move",
+                        actionDescription: "",
+                        rollmodifier: 0,
+                        hit: "",
+                    },
+                    {
+                        actionName: "",
+                        actionDescription: "",
+                        rollmodifier: 0,
+                        hit: "",
+                    },
+
+                ],
+                andText:"",
+                andActions: [
+                    {
+                        actionName: "Move",
+                        actionDescription: "",
+                        rollmodifier: 0,
+                        hit: "",
+                    },
+                    {
+                        actionName: "",
+                        actionDescription: "",
+                        rollmodifier: 0,
+                        hit: "",
+                    },
+
+                ]
+            }
+        ],
+        reactions: [
+            { reactionName: "", perRound: 1, reactionDescription: "" },
+        ]
+    },, 
+    {
+        name: "",
+        description: "",
+        monsterLevel: 0,
+        size: "Small",
+        type: "",
+        attributes: {
+            STR: 0,
+            DEX: 0, Ref: 10,
+            END: 0, Fort: 10,
+            AWR: 0, Ant: 10,
+            INT: 0, Log: 10,
+            CHA: 0,
+            Will: 0
+        },
+        hitPoints: 50,
+        armorRating: 10,
+        armorRatingType: "",
+        speed: {
+            climb: "",
+            fly: "",
+            jump: "",
+            hover: "",
+            swim: "",
+            walk: "30ft",
+        },
+        resist: {
+            arcane: 0,
+            blunt: 0,
+            sharp: 0,
+            cold: 0,
+            corrosive: 0,
+            divine: 0,
+            fire: 0,
+            lightning: 0,
+            necrotic: 0,
+            occult: 0,
+            psychic: 0,
             radiant: 0,
             sonic: 0,
             toxic: 0,
@@ -2468,11 +4838,11 @@
             tremorsense: "",
             truesight: ""
         },
-        "DR": [""],
-        "skills": [
-            { skillAttribute: "(DEX) Sneaking +6", Skill"name": "", skillBonus: 6 }
+        DR: [""],
+        skills: [
+            { skillAttribute: "", SkillName: "", skillBonus: 0 }
         ],
-        "traits": [""],
+        traits: [""],
         features: [
             { feature"name": "Worm", feature"description": "The Swarm can share spaces in combat with any creature and can only attack creatures with whom it shares a space" },
             { feature"name": "Swarm", feature"description": "When the Swarm is Bloodied, it deals ½ damage." },
@@ -2514,6 +4884,121 @@
                         "actionDescription": "",
                         "rollmodifier": 0,
                         "hit": "",
+                    },
+
+                ]
+            }
+        ],
+        reactions: [
+            { reactionName: "", perRound: 1, reactionDescription: "" },
+        ]
+    },, 
+    {
+        name: "",
+        description: "",
+        monsterLevel: 0,
+        size: "Small",
+        type: "",
+        attributes: {
+            STR: 0,
+            DEX: 0, Ref: 10,
+            END: 0, Fort: 10,
+            AWR: 0, Ant: 10,
+            INT: 0, Log: 10,
+            CHA: 0,
+            Will: 0
+        },
+        hitPoints: 50,
+        armorRating: 10,
+        armorRatingType: "",
+        speed: {
+            climb: "",
+            fly: "",
+            jump: "",
+            hover: "",
+            swim: "",
+            walk: "30ft",
+        },
+        resist: {
+            arcane: 0,
+            blunt: 0,
+            sharp: 0,
+            cold: 0,
+            corrosive: 0,
+            divine: 0,
+            fire: 0,
+            lightning: 0,
+            necrotic: 0,
+            occult: 0,
+            psychic: 0,
+            radiant: 0,
+            sonic: 0,
+            toxic: 0,
+            special: [],
+        },
+        vulnerable: {
+            arcane: 0,
+            blunt: 0,
+            sharp: 0,
+            cold: 0,
+            corrosive: 0,
+            divine: 0,
+            fire: 0,
+            lightning: 0,
+            necrotic: 0,
+            occult: 0,
+            psychic: 0,
+            radiant: 1,
+            sonic: 0,
+            toxic: 0,
+            special: [],
+        },
+        senses: {
+            blindsight: "",
+            darkvision: "",
+            lowLight: "",
+            tremorsense: "",
+            truesight: ""
+        },
+        DR: [""],
+        skills: [
+            { skillAttribute: "", SkillName: "", skillBonus: 0 }
+        ],
+        traits: [""],
+        features: [
+            { featureName: "", featureDescription: "" },
+        ],
+        actionsOptions: [
+            {
+                optionText: "",
+                orActions: [
+                    {
+                        actionName: "Move",
+                        actionDescription: "",
+                        rollmodifier: 0,
+                        hit: "",
+                    },
+                    {
+                        actionName: "",
+                        actionDescription: "",
+                        rollmodifier: 0,
+                        hit: "",
+                    },
+
+                ],
+                andText:"",
+                andActions: [
+                    {
+                        actionName: "Move",
+                        actionDescription: "",
+                        rollmodifier: 0,
+                        hit: "",
+                    },
+                    {
+                        actionName: "",
+                        actionDescription: "",
+                        rollmodifier: 0,
+                        hit: "",
                     },
 
                 ]
@@ -2626,11 +5111,11 @@
             tremorsense: "",
             truesight: ""
         },
-        "DR": [""],
-        "skills": [
-            { skillAttribute: "", Skill"name": "", skillBonus: 0 }
+        DR: [""],
+        skills: [
+            { skillAttribute: "", SkillName: "", skillBonus: 0 }
         ],
-        "traits": [""],
+        traits: [""],
         features: [
             { feature"name": "Nature Spirit", feature"description": "The Blightweed ignores difficult terrain caused by foliage and other forest-related phenomena" },
         ],
@@ -2777,11 +5262,11 @@
             tremorsense: "",
             truesight: ""
         },
-        "DR": [""],
-        "skills": [
-            { skillAttribute: "", Skill"name": "", skillBonus: 0 }
+        DR: [""],
+        skills: [
+            { skillAttribute: "", SkillName: "", skillBonus: 0 }
         ],
-        "traits": ["Immutable, Unerring Mind, Regen 3"],
+        traits: [""],
         features: [
             { feature"name": "Boiling Blood", feature"description": "Any creature that makes a successful melee attack against the Blood Effigy must make a DC 14 FORT check or take 2 (1d4) fire damage." },
             { feature"name": "Malleable Form", feature"description": "The Blood Effigy can use its move action to pass through spaces as small as 1 inch, but cannot end its turn in any space too small for a Medium sized creature. If it does, it takes 13 (2d12) blunt damage." },
@@ -2856,11 +5341,159 @@
                 ]
             }
         ],
-        "reactions": [
-            { re"actionName": "", perRound: 1, re"actionDescription": "" },
+        reactions: [
+            { reactionName: "", perRound: 1, reactionDescription: "" },
         ]
-    },
-                
+    },, 
+    {
+        name: "",
+        description: "",
+        monsterLevel: 0,
+        size: "Small",
+        type: "",
+        attributes: {
+            STR: 0,
+            DEX: 0, Ref: 10,
+            END: 0, Fort: 10,
+            AWR: 0, Ant: 10,
+            INT: 0, Log: 10,
+            CHA: 0,
+            Will: 0
+        },
+        hitPoints: 50,
+        armorRating: 10,
+        armorRatingType: "",
+        speed: {
+            climb: "",
+            fly: "",
+            jump: "",
+            hover: "",
+            swim: "",
+            walk: "30ft",
+        },
+        resist: {
+            arcane: 0,
+            blunt: 0,
+            sharp: 0,
+            cold: 0,
+            corrosive: 0,
+            divine: 0,
+            fire: 0,
+            lightning: 0,
+            necrotic: 0,
+            occult: 0,
+            psychic: 0,
+            radiant: 0,
+            sonic: 0,
+            toxic: 0,
+            special: [],
+        },
+        vulnerable: {
+            arcane: 0,
+            blunt: 0,
+            sharp: 0,
+            cold: 0,
+            corrosive: 0,
+            divine: 0,
+            fire: 0,
+            lightning: 0,
+            necrotic: 0,
+            occult: 0,
+            psychic: 0,
+            radiant: 1,
+            sonic: 0,
+            toxic: 0,
+            special: [],
+        },
+        senses: {
+            blindsight: "",
+            darkvision: "",
+            lowLight: "",
+            tremorsense: "",
+            truesight: ""
+        },
+        DR: [""],
+        skills: [
+            { skillAttribute: "", SkillName: "", skillBonus: 0 }
+        ],
+        traits: [""],
+        features: [
+            { featureName: "", featureDescription: "" },
+        ],
+        actionsOptions: [
+            {
+                optionText: "",
+                orActions: [
+                    {
+                        actionName: "Move",
+                        actionDescription: "",
+                        rollmodifier: 0,
+                        hit: "",
+                    },
+                    {
+                        actionName: "",
+                        actionDescription: "",
+                        rollmodifier: 0,
+                        hit: "",
+                    },
+
+                ],
+                andText:"",
+                andActions: [
+                    {
+                        actionName: "Move",
+                        actionDescription: "",
+                        rollmodifier: 0,
+                        hit: "",
+                    },
+                    {
+                        actionName: "",
+                        actionDescription: "",
+                        rollmodifier: 0,
+                        hit: "",
+                    },
+
+                ]
+            },
+            , {
+                orOptionText: "",
+                orActions: [
+                    {
+                        actionName: "Move",
+                        actionDescription: "",
+                        rollmodifier: 0,
+                        hit: "",
+                    },
+                    {
+                        actionName: "",
+                        actionDescription: "",
+                        rollmodifier: 0,
+                        hit: "",
+                    },
+
+                ],
+                andText:"",
+                andActions: [
+                    {
+                        actionName: "Move",
+                        actionDescription: "",
+                        rollmodifier: 0,
+                        hit: "",
+                    },
+                    {
+                        actionName: "",
+                        actionDescription: "",
+                        rollmodifier: 0,
+                        hit: "",
+                    },
+
+                ]
+            }
+        ],
+        reactions: [
+            { reactionName: "", perRound: 1, reactionDescription: "" },
+        ]
+    },, 
     {
         "name": "Bloodoak Arborean",
         "description": "",
@@ -2930,11 +5563,11 @@
             tremorsense: "90ft",
             truesight: ""
         },
-        "DR": [""],
-        "skills": [
-            {  skillAttribute: "se 90ft Skills(STR) Applied Force + 10", Skill"name": "", skillBonus: 10 }
+        DR: [""],
+        skills: [
+            { skillAttribute: "", SkillName: "", skillBonus: 0 }
         ],
-        "traits": ["Immutable"],
+        traits: [""],
         features: [
             { feature"name": "Bloody Roots", feature"description": "Once on each of the Bloodoak’s turns, it may partially consume the corpse of any humanoid creature within 5 ft of it, regaining 10 HP if it does so. This feature may be used 3 times on any single corpse before the corpse is completely destroyed." },
         ],
@@ -2982,11 +5615,120 @@
                 orOptionText: "OR the Bloodoak can take TWO of the following actions, or the same action twice…",
                 orActions: [
                     {
-                        "actionName": "Move",
-                        "actionDescription": "The Bloodoak can move up to its speed.",
-                        "rollmodifier": 0,
-                        "hit": "",
+                        actionName: "Move",
+                        actionDescription: "",
+                        rollmodifier: 0,
+                        hit: "",
                     },
+                    {
+                        actionName: "",
+                        actionDescription: "",
+                        rollmodifier: 0,
+                        hit: "",
+                    },
+
+                ],
+                andText:"",
+                andActions: [
+                    {
+                        actionName: "Move",
+                        actionDescription: "",
+                        rollmodifier: 0,
+                        hit: "",
+                    },
+                    {
+                        actionName: "",
+                        actionDescription: "",
+                        rollmodifier: 0,
+                        hit: "",
+                    },
+
+                ]
+            }
+        ],
+        reactions: [
+            { reactionName: "", perRound: 1, reactionDescription: "" },
+        ]
+    },, 
+    {
+        name: "",
+        description: "",
+        monsterLevel: 0,
+        size: "Small",
+        type: "",
+        attributes: {
+            STR: 0,
+            DEX: 0, Ref: 10,
+            END: 0, Fort: 10,
+            AWR: 0, Ant: 10,
+            INT: 0, Log: 10,
+            CHA: 0,
+            Will: 0
+        },
+        hitPoints: 50,
+        armorRating: 10,
+        armorRatingType: "",
+        speed: {
+            climb: "",
+            fly: "",
+            jump: "",
+            hover: "",
+            swim: "",
+            walk: "30ft",
+        },
+        resist: {
+            arcane: 0,
+            blunt: 0,
+            sharp: 0,
+            cold: 0,
+            corrosive: 0,
+            divine: 0,
+            fire: 0,
+            lightning: 0,
+            necrotic: 0,
+            occult: 0,
+            psychic: 0,
+            radiant: 0,
+            sonic: 0,
+            toxic: 0,
+            special: [],
+        },
+        vulnerable: {
+            arcane: 0,
+            blunt: 0,
+            sharp: 0,
+            cold: 0,
+            corrosive: 0,
+            divine: 0,
+            fire: 0,
+            lightning: 0,
+            necrotic: 0,
+            occult: 0,
+            psychic: 0,
+            radiant: 1,
+            sonic: 0,
+            toxic: 0,
+            special: [],
+        },
+        senses: {
+            blindsight: "",
+            darkvision: "",
+            lowLight: "",
+            tremorsense: "",
+            truesight: ""
+        },
+        DR: [""],
+        skills: [
+            { skillAttribute: "", SkillName: "", skillBonus: 0 }
+        ],
+        traits: [""],
+        features: [
+            { featureName: "", featureDescription: "" },
+        ],
+        actionsOptions: [
+            {
+                optionText: "",
+                orActions: [
                     {
                         "actionName": "Slam",
                         "actionDescription": "The Bloodoak uses its Slam attack",
@@ -3098,11 +5840,11 @@
             tremorsense: "60ft",
             truesight: ""
         },
-        "DR": [""],
-        "skills": [
-            { skillAttribute: "", Skill"name": "", skillBonus: 0 }
+        DR: [""],
+        skills: [
+            { skillAttribute: "", SkillName: "", skillBonus: 0 }
         ],
-        "traits": ["Immovable,Steel Mind, Vigilant"],
+        traits: [""],
         features: [
             { feature"name": "", feature"description": "" },
         ],
@@ -3250,11 +5992,11 @@
             tremorsense: "",
             truesight: ""
         },
-        "DR": [""],
-        "skills": [
-            { skillAttribute: "", Skill"name": "", skillBonus: 0 }
+        DR: [""],
+        skills: [
+            { skillAttribute: "", SkillName: "", skillBonus: 0 }
         ],
-        "traits": [""],
+        traits: [""],
         features: [
             { feature"name": "Shambling Dead", feature"description": "When the Host is reduced to 0 HP and is not reduced to 0 HP by a critical hit, or damage to which it is vulnerable, roll 1d20. On a roll of 12 or lower, the Bloodoak falls Prone and regains 1 HP." },
             { feature"name": "Fertilizer", feature"description": " When the Bloodoak reaches 0 HP and fails its Shambling Dead roll, it sprouts an area of thick growths. The area within a 5ft radius of the Bloodoak becomes difficult terrain." },
@@ -3403,11 +6145,11 @@
             tremorsense: "",
             truesight: ""
         },
-        "DR": [""],
-        "skills": [
-            { skillAttribute: "", Skill"name": "", skillBonus: 0 }
+        DR: [""],
+        skills: [
+            { skillAttribute: "", SkillName: "", skillBonus: 0 }
         ],
-        "traits": [""],
+        traits: [""],
         features: [
             { feature"name": "Fertilizer", feature"description": "When the Bloodoak reaches 0 HP and fails its Shambling Dead roll, it sprouts an area of thick growths. The area within a 5ft radius of the Bloodoak becomes difficult terrain." },
         ],
@@ -3554,11 +6296,11 @@
             tremorsense: "",
             truesight: ""
         },
-        "DR": [""],
-        "skills": [
-            { skillAttribute: " (AWR) Intuiting +2;; (CHA) Entertaining +1,Gossipping +4", Skill"name": "", skillBonus: 0 }
+        DR: [""],
+        skills: [
+            { skillAttribute: "", SkillName: "", skillBonus: 0 }
         ],
-        "traits": ["Immutable"],
+        traits: [""],
         features: [
             { feature"name": "Misery Loves Company", feature"description": "Any creature that listens to the Boggart speak for 10 minutes becomes Demoralized for the next hour" },
             { feature"name": "Lurk", feature"description": " The Boggart can turn invisible at will. Once it physically damages a creature, it becomes visible and cannot become invisible again for 10 minutes." },
@@ -3600,6 +6342,121 @@
                         "actionDescription": "",
                         "rollmodifier": 0,
                         "hit": "",
+                    },
+
+                ]
+            }
+        ],
+        reactions: [
+            { reactionName: "", perRound: 1, reactionDescription: "" },
+        ]
+    },, 
+    {
+        name: "",
+        description: "",
+        monsterLevel: 0,
+        size: "Small",
+        type: "",
+        attributes: {
+            STR: 0,
+            DEX: 0, Ref: 10,
+            END: 0, Fort: 10,
+            AWR: 0, Ant: 10,
+            INT: 0, Log: 10,
+            CHA: 0,
+            Will: 0
+        },
+        hitPoints: 50,
+        armorRating: 10,
+        armorRatingType: "",
+        speed: {
+            climb: "",
+            fly: "",
+            jump: "",
+            hover: "",
+            swim: "",
+            walk: "30ft",
+        },
+        resist: {
+            arcane: 0,
+            blunt: 0,
+            sharp: 0,
+            cold: 0,
+            corrosive: 0,
+            divine: 0,
+            fire: 0,
+            lightning: 0,
+            necrotic: 0,
+            occult: 0,
+            psychic: 0,
+            radiant: 0,
+            sonic: 0,
+            toxic: 0,
+            special: [],
+        },
+        vulnerable: {
+            arcane: 0,
+            blunt: 0,
+            sharp: 0,
+            cold: 0,
+            corrosive: 0,
+            divine: 0,
+            fire: 0,
+            lightning: 0,
+            necrotic: 0,
+            occult: 0,
+            psychic: 0,
+            radiant: 1,
+            sonic: 0,
+            toxic: 0,
+            special: [],
+        },
+        senses: {
+            blindsight: "",
+            darkvision: "",
+            lowLight: "",
+            tremorsense: "",
+            truesight: ""
+        },
+        DR: [""],
+        skills: [
+            { skillAttribute: "", SkillName: "", skillBonus: 0 }
+        ],
+        traits: [""],
+        features: [
+            { featureName: "", featureDescription: "" },
+        ],
+        actionsOptions: [
+            {
+                optionText: "",
+                orActions: [
+                    {
+                        actionName: "Move",
+                        actionDescription: "",
+                        rollmodifier: 0,
+                        hit: "",
+                    },
+                    {
+                        actionName: "",
+                        actionDescription: "",
+                        rollmodifier: 0,
+                        hit: "",
+                    },
+
+                ],
+                andText:"",
+                andActions: [
+                    {
+                        actionName: "Move",
+                        actionDescription: "",
+                        rollmodifier: 0,
+                        hit: "",
+                    },
+                    {
+                        actionName: "",
+                        actionDescription: "",
+                        rollmodifier: 0,
+                        hit: "",
                     },
 
                 ]
@@ -3712,11 +6569,11 @@
             tremorsense: "",
             truesight: ""
         },
-        "DR": [""],
-        "skills": [
-            { skillAttribute: "", Skill"name": "", skillBonus: 0 }
+        DR: [""],
+        skills: [
+            { skillAttribute: "", SkillName: "", skillBonus: 0 }
         ],
-        "traits": ["Immutable"],
+        traits: [""],
         features: [
             { feature"name": "Swamp Thing", feature"description": " The Bogwallower gains +4 to stealth checks while in shallow water." },
         ],
@@ -3864,11 +6721,11 @@
             tremorsense: "",
             truesight: ""
         },
-        "DR": [""],
-        "skills": [
-            { skillAttribute: "", Skill"name": "", skillBonus: 0 }
+        DR: [""],
+        skills: [
+            { skillAttribute: "", SkillName: "", skillBonus: 0 }
         ],
-        "traits": ["Steel Mind, Vigilant"],
+        traits: [""],
         features: [
             { feature"name": "MCAP", feature"description": "While riding a Bone Spider, the mounted creature has 2 MCAP. Bone Spiders will only let the caster that summoned them ride them, unless the caster commands the Bone Spider to let another creature ride it." },
             { feature"name": "Disassemble", feature"description": "The Bone Spider can crumble into individual bones held loosely together, resembling a long snake. In this form, it can squeeze through areas as narrow as 1ft wide, but it cannot take any of its normal actions. Reassembling into its normal form takes 1 minute." },
@@ -4016,11 +6873,11 @@
             tremorsense: "",
             truesight: ""
         },
-        "DR": [" 3/Silvered or Divine"],
-        "skills": [
-            { skillAttribute: "", Skill"name": "", skillBonus: 0 }
+        DR: [""],
+        skills: [
+            { skillAttribute: "", SkillName: "", skillBonus: 0 }
         ],
-        "traits": [" Immutable, Unerring Mind"],
+        traits: [""],
         features: [
             { feature"name": "House of Nightmare", feature"description": "The interior of the Bone Hut contains a pocket dimension approximately 500ft wide, 500ft long, and 500ft tall. This space is directly connected to the will of the Hut’s Bone Hag and can assume any form they will, complete with appropriate furnishings. This pocket dimension immediately dissolves if the Bone Hut reaches 0 HP." },
             { feature"name": "Facade of Normalcy", feature"description": "If the Bone Hut does not move for 1 hour it assumes the form of a normal cottage of wood and stone. A DC 17 Perceiving check reveals something sinister about the cottage, such as a rotted stench or necrotic aura. The Bone Hut’s true nature can only be revealed if a creature has the ability to magically see creatures in theirtrue form, such as with  the Unerring Mind trait." },
@@ -4059,11 +6916,104 @@
                         "rollmodifier": 0,
                         "hit": "",
                     },
+
+                ]
+            }
+        ],
+        reactions: [
+            { reactionName: "", perRound: 1, reactionDescription: "" },
+        ]
+    },, 
+    {
+        name: "",
+        description: "",
+        monsterLevel: 0,
+        size: "Small",
+        type: "",
+        attributes: {
+            STR: 0,
+            DEX: 0, Ref: 10,
+            END: 0, Fort: 10,
+            AWR: 0, Ant: 10,
+            INT: 0, Log: 10,
+            CHA: 0,
+            Will: 0
+        },
+        hitPoints: 50,
+        armorRating: 10,
+        armorRatingType: "",
+        speed: {
+            climb: "",
+            fly: "",
+            jump: "",
+            hover: "",
+            swim: "",
+            walk: "30ft",
+        },
+        resist: {
+            arcane: 0,
+            blunt: 0,
+            sharp: 0,
+            cold: 0,
+            corrosive: 0,
+            divine: 0,
+            fire: 0,
+            lightning: 0,
+            necrotic: 0,
+            occult: 0,
+            psychic: 0,
+            radiant: 0,
+            sonic: 0,
+            toxic: 0,
+            special: [],
+        },
+        vulnerable: {
+            arcane: 0,
+            blunt: 0,
+            sharp: 0,
+            cold: 0,
+            corrosive: 0,
+            divine: 0,
+            fire: 0,
+            lightning: 0,
+            necrotic: 0,
+            occult: 0,
+            psychic: 0,
+            radiant: 1,
+            sonic: 0,
+            toxic: 0,
+            special: [],
+        },
+        senses: {
+            blindsight: "",
+            darkvision: "",
+            lowLight: "",
+            tremorsense: "",
+            truesight: ""
+        },
+        DR: [""],
+        skills: [
+            { skillAttribute: "", SkillName: "", skillBonus: 0 }
+        ],
+        traits: [""],
+        features: [
+            { featureName: "", featureDescription: "" },
+        ],
+        actionsOptions: [
+            {
+                optionText: "",
+                orActions: [
                     {
-                        "actionName": "",
-                        "actionDescription": "",
-                        "rollmodifier": 0,
-                        "hit": "",
+                        actionName: "Move",
+                        actionDescription: "",
+                        rollmodifier: 0,
+                        hit: "",
+                    },
+                    {
+                        actionName: "",
+                        actionDescription: "",
+                        rollmodifier: 0,
+                        hit: "",
                     },
 
                 ]
@@ -4176,11 +7126,11 @@
             tremorsense: "30ft",
             truesight: ""
         },
-        "DR": [""],
-        "skills": [
-            { skillAttribute: "(END) Forced March +4", Skill"name": "", skillBonus: 0 }
+        DR: [""],
+        skills: [
+            { skillAttribute: "", SkillName: "", skillBonus: 0 }
         ],
-        "traits": [""],
+        traits: [""],
         features: [
             { feature"name": "Beast of Burden", feature"description": "A Buttercap can carry 4 additional Unwieldy items before becoming Encumbered." },
             { feature"name": "Mount", feature"description": " When riding a Buttercap, a creature gains 1 MCAP, which it can use to move or make a Bite attack." },
@@ -4329,17 +7279,99 @@
             tremorsense: "",
             truesight: ""
         },
-        "DR": [""],
-        "skills": [
-            { skillAttribute: "", Skill"name": "", skillBonus: 0 }
+        DR: [""],
+        skills: [
+            { skillAttribute: "", SkillName: "", skillBonus: 0 }
         ],
-        "traits": ["Unerring Mind"],
+        traits: [""],
         features: [
             { feature"name": "Night Hunter", feature"description": "The Calleoch’s darkvision works in magical darkness." },
             { feature"name": "Light Sensitive", feature"description": "The Calleoch suffers a -5 to attacks and skill checks while in direct sunlight." },
             { feature"name": "Illusory Form", feature"description": "The Calleoch is able to magically disguise itself as a medium sized humanoid or a small sized owl. While in this form, it gains +6 to disguise checks. Taking damage, attacking, or entering direct sunlight immediately dispels this illusion; once dispelled, the Calleoch cannot use this feature again for 10 minutes." },
             { feature"name": "Primeval Terror", feature"description": ". Using CHA, the Calleoch can cast the following primal or occult spells innately each 1/Recoup. They all count as occult spells. Babble, Creeping Fear, Darkness, and Terror." },
 
+                ]
+            }
+        ],
+        reactions: [
+            { reactionName: "", perRound: 1, reactionDescription: "" },
+        ]
+    },, 
+    {
+        name: "",
+        description: "",
+        monsterLevel: 0,
+        size: "Small",
+        type: "",
+        attributes: {
+            STR: 0,
+            DEX: 0, Ref: 10,
+            END: 0, Fort: 10,
+            AWR: 0, Ant: 10,
+            INT: 0, Log: 10,
+            CHA: 0,
+            Will: 0
+        },
+        hitPoints: 50,
+        armorRating: 10,
+        armorRatingType: "",
+        speed: {
+            climb: "",
+            fly: "",
+            jump: "",
+            hover: "",
+            swim: "",
+            walk: "30ft",
+        },
+        resist: {
+            arcane: 0,
+            blunt: 0,
+            sharp: 0,
+            cold: 0,
+            corrosive: 0,
+            divine: 0,
+            fire: 0,
+            lightning: 0,
+            necrotic: 0,
+            occult: 0,
+            psychic: 0,
+            radiant: 0,
+            sonic: 0,
+            toxic: 0,
+            special: [],
+        },
+        vulnerable: {
+            arcane: 0,
+            blunt: 0,
+            sharp: 0,
+            cold: 0,
+            corrosive: 0,
+            divine: 0,
+            fire: 0,
+            lightning: 0,
+            necrotic: 0,
+            occult: 0,
+            psychic: 0,
+            radiant: 1,
+            sonic: 0,
+            toxic: 0,
+            special: [],
+        },
+        senses: {
+            blindsight: "",
+            darkvision: "",
+            lowLight: "",
+            tremorsense: "",
+            truesight: ""
+        },
+        DR: [""],
+        skills: [
+            { skillAttribute: "", SkillName: "", skillBonus: 0 }
+        ],
+        traits: [""],
+        features: [
+            { featureName: "", featureDescription: "" },
+        ],
         actionsOptions: [
             {
                 optionText: "This creature can take FOUR of the following actions, or take the same action four times.",
@@ -4386,6 +7418,121 @@
                     },
 
                 ]
+            }
+        ],
+        reactions: [
+            { reactionName: "", perRound: 1, reactionDescription: "" },
+        ]
+    },, 
+    {
+        name: "",
+        description: "",
+        monsterLevel: 0,
+        size: "Small",
+        type: "",
+        attributes: {
+            STR: 0,
+            DEX: 0, Ref: 10,
+            END: 0, Fort: 10,
+            AWR: 0, Ant: 10,
+            INT: 0, Log: 10,
+            CHA: 0,
+            Will: 0
+        },
+        hitPoints: 50,
+        armorRating: 10,
+        armorRatingType: "",
+        speed: {
+            climb: "",
+            fly: "",
+            jump: "",
+            hover: "",
+            swim: "",
+            walk: "30ft",
+        },
+        resist: {
+            arcane: 0,
+            blunt: 0,
+            sharp: 0,
+            cold: 0,
+            corrosive: 0,
+            divine: 0,
+            fire: 0,
+            lightning: 0,
+            necrotic: 0,
+            occult: 0,
+            psychic: 0,
+            radiant: 0,
+            sonic: 0,
+            toxic: 0,
+            special: [],
+        },
+        vulnerable: {
+            arcane: 0,
+            blunt: 0,
+            sharp: 0,
+            cold: 0,
+            corrosive: 0,
+            divine: 0,
+            fire: 0,
+            lightning: 0,
+            necrotic: 0,
+            occult: 0,
+            psychic: 0,
+            radiant: 1,
+            sonic: 0,
+            toxic: 0,
+            special: [],
+        },
+        senses: {
+            blindsight: "",
+            darkvision: "",
+            lowLight: "",
+            tremorsense: "",
+            truesight: ""
+        },
+        DR: [""],
+        skills: [
+            { skillAttribute: "", SkillName: "", skillBonus: 0 }
+        ],
+        traits: [""],
+        features: [
+            { featureName: "", featureDescription: "" },
+        ],
+        actionsOptions: [
+            {
+                optionText: "",
+                orActions: [
+                    {
+                        actionName: "Move",
+                        actionDescription: "",
+                        rollmodifier: 0,
+                        hit: "",
+                    },
+                    {
+                        actionName: "",
+                        actionDescription: "",
+                        rollmodifier: 0,
+                        hit: "",
+                    },
+
+                ],
+                andText:"",
+                andActions: [
+                    {
+                        actionName: "Move",
+                        actionDescription: "",
+                        rollmodifier: 0,
+                        hit: "",
+                    },
+                    {
+                        actionName: "",
+                        actionDescription: "",
+                        rollmodifier: 0,
+                        hit: "",
+                    },
+
+                ]
             },
             , {
                 orOptionText: " this creature can take TWO of the following actions, or take the same action twice…",
@@ -4420,6 +7567,121 @@
                     },
 
                 ]
+            }
+        ],
+        reactions: [
+            { reactionName: "", perRound: 1, reactionDescription: "" },
+        ]
+    },, 
+    {
+        name: "",
+        description: "",
+        monsterLevel: 0,
+        size: "Small",
+        type: "",
+        attributes: {
+            STR: 0,
+            DEX: 0, Ref: 10,
+            END: 0, Fort: 10,
+            AWR: 0, Ant: 10,
+            INT: 0, Log: 10,
+            CHA: 0,
+            Will: 0
+        },
+        hitPoints: 50,
+        armorRating: 10,
+        armorRatingType: "",
+        speed: {
+            climb: "",
+            fly: "",
+            jump: "",
+            hover: "",
+            swim: "",
+            walk: "30ft",
+        },
+        resist: {
+            arcane: 0,
+            blunt: 0,
+            sharp: 0,
+            cold: 0,
+            corrosive: 0,
+            divine: 0,
+            fire: 0,
+            lightning: 0,
+            necrotic: 0,
+            occult: 0,
+            psychic: 0,
+            radiant: 0,
+            sonic: 0,
+            toxic: 0,
+            special: [],
+        },
+        vulnerable: {
+            arcane: 0,
+            blunt: 0,
+            sharp: 0,
+            cold: 0,
+            corrosive: 0,
+            divine: 0,
+            fire: 0,
+            lightning: 0,
+            necrotic: 0,
+            occult: 0,
+            psychic: 0,
+            radiant: 1,
+            sonic: 0,
+            toxic: 0,
+            special: [],
+        },
+        senses: {
+            blindsight: "",
+            darkvision: "",
+            lowLight: "",
+            tremorsense: "",
+            truesight: ""
+        },
+        DR: [""],
+        skills: [
+            { skillAttribute: "", SkillName: "", skillBonus: 0 }
+        ],
+        traits: [""],
+        features: [
+            { featureName: "", featureDescription: "" },
+        ],
+        actionsOptions: [
+            {
+                optionText: "",
+                orActions: [
+                    {
+                        actionName: "Move",
+                        actionDescription: "",
+                        rollmodifier: 0,
+                        hit: "",
+                    },
+                    {
+                        actionName: "",
+                        actionDescription: "",
+                        rollmodifier: 0,
+                        hit: "",
+                    },
+
+                ],
+                andText:"",
+                andActions: [
+                    {
+                        actionName: "Move",
+                        actionDescription: "",
+                        rollmodifier: 0,
+                        hit: "",
+                    },
+                    {
+                        actionName: "",
+                        actionDescription: "",
+                        rollmodifier: 0,
+                        hit: "",
+                    },
+
+                ]
             },
             , {
                 orOptionText: "this creature can take TWO of the following actions, or take the same action twice.",
@@ -4450,6 +7712,136 @@
                     },
                 ]
             }
+        ],
+        reactions: [
+            { reactionName: "", perRound: 1, reactionDescription: "" },
+        ]
+    },, 
+    {
+        name: "",
+        description: "",
+        monsterLevel: 0,
+        size: "Small",
+        type: "",
+        attributes: {
+            STR: 0,
+            DEX: 0, Ref: 10,
+            END: 0, Fort: 10,
+            AWR: 0, Ant: 10,
+            INT: 0, Log: 10,
+            CHA: 0,
+            Will: 0
+        },
+        hitPoints: 50,
+        armorRating: 10,
+        armorRatingType: "",
+        speed: {
+            climb: "",
+            fly: "",
+            jump: "",
+            hover: "",
+            swim: "",
+            walk: "30ft",
+        },
+        resist: {
+            arcane: 0,
+            blunt: 0,
+            sharp: 0,
+            cold: 0,
+            corrosive: 0,
+            divine: 0,
+            fire: 0,
+            lightning: 0,
+            necrotic: 0,
+            occult: 0,
+            psychic: 0,
+            radiant: 0,
+            sonic: 0,
+            toxic: 0,
+            special: [],
+        },
+        vulnerable: {
+            arcane: 0,
+            blunt: 0,
+            sharp: 0,
+            cold: 0,
+            corrosive: 0,
+            divine: 0,
+            fire: 0,
+            lightning: 0,
+            necrotic: 0,
+            occult: 0,
+            psychic: 0,
+            radiant: 1,
+            sonic: 0,
+            toxic: 0,
+            special: [],
+        },
+        senses: {
+            blindsight: "",
+            darkvision: "",
+            lowLight: "",
+            tremorsense: "",
+            truesight: ""
+        },
+        DR: [""],
+        skills: [
+            { skillAttribute: "", SkillName: "", skillBonus: 0 }
+        ],
+        traits: [""],
+        features: [
+            { featureName: "", featureDescription: "" },
+        ],
+        actionsOptions: [
+            {
+                optionText: "",
+                orActions: [
+                    {
+                        actionName: "Move",
+                        actionDescription: "",
+                        rollmodifier: 0,
+                        hit: "",
+                    },
+                    {
+                        actionName: "",
+                        actionDescription: "",
+                        rollmodifier: 0,
+                        hit: "",
+                    },
+
+                ],
+                andText:"",
+                andActions: [
+                    {
+                        actionName: "Move",
+                        actionDescription: "",
+                        rollmodifier: 0,
+                        hit: "",
+                    },
+                    {
+                        actionName: "",
+                        actionDescription: "",
+                        rollmodifier: 0,
+                        hit: "",
+                    },
+
+                ]
+            },
+            , {
+                orOptionText: "",
+                orActions: [
+                    {
+                        actionName: "Move",
+                        actionDescription: "",
+                        rollmodifier: 0,
+                        hit: "",
+                    },
+                    {
+                        actionName: "",
+                        actionDescription: "",
+                        rollmodifier: 0,
+                        hit: "",
+                    },
 
         ],
         "reactions": [
@@ -4457,7 +7849,609 @@
         ]
     }
         ]
-    }
+    },, 
+    {
+        name: "",
+        description: "",
+        monsterLevel: 0,
+        size: "Small",
+        type: "",
+        attributes: {
+            STR: 0,
+            DEX: 0, Ref: 10,
+            END: 0, Fort: 10,
+            AWR: 0, Ant: 10,
+            INT: 0, Log: 10,
+            CHA: 0,
+            Will: 0
+        },
+        hitPoints: 50,
+        armorRating: 10,
+        armorRatingType: "",
+        speed: {
+            climb: "",
+            fly: "",
+            jump: "",
+            hover: "",
+            swim: "",
+            walk: "30ft",
+        },
+        resist: {
+            arcane: 0,
+            blunt: 0,
+            sharp: 0,
+            cold: 0,
+            corrosive: 0,
+            divine: 0,
+            fire: 0,
+            lightning: 0,
+            necrotic: 0,
+            occult: 0,
+            psychic: 0,
+            radiant: 0,
+            sonic: 0,
+            toxic: 0,
+            special: [],
+        },
+        vulnerable: {
+            arcane: 0,
+            blunt: 0,
+            sharp: 0,
+            cold: 0,
+            corrosive: 0,
+            divine: 0,
+            fire: 0,
+            lightning: 0,
+            necrotic: 0,
+            occult: 0,
+            psychic: 0,
+            radiant: 1,
+            sonic: 0,
+            toxic: 0,
+            special: [],
+        },
+        senses: {
+            blindsight: "",
+            darkvision: "",
+            lowLight: "",
+            tremorsense: "",
+            truesight: ""
+        },
+        DR: [""],
+        skills: [
+            { skillAttribute: "", SkillName: "", skillBonus: 0 }
+        ],
+        traits: [""],
+        features: [
+            { featureName: "", featureDescription: "" },
+        ],
+        actionsOptions: [
+            {
+                optionText: "",
+                orActions: [
+                    {
+                        actionName: "Move",
+                        actionDescription: "",
+                        rollmodifier: 0,
+                        hit: "",
+                    },
+                    {
+                        actionName: "",
+                        actionDescription: "",
+                        rollmodifier: 0,
+                        hit: "",
+                    },
+
+                ],
+                andText:"",
+                andActions: [
+                    {
+                        actionName: "Move",
+                        actionDescription: "",
+                        rollmodifier: 0,
+                        hit: "",
+                    },
+                    {
+                        actionName: "",
+                        actionDescription: "",
+                        rollmodifier: 0,
+                        hit: "",
+                    },
+
+                ]
+            },
+            , {
+                orOptionText: "",
+                orActions: [
+                    {
+                        actionName: "Move",
+                        actionDescription: "",
+                        rollmodifier: 0,
+                        hit: "",
+                    },
+                    {
+                        actionName: "",
+                        actionDescription: "",
+                        rollmodifier: 0,
+                        hit: "",
+                    },
+
+                ],
+                andText:"",
+                andActions: [
+                    {
+                        actionName: "Move",
+                        actionDescription: "",
+                        rollmodifier: 0,
+                        hit: "",
+                    },
+                    {
+                        actionName: "",
+                        actionDescription: "",
+                        rollmodifier: 0,
+                        hit: "",
+                    },
+
+                ]
+            }
+        ],
+        reactions: [
+            { reactionName: "", perRound: 1, reactionDescription: "" },
+        ]
+    },, 
+    {
+        name: "",
+        description: "",
+        monsterLevel: 0,
+        size: "Small",
+        type: "",
+        attributes: {
+            STR: 0,
+            DEX: 0, Ref: 10,
+            END: 0, Fort: 10,
+            AWR: 0, Ant: 10,
+            INT: 0, Log: 10,
+            CHA: 0,
+            Will: 0
+        },
+        hitPoints: 50,
+        armorRating: 10,
+        armorRatingType: "",
+        speed: {
+            climb: "",
+            fly: "",
+            jump: "",
+            hover: "",
+            swim: "",
+            walk: "30ft",
+        },
+        resist: {
+            arcane: 0,
+            blunt: 0,
+            sharp: 0,
+            cold: 0,
+            corrosive: 0,
+            divine: 0,
+            fire: 0,
+            lightning: 0,
+            necrotic: 0,
+            occult: 0,
+            psychic: 0,
+            radiant: 0,
+            sonic: 0,
+            toxic: 0,
+            special: [],
+        },
+        vulnerable: {
+            arcane: 0,
+            blunt: 0,
+            sharp: 0,
+            cold: 0,
+            corrosive: 0,
+            divine: 0,
+            fire: 0,
+            lightning: 0,
+            necrotic: 0,
+            occult: 0,
+            psychic: 0,
+            radiant: 1,
+            sonic: 0,
+            toxic: 0,
+            special: [],
+        },
+        senses: {
+            blindsight: "",
+            darkvision: "",
+            lowLight: "",
+            tremorsense: "",
+            truesight: ""
+        },
+        DR: [""],
+        skills: [
+            { skillAttribute: "", SkillName: "", skillBonus: 0 }
+        ],
+        traits: [""],
+        features: [
+            { featureName: "", featureDescription: "" },
+        ],
+        actionsOptions: [
+            {
+                optionText: "",
+                orActions: [
+                    {
+                        actionName: "Move",
+                        actionDescription: "",
+                        rollmodifier: 0,
+                        hit: "",
+                    },
+                    {
+                        actionName: "",
+                        actionDescription: "",
+                        rollmodifier: 0,
+                        hit: "",
+                    },
+
+                ],
+                andText:"",
+                andActions: [
+                    {
+                        actionName: "Move",
+                        actionDescription: "",
+                        rollmodifier: 0,
+                        hit: "",
+                    },
+                    {
+                        actionName: "",
+                        actionDescription: "",
+                        rollmodifier: 0,
+                        hit: "",
+                    },
+
+                ]
+            },
+            , {
+                orOptionText: "",
+                orActions: [
+                    {
+                        actionName: "Move",
+                        actionDescription: "",
+                        rollmodifier: 0,
+                        hit: "",
+                    },
+                    {
+                        actionName: "",
+                        actionDescription: "",
+                        rollmodifier: 0,
+                        hit: "",
+                    },
+
+                ],
+                andText:"",
+                andActions: [
+                    {
+                        actionName: "Move",
+                        actionDescription: "",
+                        rollmodifier: 0,
+                        hit: "",
+                    },
+                    {
+                        actionName: "",
+                        actionDescription: "",
+                        rollmodifier: 0,
+                        hit: "",
+                    },
+
+                ]
+            }
+        ],
+        reactions: [
+            { reactionName: "", perRound: 1, reactionDescription: "" },
+        ]
+    },, 
+    {
+        name: "",
+        description: "",
+        monsterLevel: 0,
+        size: "Small",
+        type: "",
+        attributes: {
+            STR: 0,
+            DEX: 0, Ref: 10,
+            END: 0, Fort: 10,
+            AWR: 0, Ant: 10,
+            INT: 0, Log: 10,
+            CHA: 0,
+            Will: 0
+        },
+        hitPoints: 50,
+        armorRating: 10,
+        armorRatingType: "",
+        speed: {
+            climb: "",
+            fly: "",
+            jump: "",
+            hover: "",
+            swim: "",
+            walk: "30ft",
+        },
+        resist: {
+            arcane: 0,
+            blunt: 0,
+            sharp: 0,
+            cold: 0,
+            corrosive: 0,
+            divine: 0,
+            fire: 0,
+            lightning: 0,
+            necrotic: 0,
+            occult: 0,
+            psychic: 0,
+            radiant: 0,
+            sonic: 0,
+            toxic: 0,
+            special: [],
+        },
+        vulnerable: {
+            arcane: 0,
+            blunt: 0,
+            sharp: 0,
+            cold: 0,
+            corrosive: 0,
+            divine: 0,
+            fire: 0,
+            lightning: 0,
+            necrotic: 0,
+            occult: 0,
+            psychic: 0,
+            radiant: 1,
+            sonic: 0,
+            toxic: 0,
+            special: [],
+        },
+        senses: {
+            blindsight: "",
+            darkvision: "",
+            lowLight: "",
+            tremorsense: "",
+            truesight: ""
+        },
+        DR: [""],
+        skills: [
+            { skillAttribute: "", SkillName: "", skillBonus: 0 }
+        ],
+        traits: [""],
+        features: [
+            { featureName: "", featureDescription: "" },
+        ],
+        actionsOptions: [
+            {
+                optionText: "",
+                orActions: [
+                    {
+                        actionName: "Move",
+                        actionDescription: "",
+                        rollmodifier: 0,
+                        hit: "",
+                    },
+                    {
+                        actionName: "",
+                        actionDescription: "",
+                        rollmodifier: 0,
+                        hit: "",
+                    },
+
+                ],
+                andText:"",
+                andActions: [
+                    {
+                        actionName: "Move",
+                        actionDescription: "",
+                        rollmodifier: 0,
+                        hit: "",
+                    },
+                    {
+                        actionName: "",
+                        actionDescription: "",
+                        rollmodifier: 0,
+                        hit: "",
+                    },
+
+                ]
+            },
+            , {
+                orOptionText: "",
+                orActions: [
+                    {
+                        actionName: "Move",
+                        actionDescription: "",
+                        rollmodifier: 0,
+                        hit: "",
+                    },
+                    {
+                        actionName: "",
+                        actionDescription: "",
+                        rollmodifier: 0,
+                        hit: "",
+                    },
+
+                ],
+                andText:"",
+                andActions: [
+                    {
+                        actionName: "Move",
+                        actionDescription: "",
+                        rollmodifier: 0,
+                        hit: "",
+                    },
+                    {
+                        actionName: "",
+                        actionDescription: "",
+                        rollmodifier: 0,
+                        hit: "",
+                    },
+
+                ]
+            }
+        ],
+        reactions: [
+            { reactionName: "", perRound: 1, reactionDescription: "" },
+        ]
+    },
+];
+
+
+
+/*, 
+    {
+        name: "",
+        description: "",
+        monsterLevel: 0,
+        size: "Small",
+        type: "",
+        attributes: {
+            STR: 0,
+            DEX: 0, Ref: 10,
+            END: 0, Fort: 10,
+            AWR: 0, Ant: 10,
+            INT: 0, Log: 10,
+            CHA: 0,
+            Will: 0
+        },
+        hitPoints: 50,
+        armorRating: 10,
+        armorRatingType: "",
+        speed: {
+            climb: "",
+            fly: "",
+            jump: "",
+            hover: "",
+            swim: "",
+            walk: "30ft",
+        },
+        resist: {
+            arcane: 0,
+            blunt: 0,
+            sharp: 0,
+            cold: 0,
+            corrosive: 0,
+            divine: 0,
+            fire: 0,
+            lightning: 0,
+            necrotic: 0,
+            occult: 0,
+            psychic: 0,
+            radiant: 0,
+            sonic: 0,
+            toxic: 0,
+            special: [],
+        },
+        vulnerable: {
+            arcane: 0,
+            blunt: 0,
+            sharp: 0,
+            cold: 0,
+            corrosive: 0,
+            divine: 0,
+            fire: 0,
+            lightning: 0,
+            necrotic: 0,
+            occult: 0,
+            psychic: 0,
+            radiant: 1,
+            sonic: 0,
+            toxic: 0,
+            special: [],
+        },
+        senses: {
+            blindsight: "",
+            darkvision: "",
+            lowLight: "",
+            tremorsense: "",
+            truesight: ""
+        },
+        DR: [""],
+        skills: [
+            { skillAttribute: "", SkillName: "", skillBonus: 0 }
+        ],
+        traits: [""],
+        features: [
+            { featureName: "", featureDescription: "" },
+        ],
+        actionsOptions: [
+            {
+                optionText: "",
+                orActions: [
+                    {
+                        actionName: "Move",
+                        actionDescription: "",
+                        rollmodifier: 0,
+                        hit: "",
+                    },
+                    {
+                        actionName: "",
+                        actionDescription: "",
+                        rollmodifier: 0,
+                        hit: "",
+                    },
+
+                ],
+                andText:"",
+                andActions: [
+                    {
+                        actionName: "Move",
+                        actionDescription: "",
+                        rollmodifier: 0,
+                        hit: "",
+                    },
+                    {
+                        actionName: "",
+                        actionDescription: "",
+                        rollmodifier: 0,
+                        hit: "",
+                    },
+
+                ]
+            },
+            , {
+                orOptionText: "",
+                orActions: [
+                    {
+                        actionName: "Move",
+                        actionDescription: "",
+                        rollmodifier: 0,
+                        hit: "",
+                    },
+                    {
+                        actionName: "",
+                        actionDescription: "",
+                        rollmodifier: 0,
+                        hit: "",
+                    },
+
+                ],
+                andText:"",
+                andActions: [
+                    {
+                        actionName: "Move",
+                        actionDescription: "",
+                        rollmodifier: 0,
+                        hit: "",
+                    },
+                    {
+                        actionName: "",
+                        actionDescription: "",
+                        rollmodifier: 0,
+                        hit: "",
+                    },
+
+                ]
+            }
+        ],
+        reactions: [
+            { reactionName: "", perRound: 1, reactionDescription: "" },
+        ]
+    },
+    */
 
 
 

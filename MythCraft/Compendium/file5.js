@@ -166,7 +166,7 @@ mcStandardProfessions = [
         name: {
             noun: "",
         },
-        occupations: [""],
+        occupations: [],
         description: "",
         StartingEquipment: [
             { name: "satchel", qty: 1, canChoose: false, type: "mundane" },
@@ -199,9 +199,7 @@ mcStandardProfessions = [
             noun: "tenure",
             specializations: ["", ""],
             description: "",
-            ranksAndSpecializations: [
-
-            ],
+            ranksAndSpecializations: [],
         }
     }
 ];

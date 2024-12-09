@@ -3,7 +3,7 @@ mcStandardProfessions = [
         name: {
             noun: "Student",
         },
-        occupations: [""],
+        occupations: [],
         description: "You are constantly seeking knowledge and understanding, driven by a thirst for discovery and a desire to make a difference in the world.Whether you are studying magic, history, or the natural sciences, you are always eager to learn and to put your newfound knowledge to the test, eager to make a name for yourself and achieve great things. With your unwavering determination and quick mind, you are well on your way to becoming a respected master in your field.",
         StartingEquipment: [],
     },
@@ -25,7 +25,7 @@ mcStandardProfessions = [
         name: {
             noun: "True Believer",
         },
-        occupations: [""],
+        occupations: [],
         description: "You are guided by a strong faith in your chosen deity or belief system. You see the world through a lens of reverence and devotion.When able, you pursue acts of charity and stand up against those who would do harm to your beliefs.",
         StartingEquipment: [],
     },
@@ -48,7 +48,7 @@ mcStandardProfessions = [
         name: {
             noun: "Urchin",
         },
-        occupations: [""],
+        occupations: [],
         description: "You’ve had to fend for yourself from a young age, relying on your wits and cunning to survive in a harsh and unforgiving world.Growing up on the streets, you’ve learned to be quick on your feet; to pick pockets and slip away from danger without being detected.Despite the hardships you’ve faced, you’ve developed a fierce independence and a sense of humor that has helped you get by, and you always have a trick or two up your sleeve to help you out of a tight spot.",
         StartingEquipment: [
             { name: "backpack", qty: 1, canChoose: false, type: "mundane" },
@@ -76,7 +76,7 @@ mcStandardProfessions = [
         name: {
             noun: "Occupation Tags",
         },
-        occupations: [""],
+        occupations: [],
         description: "Occupation tags are listed in italics directly below the title of any given profession.There are seven occupation tags: academic, aristocratic, mercantile, militant, religious, underworld, and wandering. Seven of the nine backgrounds specify that you gain an added bonus if you choose a profession with a particular occupation tag.For example, the Born Marrior states that you gain + 2 Forced March if you take a profession with the militant occupation tag.",
         StartingEquipment: [],
     },
@@ -84,7 +84,7 @@ mcStandardProfessions = [
         name: {
             noun: "Professions",
         },
-        occupations: [""],
+        occupations: [],
         description: "When creating a character, in addition to your background, you gain one profession of your choice.There are two exceptions: If you are a Knave, you gain two professions (you cannot pick the same profession twice).If you are an urchin, you do not gain any profession. Each profession has one or more occupation tags, so be sure to check and see if this gives you any additional bonuses based on your background.When you gain a professional rank, you may choose to gain a rank in the same profession or get the 1st rank of a new profession.",
         StartingEquipment: [],
     },
@@ -92,7 +92,7 @@ mcStandardProfessions = [
         name: {
             noun: "Goodwill",
         },
-        occupations: [""],
+        occupations: [],
         description: "Some professions reference Goodwill, which represents your standing in various aspects of the community. You can read more about Goodwill in Chapter 7.",
         StartingEquipment: [],
     },
@@ -107,7 +107,7 @@ mcStandardProfessions = [
         name: {
             noun: "Starting Equipment",
         },
-        occupations: [""],
+        occupations: [],
         description: "",
         StartingEquipment: [
             { name: "satchel", qty: 1, canChoose: false, type: "mundane" },

@@ -12,13 +12,34 @@
 	--derived-attribute-offset: 10px;
 	/* should be half the differeence */
 	--roll-attribute-button: 21px;
-	--roll-attribute-button-top-offset: -90px;
+	--roll-attribute-button-top-offset: -80px;
 	--roll-attribute-button-left-offset: 55px;
-	--attribute-derived-label-height: -115px;
+	--attribute-derived-label-height: -108px;
 	--attribute-derived-label-width: -7px;
 	--sheet-background: #F4EFE4;
 	;
 }
+
+
+html {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+  
+  	box-sizing: border-box;
+  }
+
+  *,
+  *:before,
+  *:after {
+	-webkit-box-sizing: inherit;
+	-moz-box-sizing: inherit;
+  	box-sizing: inherit;
+  }
+
+  button.btn.repcontrol_add::before,
+  button.btn.repcontrol_edit::after{
+  	box-sizing: content-box;
+  }
 
 .sheet-naked {
 	appearance: none;
@@ -57,17 +78,7 @@ input[type="number"] {
 
 	letter-spacing: normal !important;
 }
-
-/* 
-  Checks each repeating item to see if the filter control
-  checkbox contained in it is checked or not. Then sets the
-  ones that don't contain a checked on to display none.
-*/
-.ui-dialog .tab-content .charsheet .filtered-section .repitem:has(.filter-control:not(:checked)) {
-	display: none !important;
-}
-
-
+ 
 
 
 
@@ -100,7 +111,7 @@ input[type="number"] {
 	border: 15px solid transparent;
 	border-image: url('https://irp.cdn-website.com/a2239e04/dms3rep/multi/Small_Frame-69bc8c7b.png') 340 / 25px / 5px stretch;
 	margin: 5px 5px;
-	letter-spacing: normal !important;
+	min-height: 141.01px;
 }
 
 .charmancerlogo {
@@ -120,7 +131,7 @@ div[class^="sheet-fieldset"] {
 
 div[class^="sheet-legend"] {
 	text-align: center;
-	background-color:var(--sheet-background);
+	background-color: var(--sheet-background);
 	color: Black;
 	padding: 5px 10px;
 	position: relative;
@@ -148,7 +159,9 @@ div[class^="sheet-legend"]>div[class^="sheet-wide-content"] {
 }
 
 
-
+.sheet-action-point-configuraiton{
+	border-top:1px dashed #bbb;margin-top:6px;
+	border-bottom:1px dashed #bbb;margin-bottom:6px;}
 
 
 
@@ -406,8 +419,29 @@ div.sheet-repeatingitems.sheet-talents>div.repcontainer>div.repitem {
 }
 
 div.sheet-repeatingitems.sheet-talents>div.repcontrol>button.btn.repcontrol_add {
-	display: none !important; 
+	display: none !important;
 }
+
+
+
+.sheet-skills {}
+
+.sheet-skill {
+	display: inline-block;
+	width: 100%;
+}
+div.sheet-repeatingitems>div.repcontainer>div>div.sheet-skills.sheet-skill {}
+
+div.sheet-col-1-2.sheet-right > div > div.sheet-repeatingskills > div.repcontainer > div.repitem,
+div.sheet-repeatingitems.sheet-skills>div.repcontainer>div.repitem {
+	display: inline-block;
+	width: 50%;
+	font-size: 9px;
+	float:left;
+}
+
+
+
 
 .repcontrol .btn:focus {
 	outline: 0;
@@ -438,8 +472,8 @@ input[type="submit"].repcontrol .btn {
 	vertical-align: bottom;
 }
 
- .repcontrol .repcontrol_add:before,
- .repcontrol .repcontrol_edit:after {
+.repcontrol .repcontrol_add:before,
+.repcontrol .repcontrol_edit:after {
 	border: 1px solid black;
 	border-radius: 50%;
 	font-size: 13px;
@@ -478,102 +512,121 @@ input[type="submit"].repcontrol .btn {
 
 
 /* ===== REPEATING SECTIONS CTRL ===== */
- .repcontrol {
-    margin-top: 2px;
-    min-height: 27px;
-    width: 90%;
-    text-align: center;
-}
-.repcontrol .btn {
-    border: none;
-    color: white !important;
-    background: none;
-    box-shadow: none;
-    font-size: 0;
-}
- .repcontrol .btn {padding: 0px 0px 0px 0px;}
- .repcontrol .btn {
-    padding: 0px 0px 0px 0px;
-    margin-left: 10px;
-    display: inline-block;
-    width: 25px;
-    font-size: 0px;
+.repcontrol {
+	margin-top: 2px;
+	min-height: 27px;
+	width: 90%;
+	text-align: center;
 }
 
-.repcontrol .btn:focus {outline: 0;}
+.repcontrol .btn {
+	border: none;
+	color: white !important;
+	background: none;
+	box-shadow: none;
+	font-size: 0;
+}
+
+.repcontrol .btn {
+	padding: 0px 0px 0px 0px;
+}
+
+.repcontrol .btn {
+	padding: 0px 0px 0px 0px;
+	margin-left: 10px;
+	display: inline-block;
+	width: 25px;
+	font-size: 0px;
+}
+
+.repcontrol .btn:focus {
+	outline: 0;
+}
+
 .repcontrol .repcontrol_add:before {
-    content: '&';
-    font-family: pictos;
-    color: black;
-    display: inline-block;
+	content: '&';
+	font-family: pictos;
+	color: black;
+	display: inline-block;
 }
- .repcontrol  .repcontrol_add:before,
- .repcontrol .repcontrol_edit:after {
-    border: 1px solid black;
-    border-radius: 50%;
-    font-size: 13px;
-    padding: 3px;
-    height: 12px;
-    width: 12px;
-    line-height: 12px;
+
+.repcontrol .repcontrol_add:before,
+.repcontrol .repcontrol_edit:after {
+	border: 1px solid black;
+	border-radius: 50%;
+	font-size: 13px;
+	padding: 3px;
+	height: 12px;
+	width: 12px;
+	line-height: 12px;
 }
+
 .sheet-statblock .repcontrol .repcontrol_add:before,
 .sheet-statblock .repcontrol .repcontrol_edit:after {
-    font-size: 12px;
-    padding: 2px;
-    height: 10px;
-    width: 10px;
-    line-height: 10px;
+	font-size: 12px;
+	padding: 2px;
+	height: 10px;
+	width: 10px;
+	line-height: 10px;
 }
 
 .repcontrol .repcontrol_edit:after {
-    content: '(';
-    font-family: pictos;
-    color: black;
-    display: inline-block;
+	content: '(';
+	font-family: pictos;
+	color: black;
+	display: inline-block;
 }
-.editmode ~ .repcontrol .repcontrol_edit:after {
-    content: ')';
-    vertical-align: bottom;
+
+.editmode~.repcontrol .repcontrol_edit:after {
+	content: ')';
+	vertical-align: bottom;
 }
 
 .repcontrol .repcontrol_edit:hover:after,
 .repcontrol .repcontrol_add:hover:before {
-    color: #C3996B;
-    border-color: #C3996B;
+	color: #C3996B;
+	border-color: #C3996B;
 }
-.repcontainer .repitem .itemcontrol {z-index: 10;}
+
+.repcontainer .repitem .itemcontrol {
+	z-index: 10;
+}
+
 .repcontainer .repitem .itemcontrol .repcontrol_del {
-    float: right;
-    font-size: 10px;
-    padding: 0px;
-    height: 18px;
-    width: 18px;
+	float: right;
+	font-size: 8px;
+	padding: 0px;
+	height: 18px;
+	width: 18px;
 }
+
 .repcontainer .repitem .itemcontrol .repcontrol_move {
-    cursor: move;
-    float: left;
-    font-size: 10px;
-    padding: 0px;
-    height: 18px;
-    width: 18px;
+	cursor: move;
+	float: left;
+	font-size: 8px;
+	padding: 0px;
+	height: 18px;
+	width: 18px;
 }
+
 .sheet-statblock .sheet-npcatk .repitem,
 .sheet-statblock .sheet-npcatk .repcontrol,
 .sheet-statblock .sheet-npcatk .repcontainer,
 .sheet-buffs .repitem,
 .sheet-buffs .repcontrol,
 .sheet-buffs .repcontainer {
-    vertical-align: top;
+	vertical-align: top;
 }
+
 .sheet-statblock .sheet-npcatk .repitem,
 .sheet-statblock .sheet-npcatk .repcontrol,
 .sheet-buffs .repitem,
 .sheet-buffs .repcontrol {
-    display: inline-block;
+	display: inline-block;
 }
+
 .sheet-statblock .sheet-npcatk .repcontainer {
-    display: inline;
+	display: inline;
 }
 
 
@@ -597,13 +650,13 @@ input[type="submit"].repcontrol .btn {
 
 
 .sheet-block-a,
- .sheet-block-switch:checked~.sheet-block-b {
+.sheet-block-switch:checked~.sheet-block-b {
 	letter-spacing: normal;
 	display: block;
 }
 
 .sheet-block-b,
- .sheet-block-switch:checked~.sheet-block-a {
+.sheet-block-switch:checked~.sheet-block-a {
 	letter-spacing: normal;
 	display: none;
 }
@@ -623,59 +676,6 @@ input.sheet-block-switch[type=checkbox] {
 	cursor: pointer;
 	z-index: 1;
 }
-
-/* Fake checkbox */
-input.sheet-block-switch[type=checkbox]+span::before {
-	margin-right: 4px;
-	line-height: 14px;
-	text-align: center;
-	display: inline-block;
-	vertical-align: middle;
-font-family: pictos;
-	content: "y";
-	width: 14px;
-	height: 14px;
-	font-size: 12px;
-}
-
-input.sheet-block-switch[type=checkbox]:checked+span::before {
-	font-family: pictos;
-	content: "2";
-	width: 14px;
-	height: 14px;
-	font-size: 12px;
-}
-
-.fixSpacing {
-	letter-spacing: normal !important;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* Room Settings */
 
@@ -755,7 +755,7 @@ input.sheet-wrkshp10:checked~div.sheet-wrkshp-occupation-step,
 input.sheet-wrkshp11:checked~div.sheet-wrkshp-resources-step,
 input.sheet-wrkshp12:checked~div.sheet-wrkshp-journal-step {
 	display: block;
-	background:var(--sheet-background);
+	background: var(--sheet-background);
 }
 
 input.sheet-wrkshp99:checked~div[class^="sheet-wrkshp"] {
@@ -799,7 +799,7 @@ input.sheet-wrkshp10:checked+span.sheet-wrkshp10,
 input.sheet-wrkshp11:checked+span.sheet-wrkshp11,
 input.sheet-wrkshp12:checked+span.sheet-wrkshp12,
 input.sheet-wrkshp99:checked+span.sheet-wrkshp99 {
-	background:var(--sheet-background);
+	background: var(--sheet-background);
 	color: rgb(71, 15, 15);
 	border-radius: 4px;
 }
@@ -837,9 +837,6 @@ input.sheet-wrkshp99:checked+span.sheet-wrkshp99 {
 	border-radius: 5px;
 	border: black 1px solid;
 	padding: 5px 0px;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
 }
 
 
@@ -970,9 +967,6 @@ input.sheet-wrkshp99:checked+span.sheet-wrkshp99 {
 	font-size: 1.1em;
 	-moz-text-decoration-color: #D64541;
 	text-decoration-color: #D64541;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
 	max-width: 120px;
 	padding: 2px 2px 2px 0px;
 }
@@ -983,16 +977,10 @@ input.sheet-wrkshp99:checked+span.sheet-wrkshp99 {
 	font-size: 1.1em;
 	-moz-text-decoration-color: #D64541;
 	text-decoration-color: #D64541;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
 	padding: 2px 2px 2px 0px
 }
 
 .sheet-rolltemplate-mythcraft .sheet-rt-value {
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
 	margin-top: 2px;
 }
 
@@ -1012,8 +1000,6 @@ input.sheet-wrkshp99:checked+span.sheet-wrkshp99 {
 .sheet-rolltemplate-mythcraft .sheet-rt-value .sheet-no-roll-highlight .inlinerollresult .fullfail .sheet-rolltemplate-mythcraft .sheet-rt-value .sheet-no-roll-highlight .inlinerollresult .fullcrit {
 	border: 0;
 }
-
-.sheet-rolltemplate-mythcraft .sheet-main-content {}
 
 
 .sheet-wide-content {
@@ -1132,7 +1118,7 @@ input.sheet-tab2:checked~div.sheet-section-social,
 input.sheet-tab3:checked~div.sheet-section-magic,
 input.sheet-tab4:checked~div.sheet-section-bio {
 	display: block;
-	background:var(--sheet-background);
+	background: var(--sheet-background);
 }
 
 input.sheet-tab99:checked~div[class^="sheet-section"] {
@@ -1541,33 +1527,21 @@ textarea,
 .sheet-padl,
 .sheet-rolltemplate-mythcraft .sheet-padl {
 	padding-left: 10px;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
 }
 
 .sheet-padr,
 .sheet-rolltemplate-mythcraft .sheet-padr {
 	padding-right: 10px;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
 }
 
 .sheet-padt,
 .sheet-rolltemplate-mythcraft .sheet-padt {
 	padding-top: 12px;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
 }
 
 .sheet-padb,
 .sheet-rolltemplate-mythcraft .sheet-padb {
 	padding-bottom: 5px;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
 }
 
 .sheet-border-right,
@@ -1627,7 +1601,10 @@ input[type=number] {
 }
 
 input[type=text].sheet-underlined {
-	box-shadow: 0px -2px 0px 0px #000000 inset;
+	border: none;
+	border-bottom: 1px solid black;
+	outline: none;
+	box-shadow: 0px -1px 0px 0px #000000 inset;
 }
 
 input[type=number].sheet-underlined {
@@ -2066,8 +2043,8 @@ span.sheet-ignored-roll {
 
 .sheet-row,
 .sheet-rolltemplate-mythcraft .sheet-row {
-	letter-spacing: -0.31em;
-	/*letter-spacing: normal;*/
+	/*letter-spacing: -0.31em;*/
+	letter-spacing: normal;
 	/*word-spacing: -0.43em;*/
 	text-rendering: optimizespeed;
 }
@@ -2199,6 +2176,7 @@ span.sheet-ignored-roll {
 .sheet-rolltemplate-mythcraft .sheet-col-15-17,
 .sheet-rolltemplate-mythcraft .sheet-col-16-17,
 .sheet-rolltemplate-mythcraft .sheet-col-1-18,
+.sheet-rolltemplate-mythcraft .sheet-col-3-18,
 .sheet-rolltemplate-mythcraft .sheet-col-5-18,
 .sheet-rolltemplate-mythcraft .sheet-col-7-18,
 .sheet-rolltemplate-mythcraft .sheet-col-11-18,
@@ -2397,6 +2375,7 @@ span.sheet-ignored-roll {
 .sheet-col-15-17,
 .sheet-col-16-17,
 .sheet-col-1-18,
+.sheet-col-3-18,
 .sheet-col-5-18,
 .sheet-col-7-18,
 .sheet-col-11-18,
@@ -2507,7 +2486,7 @@ span.sheet-ignored-roll {
 
 .sheet-col-1-2,
 .sheet-rolltemplate-mythcraft .sheet-col-1-2 {
-	width: 50%;
+	width: 49%;
 }
 
 .sheet-offset-1-2,
@@ -3548,6 +3527,16 @@ span.sheet-ignored-roll {
 	margin-left: 5.55556%;
 }
 
+.sheet-col-3-18,
+.sheet-rolltemplate-mythcraft .sheet-col-13-18 {
+	width: 16.66%;
+}
+
+.sheet-offset-3-18,
+.sheet-rolltemplate-mythcraft .sheet-offset-3-18 {
+	margin-left: 16.66%;
+}
+
 .sheet-col-5-18,
 .sheet-rolltemplate-mythcraft .sheet-col-5-18 {
 	width: 27.77778%;
@@ -4490,17 +4479,11 @@ span.sheet-ignored-roll {
 
 .sheet-row-r,
 .sheet-rolltemplate-mythcraft .sheet-row-r {
-	letter-spacing: -0.31em;
-	/*letter-spacing: normal; */
-	word-spacing: -0.43em;
+	/*letter-spacing: -0.31em;*/
+	letter-spacing: normal;
 }
 
-.sheet-opera-only:-o-prefocus,
-.sheet-row-r,
-.sheet-rolltemplate-mythcraft .sheet-opera-only:-o-prefocus,
-.sheet-rolltemplate-mythcraft .sheet-row-r {
-	word-spacing: -0.43em;
-}
+
 
 .sheet-row-r img,
 .sheet-rolltemplate-mythcraft .sheet-row-r img {
@@ -4644,7 +4627,7 @@ input[name="attr_coordination_cor"].sheet-core-attribute-content {
 	border-radius: var(--derived-attribute-exterior-ring);
 
 	position: relative !important;
-	top: -67px !important;
+	top: -57px !important;
 	left: var(--derived-attribute-offset) !important;
 }
 
@@ -4678,6 +4661,7 @@ input[name="attr_willpower_wil"].sheet-derived-attribute-content {
 	padding: 0 0 !important;
 	margin: 0 0 !important;
 	letter-spacing: normal !important;
+	font-size: 17px;
 }
 
 .sheet-derived-attribute-label {
@@ -4710,6 +4694,252 @@ input[name="attr_willpower_wil"].sheet-derived-attribute-content {
 
 div.sheet-row.sheet-attribute-bubbles {
 	height: 110px !important;
+	display: inline-block;
+}
+
+div.sheet-row.sheet-attribute-bubbles .sheet-col-1-8 {
+	width: 12%;
 }
 
 /* End Core Mythcraft Stat Row */
+
+
+
+.sheet-PTH-lbl {
+
+	letter-spacing: normal;
+	word-spacing: normal;
+	vertical-align: top;
+	text-rendering: auto;
+}
+
+.sheet-PTH-lab {
+
+	letter-spacing: normal;
+	word-spacing: normal;
+	vertical-align: top;
+	text-rendering: auto;
+}
+
+
+
+.sheet-PTH-labline {
+	line-height: 1em;
+	white-space: nowrap;
+	text-align: right;
+	margin-top: 2px;
+}
+
+.sheet-roll-text {}
+
+
+.ui-dialog .charsheet button[type=roll].sheet-roll-text:before {
+	content: "";
+}
+.charsheet{
+	font-size: 8px;
+}
+div.sheet-row.compendium-drop-target.sheet-skill > div.sheet-col-1-2 > button{
+	font-size: 9px;
+}
+.sheet-roll-text,
+button[type=roll].sheet-roll-text {
+	text-align: center;
+	text-decoration: none;
+	background: 0 0;
+	background-image: none;
+	border: none;
+	box-shadow: none;
+	text-shadow: none;
+	padding: inherit;
+	margin: inherit;
+	color: inherit;
+	font-family: inherit;
+	font-size: inherit;
+	line-height: inherit;
+	text-transform: inherit;
+	text-align: inherit;
+	vertical-align: inherit;
+	border-radius: none;
+}
+
+button[type=action].sheet-roll-text:hover,
+button[type=compendium].sheet-roll-text:hover,
+button[type=roll].sheet-roll-text:hover,
+button[type=roll].sheet-roll-text:hover span,
+button[type=roll].sheet-roll-text:hover span.sheet-pseudoattr {
+	color: #be202e
+}
+
+button[type=roll].sheet-roll-text:before {
+	content: none;
+}
+
+button[type=action].sheet-roll-text:focus,
+button[type=compendium].sheet-roll-text:focus,
+button[type=roll].sheet-roll-text:focus {
+	outline: 0
+}
+ 
+
+button[type=roll].sheet-roll-text.sheet-margindent {
+	margin-left: 14px !important
+}
+
+.sheet-statblock button[type=roll].sheet-roll-text {
+	margin: 0
+}
+
+button[type=roll].sheet-roll-text.sheet-underl {
+	margin-left: 14px;
+	border-bottom: 1px dotted #999
+}
+
+.sheet-spelllike .sheet-spell button[type=roll].sheet-roll-text.sheet-underl,
+.sheet-spells .sheet-spell button[type=roll].sheet-roll-text.sheet-underl {
+	font-style: italic
+}
+
+.sheet-spells .sheet-spell button[type=roll].sheet-roll-text.sheet-underl {
+	margin-right: 2px;
+	border-bottom: 1px dotted transparent
+}
+
+.sheet-spells .sheet-spell button[type=roll].sheet-roll-text.sheet-underl:hover,
+button[type=roll].sheet-roll-text.sheet-underl:hover {
+	border-bottom: 1px dotted #be202e
+}
+
+
+
+div.sheet-col-1-2.sheet-border-right{
+	width: 48%;
+	float: left;
+}
+
+div.sheet-col-1-2.sheet-border-left {
+	width: 48%;
+	
+}
+
+.sheet-font-small{ 
+	font-size: 0.65em;
+    line-height: 0.65em;
+}
+
+
+.sheet-font-standard{
+	font-size: 0.83em;
+    line-height: 0.83em;
+	
+}
+.sheet-font-large{
+	
+	font-size: 1.03em;
+    line-height: 1.03em;
+}
+.sheet-entered-value{
+	font-family: "sans-seri";/* ? Patrick Hand" */
+	font-size: 1.1em;
+}
+
+.sheet-underlined{
+    border-bottom: 1px solid black;
+	font-family: "sans-seri";/* ? Patrick Hand" */
+	font-size: 1.03em;
+}
+
+
+/* ===== OPTIONS ===== */
+.sheet-options-flag {
+    /* opacity: 0;*/
+
+    width: 16px;
+    min-height: 16px;
+    z-index: 2;
+}
+.sheet-options-skill-flag + span,
+.sheet-options-attack-flag + span,
+.sheet-options-sap-flag + span,
+.sheet-options-globals-flag + span,
+.sheet-options-flag + span { 
+    width: 16px;
+    height: 16px;
+    font-size: 16px;
+    font-family: pictos;
+    color: #BBBBBB;
+    cursor: pointer;
+    margin-top: 0px;
+    display: none;
+	margin-left: -16px;
+	top:-16px;
+	left: 16px;
+}
+.sheet-options-skill-flag:hover + span,
+.sheet-options-attack-flag:hover + span,
+.sheet-options-sap-flag:hover + span,
+.sheet-options-globals-flag:hover + span,
+.sheet-options-flag:checked + span {
+    color: #C3996B;
+    display: block;
+} 
+.sheet-options-skill-flag + span,
+.sheet-options-attack-flag + span,
+.sheet-options-sap-flag + span,
+.sheet-options-globals-flag + span,
+.sheet-options-flag + span
+{
+    display: block;
+}
+
+.sheet-options-skill-flag:checked + span,   .sheet-options-skill-flag:hover + span,   .sheet-options-hidden-skill-flag:checked + span,
+.sheet-options-attack-flag:checked + span,  .sheet-options-attack-flag:hover + span,  .sheet-options-hidden-attack-flag:checked + span,
+.sheet-options-sap-flag:checked + span,     .sheet-options-sap-flag:hover + span,     .sheet-options-hidden-sap-flag:checked + span, 
+.sheet-options-globals-flag:checked + span, .sheet-options-globals-flag:hover + span, .sheet-options-hidden-globals-flag:checked + span 
+ {
+    color: #C3996B;
+    display: block;
+}
+.sheet-options-skill,   .sheet-options-hidden-skill-flag,
+.sheet-options-attack,  .sheet-options-hidden-attack-flag,
+.sheet-options-sap,     .sheet-options-hidden-sap-flag,
+.sheet-options-globals, .sheet-options-hidden-globals-flag,
+.sheet-options {
+   display: none; 
+    margin-top: 2px;
+    margin-bottom: 2px;
+    padding: 3px;
+    border: 2px dotted #C3996B;
+	
+	transition: max-height .25s ease-in-out;
+    background-color: rgb(250,250,250);
+
+}
+
+.sheet-options, 
+.sheet-options-skill, 
+.sheet-options-attack, 
+.sheet-options-sap, 
+.sheet-options-globals {
+    display: block;
+}
+.sheet-options-flag:checked ~ .sheet-options,  
+.sheet-options-skill-flag:checked ~ .sheet-options-skill,     .sheet-options-hidden-skill-flag:checked  ~ .sheet-options-skill,
+.sheet-options-attack-flag:checked ~ .sheet-options-attack,   .sheet-options-hidden-attack-flag:checked  ~ .sheet-options-attack
+.sheet-options-sap-flag:checked ~ .sheet-options-sap,         .sheet-options-hidden-sap-flag:checked  ~ .sheet-options-sap,
+.sheet-options-globals-flag:checked ~ .sheet-options-globals, .sheet-options-hidden-globals-flag:checked  ~ .sheet-options-globals
+{
+    display: none;
+}
+
+.sheet-row [class *="sheet-col"], [class *="sheet-col"]{
+	font-size: 9px;
+}
+.sheet-hidden{
+    display: none;
+
+}
+.sheet-action-display-range-distance:checked + input{
+    display: none;
+
+}

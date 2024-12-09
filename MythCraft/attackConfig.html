@@ -1,0 +1,320 @@
+<div class="sheet-row"> <span class="sheet-PTH-lbl">Name</span>
+    <input type="text" name="attr_displayName" class=" name" spellcheck="false" placeholder="Name"
+        title="@{repeating_attacks_$id_displayName}" /> <input type="hidden" name="attr_fromcompendium"
+        class="fromcompendium" value="" /><button class="sheet-roll" type="compendium" name="attr_fromcompendium"
+        title="Open Compendium Item"></button>
+</div>
+<div class="sheet-row "> <span class="sheet-PTH-lbl">Category:</span> <input type="text" name="attr_category"
+        class=" dmgbase" spellcheck="false" title="@{repeating_attacks_$id_category}" /> <span
+        class="sheet-PTH-lbl">Type:</span> <input type="text" name="attr_type" class=" dmgbase" spellcheck="false"
+        title="@{repeating_attacks_$id_type}" />
+</div>
+<div class="sheet-row "> <input class="sheet-col-1-10" type="checkbox" name="attr_atkflag" value="{{attack=1}}"
+        title="@{repeating_attacks_$id_atkflag}" checked="checked" /><span></span>
+    <span class="sheet-PTH-lbl">Attack:</span>
+    <select class=" sheet-col-1-10" name="attr_atktype" title="@{repeating_attacks_$id_atktype}">
+        <option value="melee" selected="selected">Melee</option>
+        <option value="ranged">Ranged</option>
+        <option value="0">-</option>
+    </select> <span class="sheet-PTH-lbl">+</span>
+    <select name="attr_atktype2 sheet-col-1-10" title="@{repeating_attacks_$id_atktype2}">
+        <option value="0" selected="selected">-</option>
+        <option value="strength">STR</option>
+        <option value="dexterity">DEX</option>
+        <option value="constitution">CON</option>
+        <option value="intelligence">INT</option>
+        <option value="wisdom">WIS</option>
+        <option value="charisma">CHA</option>
+    </select> <span class="sheet-PTH-lbl">+</span>
+    <input type="text" class="sheet-col-1-10" name="attr_atkmod" value="0" spellcheck="false"
+        title="@{repeating_attacks_$id_atkmod}" /> <span class="sheet-PTH-lbl">vs</span> <select class=" vs"
+        name="attr_atkvs" title="@{repeating_attacks_$id_atkvs}">
+        <option value="ac" selected="selected">AC</option>
+        <option value="touch">Touch</option>
+        <option value="flatfooted">Flat-footed</option>
+        <option value="fftouch">FF Touch</option>
+        <option value="cmd">CMD</option>
+        <option value="cmb">CMB (opposed)</option>
+        <option value="fortitude">Fortitude</option>
+        <option value="reflex">Reflex</option>
+        <option value="will">Will</option>
+        <option value="other">Other</option>
+    </select>
+</div>
+<div class="sheet-row padindent"> <span class="sheet-PTH-lbl" title="Critical Range">Critical
+        Range:</span> <input type="number" class="nospin " name="attr_atkcritrange" value="20"
+        title="@{repeating_attacks_$id_atkcritrange}" /> <span class="sheet-PTH-lbl">Range:</span> <input type="text"
+        name="attr_atkrange" class=" medium" spellcheck="false" placeholder="10 feet"
+        title="@{repeating_attacks_$id_atkrange}" /> </div>
+<div class="sheet-row grtopbrd"> <input class="pseudocheck" type="checkbox" name="attr_dmgflag"
+        value="{{damage=1}} {{dmg1flag=1}}" title="@{repeating_attacks_$id_dmgflag}" checked="checked" /><span></span>
+    <span class="sheet-PTH-lbl atk">Damage:</span> <input type="text" name="attr_dmgbase" class=" dmgbase"
+        spellcheck="false" placeholder="1d6" title="@{repeating_attacks_$id_dmgbase}" /> <span
+        class="sheet-PTH-lbl">+</span> <select class=" dmg" name="attr_dmgattr"
+        title="@{repeating_attacks_$id_dmgattr}">
+        <option value="strength" selected="selected">STR</option>
+        <option value="strength_oneandahalf">STR (Two-Handed)
+        </option>
+        <option value="strength_half">STR (Off-Hand)</option>
+        <option value="dexterity">DEX</option>
+        <option value="dexterity_oneandahalf">DEX (Two-Handed)
+        </option>
+        <option value="dexterity_half">DEX (Off-Hand)</option>
+        <option value="constitution">CON</option>
+        <option value="intelligence">INT</option>
+        <option value="wisdom">WIS</option>
+        <option value="charisma">CHA</option>
+        <option value="0">-</option>
+    </select> <span class="sheet-PTH-lbl">+</span> <input type="text" name="attr_dmgmod" class=" dmgbase"
+        spellcheck="false" placeholder="0" title="@{repeating_attacks_$id_dmgmod}" />
+</div>
+<div class="sheet-row padindent"> <span class="sheet-PTH-lbl">Type:</span>
+    <input type="text" name="attr_dmgtype" class=" dmgtype" spellcheck="false" placeholder="Slashing"
+        title="@{repeating_attacks_$id_dmgtype}" /> <span class="sheet-PTH-lbl" title="Critical Multiplier">Critical
+        Multiplier:</span>
+    <input type="number" class="nospin " name="attr_dmgcritmulti" value="2"
+        title="@{repeating_attacks_$id_dmgcritmulti}" />
+</div>
+<div class="sheet-row padindent"> <span class="sheet-PTH-lbl">Bonus
+        dice (no crit):</span> <input type="text" name="attr_dmgbonusdice" value="" class=" dmgbase" spellcheck="false"
+        title="@{repeating_attacks_$id_dmgbonusdice}" /> </div>
+<div class="sheet-row"> <input class="pseudocheck" type="checkbox" name="attr_dmg2flag"
+        value="{{damage=1}} {{dmg2flag=1}}" title="@{repeating_attacks_$id_dmg2flag}" /><span></span>
+    <input type="text" name="attr_dmg2name" spellcheck="false" data-i18n-placeholder="damage2" placeholder="Damage2"
+        value="" title="@{repeating_attacks_$id_dmg2name}" />:
+    <input type="text" name="attr_dmg2base" class=" dmgbase" spellcheck="false" placeholder="1d4"
+        title="@{repeating_attacks_$id_dmg2base}" /> <span class="sheet-PTH-lbl">+</span> <select class=" dmg"
+        name="attr_dmg2attr" title="@{repeating_attacks_$id_dmg2attr}">
+        <option value="strength">STR</option>
+        <option value="strength_oneandahalf">STR (Two-Handed)
+        </option>
+        <option value="strength_half">STR (Off-Hand)</option>
+        <option value="dexterity">DEX</option>
+        <option value="dexterity_oneandahalf">DEX (Two-Handed)
+        </option>
+        <option value="dexterity_half">DEX (Off-Hand)</option>
+        <option value="constitution">CON</option>
+        <option value="intelligence">INT</option>
+        <option value="wisdom">WIS</option>
+        <option value="charisma">CHA</option>
+        <option value="0" selected="selected">-</option>
+    </select> <span class="sheet-PTH-lbl">+</span> <input type="text" name="attr_dmg2mod" class=" dmgbase"
+        spellcheck="false" placeholder="0" title="@{repeating_attacks_$id_dmg2mod}" />
+</div>
+<div class="sheet-row padindent"> <span class="sheet-PTH-lbl">Type:</span>
+    <input type="text" name="attr_dmg2type" class=" dmgtype" spellcheck="false" placeholder="Fire"
+        title="@{repeating_attacks_$id_dmg2type}" /> <span class="sheet-PTH-lbl" title="Critical Multiplier">Critical
+        Multiplier:</span>
+    <input type="number" class="nospin " name="attr_dmg2critmulti" value="1"
+        title="@{repeating_attacks_$id_dmg2critmulti}" />
+</div>
+<div class="sheet-row padindent"> <span class="sheet-PTH-lbl">Bonus
+        dice (no crit):</span> <input type="text" name="attr_dmg2bonusdice" value="" class=" dmgbase" spellcheck="false"
+        title="@{repeating_attacks_$id_dmg2bonusdice}" /> </div>
+<div class="sheet-row grtopbrd"> <span class="sheet-PTH-lbl">Additional Attacks:</span> </div>
+<div class="sheet-row"> <input class="pseudocheck" type="checkbox" name="attr_atkextra1flag" value="1"
+        title="@{repeating_attacks_$id_atkextra1flag}" /><span></span>
+    <span class="sheet-PTH-lbl" title="#1">#1</span> <span class="sheet-PTH-lbl">Name</span> <input type="text"
+        name="attr_atkextra1name" value="" class=" dmgbase" spellcheck="false"
+        title="@{repeating_attacks_$id_atkextra1name}" placeholder="Off-hand/Rapid Shot" /> <span class="sheet-PTH-lbl"
+        title="Critical Range">Critical "Range":</span> <input type="number" class="nospin "
+        name="attr_atkextra1critrange" value="20" title="@{repeating_attacks_$id_atkextra1critrange}" />
+</div>
+<div class="sheet-row padindent"> <span class="sheet-PTH-lbl">Attack:</span>
+    <select class=" type  sheet-col-1-10" name="attr_atkextra1type" title="@{repeating_attacks_$id_atkextra1type}">
+        <option value="melee_mod" selected="selected">Melee
+        </option>
+        <option value="ranged_mod">Ranged</option>
+        <option value="cmb_mod">CMB</option>
+        <option value="bab">BAB Max</option>
+        <option value="0">-</option>
+    </select> <span class="sheet-PTH-lbl sheet-col-1-10">+</span> <select class="" name="attr_atkextra1type2"
+        title="@{repeating_attacks_$id_atkextra1type2}">
+        <option value="0" selected="selected">-</option>
+        <option value="strength_mod">STR</option>
+        <option value="dexterity_mod">DEX</option>
+        <option value="constitution_mod">CON</option>
+        <option value="intelligence_mod">INT</option>
+        <option value="wisdom_mod">WIS</option>
+        <option value="charisma_mod">CHA</option>
+    </select> <span class="sheet-PTH-lbl">+</span> <input type="text" class=" dmgbase" name="attr_atkextra1mod"
+        value="0" spellcheck="false" title="@{repeating_attacks_$id_atkextra1mod}" />
+</div>
+<div class="sheet-row padindent"> <span class="sheet-PTH-lbl atk">Damage:</span>
+    <input type="text" name="attr_atkextra1dmgbase" class=" dmgbase" spellcheck="false" placeholder="1d6"
+        title="@{repeating_attacks_$id_atkextra1dmgbase}" /> <span class="sheet-PTH-lbl">+</span> <select class=" dmg"
+        name="attr_atkextra1dmgattr" title="@{repeating_attacks_$id_atkextra1dmgattr}">
+        <option value="strength_mod" selected="selected">STR
+        </option>
+        <option value="strength_oneandahalf_mod">STR (Two-Handed)
+        </option>
+        <option value="strength_half_mod">STR (Off-Hand)</option>
+        <option value="dexterity_mod">DEX</option>
+        <option value="dexterity_oneandahalf_mod">DEX (Two-Handed)
+        </option>
+        <option value="dexterity_half_mod">DEX (Off-Hand)</option>
+        <option value="constitution_mod">CON</option>
+        <option value="intelligence_mod">INT</option>
+        <option value="wisdom_mod">WIS</option>
+        <option value="charisma_mod">CHA</option>
+        <option value="0">-</option>
+    </select> <span class="sheet-PTH-lbl">+</span> <input type="text" name="attr_atkextra1dmgmod" class=" dmgbase"
+        spellcheck="false" placeholder="0" title="@{repeating_attacks_$id_atkextra1dmgmod}" />
+</div>
+<div class="sheet-row padindent"> <span class="sheet-PTH-lbl">Type:</span>
+    <input type="text" name="attr_atkextra1dmgtype" class=" dmgtype" spellcheck="false" placeholder="Slashing"
+        title="@{repeating_attacks_$id_atkextra1dmgtype}" /> <span class="sheet-PTH-lbl"
+        title="Critical Multiplier">Critical
+        Multiplier:</span> <input type="number" class="nospin " name="attr_atkextra1dmgcritmulti" value="2"
+        title="@{repeating_attacks_$id_atkextra1dmgcritmulti}" />
+</div>
+<div class="sheet-row grtopbrd"> <input class="pseudocheck" type="checkbox" name="attr_atkextra2flag" value="1"
+        title="@{repeating_attacks_$id_atkextra2flag}" /><span></span>
+    <span class="sheet-PTH-lbl" title="#2">#2</span> <span class="sheet-PTH-lbl">Name</span> <input type="text"
+        name="attr_atkextra2name" value="" class=" dmgbase" spellcheck="false"
+        title="@{repeating_attacks_$id_atkextra2name}" placeholder="Off-hand/Rapid Shot" /> <span class="sheet-PTH-lbl"
+        title="Critical Range">Critical "Range":</span> <input type="number" class="nospin "
+        name="attr_atkextra2critrange" value="20" title="@{repeating_attacks_$id_atkextra2critrange}" />
+</div>
+<div class="sheet-row padindent"> <span class="sheet-PTH-lbl">Attack:</span>
+    <select class=" type" name="attr_atkextra2type" title="@{repeating_attacks_$id_atkextra2type}">
+        <option value="melee_mod" selected="selected">Melee
+        </option>
+        <option value="ranged_mod">Ranged</option>
+        <option value="cmb_mod">CMB</option>
+        <option value="bab">BAB</option>
+        <option value="0">-</option>
+    </select> <span class="sheet-PTH-lbl">+</span> <select class="" name="attr_atkextra2type2"
+        title="@{repeating_attacks_$id_atkextra2type2}">
+        <option value="0" selected="selected">-</option>
+        <option value="strength_mod">STR</option>
+        <option value="dexterity_mod">DEX</option>
+        <option value="constitution_mod">CON</option>
+        <option value="intelligence_mod">INT</option>
+        <option value="wisdom_mod">WIS</option>
+        <option value="charisma_mod">CHA</option>
+    </select> <span class="sheet-PTH-lbl">+</span> <input type="text" class=" dmgbase" name="attr_atkextra2mod"
+        value="0" spellcheck="false" title="@{repeating_attacks_$id_atkextra2mod}" />
+</div>
+<div class="sheet-row padindent"> <span class="sheet-PTH-lbl atk">Damage:</span> <input type="text"
+        name="attr_atkextra2dmgbase" class=" dmgbase" spellcheck="false" placeholder="1d6"
+        title="@{repeating_attacks_$id_atkextra2dmgbase}" /> <span class="sheet-PTH-lbl">+</span> <select class=" dmg"
+        name="attr_atkextra2dmgattr" title="@{repeating_attacks_$id_atkextra2dmgattr}">
+        <option value="strength_mod" selected="selected">STR
+        </option>
+        <option value="strength_oneandahalf_mod">STR (Two-Handed)
+        </option>
+        <option value="strength_half_mod">STR (Off-Hand)</option>
+        <option value="dexterity_mod">DEX</option>
+        <option value="dexterity_oneandahalf_mod">DEX (Two-Handed)
+        </option>
+        <option value="dexterity_half_mod">DEX (Off-Hand)</option>
+        <option value="constitution_mod">CON</option>
+        <option value="intelligence_mod">INT</option>
+        <option value="wisdom_mod">WIS</option>
+        <option value="charisma_mod">CHA</option>
+        <option value="0">-</option>
+    </select> <span class="sheet-PTH-lbl">+</span> <input type="text" name="attr_atkextra2dmgmod" class=" dmgbase"
+        spellcheck="false" placeholder="0" title="@{repeating_attacks_$id_atkextra2dmgmod}" /> </div>
+<div class="sheet-row padindent"> <span class="sheet-PTH-lbl">Type:</span>
+    <input type="text" name="attr_atkextra2dmgtype" class=" dmgtype" spellcheck="false" placeholder="Slashing"
+        title="@{repeating_attacks_$id_atkextra2dmgtype}" /> <span class="sheet-PTH-lbl"
+        title="Critical Multiplier">Critical
+        Multiplier:</span> <input type="number" class="nospin " name="attr_atkextra2dmgcritmulti" value="2"
+        title="@{repeating_attacks_$id_atkextra2dmgcritmulti}" />
+</div>
+<div class="sheet-row grtopbrd"> <input class="pseudocheck" type="checkbox" name="attr_atkextra3flag" value="1"
+        title="@{repeating_attacks_$id_atkextra3flag}" /><span></span>
+    <span class="sheet-PTH-lbl" title="#3">#3</span> <span class="sheet-PTH-lbl">Name</span> <input type="text"
+        name="attr_atkextra3name" value="" class=" dmgbase" spellcheck="false"
+        title="@{repeating_attacks_$id_atkextra3name}" placeholder="Off-hand/Rapid Shot" /> <span class="sheet-PTH-lbl"
+        title="Critical Range">Critical "Range":</span> <input type="number" class="nospin "
+        name="attr_atkextra3critrange" value="20" title="@{repeating_attacks_$id_atkextra3critrange}" />
+</div>
+<div class="sheet-row padindent"> <span class="sheet-PTH-lbl">Attack:</span>
+    <select class=" type" name="attr_atkextra3type" title="@{repeating_attacks_$id_atkextra3type}">
+        <option value="melee_mod" selected="selected">Melee
+        </option>
+        <option value="ranged_mod">Ranged</option>
+        <option value="cmb_mod">CMB</option>
+        <option value="bab">BAB</option>
+        <option value="0">-</option>
+    </select> <span class="sheet-PTH-lbl">+</span> <select class="" name="attr_atkextra3type2"
+        title="@{repeating_attacks_$id_atkextra3type2}">
+        <option value="0" selected="selected">-</option>
+        <option value="strength_mod">STR</option>
+        <option value="dexterity_mod">DEX</option>
+        <option value="constitution_mod">CON</option>
+        <option value="intelligence_mod">INT</option>
+        <option value="wisdom_mod">WIS</option>
+        <option value="charisma_mod">CHA</option>
+    </select> <span class="sheet-PTH-lbl">+</span> <input type="text" class=" dmgbase" name="attr_atkextra3mod"
+        value="0" spellcheck="false" title="@{repeating_attacks_$id_atkextra3mod}" />
+</div>
+<div class="sheet-row padindent"> <span class="sheet-PTH-lbl atk">Damage:</span> <input type="text"
+        name="attr_atkextra3dmgbase" class=" dmgbase" spellcheck="false" placeholder="1d6"
+        title="@{repeating_attacks_$id_atkextra3dmgbase}" /> <span class="sheet-PTH-lbl">+</span> <select class=" dmg"
+        name="attr_atkextra3dmgattr" title="@{repeating_attacks_$id_atkextra3dmgattr}">
+        <option value="strength_mod" selected="selected">STR
+        </option>
+        <option value="strength_oneandahalf_mod">STR (Two-Handed)
+        </option>
+        <option value="strength_half_mod">STR (Off-Hand)
+        </option>
+        <option value="dexterity_mod">DEX</option>
+        <option value="dexterity_oneandahalf_mod">DEX (Two-Handed)
+        </option>
+        <option value="dexterity_half_mod">DEX (Off-Hand)
+        </option>
+        <option value="constitution_mod">CON</option>
+        <option value="intelligence_mod">INT</option>
+        <option value="wisdom_mod">WIS</option>
+        <option value="charisma_mod">CHA</option>
+        <option value="0">-</option>
+    </select> <span class="sheet-PTH-lbl">+</span> <input type="text" name="attr_atkextra3dmgmod" class=" dmgbase"
+        spellcheck="false" placeholder="0" title="@{repeating_attacks_$id_atkextra3dmgmod}" /> </div>
+<div class="sheet-row padindent"> <span class="sheet-PTH-lbl">Type:</span>
+    <input type="text" name="attr_atkextra3dmgtype" class=" dmgtype" spellcheck="false" placeholder="Slashing"
+        title="@{repeating_attacks_$id_atkextra3dmgtype}" /> <span class="sheet-PTH-lbl"
+        title="Critical Multiplier">Critical
+        Multiplier:</span> <input type="number" class="nospin " name="attr_atkextra3dmgcritmulti" value="2"
+        title="@{repeating_attacks_$id_atkextra3dmgcritmulti}" />
+</div>
+<div class="sheet-row grtopbrd"> <input class="pseudocheck" type="checkbox" name="attr_descflag"
+        value="{{descflag=[[1]]}}" title="@{repeating_attacks_$id_descflag}" /><span></span>
+    <span class="sheet-PTH-lbl atk">Description:</span>
+    <div class="autoex"> <span name="attr_atkdesc"></span> <textarea name="attr_atkdesc" class="" spellcheck="false"
+            placeholder="Description" title="@{repeating_attacks_$id_atkdesc}"></textarea>
+    </div>
+</div> <span class="sheet-PTH-lbl">Notes:</span>
+<div class="autoex"> <span name="attr_notes"></span> <textarea name="attr_notes" spellcheck="false" placeholder="Notes"
+        title="@{repeating_attacks_$id_notes}"></textarea> </div>
+        <div class="Sheet-row"  >
+            <span class="sheet-PTH-lab" title="Temporary Global Attack Bonus. Will be added to all weapons and spells attacks.">Temp ATK</span>
+            <input type="number" name="attr_attack_bonus" class="sheet-col-1-10 sheet-no-spin"
+                value="0" title="@{attack_bonus}" /> 
+                <span class="sheet-PTH-lab"											title="Temporary Global Damage Bonus. Will be added to all weapons and spell damages.">DMG</span>
+            <input type="number" name="attr_damage_bonus" class="sheet-col-1-10 sheet-no-spin" value="0"
+                title="@{damage_bonus}" /> <span class="sheet-PTH-lab"
+                title="Temporary Melee Damage Bonus. Will be added to Melee attacks damages.">Melee
+                DMG</span> <input type="number" name="attr_melee_damage_bonus"
+                class="sheet-col-1-10 sheet-no-spin" value="0" title="@{melee_damage_bonus}" /> <span
+                class="sheet-PTH-lab"
+                title="Temporary Ranged Damage Bonus. Will be added to Ranged attacks damages.">Ranged
+                DMG</span> <input type="number" name="attr_ranged_damage_bonus"
+                class="sheet-col-1-10 sheet-no-spin" value="0" title="@{ranged_damage_bonus}" />
+        </div>
+<input type="hidden" name="attr_rollbase" />
+<input type="hidden" name="attr_rollbase_atk" />
+<input type="hidden" name="attr_rollbase_atk1" />
+<input type="hidden" name="attr_rollbase_atk2" />
+<input type="hidden" name="attr_rollbase_atk3" />
+<input type="hidden" name="attr_rollbase_atk4" />
+<input type="hidden" name="attr_rollbase_atk4" />
+<input type="hidden" name="attr_rollbase_atk5" />
+<input type="hidden" name="attr_rollbase_atk6" />
+<input type="hidden" name="attr_rollbase_atk7" />
+<input type="hidden" name="attr_rollbase_atk8" />
+<input type="hidden" name="attr_rollbase_atk9" />
+<input type="hidden" name="attr_rollbase_dmg" />
+</div>

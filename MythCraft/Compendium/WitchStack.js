@@ -3,8 +3,8 @@ const witch =
 
 
 {
-talentname: "Witch",
-shortDescription: "Harnessing primal or occult power, witches bond with familiars and can brew various concoctions to bolster their allies.",
+"TalentName": "Witch",
+"ShortDescription": "Harnessing primal or occult power, witches bond with familiars and can brew various concoctions to bolster their allies.",
 quote: {
 phrase: "Secrets wait to be embraced in the whispers of primeval spirits.Curiosity never hurt anyone brave enough to go looking.So long as I draw breath and have strength to explore, I will ever look to deepen my understanding of things within our world and things beyond.",
 quotedsname: "Lyla Greoghal",
@@ -17,12 +17,12 @@ prerequisites: ["Class Entry", "", "Character Level 2"],
 flavorTest: "",
 abilities: [
 {
-    abilityname: "",
-    abilitydescription: "",
+    "abilityname": "",
+    "abilitydescription": "",
 },
 {
-    abilityname: "",
-    abilitydescription: "",
+    "abilityname": "",
+    "abilitydescription": "",
 }
 ]
 
@@ -34,7 +34,7 @@ description: "Curate a collection of poppets and cast sympathetic magic on them 
 talents: [
 {
 talentname: "",
-prerequisites: [""],
+prerequisites: [],
 flavorTest: "",
 abilities: [
 {
@@ -55,7 +55,7 @@ description: "By communing with the six conclaves of the Everwilds, you gain the
 talents: [
 {
 talentname: "",
-prerequisites: [""],
+prerequisites: [],
 flavorTest: "",
 abilities: [
 {
@@ -76,7 +76,7 @@ description: " Enhance your familiar, or summon a pack or flock of familiars.",
 talents: [
 {
 talentname: "",
-prerequisites: [""],
+prerequisites: [],
 flavorTest: "",
 abilities: [
 {
@@ -97,7 +97,7 @@ description: "You are one with the natural world and can draw power from the soi
 talents: [
 {
 talentname: "",
-prerequisites: [""],
+prerequisites: [],
 flavorTest: "",
 abilities: [
 {
@@ -118,7 +118,7 @@ description: "w. By mixing strange ingredients, you can create a variety of uniq
 talents: [
 {
 talentname: "",
-prerequisites: [""],
+prerequisites: [],
 flavorTest: "",
 abilities: [
 {
