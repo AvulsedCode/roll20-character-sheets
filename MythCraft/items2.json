@@ -1,4 +1,4 @@
-const lightArmor = [
+{"lightArmor" : [
         { "Armor": "Cuirass (Leather)",     "AR": 12, "Tags": ["Light"], "REF": "+1",  "FORT": "+1",  "ANT": "",  "LOG": "",  "WILL": "",     "STRmin":"","DEXmax":"",  "Speed":"", "Resist": "Blunt 2", "Cost": 100 , "ARMod":"","flavorText":"",  "XtraActions":[]},
         { "Armor": "Gambeson",              "AR": 10, "Tags": ["Light"], "REF": "+1",     "FORT": "+1", "ANT": "",  "LOG": "",  "WILL": "",     "STRmin":"","DEXmax":"",  "Speed":"",     "Resist": "Cold 1, Blunt 1", "Cost": 12, "ARMod":"" ,"flavorText":"",  "XtraActions":[]},
         { "Armor": "Hide",                  "AR": 11, "Tags": ["Light"], "REF": "",       "FORT": "+1",   "ANT": "",  "LOG": "",  "WILL": "",     "STRmin":"","DEXmax":"",  "Speed":"",     "Resist": "Cold 3","Cost": 25, "ARMod":"","flavorText":"",  "XtraActions":[]},
@@ -31,4 +31,5 @@ const lightArmor = [
                 APCost:2,
                 Description:"You may spend 2 AP to brace the shield, which grants Partial Cover to a creature standing directly behind you, provided that the creature is your Size or smaller."
         }] },
-    ];  
+    ]
+    } 

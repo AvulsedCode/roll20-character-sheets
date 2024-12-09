@@ -697,12 +697,14 @@ Spells:[
     Requires: "Gesture,Verbal, Visual",
     Duration: " Indefinite",
     spellDescription: [
-      "When you cast this spell, touch a page of text. You cause the text to look garbled and illegible to anyone other than creatures that you specify when you cast this spell."],  Upcharges: ["+5 minutes per +5 SP."],        
+            "When you cast this spell, touch a page of text. You cause the text to look garbled and illegible to anyone other than creatures that you specify when you cast this spell."],
+        Upcharges: ["+5 minutes per +5 SP."],        
       "Alternatively, if you cast this spell on a page of text that has been magically encoded, you may decode it."
     ],
     Upcharges: ["+1 page of text per +1 SP"],
 
-}, {
+},
+    {
     spellName: "Empower Spell",
     prerequisites: ["Arcane Spell, Evoking, Metamagic"],
     APC: 4,
@@ -761,7 +763,8 @@ Spells:[
     SPC: 4,
     Range: "60 ft",
     Requires: "Gesture,Verbal, Visual",
-    Duration: " Instantaneous",
+    Duration: " Instantaneous
+",
     spellDescription: [
         "Choose a point within range. Each creature within a 10 ft radius of that point that has the Burning condition immediately takes its Burning damage again."
     ],

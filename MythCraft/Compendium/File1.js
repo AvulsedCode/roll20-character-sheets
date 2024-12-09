@@ -125,9 +125,7 @@ mcStandardProfessions = [
             rankingBlerb: "",
         },
         occupationBonus: "If you take a profession with the militant tag, gain +2 Forced March.",
-        startingWealth: {
-            roll: "5d20x2",
-            average: 104
+        startingWealth: {  roll: "5d20x2",  average: 104
         },
         ranking: {
             noun: "",
@@ -159,9 +157,7 @@ mcStandardProfessions = [
             rankingBlerb: "",
         },
         occupationBonus: "If you take a profession with the underworld tag, gain +2 Intuiting.",
-        startingWealth: {
-            roll: "4d100 sc",
-            average: 202,
+        startingWealth: {  roll: "4d100 sc",  average: 202,
         },
     },
     {

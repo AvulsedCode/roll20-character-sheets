@@ -2,7 +2,7 @@ const TalentStacks= [
 
 
     {
-        displayName: "ACrobat",
+        displayName: "Acrobat",
         prerequisites: ["Skill Specialization, Repeatable"],
         isRepeatable: false,
         DescriptionParagraphs: "Gain 6 Skill Points, which you can spend on any skills with the Acrobatics tag.",
@@ -1045,12 +1045,3 @@ const TalentStacks= [
            
          ],
     },
-    {
-        displayName: "",
-        prerequisites: [""],
-        isRepeatable: false,
-        DescriptionParagraphs: "",
-        BenefitList: [
-            
-           
-   

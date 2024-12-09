@@ -1,4 +1,4 @@
-const Pugilist = {
+const pugilist = {
   talentname: "Pugilist",
   shortDescription: "Whether a brawny boxer, a nimble martial artist, or a wellrounded wrestler, a pugilist excels at unarmed combat.",
   quote: {
