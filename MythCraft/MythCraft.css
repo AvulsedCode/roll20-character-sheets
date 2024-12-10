@@ -404,7 +404,6 @@ input[type=number]:disabled {
 	text-transform: uppercase;
 }
 
-.sheet-talents {}
 
 .sheet-talent {
 	display: inline-block;
@@ -4862,6 +4861,8 @@ div.sheet-col-1-2.sheet-border-left {
 .sheet-options-attack-flag + span,
 .sheet-options-sap-flag + span,
 .sheet-options-globals-flag + span,
+.sheet-options-talents-flag + span,
+.sheet-options-lnbop-flag + span,
 .sheet-options-flag + span { 
     width: 16px;
     height: 16px;
@@ -4879,6 +4880,8 @@ div.sheet-col-1-2.sheet-border-left {
 .sheet-options-attack-flag:hover + span,
 .sheet-options-sap-flag:hover + span,
 .sheet-options-globals-flag:hover + span,
+.sheet-options-talents-flag:hover + span,
+.sheet-options-lnbop-flag:hover + span,
 .sheet-options-flag:checked + span {
     color: #C3996B;
     display: block;
@@ -4887,6 +4890,8 @@ div.sheet-col-1-2.sheet-border-left {
 .sheet-options-attack-flag + span,
 .sheet-options-sap-flag + span,
 .sheet-options-globals-flag + span,
+.sheet-options-talents-flag + span,
+.sheet-options-lnbop-flag + span,
 .sheet-options-flag + span
 {
     display: block;
@@ -4895,7 +4900,10 @@ div.sheet-col-1-2.sheet-border-left {
 .sheet-options-skill-flag:checked + span,   .sheet-options-skill-flag:hover + span,   .sheet-options-hidden-skill-flag:checked + span,
 .sheet-options-attack-flag:checked + span,  .sheet-options-attack-flag:hover + span,  .sheet-options-hidden-attack-flag:checked + span,
 .sheet-options-sap-flag:checked + span,     .sheet-options-sap-flag:hover + span,     .sheet-options-hidden-sap-flag:checked + span, 
-.sheet-options-globals-flag:checked + span, .sheet-options-globals-flag:hover + span, .sheet-options-hidden-globals-flag:checked + span 
+.sheet-options-globals-flag:checked + span, .sheet-options-globals-flag:hover + span, .sheet-options-hidden-globals-flag:checked + span, 
+.sheet-options-talents-flag:checked + span, .sheet-options-talents-flag:hover + span, .sheet-options-hidden-talents-flag:checked + span, 
+.sheet-options-lnbop-flag:checked + span,   .sheet-options-lnbop-flag:hover + span,   .sheet-options-hidden-lnbop-flag:checked + span 
+ 
  {
     color: #C3996B;
     display: block;
@@ -4904,6 +4912,8 @@ div.sheet-col-1-2.sheet-border-left {
 .sheet-options-attack,  .sheet-options-hidden-attack-flag,
 .sheet-options-sap,     .sheet-options-hidden-sap-flag,
 .sheet-options-globals, .sheet-options-hidden-globals-flag,
+.sheet-options-talents, .sheet-options-hidden-talents-flag,
+.sheet-options-lnbop, .sheet-options-hidden-lnbop-flag,
 .sheet-options {
    display: none; 
     margin-top: 2px;
@@ -4919,15 +4929,20 @@ div.sheet-col-1-2.sheet-border-left {
 .sheet-options, 
 .sheet-options-skill, 
 .sheet-options-attack, 
-.sheet-options-sap, 
-.sheet-options-globals {
+.sheet-options-sap,
+.sheet-options-globals,
+.sheet-options-talents,
+.sheet-options-lnbop
+{
     display: block;
 }
 .sheet-options-flag:checked ~ .sheet-options,  
 .sheet-options-skill-flag:checked ~ .sheet-options-skill,     .sheet-options-hidden-skill-flag:checked  ~ .sheet-options-skill,
-.sheet-options-attack-flag:checked ~ .sheet-options-attack,   .sheet-options-hidden-attack-flag:checked  ~ .sheet-options-attack
+.sheet-options-attack-flag:checked ~ .sheet-options-attack,   .sheet-options-hidden-attack-flag:checked  ~ .sheet-options-attack,
 .sheet-options-sap-flag:checked ~ .sheet-options-sap,         .sheet-options-hidden-sap-flag:checked  ~ .sheet-options-sap,
-.sheet-options-globals-flag:checked ~ .sheet-options-globals, .sheet-options-hidden-globals-flag:checked  ~ .sheet-options-globals
+.sheet-options-globals-flag:checked ~ .sheet-options-globals, .sheet-options-hidden-globals-flag:checked  ~ .sheet-options-globals,
+.sheet-options-talents-flag:checked ~ .sheet-options-talents, .sheet-options-hidden-talents-flag:checked  ~ .sheet-options-talents,
+.sheet-options-lnbop-flag:checked ~ .sheet-options-lnbop, .sheet-options-hidden-lnbop-flag:checked  ~ .sheet-options-lnbop
 {
     display: none;
 }
