@@ -4836,7 +4836,7 @@ button[type=compendium].sheet-roll-text:hover,
 button[type=roll].sheet-roll-text:hover,
 button[type=roll].sheet-roll-text:hover span,
 button[type=roll].sheet-roll-text:hover span.sheet-pseudoattr {
-	color: #FC6543
+	color: #FC6543;
 }
 
 button[type=roll].sheet-roll-text:before {
