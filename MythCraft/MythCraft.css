@@ -1,3 +1,8 @@
+/*
+to create the ascii Art words: 
+https://patorjk.com/software/taag/#p=display&f=Colossal&t=Options
+*/
+
 :root {
 	--attribute-label-height: -70px;
 	/* should be  the negative of attribute-interior-content */
@@ -21,6 +26,67 @@
 }
 
 
+/* ===== 
+
+
+8888888888                888             
+888                       888             
+888                       888             
+8888888  .d88b.  88888b.  888888 .d8888b  
+888     d88""88b 888 "88b 888    88K      
+888     888  888 888  888 888    "Y8888b. 
+888     Y88..88P 888  888 Y88b.       X88 
+888      "Y88P"  888  888  "Y888  88888P' 
+                                          
+                                          
+                                          
+// these are hosted by Avulsed Games, need to move to AWS via Roll20   
+https://irp.cdn-website.com/a2239e04/files/uploaded/DESMON.ttf
+
+https://irp.cdn-website.com/a2239e04/files/uploaded/Imperator.ttf
+https://irp.cdn-website.com/a2239e04/files/uploaded/Imperator_Bold.ttf
+https://irp.cdn-website.com/a2239e04/files/uploaded/ImperatorSmallCaps.ttf
+https://irp.cdn-website.com/a2239e04/files/uploaded/ImperatorSmallCaps_Bold.ttf
+
+
+https://irp.cdn-website.com/a2239e04/files/uploaded/Charter-Italic-02.ttf
+https://irp.cdn-website.com/a2239e04/files/uploaded/Charter-BoldItalic-03.ttf
+https://irp.cdn-website.com/a2239e04/files/uploaded/Charter-Bold-04.ttf
+https://irp.cdn-website.com/a2239e04/files/uploaded/Charter-BlackItalic-05.ttf
+https://irp.cdn-website.com/a2239e04/files/uploaded/Charter-Black-06.ttf
+
+
+===== */
+@font-face{/*The Imperator font*/
+    font-family:Imperator;
+    src:local('Imperator'),local('Imperator'),url(https://irp.cdn-website.com/a2239e04/files/uploaded/Imperator.ttf);
+}
+
+.sheet-imperator  {
+    /* sets Imperator to be used on the whole sheet, & adds "Copperplate" & "Monospace" as backup fonts if Imperator fails to load. */
+    font-family:Imperator,Copperplate,Monospace;
+}
+
+@font-face{/*The Charter font*/
+    font-family:Charter;
+    src:local('Charter'),local('Charter'),url(https://irp.cdn-website.com/a2239e04/files/uploaded/Charter-Roman-01.ttf);
+}
+
+.sheet-charter {
+    /* sets Charter to be used on the whole sheet, & adds "Copperplate" & "Monospace" as backup fonts if Charter fails to load. */
+    font-family:Charter,Copperplate,Monospace;
+}
+
+@font-face{/*The Desmond font*/
+    font-family:Desmond;
+    src:local('Desmond'),local('Desmond'),url(https://irp.cdn-website.com/a2239e04/files/uploaded/DESMON.ttf);
+}
+
+.sheet-desmond {
+    /* sets Desmond to be used on the whole sheet, & adds "Copperplate" & "Monospace" as backup fonts if Desmond fails to load. */
+    font-family:Desmond,Copperplate,Monospace;
+}
+
 html {
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
@@ -34,6 +100,7 @@ html {
 	-webkit-box-sizing: inherit;
 	-moz-box-sizing: inherit;
   	box-sizing: inherit;
+	font-family:Desmond,Copperplate,Monospace;
   }
 
   button.btn.repcontrol_add::before,
@@ -122,6 +189,16 @@ input[type="number"] {
 .mythcraft-logo>img {
 	max-width: 50% !important;
 	float: left;
+}
+#charmancer_button {
+	
+	appearance: none;
+	background: none;
+	border: none;
+	color: inherit;
+	font: inherit;
+	cursor: pointer;
+	padding: 0;
 }
 
 div[class^="sheet-fieldset"] {
@@ -228,12 +305,12 @@ input[type=number]:disabled {
 .sheet-charmancer .sheet-step.sheet-done:hover,
 .sheet-charmancer .sheet-nav.sheet-back:hover,
 .sheet-charmancer .sheet-nav.sheet-next:hover {
-	color: #BE202E;
+	color: #29878C;
 }
 
 .sheet-charmancer .sheet-step.sheet-cancel:hover,
 .sheet-charmancer .sheet-nav.sheet-cancel:hover {
-	color: black;
+	color: #FC6543;
 }
 
 .sheet-charmancer .sheet-steps.sheet-center {
@@ -312,7 +389,7 @@ input[type=number]:disabled {
 }
 
 .sheet-charmancer button:hover {
-	color: #BE202E;
+	color: #29878C;
 }
 
 .sheet-charmancer button:focus {
@@ -351,7 +428,7 @@ input[type=number]:disabled {
 	border: 4px solid #111;
 	border-radius: 2.5rem;
 	color: #111;
-	font-family: "Pictos";
+	font-family: pictos;
 	font-size: 0;
 	line-height: 1;
 }
@@ -398,7 +475,6 @@ input[type=number]:disabled {
 	border-color: red;
 	border-radius: 2.5rem;
 	color: red;
-	font-family: "Montserrat", "Arial Black", sans-serif;
 	font-size: 16pt;
 	font-weight: bolder;
 	text-transform: uppercase;
@@ -502,14 +578,7 @@ input[type="submit"].repcontrol .btn {
 	content: ')';
 	vertical-align: bottom;
 }
-
-.repcontrol .repcontrol_edit:hover:after,
-.repcontrol .repcontrol_add:hover:before {
-	color: #C3996B;
-	border-color: #C3996B;
-}
-
-
+ 
 /* ===== REPEATING SECTIONS CTRL ===== */
 .repcontrol {
 	margin-top: 2px;
@@ -583,8 +652,8 @@ input[type="submit"].repcontrol .btn {
 
 .repcontrol .repcontrol_edit:hover:after,
 .repcontrol .repcontrol_add:hover:before {
-	color: #C3996B;
-	border-color: #C3996B;
+	color: #FEEBB3;
+	border-color: #FEEBB3;
 }
 
 .repcontainer .repitem .itemcontrol {
@@ -959,7 +1028,7 @@ input.sheet-wrkshp99:checked+span.sheet-wrkshp99 {
 .sheet-rolltemplate-mythcraft .sheet-row:nth-child(even) {
 	background-color: #E9EDEE;
 }
-
+/*
 .sheet-rolltemplate-mythcraft .sheet-rt-key {
 	font-weight: bold;
 	font-family: Arial, Helvetica, sans-serif;
@@ -977,7 +1046,7 @@ input.sheet-wrkshp99:checked+span.sheet-wrkshp99 {
 	-moz-text-decoration-color: #D64541;
 	text-decoration-color: #D64541;
 	padding: 2px 2px 2px 0px
-}
+}*/
 
 .sheet-rolltemplate-mythcraft .sheet-rt-value {
 	margin-top: 2px;
@@ -1021,7 +1090,7 @@ input.sheet-wrkshp99:checked+span.sheet-wrkshp99 {
 .sheet-rolltemplate-mythcraft .sheet-rt-emote {
 	font-style: italic;
 	font-size: 11px;
-	font-family: Arial;
+	font-family:Charter,Copperplate,Monospace;
 	text-align: center;
 	border: green 1px dashed;
 	border-radius: 5px;
@@ -1737,7 +1806,7 @@ input[disabled]::-webkit-outer-spin-button {
 
 .sheet-small-note {
 	text-align: center;
-	font-family: Arial;
+	font-family:Charter,Copperplate,Monospace;
 	font-size: 10px !important;
 }
 
@@ -1926,7 +1995,7 @@ input.sheet-death-save-success:checked+span.sheet-death-save-success-tab::before
 
 .sheet-ro-modal {
 	position: absolute;
-	font-family: Arial, Helvetica, sans-serif;
+	font-family:Charter,Copperplate,Monospace;
 	top: 0;
 	right: 0;
 	bottom: 0;
@@ -1970,7 +2039,7 @@ span.sheet-ro-label {
 	font-size: 15px;
 	font-weight: bold;
 	border-radius: 4px;
-	font-family: "Pictos";
+	font-family: pictos;
 	cursor: pointer;
 	position: relative;
 	margin-left: -16px;
@@ -4767,7 +4836,7 @@ button[type=compendium].sheet-roll-text:hover,
 button[type=roll].sheet-roll-text:hover,
 button[type=roll].sheet-roll-text:hover span,
 button[type=roll].sheet-roll-text:hover span.sheet-pseudoattr {
-	color: #be202e
+	color: #FC6543
 }
 
 button[type=roll].sheet-roll-text:before {
@@ -4838,18 +4907,31 @@ div.sheet-col-1-2.sheet-border-left {
     line-height: 1.03em;
 }
 .sheet-entered-value{
-	font-family: "sans-seri";/* ? Patrick Hand" */
 	font-size: 1.1em;
 }
 
 .sheet-underlined{
     border-bottom: 1px solid black;
-	font-family: "sans-seri";/* ? Patrick Hand" */
 	font-size: 1.03em;
 }
 
 
-/* ===== OPTIONS ===== */
+/* ===== 
+ .d88888b.           888    d8b                            
+d88P" "Y88b          888    Y8P                            
+888     888          888                                   
+888     888 88888b.  888888 888  .d88b.  88888b.  .d8888b  
+888     888 888 "88b 888    888 d88""88b 888 "88b 88K      
+888     888 888  888 888    888 888  888 888  888 "Y8888b. 
+Y88b. .d88P 888 d88P Y88b.  888 Y88..88P 888  888      X88 
+ "Y88888P"  88888P"   "Y888 888  "Y88P"  888  888  88888P' 
+            888                                            
+            888                                            
+            888                                            
+
+
+
+===== */
 .sheet-options-flag {
     /* opacity: 0;*/
 
@@ -4863,6 +4945,7 @@ div.sheet-col-1-2.sheet-border-left {
 .sheet-options-globals-flag + span,
 .sheet-options-talents-flag + span,
 .sheet-options-lnbop-flag + span,
+.sheet-options-debug-flag + span,
 .sheet-options-flag + span { 
     width: 16px;
     height: 16px;
@@ -4882,6 +4965,7 @@ div.sheet-col-1-2.sheet-border-left {
 .sheet-options-globals-flag:hover + span,
 .sheet-options-talents-flag:hover + span,
 .sheet-options-lnbop-flag:hover + span,
+.sheet-options-debug-flag:hover + span,
 .sheet-options-flag:checked + span {
     color: #C3996B;
     display: block;
@@ -4892,6 +4976,7 @@ div.sheet-col-1-2.sheet-border-left {
 .sheet-options-globals-flag + span,
 .sheet-options-talents-flag + span,
 .sheet-options-lnbop-flag + span,
+.sheet-options-debug-flag + span,
 .sheet-options-flag + span
 {
     display: block;
@@ -4902,7 +4987,8 @@ div.sheet-col-1-2.sheet-border-left {
 .sheet-options-sap-flag:checked + span,     .sheet-options-sap-flag:hover + span,     .sheet-options-hidden-sap-flag:checked + span, 
 .sheet-options-globals-flag:checked + span, .sheet-options-globals-flag:hover + span, .sheet-options-hidden-globals-flag:checked + span, 
 .sheet-options-talents-flag:checked + span, .sheet-options-talents-flag:hover + span, .sheet-options-hidden-talents-flag:checked + span, 
-.sheet-options-lnbop-flag:checked + span,   .sheet-options-lnbop-flag:hover + span,   .sheet-options-hidden-lnbop-flag:checked + span 
+.sheet-options-lnbop-flag:checked + span,   .sheet-options-lnbop-flag:hover + span,   .sheet-options-hidden-lnbop-flag:checked + span , 
+.sheet-options-debug-flag:checked + span,   .sheet-options-debug-flag:hover + span,   .sheet-options-hidden-debug-flag:checked + span 
  
  {
     color: #C3996B;
@@ -4914,6 +5000,7 @@ div.sheet-col-1-2.sheet-border-left {
 .sheet-options-globals, .sheet-options-hidden-globals-flag,
 .sheet-options-talents, .sheet-options-hidden-talents-flag,
 .sheet-options-lnbop, .sheet-options-hidden-lnbop-flag,
+.sheet-options-debug, .sheet-options-hidden-debug-flag,
 .sheet-options {
    display: none; 
     margin-top: 2px;
@@ -4932,7 +5019,8 @@ div.sheet-col-1-2.sheet-border-left {
 .sheet-options-sap,
 .sheet-options-globals,
 .sheet-options-talents,
-.sheet-options-lnbop
+.sheet-options-lnbop,
+.sheet-options-debug
 {
     display: block;
 }
@@ -4942,7 +5030,8 @@ div.sheet-col-1-2.sheet-border-left {
 .sheet-options-sap-flag:checked ~ .sheet-options-sap,         .sheet-options-hidden-sap-flag:checked  ~ .sheet-options-sap,
 .sheet-options-globals-flag:checked ~ .sheet-options-globals, .sheet-options-hidden-globals-flag:checked  ~ .sheet-options-globals,
 .sheet-options-talents-flag:checked ~ .sheet-options-talents, .sheet-options-hidden-talents-flag:checked  ~ .sheet-options-talents,
-.sheet-options-lnbop-flag:checked ~ .sheet-options-lnbop, .sheet-options-hidden-lnbop-flag:checked  ~ .sheet-options-lnbop
+.sheet-options-lnbop-flag:checked ~ .sheet-options-lnbop, .sheet-options-hidden-lnbop-flag:checked  ~ .sheet-options-lnbop,
+.sheet-options-debug-flag:checked ~ .sheet-options-debug, .sheet-options-hidden-debug-flag:checked  ~ .sheet-options-debug
 {
     display: none;
 }
@@ -4958,3 +5047,9 @@ div.sheet-col-1-2.sheet-border-left {
     display: none;
 
 }
+
+
+
+
+
+
