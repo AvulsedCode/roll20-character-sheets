@@ -54,9 +54,16 @@ https://irp.cdn-website.com/a2239e04/files/uploaded/Charter-BoldItalic-03.ttf
 https://irp.cdn-website.com/a2239e04/files/uploaded/Charter-Bold-04.ttf
 https://irp.cdn-website.com/a2239e04/files/uploaded/Charter-BlackItalic-05.ttf
 https://irp.cdn-website.com/a2239e04/files/uploaded/Charter-Black-06.ttf
-
+Fallbacks:
+Imperator: Cinzel Bold 700
+Desmon: Yeseva One
+Charter: Noto Serif
 
 ===== */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap');
+
 @font-face{/*The Imperator font*/
     font-family:Imperator;
     src:local('Imperator'),local('Imperator'),url(https://irp.cdn-website.com/a2239e04/files/uploaded/Imperator.ttf);
@@ -64,7 +71,7 @@ https://irp.cdn-website.com/a2239e04/files/uploaded/Charter-Black-06.ttf
 
 .sheet-imperator  {
     /* sets Imperator to be used on the whole sheet, & adds "Copperplate" & "Monospace" as backup fonts if Imperator fails to load. */
-    font-family:Imperator,Copperplate,Monospace;
+    font-family:Imperator,'Cinzel',serif;
 }
 
 @font-face{/*The Charter font*/
@@ -74,8 +81,9 @@ https://irp.cdn-website.com/a2239e04/files/uploaded/Charter-Black-06.ttf
 
 .sheet-charter {
     /* sets Charter to be used on the whole sheet, & adds "Copperplate" & "Monospace" as backup fonts if Charter fails to load. */
-    font-family:Charter,Copperplate,Monospace;
+    font-family:Charter,'Noto Serif',serif;
 }
+
 
 @font-face{/*The Desmond font*/
     font-family:Desmond;
@@ -84,9 +92,9 @@ https://irp.cdn-website.com/a2239e04/files/uploaded/Charter-Black-06.ttf
 
 .sheet-desmond {
     /* sets Desmond to be used on the whole sheet, & adds "Copperplate" & "Monospace" as backup fonts if Desmond fails to load. */
-    font-family:Desmond,Copperplate,Monospace;
+    font-family:Desmond,'Yeseva One',cursive;
 }
-
+/*
 html {
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
@@ -107,7 +115,7 @@ html {
   button.btn.repcontrol_edit::after{
   	box-sizing: content-box;
   }
-
+*/
 .sheet-naked {
 	appearance: none;
 	background: none;
@@ -164,7 +172,7 @@ input[type="number"] {
 .sheet-mythcraft-border {
 	border: 15px solid transparent;
 	border-image: url('https://irp.cdn-website.com/a2239e04/dms3rep/multi/PageBorder-cc4dcf4f.png') 340 / 50px / 5px repeat;
-
+	 
 }
 
 .sheet-attribute-border {
@@ -172,6 +180,7 @@ input[type="number"] {
 	border-image: url('https://irp.cdn-website.com/a2239e04/dms3rep/multi/Attribute_p1.png') 300 / 75px / 5px stretch;
 	margin: 5px 5px;
 	min-height: 100px;
+	 
 }
 
 .sheet-small-box-border {
@@ -179,6 +188,7 @@ input[type="number"] {
 	border-image: url('https://irp.cdn-website.com/a2239e04/dms3rep/multi/Small_Frame-69bc8c7b.png') 340 / 25px / 5px stretch;
 	margin: 5px 5px;
 	min-height: 141.01px;
+	 
 }
 
 .charmancerlogo {
@@ -201,14 +211,19 @@ input[type="number"] {
 	padding: 0;
 }
 
+.sheet-push-right{
+
+	float: right;
+}
+
 div[class^="sheet-fieldset"] {
 
-	background-color: var(--sheet-background);
+	/* background-color: var(--sheet-background);*/
 }
 
 div[class^="sheet-legend"] {
 	text-align: center;
-	background-color: var(--sheet-background);
+	/* background-color: var(--sheet-background);*/
 	color: Black;
 	padding: 5px 10px;
 	position: relative;
@@ -756,7 +771,7 @@ input.sheet-room1:checked~div.sheet-room-player-sheet,
 input.sheet-room2:checked~div.sheet-room-npc-sheet,
 input.sheet-room3:checked~div.sheet-room-workshop {
 	display: block;
-	background: var(--sheet-background);
+	/* background: var(--sheet-background);*/
 	font-size: 11px;
 }
 
@@ -795,7 +810,7 @@ input.sheet-room1:checked+span.sheet-room1,
 input.sheet-room2:checked+span.sheet-room2,
 input.sheet-room3:checked+span.sheet-room3,
 input.sheet-room99:checked+span.sheet-room99 {
-	background: var(--sheet-background);
+	/* background: var(--sheet-background);*/
 	color: rgb(111, 10, 10);
 	border-radius: 4px;
 }
@@ -823,7 +838,7 @@ input.sheet-wrkshp10:checked~div.sheet-wrkshp-occupation-step,
 input.sheet-wrkshp11:checked~div.sheet-wrkshp-resources-step,
 input.sheet-wrkshp12:checked~div.sheet-wrkshp-journal-step {
 	display: block;
-	background: var(--sheet-background);
+	/* background: var(--sheet-background);*/
 }
 
 input.sheet-wrkshp99:checked~div[class^="sheet-wrkshp"] {
@@ -867,7 +882,7 @@ input.sheet-wrkshp10:checked+span.sheet-wrkshp10,
 input.sheet-wrkshp11:checked+span.sheet-wrkshp11,
 input.sheet-wrkshp12:checked+span.sheet-wrkshp12,
 input.sheet-wrkshp99:checked+span.sheet-wrkshp99 {
-	background: var(--sheet-background);
+	/* background: var(--sheet-background);*/
 	color: rgb(71, 15, 15);
 	border-radius: 4px;
 }
@@ -898,7 +913,7 @@ input.sheet-wrkshp99:checked+span.sheet-wrkshp99 {
 .sheet-rolltemplate-mythcraft .sheet-rt-card {
 	width: 95%;
 
-	background-color: #f6f1e8;
+	/* background-color: #f6f1e8; */
 	font-size: 11px;
 	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
@@ -913,10 +928,10 @@ input.sheet-wrkshp99:checked+span.sheet-wrkshp99 {
 .sheet-rolltemplate-mythcraft .sheet-rt-header {
 	text-align: center;
 	position: relative;
-	background-color: #f6f1e8;
+	/* background-color: #f6f1e8; */
 	margin: 0 -10px 10px -10px;
 	padding: 5px 0;
-	background-color: #5c5c5c;
+	/* background-color: #5c5c5c; */
 	background-image: linear-gradient(rgba(255, 255, 255, .3), rgba(255, 255, 255, 0));
 	-moz-box-shadow: 0 2px 0 rgba(0, 0, 0, .3);
 	-webkit-box-shadow: 0 2px 0 rgba(0, 0, 0, .3);
@@ -954,7 +969,7 @@ input.sheet-wrkshp99:checked+span.sheet-wrkshp99 {
 /* Melee header*/
 
 .sheet-rolltemplate-mythcraft .sheet-rt-header.sheet-weapon {
-	background-color: #2C5D28;
+	/* background-color: #2C5D28; */
 }
 
 .sheet-rolltemplate-mythcraft .sheet-rt-header.sheet-weapon:before {
@@ -969,7 +984,7 @@ input.sheet-wrkshp99:checked+span.sheet-wrkshp99 {
 /* Spell header */
 
 .sheet-rolltemplate-mythcraft .sheet-rt-header.sheet-spell {
-	background-color: #45285D;
+	/* background-color: #45285D; */
 }
 
 .sheet-rolltemplate-mythcraft .sheet-rt-header.sheet-spell:before {
@@ -984,7 +999,7 @@ input.sheet-wrkshp99:checked+span.sheet-wrkshp99 {
 /* Ability check header */
 
 .sheet-rolltemplate-mythcraft .sheet-rt-header.sheet-ability {
-	background-color: #28595D;
+	/* background-color: #28595D; */
 }
 
 .sheet-rolltemplate-mythcraft .sheet-rt-header.sheet-ability:before {
@@ -999,7 +1014,7 @@ input.sheet-wrkshp99:checked+span.sheet-wrkshp99 {
 /* Saving throw header */
 
 .sheet-rolltemplate-mythcraft .sheet-rt-header.sheet-save {
-	background-color: #5D2828;
+	/* background-color: #5D2828; */
 }
 
 .sheet-rolltemplate-mythcraft .sheet-rt-header.sheet-save:before {
@@ -1014,7 +1029,7 @@ input.sheet-wrkshp99:checked+span.sheet-wrkshp99 {
 /* Death Save header */
 
 .sheet-rolltemplate-mythcraft .sheet-rt-header.sheet-deathsave {
-	background-color: #240F0F;
+	/* background-color: #240F0F; */
 }
 
 .sheet-rolltemplate-mythcraft .sheet-rt-header.sheet-deathsave:before {
@@ -1026,7 +1041,7 @@ input.sheet-wrkshp99:checked+span.sheet-wrkshp99 {
 }
 
 .sheet-rolltemplate-mythcraft .sheet-row:nth-child(even) {
-	background-color: #E9EDEE;
+	/* background-color: #E9EDEE;*/
 }
 /*
 .sheet-rolltemplate-mythcraft .sheet-rt-key {
@@ -1083,7 +1098,7 @@ input.sheet-wrkshp99:checked+span.sheet-wrkshp99 {
 	margin-left: auto;
 	margin-right: auto;
 	color: #D64541;
-	background-color: #D64541;
+	/* background-color: #D64541;*/
 	height: 1px;
 }
 
@@ -1106,7 +1121,8 @@ input.sheet-wrkshp99:checked+span.sheet-wrkshp99 {
 
 .sheet-overall-wrapper {
 	max-width: 832px;
-	background-color: var(--sheet-background);
+	/* background-color: var(--sheet-background);*/
+	background-image: url('https://irp.cdn-website.com/a2239e04/files/uploaded/MythCraft-PaperTexture.jpg');
 }
 
 
@@ -1186,7 +1202,7 @@ input.sheet-tab2:checked~div.sheet-section-social,
 input.sheet-tab3:checked~div.sheet-section-magic,
 input.sheet-tab4:checked~div.sheet-section-bio {
 	display: block;
-	background: var(--sheet-background);
+	/* background: var(--sheet-background);*/
 }
 
 input.sheet-tab99:checked~div[class^="sheet-section"] {
@@ -1492,7 +1508,7 @@ input[class^="sheet-classactionshowoptions"]:checked~div.sheet-classaction-outpu
 }
 
 .sheet-class-action-zebra .sheet-row:nth-child(even) {
-	background-color: #D5E3E7;
+	/* background-color: #D5E3E7;*/
 }
 
 
@@ -1517,6 +1533,10 @@ textarea,
 	font-weight: bold;
 }
 
+.sheet-medium-label,
+.sheet-rolltemplate-mythcraft .sheet-medium-label {
+	font-size:11px;
+}
 .sheet-small-label,
 .sheet-rolltemplate-mythcraft .sheet-small-label {
 	font-size: 85% !important;
@@ -1762,7 +1782,7 @@ h3 {
 	text-transform: uppercase;
 	margin-bottom: 5px;
 	color: #ffffff;
-	background-color: #000000;
+	/*background-color: #000000;*/
 	background-image: -moz-repeating-radial-gradient(center center, circle cover, #000000, #870202 100%);
 	background-image: -webkit-repeating-radial-gradient(center center, circle cover, #000000, #870202 100%);
 	background-image: -o-repeating-radial-gradient(center center, circle cover, #000000, #870202 100%);
@@ -1773,7 +1793,7 @@ h3 {
 }
 
 h4 {
-	background-color: #000000;
+	/* background-color: #000000;*/
 	color: #ffffff;
 	font-size: 12px;
 	border-radius: 12px;
@@ -1782,7 +1802,7 @@ h4 {
 }
 
 input[disabled] {
-	background-color: #eaffef;
+	/* background-color: #eaffef; */
 	border-color: #ddd;
 	cursor: not-allowed;
 	-moz-appearance: textfield;
@@ -1791,7 +1811,7 @@ input[disabled] {
 }
 
 input[disabled].sheet-passive-skill-score {
-	background-color: #def6fc;
+	/* background-color: #def6fc; */
 	border-color: #ddd;
 	cursor: not-allowed;
 	-moz-appearance: textfield;
@@ -1816,29 +1836,29 @@ select {
 
 .sheet-important-text {
 	text-decoration: underline;
-	color: #ff0000;
+	color: #FC6543;
 }
 
 .sheet-grey-row {
-	background-color: #eee;
+	/* background-color: #eee; */
 }
 
 .sheet-sub-header {
-	background-color: #cecece;
+	/* background-color: #cecece; */
 	vertical-align: bottom;
 	border-radius: 12px;
 	margin-bottom: 3px;
 }
 
 .sheet-footer {
-	background-color: rgba(250, 202, 78, 0.2);
+	/* background-color: rgba(250, 202, 78, 0.2);*/
 	vertical-align: bottom;
 	border-radius: 12px;
 	margin-top: 3px;
 }
 
 .sheet-spell-header {
-	background-color: #c7d1bf;
+	/* background-color: #c7d1bf; */
 	vertical-align: bottom;
 	border-radius: 12px;
 	margin-bottom: 3px;
@@ -1856,7 +1876,7 @@ img.sheet-icon {
 /* Core stat section */
 
 .sheet-core-stat-label {
-	background-color: #000000;
+	/* background-color: #000000; */
 	color: #ffffff;
 	font-size: 14px !important;
 	font-weight: bold;
@@ -2540,7 +2560,6 @@ span.sheet-ignored-roll {
 .sheet-col-23-24 {
 	display: inline-block;
 	zoom: 1;
-	/*display: inline; */
 	letter-spacing: normal;
 	word-spacing: normal;
 	vertical-align: top;
@@ -2554,7 +2573,8 @@ span.sheet-ignored-roll {
 
 .sheet-col-1-2,
 .sheet-rolltemplate-mythcraft .sheet-col-1-2 {
-	width: 49%;
+	display: inline-block;
+	width: 49.5%;
 }
 
 .sheet-offset-1-2,
@@ -2567,6 +2587,11 @@ span.sheet-ignored-roll {
 	width: 33.33333%;
 }
 
+.sheet-col-1-3-minus,
+.sheet-rolltemplate-mythcraft .sheet-col-1-3-minus {
+	display: inline-block;
+	width: 32%;
+}
 
 
 .sheet-col-special-ap {
@@ -2597,7 +2622,8 @@ span.sheet-ignored-roll {
 
 .sheet-col-1-4,
 .sheet-rolltemplate-mythcraft .sheet-col-1-4 {
-	width: 25%;
+	display: inline-block;
+	width: 24.75%;
 }
 
 .sheet-offset-1-4,
@@ -5009,7 +5035,7 @@ Y88b. .d88P 888 d88P Y88b.  888 Y88..88P 888  888      X88
     border: 2px dotted #C3996B;
 	
 	transition: max-height .25s ease-in-out;
-    background-color: rgb(250,250,250);
+    /* background-color: rgb(250,250,250); */
 
 }
 

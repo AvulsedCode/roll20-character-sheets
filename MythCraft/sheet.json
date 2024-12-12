@@ -6,7 +6,7 @@
 	"preview": "preview.jpg",
 	"instructions": "# Basic Mythcraft SRD\r BlAH BLAh blAH;) **This sheet is print fiendlyt**\n\nYou can put Markdown-formatted instructions here for how to use your sheet.",
 	"useroptions": [
-    {
+    /* {
       "attribute": "npc",
       "displayname": "NPC",
       "displaytranslationkey": "npc-u",
@@ -182,9 +182,10 @@
       "default": "ac",
       "description": "On Default Tokens created by doing a drop onto the virtual table top, link the Bar 3's value to this attribute. If set this will override all other bar settings.",
       "descriptiontranslationkey": "cd-bar3-link-desc:-u"
-    }
+    }*/
   ],
- 
+ "compendium":"mythcraft",
 	"legacy": false,
-	"printable": true
+	"printable": true,
+  "requestedsize":"1440x1080"
 }
