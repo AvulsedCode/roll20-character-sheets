@@ -526,21 +526,28 @@
 														class=" sheet-options-attack-flag sheet-ro-checkbox" /><span
 														class="sheet-ro-label">y</span>
 												</div>
+												<div class="sheet-col-1-16">
+													<span class="sheet-pseudoattr"
+														name="attr_attack_ap_calculated" value="##"></span>
+												</div>
 												<div class="sheet-col-1-2">
-													<button class="sheet-roll-text " type="roll" name="roll_fullattack"
-														title="Full Attack & Damage roll" value="@{rollbase}">
+													<button class="sheet-roll-text " type="roll"  name="roll_fullattack"
+														title="Full Attack & Damage roll" 
+														value="&{template:actionattack} {{title=@{displayName}}}  {{range=@{attack_range}}} {{rangedistance=@{attack_range_distance}}} {{tohit=[[d20+@{tohit}]]}} {{dmg0=[[@{attack_second_damagedice_count_modifier}@{attack_first_damagedice_type_selector}]]}} {{damagetype0=@{attack_first_damageType}}} {{dmg1=[[@{attack_second_damagedice_count_modifier}@{attack_second_damagedice_type_selector}]]}} {{damagetype1=@{attack_second_damageType}}} {{dmg2=[[@{attack_third_damagedice_count_modifier}@{attack_third_damagedice_type_selector}]]}} {{damagetype2=@{attack_third_damageType}}} "
+														>
+														<input type="hidden" name="attr_tohit" value="3">
 														<span class="sheet-pseudoattr" name="attr_displayName"></span>
 													</button>
 												</div>
 												<div class="sheet-col-1-5">
 													<button class="sheet-roll-text" type="roll" name="roll_damage"
-														title="Damage roll" value="@{rollbase_dmg}">
+														title="Damage roll" >
 														<span class="sheet-pseudoattr" name="attr_atkdmgdisplay"></span>
 													</button>
 												</div>
 												<div class="sheet-col-1-10">
 													<input type="number" class="sheet-ammo " name="attr_atkammo"
-														value="0" title="@{repeating_attacks_$id_atkammo}" />
+														value="0"  />
 												</div>
 												<input type="checkbox" name="attr_options-flag-attack"
 													class="sheet-options-hidden-attack-flag" />
@@ -549,26 +556,27 @@
 													<div class="sheet-row">
 														<div class="sheet-col-1-2">
 															<div class="sheet-label sheet-left">Name:</div>
-															<input type="text" class=" sheet-underlined"
+															<input type="text" class="sheet-underlined"
 																name="attr_displayName" value="" />
 														</div>
 														<div class="sheet-col-3-16">
 															<div class="sheet-label sheet-center">Range:</div><select
-																name="attr_action_range">
+																name="attr_attack_range" class="sheet-underlined">
+																<option value="Self" data-18n="self">Self</option>
 																<option value="Melee" data-18n="melee" checked="Melee">
 																	Melee</option>
-																<option value="Ranged" data-18n="ranged">Ranged</option>
 																<option value="Reach" data-18n="reach">Reach</option>
 																<option value="Thrown" data-18n="thrown">Thrown</option>
+																<option value="Ranged" data-18n="ranged">Ranged</option>
 															</select>
 														</div>
 														<div class="sheet-col-3-16">
 															<div class="sheet-label sheet-center">Distance:</div>
 															<input type="checkbox"
 																class="sheet-hidden sheet-action-display-range-distance"
-																name="attr_action_display_range_distance" value="0" />
-															<input type="number" class="sheet-action-range-distance"
-																name="attr_action_range_distance" value="0" />
+																name="attr_attack_range_display_distance" value="0" />
+															<input type="number" class="sheet-action-range-distance sheet-underlined"
+																name="attr_attack_range_distance" value="0" />
 
 														</div>
 													</div>
@@ -576,11 +584,11 @@
 														<div class="sheet-col-1-4 ">
 															<div class="sheet-label sheet-center">Action Points:</div>
 															<input type="number" class=" sheet-underlined"
-																name="attr_attack0_ap_base" value="" />
+																name="attr_attack_ap_base" value="" />
 														</div>
 														<div class="sheet-col-3-16 ">
-															<div class="sheet-label sheet-center">+</div><select
-																class="sheet-col-1-8" name="attr_attack0_ap_plus_stat">
+															<!-- <div class="sheet-label sheet-center">+</div><select
+																class="sheet-col-1-8" name="attr_attack_ap_plus_stat">
 																<option value="--" data-18n="--" checked="checked">--
 																</option>
 																<option value="STR" data-18n="str">STR</option>
@@ -591,11 +599,11 @@
 																<option value="CHA" data-18n="cha">CHA</option>
 																<option value="LUCK" data-18n="luck">LUCK</option>
 																<option value="COR" data-18n="cor">COR</option>
-															</select>
+															</select> -->
 														</div>
 														<div class="sheet-col-3-16 ">
 															<div class="sheet-label sheet-center">-</div><select
-																class="sheet-col-1-8" name="attr_attack0_ap_minus_stat">
+																class="sheet-col-1-8" name="attr_attack_ap_minus_stat">
 																<option value="--" data-18n="--" checked="checked">--
 																</option>
 																<option value="STR" data-18n="str">STR</option>
@@ -611,18 +619,18 @@
 														<div class="sheet-col-3-16 ">
 															<div class="sheet-label sheet-center">Minimum:</div>
 															<input type="number" class=" sheet-underlined"
-																name="attr_attack0_ap_minimum" value="" />
+																name="attr_attack_ap_minimum" value="" />
 														</div>
 														<div class="sheet-col-1-16">
 															<span class="sheet-pseudoattr"
-																name="attr_attack0_ap_calculated" value="##"></span>
+																name="attr_attack_ap_calculated" value="##"></span>
 														</div>
 													</div>
 
 													<div class="sheet-row">
 														<div class="sheet-col-1-5">
 															<div class="sheet-label sheet-center">Stat:</div><select
-																name="attr_action_stat">
+																name="attr_attack_first_stat">
 																<option value="--" data-18n="--" checked="checked">--
 																</option>
 																<option value="STR" data-18n="str">STR</option>
@@ -638,27 +646,27 @@
 														<div class="sheet-col-1-6">
 															<div class="sheet-label  sheet-center">Dice:</div>
 															<input type="number"
-																name="attr_action_damagedice_count_modifier"
+																name="attr_attack_first_damagedice_count_modifier"
 																value="1" />
 
 														</div>
 														<div class="sheet-col-1-8">
 															<div class="sheet-label  sheet-center">Dice:</div>
-															<select name="attr_action_damagedice_type_selector">
-																<option value="1d1" data-18n="1d1" checked="checked">1d1
+															<select name="attr_attack_first_damagedice_type_selector">
+																<option value="d1" data-18n="1d1" checked="checked">d1
 																</option>
-																<option value="1d2" data-18n="1d2">1d2</option>
-																<option value="1d4" data-18n="1d4">1d4</option>
-																<option value="1d6" data-18n="1d6">1d6</option>
-																<option value="1d8" data-18n="1d8">1d8</option>
-																<option value="1d10" data-18n="1d10">1d10</option>
-																<option value="1d12" data-18n="1d12">1d12</option>
-																<option value="1d20" data-18n="1d20">1d20</option>
+																<option value="d2" data-18n="1d2">d2</option>
+																<option value="d4" data-18n="1d4">d4</option>
+																<option value="d6" data-18n="1d6">d6</option>
+																<option value="d8" data-18n="1d8">d8</option>
+																<option value="d10" data-18n="1d10">d10</option>
+																<option value="d12" data-18n="1d12">d12</option>
+																<option value="d20" data-18n="1d20">d20</option>
 															</select>
 														</div>
 														<div class="sheet-col-1-3">
 															<div class="sheet-label sheet-center">Damage Type:</div>
-															<select class="sheet-col-1-8" name="attr_damageType">
+															<select class="sheet-col-1-8" name="attr_attack_first_damageType">
 																<option value="Blunt" data-18n="blunt"
 																	checked="checked">Blunt</option>
 																<option value="Sharp" data-18n="sharp">Sharp</option>
@@ -685,11 +693,11 @@
 															<div class="sheet-col-1-18">
 																<div class="sheet-label sheet-center">2<sup>nd</sup>
 																</div>
-																<input type="checkbox" name="attr_has_action2">
+																<input type="checkbox" name="attr_has_attack_second">
 															</div>
 															<div class="sheet-col-1-5">
 																<div class="sheet-label sheet-center">Stat:</div>
-																<select name="attr_action2_stat">
+																<select name="attr_attack_second_stat">
 																	<option value="--" data-18n="--" checked="checked">
 																		--</option>
 																	<option value="STR" data-18n="str">STR</option>
@@ -705,28 +713,28 @@
 															<div class="sheet-col-1-6">
 																<div class="sheet-label  sheet-center">Dice:</div>
 																<input type="number"
-																	name="attr_action2_damagedice_count_modifier"
+																	name="attr_attack_second_damagedice_count_modifier"
 																	value="1" />
 
 															</div>
 															<div class="sheet-col-1-8">
 																<div class="sheet-label  sheet-center">Dice:</div>
-																<select name="attr_action2_damagedice_type_selector">
-																	<option value="1d1" data-18n="1d1"
-																		checked="checked">1d1</option>
-																	<option value="1d2" data-18n="1d2">1d2</option>
-																	<option value="1d4" data-18n="1d4">1d4</option>
-																	<option value="1d6" data-18n="1d6">1d6</option>
-																	<option value="1d8" data-18n="1d8">1d8</option>
-																	<option value="1d10" data-18n="1d10">1d10</option>
-																	<option value="1d12" data-18n="1d12">1d12</option>
-																	<option value="1d20" data-18n="1d20">1d20</option>
+																<select name="attr_attack_second_damagedice_type_selector">
+																	<option value="d1" data-18n="1d1"
+																		checked="checked">d1</option>
+																	<option value="d2" data-18n="1d2">d2</option>
+																	<option value="d4" data-18n="1d4">d4</option>
+																	<option value="d6" data-18n="1d6">d6</option>
+																	<option value="d8" data-18n="1d8">d8</option>
+																	<option value="d10" data-18n="1d10">d10</option>
+																	<option value="d12" data-18n="1d12">d12</option>
+																	<option value="d20" data-18n="1d20">d20</option>
 																</select>
 															</div>
 															<div class="sheet-col-1-3">
 																<div class="sheet-label sheet-center">Damage Type:</div>
 																<select class="sheet-col-1-8"
-																	name="attr_action2_damageType">
+																	name="attr_attack_second_damageType">
 																	<option value="Blunt" data-18n="blunt"
 																		checked="checked">Blunt</option>
 																	<option value="Sharp" data-18n="sharp">Sharp
@@ -754,11 +762,11 @@
 															<div class="sheet-col-1-18">
 																<div class="sheet-label sheet-center">3<sup>rd</sup>
 																</div>
-																<input type="checkbox" name="attr_has_action3">
+																<input type="checkbox" name="attr_has_attack_third">
 															</div>
 															<div class="sheet-col-1-5">
 																<div class="sheet-label sheet-center">Stat:</div><select
-																	name="attr_action3_stat">
+																	name="attr_attack_third_stat">
 																	<option value="--" data-18n="--" checked="checked">
 																		--</option>
 																	<option value="STR" data-18n="str">STR</option>
@@ -774,28 +782,28 @@
 															<div class="sheet-col-1-6">
 																<div class="sheet-label  sheet-center">Dice:</div>
 																<input type="number"
-																	name="attr_action3_damagedice_count_modifier"
+																	name="attr_attack_third_damagedice_count_modifier"
 																	value="1" />
 
 															</div>
 															<div class="sheet-col-1-8">
 																<div class="sheet-label  sheet-center">Dice:</div>
-																<select name="attr_action3_damagedice_type_selector">
-																	<option value="1d1" data-18n="1d1"
-																		checked="checked">1d1</option>
-																	<option value="1d2" data-18n="1d2">1d2</option>
-																	<option value="1d4" data-18n="1d4">1d4</option>
-																	<option value="1d6" data-18n="1d6">1d6</option>
-																	<option value="1d8" data-18n="1d8">1d8</option>
-																	<option value="1d10" data-18n="1d10">1d10</option>
-																	<option value="1d12" data-18n="1d12">1d12</option>
-																	<option value="1d20" data-18n="1d20">1d20</option>
+																<select name="attr_attack_third_damagedice_type_selector">
+																	<option value="d1" data-18n="1d1"
+																		checked="checked">d1</option>
+																	<option value="d2" data-18n="1d2">1d2</option>
+																	<option value="d4" data-18n="1d4">1d4</option>
+																	<option value="d6" data-18n="1d6">1d6</option>
+																	<option value="d8" data-18n="1d8">1d8</option>
+																	<option value="d10" data-18n="1d10">1d10</option>
+																	<option value="d12" data-18n="1d12">1d12</option>
+																	<option value="d20" data-18n="1d20">1d20</option>
 																</select>
 															</div>
 															<div class="sheet-col-1-3">
 																<div class="sheet-label sheet-center">Damage Type:</div>
 																<select class="sheet-col-1-8"
-																	name="attr_action3_damageType">
+																	name="attr_attack_third_damageType">
 																	<option value="Blunt" data-18n="blunt"
 																		checked="checked">Blunt</option>
 																	<option value="Sharp" data-18n="sharp">Sharp
@@ -832,8 +840,8 @@
 						</div>
 
 					</div>
-					<div class="sheet-col-1-2 sheet-push-right"><!-- Skills -->
-						<div class="sheet-fieldset sheet-attribute-border">
+					<div class="sheet-col-1-2 sheet-push-right">
+						<div class="sheet-fieldset sheet-attribute-border"><!-- Skills -->
 							<div class="sheet-legend">Skills</div>
 							<div class="sheet-repeatingskills">
 
@@ -847,7 +855,7 @@
 										</div>
 										<div class="sheet-col-1-2 ">
 											<button class=" sheet-roll-text" type="roll" name="roll_skillCheck"
-												title="Roll Check" value="@{rollbase}">
+												title="Roll Check" >
 												<span class="sheet-pseudoattr" name="attr_skillName"></span>
 												&nbsp;<span class="sheet-pictos" name="attr_requiresTool"></span>&nbsp;
 										</div>
@@ -902,6 +910,42 @@
 												</div>
 											</div>
 
+										</div>
+									</div>
+								</fieldset>
+							</div>
+
+						</div>
+						<div class="sheet-fieldset sheet-attribute-border"><!-- Conditions -->
+							<div class="sheet-legend">Conditions</div>
+							<div class="sheet-repeatingconditions">
+								<fieldset class="repeating_conditions sheet-conditions"> <!-- repeating fieldset -->
+									<div class="sheet-row compendium-drop-target sheet-right sheet-condition">
+										<div class="sheet-col-1-8 "></div>
+										<div class="sheet-col-1-12"><input type="checkbox"
+												name="attr_options-flag-condition" checked="checked" title="Configure condition"
+												class="sheet-ro-checkbox sheet-options-condition-flag " />
+											<span class="sheet-ro-label">y</span>
+										</div>
+										<div class="sheet-col-1-2 ">
+												<span class="sheet-pseudoattr" name="attr_conditionName"></span>
+												<span class="sheet-pseudoattr" name="attr_conditionText"></span>
+										</div>
+										</button>
+										<input type="checkbox" name="attr_options-flag-condition" checked="checked"
+											class="sheet-options-hidden-condition-flag " />
+										<div class="sheet-options-condition">
+											<div class="sheet-row">
+												<div class="sheet-col-1-3">
+													<span class="sheet-label">Name:</span>
+													<input type="text" name="attr_conditionName" value="" />
+												</div>
+
+												<div class="sheet-col-2-3-minus">
+													<div>Effect:</div>
+													<input type="text" name="attr_conditionText" value="" />
+												</div>
+											</div>
 										</div>
 									</div>
 								</fieldset>
@@ -1020,7 +1064,7 @@
 
 								<div class="sheet-options-lnbop">
 									<div class="sheet-row">
-
+										
 									</div>
 
 
@@ -1232,10 +1276,50 @@
 							<div class="sheet-row sheet-sub-header">
 								<div class="sheet-col-1-6 sheet-center sheet-small-label">Source/Level</div>
 							</div>
-							<div class="sheet-row">
-								<div class="sheet-col-1-6" title="Current Resources">
-									<input type="number" name="attr_Source_level_pairs">
+							<div class="sheet-repeatingsourcelevels">
+								<div class="sheet-row">
+									<div class="sheet-col-1-18">
+									 </div>
+									<div class="sheet-col-1-8">
+										Level
+									</div>
+									<div class="sheet-col-3-4">
+										Source
+									</div>
 								</div>
+								<fieldset class="repeating_sourcelevels sheet-sourcelevels"> <!-- repeating fieldset -->
+									
+									<!-- START Fieldset sourcelevel START -->
+									<div class="sheet-sourcelevel sheet-row">
+										<div class="sheet-col-1-18">
+											<input type="checkbox" name="attr_options-flag-sourcelevel" checked="checked" title="Configure Lineage or BOP"
+												class=" sheet-options-sourcelevel-flag sheet-ro-checkbox" /><span class="sheet-ro-label">y</span>
+										</div>
+										<div class="sheet-col-1-8">
+											<span class="sheet-pseudoattr" name="attr_sourceLevel"></span>
+										</div>
+										<div class="sheet-col-3-4">
+											<span class="sheet-pseudoattr" name="attr_sourceName"></span>
+										</div>
+									</div>
+									<input type="checkbox" name="attr_options-flag-sourcelevel" class="sheet-options-hidden-sourcelevel-flag" checked="checked"/>
+							
+									<div class="sheet-options-sourcelevel">
+										<div class="sheet-row">
+											<div class="sheet-col-1-8">
+												<input type="number" name="attr_sourceLevel"></span>
+											</div>
+											<div class="sheet-col-3-4">
+												<input type="text" name="attr_sourceName"></span>
+											</div>
+										</div>
+							
+							
+									</div>
+							
+									<!-- END Fieldset sourcelevel END -->
+								</fieldset>
+							
 							</div>
 						</div>
 					</div>
@@ -1264,27 +1348,240 @@
 				<div class="sheet-row sheet-fieldset sheet-attribute-border">
 					<!-- Source Magic -->
 
-					<div class="sheet-legend">{Source Magic}</div>
-					<div class="sheet-row">
-
-						<textarea name="attr_magic_from_sources"></textarea>
+					<div class="sheet-legend">Source Magic</div>
+					<div class="sheet-repeatingsources">
+						<div class="sheet-row">
+							<div class="sheet-col-1-18">
+							 </div>
+							<div class="sheet-col-1-3">
+								<div class="sheet-label sheet-left">Name</div></div>
+							<div class="sheet-col-1-8">
+								<div class="sheet-label sheet-left">APC</div>
+							</div>
+							<div class="sheet-col-1-8">
+								<div class="sheet-label sheet-left">Description</div>
+								 
+							</div>
+						</div>
+						<hr/>
+						<fieldset class="repeating_sources sheet-sources"> <!-- repeating fieldset -->
+							
+							<!-- START Fieldset source START -->
+							<div class="sheet-source sheet-row">
+								<div class="sheet-col-1-18">
+									<input type="checkbox" name="attr_options-flag-source" checked="checked" title="Configure Lineage or BOP"
+										class=" sheet-options-source-flag sheet-ro-checkbox" /><span class="sheet-ro-label">y</span>
+								</div>
+								<div class="sheet-col-1-4">
+									<button class="sheet-roll-text " type="roll" name="roll_fullattack" >
+										<span class="sheet-pseudoattr" name="attr_displayName"></span>
+									</button>
+								</div>
+								<div class="sheet-col-1-8">
+									 <span class="sheet-pseudoattr" name="attr_apc"></span>
+								</div>
+								<div class="sheet-col-2-3-minus">
+									 <span class="sheet-pseudoattr" name="attr_description"></span>
+									 
+								</div>
+							</div>
+							<input type="checkbox" name="attr_options-flag-source" class="sheet-options-hidden-source-flag" checked="checked"/>
+					
+							<div class="sheet-options-source">
+								<div class="sheet-row">
+									<div class="sheet-col-1-2">
+										<div class="sheet-label sheet-left">Name:</div>
+										<input type="text" class=" sheet-underlined"    name="attr_displayName" value="" />
+									</div>
+									<div class="sheet-col-1-2">
+										<div class="sheet-label sheet-left">Description:</div>
+										<input type="text" class=" sheet-underlined"    name="attr_description" value="" />
+									</div>
+									<div class="sheet-col-1-8">
+										<div class="sheet-label sheet-left">APC:</div>
+										<input type="text" class=" sheet-underlined"    name="attr_apc" value="" />
+									</div><div class="sheet-col-1-8">
+										<div class="sheet-label sheet-left">SPC:</div>
+										<input type="text" class=" sheet-underlined"    name="attr_spc" value="" />
+									</div>	
+									<div class="sheet-col-1-6">
+										<div class="sheet-label sheet-left">Requires:</div>
+										<input type="text" class=" sheet-underlined"    name="attr_requires" value="" />
+									</div><div class="sheet-col-1-6">
+										<div class="sheet-label sheet-left">Range:</div>
+										<input type="text" class=" sheet-underlined"    name="attr_range" value="" />
+									</div>	
+									<div class="sheet-col-1-2">
+										<div class="sheet-label sheet-left">Notes:</div>
+										<textarea name="attr_notes"></textarea>
+									</div>	
+								</div>
+					
+					
+							</div>
+					
+							<!-- END Fieldset source END -->
+						</fieldset>
+					
 					</div>
+					
+					
 				</div>
 				<div class="sheet-row sheet-fieldset sheet-attribute-border">
 					<!-- Rituals -->
 
 					<div class="sheet-legend">Rituals</div>
-					<div class="sheet-row">
-
-						<textarea name="attr_magic_ritualss"></textarea>
+					<div class="sheet-repeatingrituals">
+						<div class="sheet-row">
+							<div class="sheet-col-1-18">
+							 </div>
+							<div class="sheet-col-1-3">
+								<div class="sheet-label sheet-left">Name</div></div>
+							<div class="sheet-col-1-8">
+								<div class="sheet-label sheet-left">Description</div>
+								 
+							</div>
+						</div>
+						<hr/>
+						<fieldset class="repeating_rituals sheet-rituals"> <!-- repeating fieldset -->
+							
+							<!-- START Fieldset ritual START -->
+							<div class="sheet-ritual sheet-row">
+								<div class="sheet-col-1-18">
+									<input type="checkbox" name="attr_options-flag-ritual" checked="checked" title="Configure Lineage or BOP"
+										class=" sheet-options-ritual-flag sheet-ro-checkbox" /><span class="sheet-ro-label">y</span>
+								</div>
+								<div class="sheet-col-1-3">
+									<button class="sheet-roll-text " type="roll" name="roll_fullattack" >
+										<span class="sheet-pseudoattr" name="attr_displayName"></span>
+									</button>
+								</div>
+								<div class="sheet-col-1-8">
+									 <span class="sheet-pseudoattr" name="attr_description"></span>
+								</div>
+								 
+							</div>
+							<input type="checkbox" name="attr_options-flag-ritual" class="sheet-options-hidden-ritual-flag" checked="checked"/>
+					
+							<div class="sheet-options-ritual">
+								<div class="sheet-row">
+									<div class="sheet-col-1-2">
+										<div class="sheet-label sheet-left">Name:</div>
+										<input type="text" class=" sheet-underlined"    name="attr_displayName" value="" />
+									</div>
+									<div class="sheet-col-1-2">
+										<div class="sheet-label sheet-left">Description:</div>
+										<input type="text" class=" sheet-underlined"    name="attr_description" value="" />
+									</div>
+									 
+									<div class="sheet-col-1-2">
+										<div class="sheet-label sheet-left">Requires:</div>
+										<input type="text" class=" sheet-underlined"    name="attr_requires" value="" />
+									</div>
+									<div class="sheet-col-1-2">
+										<div class="sheet-label sheet-left">Range:</div>
+										<input type="text" class=" sheet-underlined"    name="attr_range" value="" />
+									</div>	
+									<div class="sheet-col-1-2">
+										<div class="sheet-label sheet-left">Notes:</div>
+										<textarea name="attr_notes"></textarea>
+									</div>	
+								</div>
+					
+					
+							</div>
+					
+							<!-- END Fieldset ritual END -->
+						</fieldset>
+					
 					</div>
 				</div>
 				<div class="sheet-row sheet-fieldset sheet-attribute-border">
 					<!-- Spells -->
 					<div class="sheet-legend">Spells</div>
-					<div class="sheet-row">
-						<textarea name="attr_magic_spells"></textarea>
+					<div class="sheet-repeatingspells">
+						<div class="sheet-row">
+							<div class="sheet-col-1-18">
+							 </div>
+							<div class="sheet-col-1-4">
+								<div class="sheet-label sheet-left">Name</div>
+							</div>
+							<div class="sheet-col-1-8">
+								<div class="sheet-label sheet-left">APC</div>
+							</div>
+							<div class="sheet-col-1-8">
+								<div class="sheet-label sheet-left">SPC</div>
+							</div>
+							<div class="sheet-col-1-4">
+								<div class="sheet-label sheet-left">Description</div>
+							</div>
+						</div>
+						<hr/>
+						<fieldset class="repeating_spells sheet-spells"> <!-- repeating fieldset -->
+							
+							<!-- START Fieldset spell START -->
+							<div class="sheet-spell sheet-row">
+								<div class="sheet-col-1-18">
+									<input type="checkbox" name="attr_options-flag-spell" checked="checked" title="Configure Lineage or BOP"
+										class=" sheet-options-spell-flag sheet-ro-checkbox" /><span class="sheet-ro-label">y</span>
+								</div>
+								<div class="sheet-col-1-4">
+									<button class="sheet-roll-text " type="roll" name="roll_fullattack" >
+										<span class="sheet-pseudoattr" name="attr_displayName"></span>
+									</button>
+								</div>
+								<div class="sheet-col-1-8">
+									<span class="sheet-pseudoattr" name="attr_apc"></span>
+								</div>
+								<div class="sheet-col-1-8">
+									 <span class="sheet-pseudoattr" name="attr_spc"></span>
+									 
+								</div>
+								<div class="sheet-col-1-8">
+									 <span class="sheet-pseudoattr" name="attr_description"></span>
+									 
+								</div>
+							</div>
+							<input type="checkbox" name="attr_options-flag-spell" class="sheet-options-hidden-spell-flag" checked="checked"/>
+					
+							<div class="sheet-options-spell">
+								<div class="sheet-row">
+									<div class="sheet-col-1-2">
+										<div class="sheet-label sheet-left">Name:</div>
+										<input type="text" class=" sheet-underlined"    name="attr_displayName" value="" />
+									</div>
+									<div class="sheet-col-1-2">
+										<div class="sheet-label sheet-left">Description:</div>
+										<input type="text" class=" sheet-underlined"    name="attr_description" value="" />
+									</div>
+									<div class="sheet-col-1-2">
+										<div class="sheet-label sheet-left">APC:</div>
+										<input type="text" class=" sheet-underlined"    name="attr_apc" value="" />
+									</div><div class="sheet-col-1-2">
+										<div class="sheet-label sheet-left">SPC:</div>
+										<input type="text" class=" sheet-underlined"    name="attr_spc" value="" />
+									</div>	
+									<div class="sheet-col-1-2">
+										<div class="sheet-label sheet-left">Requires:</div>
+										<input type="text" class=" sheet-underlined"    name="attr_requires" value="" />
+									</div><div class="sheet-col-1-2">
+										<div class="sheet-label sheet-left">Range:</div>
+										<input type="text" class=" sheet-underlined"    name="attr_range" value="" />
+									</div>	
+									<div class="sheet-col-1-2">
+										<div class="sheet-label sheet-left">Notes:</div>
+										<textarea name="attr_notes"></textarea>
+									</div>	
+								</div>
+					
+					
+							</div>
+					
+							<!-- END Fieldset spell END -->
+						</fieldset>
+					
 					</div>
+					
 				</div>
 				<span class="sheet-spacer"></span>
 			</div>
@@ -1296,52 +1593,44 @@
 					<div class="sheet-col-3-13 sheet-center sheet-center">
 						<img name="attr_character_avatar">
 					</div>
-					<div class="sheet-col-10-13 sheet-center ">
-						<div class="sheet-row ">
-							<div class="sheet-col-2-13 sheet-center sheet-small-label">Character Name</div>
-
-							<div class="sheet-col-6-13 sheet-small-label ">
-								<input class="sheet- sheet-center" type="text" name="attr_character_name">
+					<div class="sheet-col-10-13">
+						<div class="sheet-row sheet-bio-header ">
+							Character Name
+							<div class="sheet-col-6-13 sheet-bio-underlined">
+								<input  type="text" name="attr_character_name">
 							</div>
-							<div class="sheet-col-2-13 sheet-center sheet-small-label">Lineage</div>
-
-							<div class="sheet-col-2-13 sheet-small-label sheet-center">
-								<input class="sheet- sheet-center" type="text" name="attr_lineage">
+							Lineage
+							<div class="sheet-col-2-13 sheet-bio-underlined">
+								<input  type="text" name="attr_lineage">
 							</div>
 						</div>
-						<div class="sheet-row ">
-							<div class="sheet-col-2-13 sheet-center sheet-small-label">Level</div>
-
-							<div class="sheet-col-3-13 sheet-small-label ">
-								<input class="sheet- sheet-center" type="text" name="attr_level">
+						<div class="sheet-row sheet-bio-header ">
+							Level
+							<div class="sheet-col-3-13 sheet-bio-underlined ">
+								<input type="text" name="attr_level">
 							</div>
-							<div class="sheet-col-2-13 sheet-center sheet-small-label">Height</div>
-
-							<div class="sheet-col-2-13 sheet-small-label sheet-center">
-								<input class="sheet- sheet-center" type="text" name="attr_height">
+							Height
+							<div class="sheet-col-2-13 sheet-bio-underlined">
+								<input type="text" name="attr_height">
 							</div>
-							<div class="sheet-col-2-13 sheet-center sheet-small-label">Weight</div>
-
-							<div class="sheet-col-2-13 sheet-small-label sheet-center">
-								<input class="sheet- sheet-center" type="text" name="attr_weight">
+							Weight
+							<div class="sheet-col-2-13 sheet-bio-underlined">
+								<input  type="text" name="attr_weight">
 							</div>
 						</div>
 
-						<div class="sheet-row ">
-							<div class="sheet-col-1-13 sheet-center sheet-small-label">Eye Color</div>
-
-							<div class="sheet-col-2-13 sheet-small-label ">
-								<input class="sheet- sheet-center" type="text" name="attr_eye_color">
+						<div class="sheet-row sheet-bio-header ">
+							Eye Color
+							<div class="sheet-col-2-13 sheet-bio-underlined ">
+								<input  type="text" name="attr_eye_color">
 							</div>
-							<div class="sheet-col-1-13 sheet-center sheet-small-label">Hair Color</div>
-
-							<div class="sheet-col-2-13 sheet-small-label sheet-center">
-								<input class="sheet- sheet-center" type="text" name="attr_hair_Color">
+							Hair Color
+							<div class="sheet-col-2-13 sheet-bio-underlined">
+								<input  type="text" name="attr_hair_Color">
 							</div>
-							<div class="sheet-col-1-13 sheet-center sheet-small-label">Other</div>
-
-							<div class="sheet-col-6-13 sheet-small-label sheet-center">
-								<input class="sheet- sheet-center" type="text" name="attr_other">
+							Other
+							<div class="sheet-col-5-13 sheet-bio-underlined">
+								<input type="text" name="attr_other">
 							</div>
 						</div>
 					</div>
@@ -1363,7 +1652,7 @@
 
 
 					<div class="sheet-row">
-						<h4 class="sheet-center sheet-col-1">Coin Carried <span class="sheet-pictos">h</span></h4>
+						<h4 class="sheet-center sheet-col-1 sheet-desmond">Coin Carried <span class="sheet-pictos">h</span></h4>
 
 						<div class="sheet-row sheet-sub-header">
 							<div class="sheet-col-1-6 sheet-center sheet-small-label">SC</div>
@@ -3266,8 +3555,8 @@ console.log("Checkpoint Omega" );
 function addWeapons(){
 
 	
-	console.log("start add weapon");
-	let varAction = convertWeaponToAction(sample);
+/*	console.log("start add weapon");
+	//let varAction = convertWeaponToAction(sample);
 	console.log("start - repeating_actions");
 	//first empty the actions array:
 	getSectionIDs("repeating_actions", function(idarray) {
@@ -3287,35 +3576,24 @@ function addWeapons(){
 	setAttrs(newrowattrs);
 
 	// }
+	*/
 	console.log("end - addAllStandardSkillsToWorkshopSkillList");
 
 
 }
 //
-on('change:repeating_action:attack0_ap_base change:repeating_action:attack0_ap_plus_stat change:repeating_action:attack0_ap_minus_stat change:repeating_action:attack0_ap_minimum', function (e) {
-    getAttrs(['repeating_action_attack0_ap_base','repeating_action_attack0_ap_plus_stat','repeating_action_attack0_ap_minus_stat','repeating_action_attack0_ap_minimum'], function (item) {
+on('change:repeating_action:attack_ap_base change:repeating_action:attack_ap_plus_stat change:repeating_action:attack_ap_minus_stat change:repeating_action:attack0_ap_minimum', function (e) {
+    getAttrs(['repeating_attack_ap_base','repeating_action_attack_ap_plus_stat','repeating_action_attack_ap_minus_stat','repeating_action_attack0_ap_minimum'], function (item) {
         var actionPointBlock = {
-			BaseValue:item.repeating_action_attack0_ap_base,
-			addAttribute:item.repeating_action_attack0_ap_plus_stat,
-			subtractFromAttribute:item.repeating_action_attack0_ap_minus_stat,
-			 min:item.repeating_action_attack0_ap_minimum}
+			BaseValue:item.repeating_action_attack_ap_base,
+			addAttribute:item.repeating_action_attack_ap_plus_stat,
+			subtractFromAttribute:item.repeating_action_attack_ap_minus_stat,
+			 min:item.repeating_action_attack_ap_minimum}
 		setAttrs({
-			repeating_action_attack0_ap_calculated:  calcAPC(actionPointBlock,retrieveCoreAttributes() )
+			repeating_action_attack_ap_calculated:  calcAPC(actionPointBlock,retrieveCoreAttributes() )
             
         });
     });
-});
-
-
-on('change:repeating_actions:action_range',(eventInfo) => {
-	if (!eventInfo.newValue) { return;}
-	let hasRange = ("Melee" === eventInfo.newValue)?0:1;
-	setAttrs(
-		{repeating_actions_action_display_range_distance : hasRange}
-		);
-
-	console.log("changed={"+eventInfo.newValue+" - "+ hasRange);
-	
 });
 
 
@@ -3378,15 +3656,15 @@ on('change:repeating_skills:skillstat change:repeating_skills:skillbaseValue',(e
 			repeating_skills_skillUseableValue : skillstat + skillbaseValue
 		}); 
 	});
-});
+}); 
 
-
-on('change:repeating_actions:action_range',(eventInfo) => {
+on('change:repeating_actions:attack_range',(eventInfo) => {
 	if (!eventInfo.newValue) { return;}
-	let hasRange = ("Melee" === eventInfo.newValue)?0:1;
-	setAttrs(
-		{repeating_actions_action_display_range_distance : hasRange}
-		);
+	let hasRange = ("Melee" === eventInfo.newValue||"Self" === eventInfo.newValue)?0:1;
+	setAttrs({
+			repeating_actions_attack_range_display_distance : hasRange,
+			repeating_actions_attack_range_distance : hasRange?10:5
+		});
 
 	console.log("changed={"+eventInfo.newValue+" - "+ hasRange);
 	
@@ -3483,17 +3761,57 @@ on("clicked:doUpdate", function() {
 <!----------------------------------------------------------------ROLL TEMPLATES -------------------------------------------------------------------------->
 
 <!--
-&{template:mythcraft-dice-roll} ---------------------------------------------------------------------------------------------------------
+&{template:actionattack} {{title=Title of the Roll}} 
+{{subtitle=Subtitle which is optional }} 
+{{color=}} 
+{{Normal row = The sheet can have any number of these sections. }}
+{{2nd row = The sheet can have any number of these sections. }}
+{{3rd row = Everything to the left of the equal sign is bolded.}} 
+{{desc= If the left side contain exactly "desc", then the equal sign is removed
+ and any content is spread to the with of the full template. Inline roll: [[d20+3]] }}
+ ---------------------------------------------------------------------------------------------------------
 -->
-<rolltemplate class="sheet-rolltemplate-mythcraft-dice-roll">
-	<table>
-		<caption>{{name}}</caption>
-		<tr>
-			<td class="template_label" data-i18n="rolled">Rolled:</td>
-			<td class="template_value">{{diceroll}}</td>
-		</tr>
-	</table>
-</rolltemplate>
+<rolltemplate class="sheet-rolltemplate-actionattack">
+	<div class="sheet-container sheet-color-{{color}}">
+	  <div class="sheet-header">
+		{{#title}}<div class="sheet-title">{{title}}<img class="sheet-lillogo" src="https://irp.cdn-website.com/a2239e04/files/uploaded/Mythcraft-Logo-Icon-Black.png" alt="Mythcraft logo"> </div>{{/title}}
+		
+		{{#range}}
+		<div class="sheet-subtitle">
+			{{range}}&nbsp;<i>{{rangedistance}}&nbsp;ft.</i>
+		</div>
+		{{/range}} 
+	  </div>
+	  <div class="sheet-content"> 
+		<!-- <div class="sheet-action-attack-details"> -->
+			<div class="sheet-action-attack-details-tohit">
+				<span>Attack</span>
+				{{tohit}}
+			</div>	
+			<div class="sheet-action-attack-details-damage">
+			{{#dmg0}}
+				<div class="sheet-attack-dmg-result">{{dmg0}} {{damagetype0}} Damage</div>
+				{{/dmg0}}
+				{{#dmg1}}
+				<div  class="sheet-attack-dmg-result">{{dmg1}} {{damagetype1}} Damage</div>
+				{{/dmg1}}
+				{{#dmg2}}
+				<div  class="sheet-attack-dmg-result">{{dmg2}} {{damagetype2}} Damage</div>
+				{{/dmg2}}
+			<!--	{{#dmg3}}
+				<span  class="sheet-attack-dmg-result">{{dmg3}} {{damagetype3}} Damage</span>
+				{{/dmg3}} -->
+			<!-- </div> -->	
+		</div>
+		{{#debug}}
+		{{#allprops() title subtitle desc color}}
+		<div class="sheet-key">{{key}}</div>
+		<div class="sheet-value">{{value}}</div>
+		{{/allprops() title subtitle desc color}}
+		{{/debug}}
+	  </div>
+	</div>
+  </rolltemplate>
 
 
 <!---------------------------------------------------------------- CHARMANCER -------------------------------------------------------------------------->
@@ -4408,107 +4726,9 @@ on("clicked:doUpdate", function() {
 			</div>
 			<div class="sheet-wrkshp-abilities-step sheet-mythcraft-border"><!-- abilities -->
 				<div class="sheet-row">
-					<div class="sheet-col-1">abilities</div>
+					<div class="sheet-col-1">Abilities</div>
 
-
-					<div class="sheet-repeatingitems">
-						<p>
-							repeating_weapons_$0_weaponname: <span name="repeating_weapons_$0_weaponskill"></span><br>
-							repeating_weapons_$0_weaponname: <span name="repeating_weapons_$0_weaponname"></span><br>
-							: <span name=""></span><br>
-						</p>
-						<div> <!-- labels -->
-							<div class="sheet-col-1-8">
-								<span class="sheet-rep-lable">label1</span>
-							</div>
-							<div class="sheet-col-1-18">
-								<span class="sheet-rep-lable">label2</span>
-							</div>
-							<div class="sheet-col-1-18">
-								<span class="sheet-rep-lable">label3</span>
-							</div>
-							<div class="sheet-col-1-18">
-								<span class="sheet-rep-lable">label4</span>
-							</div>
-							<div class="sheet-col-1-18">
-								<span class="sheet-rep-lable">label5</span>
-							</div>
-							<div class="sheet-col-1-18">
-								<span class="sheet-rep-lable">label6</span>
-							</div>
-							<div class="sheet-col-1-18">
-								<span class="sheet-rep-lable">label7</span>
-							</div>
-							<div class="sheet-col-1-18">
-								<span class="sheet-rep-lable">label8</span>
-							</div>
-							<div class="sheet-col-1-18">
-								<span class="sheet-rep-lable">Combat</span>
-							</div>
-							<div class="sheet-col-1-18">
-								<span class="sheet-rep-lable">Social</span>
-							</div>
-						</div>
-						<fieldset class="repeating_weapons"> <!-- repeating fieldset -->
-							<div class="sheet-row sheet-wrksht-inv-item compendium-drop-target">
-								<!-- 
-										{name=@{weaponname}}} {{success=[[@{weaponskill}]]}} {{hard=[[floor(@{weaponskill}/2)]]}} {{extreme=[[floor(@{weaponskill}/5)]]}}
-										{{malf=@{weaponmalf}}
-										} {{roll1=[[1d100]]}} {{roll2=[[1d100]]}} {{roll3=[[1d100]]}} {{damage=[[@{weapondamage}@{weapondb}]]}
-			-->
-								<div class="sheet-col-1-8"><input type="text" name="attr_weaponname" /></div>
-								<div class="sheet-col-1-18">
-									<button type="roll" value="@{secret_roll} &{template:coc-attack} {}"
-										name="roll_weaponskill_check"></button>
-								</div>
-								<div class="sheet-col-1-18">
-									<select name="attr_weaponskill">
-										<option value="@{fighting_brawl}">Bobby rapproch&#233;(corps &#224; corps)
-										</option>
-										<option value="@{firearms_handgun}">Bobby &#224; distance(armes de poing)
-										</option>
-										<option value="@{firearms_rifle}">Bobby &#224; distance(fusils)</option>
-										<option value="@{throw}">Lancer</option>
-										<option value="@{otherskill1}">Autres Comp. #1</option>
-										<option value="@{otherskill2}">Autres Comp. #2</option>
-										<option value="@{otherskill3}">Autres Comp. #3</option>
-										<option value="@{otherskill4}">Autres Comp. #4</option>
-										<option value="@{otherskill5}">Autres Comp. #5</option>
-										<option value="@{otherskill6}">Autres Comp. #6</option>
-									</select>
-								</div>
-								<div class="sheet-col-1-18">
-									<input type="text" name="attr_weapondamage" />
-								</div>
-								<div class="sheet-col-1-18">
-									<select name="attr_weapondb">
-										<option value="+0">+0</option>
-										<option value="+round((@{damage_bonus})/2)">+&#189;db</option>
-										<option value="+@{damage_bonus}">+db</option>
-									</select>
-								</div>
-								<div class="sheet-col-1-18">
-									<input type="text" name="attr_weaponrange" />
-								</div>
-								<div class="sheet-col-1-18">
-									<input type="text" name="attr_weaponattacks" />
-								</div>
-								<div class="sheet-col-1-18">
-									<input type="text" name="attr_weaponammo" />
-								</div>
-								<div class="sheet-col-1-18">
-									<input type="text" name="attr_weaponmalf" />
-								</div>
-								<div class="sheet-col-1-18">
-									<input type="checkbox" name="attr_showcombat" />
-								</div>
-								<div class="sheet-col-1-18">
-									<input type="checkbox" name="attr_showsocial" />
-								</div>
-							</div>
-						</fieldset>
-					</div>
-
+ 
 				</div>
 			</div>
 			<div class="sheet-charmancer-pagecontrol">
@@ -4574,106 +4794,7 @@ on("clicked:doUpdate", function() {
 		<div class="sheet-row">
 			<div class="sheet-col-1 sheet-imperator">magic</div>
 
-
-			<div class="sheet-repeatingitems">
-				<p>
-					repeating_weapons_$0_weaponname: <span name="repeating_weapons_$0_weaponskill"></span><br>
-					repeating_weapons_$0_weaponname: <span name="repeating_weapons_$0_weaponname"></span><br>
-					repeating_weapons_$0_weaponname: <span name="repeating_weapons_$0_weaponname"></span><br>
-					classresources: <span name="attr_classresources"></span><br>
-					attr_item_name: <span name="attr_item_name"></span><br>
-					: <span name=""></span><br>
-				</p>
-				<div> <!-- labels -->
-					<div class="sheet-col-1-8">
-						<span class="sheet-rep-lable">label1</span>
-					</div>
-					<div class="sheet-col-1-18">
-						<span class="sheet-rep-lable">label2</span>
-					</div>
-					<div class="sheet-col-1-18">
-						<span class="sheet-rep-lable">label3</span>
-					</div>
-					<div class="sheet-col-1-18">
-						<span class="sheet-rep-lable">label4</span>
-					</div>
-					<div class="sheet-col-1-18">
-						<span class="sheet-rep-lable">label5</span>
-					</div>
-					<div class="sheet-col-1-18">
-						<span class="sheet-rep-lable">label6</span>
-					</div>
-					<div class="sheet-col-1-18">
-						<span class="sheet-rep-lable">label7</span>
-					</div>
-					<div class="sheet-col-1-18">
-						<span class="sheet-rep-lable">label8</span>
-					</div>
-					<div class="sheet-col-1-18">
-						<span class="sheet-rep-lable">Combat</span>
-					</div>
-					<div class="sheet-col-1-18">
-						<span class="sheet-rep-lable">Social</span>
-					</div>
-				</div>
-				<fieldset class="repeating_weapons"> <!-- repeating fieldset -->
-					<div class="sheet-row sheet-wrksht-inv-item compendium-drop-target">
-						<!-- 
-									{name=@{weaponname}}} {{success=[[@{weaponskill}]]}} {{hard=[[floor(@{weaponskill}/2)]]}} {{extreme=[[floor(@{weaponskill}/5)]]}}
-									{{malf=@{weaponmalf}}
-									} {{roll1=[[1d100]]}} {{roll2=[[1d100]]}} {{roll3=[[1d100]]}} {{damage=[[@{weapondamage}@{weapondb}]]}
-		-->
-						<div class="sheet-col-1-8"><input type="text" name="attr_weaponname" /></div>
-						<div class="sheet-col-1-18">
-							<button type="roll" value="@{secret_roll} &{template:mythcraft-dice-roll} {}"
-								name="roll_weaponskill_check"></button>
-						</div>
-						<div class="sheet-col-1-18">
-							<select name="attr_weaponskill">
-								<option value="@{fighting_brawl}">Bobby rapproch&#233;(corps &#224; corps)
-								</option>
-								<option value="@{firearms_handgun}">Bobby &#224; distance(armes de poing)
-								</option>
-								<option value="@{firearms_rifle}">Bobby &#224; distance(fusils)</option>
-								<option value="@{throw}">Lancer</option>
-								<option value="@{otherskill1}">Autres Comp. #1</option>
-								<option value="@{otherskill2}">Autres Comp. #2</option>
-								<option value="@{otherskill3}">Autres Comp. #3</option>
-								<option value="@{otherskill4}">Autres Comp. #4</option>
-								<option value="@{otherskill5}">Autres Comp. #5</option>
-								<option value="@{otherskill6}">Autres Comp. #6</option>
-							</select>
-						</div>
-						<div class="sheet-col-1-18">
-							<input type="text" name="attr_weapondamage" />
-						</div>
-						<div class="sheet-col-1-18">
-							<select name="attr_weapondb">
-								<option value="+0">+0</option>
-								<option value="+round((@{damage_bonus})/2)">+&#189;db</option>
-								<option value="+@{damage_bonus}">+db</option>
-							</select>
-						</div>
-						<div class="sheet-col-1-18">
-							<input type="text" name="attr_weaponrange" />
-						</div>
-						<div class="sheet-col-1-18">
-							<input type="text" name="attr_weaponattacks" />
-						</div>
-						<div class="sheet-col-1-18">
-							<input type="text" name="attr_weaponammo" />
-						</div>
-						<div class="sheet-col-1-18">
-							<input type="text" name="attr_weaponmalf" />
-						</div>
-						<div class="sheet-col-1-18">
-							<input type="checkbox" name="attr_showcombat" />
-						</div>
-						<div class="sheet-col-1-18">
-							<input type="checkbox" name="attr_showsocial" />
-						</div>
-					</div>
-				</fieldset>
+ 
 			</div>
 
 		</div>
@@ -4780,11 +4901,7 @@ on("clicked:doUpdate", function() {
 
 					<div class="sheet-row sheet-wrksht-inv-item compendium-drop-target">
 
-
-						<div class="sheet-col-1-18">
-							<button type="roll" value="@{secret_roll} &{template:mythcraft-dice-roll} {}"
-								name="roll_weaponskill_check"></button>
-						</div>
+ 
 						<!-- ///FRUNKYMONKEY
 						-->
 						<div class="sheet-col-1-8">
@@ -4936,103 +5053,9 @@ on("clicked:doUpdate", function() {
 	</div>
 	<div class="sheet-mythcraft-border"><!-- resources -->
 		<div class="sheet-row">
-			<div class="sheet-col-1">resources</div>
+			<div class="sheet-col-1">Resources</div>
 
-			<div class="sheet-repeatingitems">
-
-				<div> <!-- labels -->
-					<div class="sheet-col-1-8">
-						<span class="sheet-rep-lable">label1</span>
-					</div>
-					<div class="sheet-col-1-18">
-						<span class="sheet-rep-lable">label2</span>
-					</div>
-					<div class="sheet-col-1-18">
-						<span class="sheet-rep-lable">label3</span>
-					</div>
-					<div class="sheet-col-1-18">
-						<span class="sheet-rep-lable">label4</span>
-					</div>
-					<div class="sheet-col-1-18">
-						<span class="sheet-rep-lable">label5</span>
-					</div>
-					<div class="sheet-col-1-18">
-						<span class="sheet-rep-lable">label6</span>
-					</div>
-					<div class="sheet-col-1-18">
-						<span class="sheet-rep-lable">label7</span>
-					</div>
-					<div class="sheet-col-1-18">
-						<span class="sheet-rep-lable">label8</span>
-					</div>
-					<div class="sheet-col-1-18">
-						<span class="sheet-rep-lable">Combat</span>
-					</div>
-					<div class="sheet-col-1-18">
-						<span class="sheet-rep-lable">Social</span>
-					</div>
-				</div>
-				<fieldset class="repeating_weapons"> <!-- repeating fieldset -->
-					<div class="sheet-row sheet-wrksht-inv-item compendium-drop-target">
-						<!-- 
-							{name=@{weaponname}}} {{success=[[@{weaponskill}]]}} {{hard=[[floor(@{weaponskill}/2)]]}} {{extreme=[[floor(@{weaponskill}/5)]]}}
-							{{malf=@{weaponmalf}}
-							} {{roll1=[[1d100]]}} {{roll2=[[1d100]]}} {{roll3=[[1d100]]}} {{damage=[[@{weapondamage}@{weapondb}]]}
--->
-						<div class="sheet-col-1-8"><input type="text" name="attr_weaponname" /></div>
-						<div class="sheet-col-1-18">
-							<button type="roll"
-								value="@{secret_roll} &{template:default} {{name=Test Attack}} {{attack=[[1d20+3]]}} {{note= This is some description or something}} {{<!--Saving Throw= vs Will-->}}"
-								name="roll_weaponskill_check"></button>
-						</div>
-						<div class="sheet-col-1-18">
-							<select name="attr_weaponskill">
-								<option value="@{fighting_brawl}">Bobby rapproch&#233;(corps &#224;
-									corps)</option>
-								<option value="@{firearms_handgun}">Bobby &#224; distance(armes de
-									poing)</option>
-								<option value="@{firearms_rifle}">Bobby &#224; distance(fusils)
-								</option>
-								<option value="@{throw}">Lancer</option>
-								<option value="@{otherskill1}">Autres Comp. #1</option>
-								<option value="@{otherskill2}">Autres Comp. #2</option>
-								<option value="@{otherskill3}">Autres Comp. #3</option>
-								<option value="@{otherskill4}">Autres Comp. #4</option>
-								<option value="@{otherskill5}">Autres Comp. #5</option>
-								<option value="@{otherskill6}">Autres Comp. #6</option>
-							</select>
-						</div>
-						<div class="sheet-col-1-18">
-							<input type="text" name="attr_weapondamage" />
-						</div>
-						<div class="sheet-col-1-18">
-							<select name="attr_weapondb">
-								<option value="+0">+0</option>
-								<option value="+round((@{damage_bonus})/2)">+&#189;db</option>
-								<option value="+@{damage_bonus}">+db</option>
-							</select>
-						</div>
-						<div class="sheet-col-1-18">
-							<input type="text" name="attr_weaponrange" />
-						</div>
-						<div class="sheet-col-1-18">
-							<input type="text" name="attr_weaponattacks" />
-						</div>
-						<div class="sheet-col-1-18">
-							<input type="text" name="attr_weaponammo" />
-						</div>
-						<div class="sheet-col-1-18">
-							<input type="text" name="attr_weaponmalf" />
-						</div>
-						<div class="sheet-col-1-18">
-							<input type="checkbox" name="attr_showcombat" />
-						</div>
-						<div class="sheet-col-1-18">
-							<input type="checkbox" name="attr_showsocial" />
-						</div>
-					</div>
-				</fieldset>
-			</div>
+		 
 		</div>
 	</div>
 	<div class="sheet-charmancer-pagecontrol">

@@ -1,0 +1,30 @@
+
+<!--
+&{template:actionattack} {{title=Title of the Roll}} 
+{{subtitle=Subtitle which is optional }} 
+{{color=}} 
+{{Normal row = The sheet can have any number of these sections. }}
+{{2nd row = The sheet can have any number of these sections. }}
+{{3rd row = Everything to the left of the equal sign is bolded.}} 
+{{desc= If the left side contain exactly "desc", then the equal sign is removed
+ and any content is spread to the with of the full template. Inline roll: [[d20+3]] }}
+ ---------------------------------------------------------------------------------------------------------
+-->
+<rolltemplate class="sheet-rolltemplate-actionattack">
+	<div class="sheet-container sheet-color-{{color}}">
+	  <div class="sheet-header">
+		{{#title}}<div class="sheet-title">{{title}}<img class="sheet-phoenix" 
+            src="https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Stargate-RPG/images/SG-phoenix.png" 
+            alt="Stargate Phoenix logo"> </div>{{/title}}
+		{{#subtitle}}<div class="sheet-subtitle">{{subtitle}}</div>{{/subtitle}}
+	  </div>
+	  <div class="sheet-content">
+		{{#allprops() title subtitle desc color}}
+		<div class="sheet-key">{{key}}</div>
+		<div class="sheet-value">{{value}}</div>
+		{{/allprops() title subtitle desc color}}
+		{{#desc}}<div class="sheet-desc">{{desc}}</div>{{/desc}}
+	  </div>
+	</div>
+  </rolltemplate>
+

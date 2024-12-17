@@ -1,0 +1,300 @@
+<div class="sheet-repeatingspells">
+    <fieldset class="repeating_spells sheet-spells"> <!-- repeating fieldset -->
+        
+        <!-- START Fieldset spell START -->
+        <div class="sheet-spell sheet-row">
+            <div class="sheet-col-1-18">
+                <input type="checkbox" name="attr_options-flag-spell" checked="checked" title="Configure Lineage or BOP"
+                    class=" sheet-options-spell-flag sheet-ro-checkbox" /><span class="sheet-ro-label">y</span>
+            </div>
+            <div class="sheet-col-1-3">
+                <button class="sheet-roll-text " type="roll" name="roll_fullattack" title="Full Attack & Damage roll" value="@{rollbase}">
+                    <span class="sheet-pseudoattr" name="attr_displayName"></span>
+                </button>
+            </div>
+            <div class="sheet-col-1-8">
+                <div class="sheet-label sheet-left">APC:</div><span class="sheet-pseudoattr" name="attr_apc"></span>
+            </div>
+            <div class="sheet-col-1-8">
+                <div class="sheet-label sheet-left">SPC: </div> <span class="sheet-pseudoattr" name="attr_spc"></span>
+                 
+            </div>
+        </div>
+        <input type="checkbox" name="attr_options-flag-spell" class="sheet-options-hidden-spell-flag" checked="checked"/>
+
+        <div class="sheet-options-spell">
+            <div class="sheet-row">
+                <div class="sheet-col-1-2">
+                    <div class="sheet-label sheet-left">Name:</div>
+                    <input type="text" class=" sheet-underlined"    name="attr_displayName" value="" />
+                </div>
+                <div class="sheet-col-1-2">
+                    <div class="sheet-label sheet-left">Description:</div>
+                    <input type="text" class=" sheet-underlined"    name="attr_description" value="" />
+                </div>
+                <div class="sheet-col-1-2">
+                    <div class="sheet-label sheet-left">APC:</div>
+                    <input type="text" class=" sheet-underlined"    name="attr_apc" value="" />
+                </div><div class="sheet-col-1-2">
+                    <div class="sheet-label sheet-left">SPC:</div>
+                    <input type="text" class=" sheet-underlined"    name="attr_spc" value="" />
+                </div>	
+                <div class="sheet-col-1-2">
+                    <div class="sheet-label sheet-left">Requires:</div>
+                    <input type="text" class=" sheet-underlined"    name="attr_requires" value="" />
+                </div><div class="sheet-col-1-2">
+                    <div class="sheet-label sheet-left">Range:</div>
+                    <input type="text" class=" sheet-underlined"    name="attr_range" value="" />
+                </div>	
+                <div class="sheet-col-1-2">
+                    <div class="sheet-label sheet-left">Notes:</div>
+                    <textarea name="attr_notes"></textarea>
+                </div>	
+            </div>
+
+
+        </div>
+
+        <!-- END Fieldset spell END -->
+    </fieldset>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="sheet-col-1-2">
+    <button class="sheet-roll-text " type="roll" name="roll_fullattack" title="Full Attack & Damage roll" value="@{rollbase}">
+        <span class="sheet-pseudoattr" name="attr_displayName"></span>
+    </button>
+</div>
+<div class="sheet-col-1-10">
+    <input type="number"  name="attr_atkammo"  value="0"  />
+</div>
+ 
+<div class="sheet-options-attack">
+    <div class="sheet-row">
+        <div class="sheet-col-1-2">
+            <div class="sheet-label sheet-left">Name:</div>
+            <input type="text" class=" sheet-underlined"    name="attr_displayName" value="" />
+        </div>
+      
+    </div>
+   
+    <div class="sheet-row">
+        <div class="sheet-col-1-5">
+            <div class="sheet-label sheet-center">Stat:</div><select
+                name="attr_action_stat">
+                <option value="--" data-18n="--" checked="checked">--
+                </option>
+                <option value="STR" data-18n="str">STR</option>
+                <option value="DEX" data-18n="dex">DEX</option>
+                <option value="END" data-18n="end">END</option>
+                <option value="AWR" data-18n="awr">AWR</option>
+                <option value="INT" data-18n="int">INT</option>
+                <option value="CHA" data-18n="cha">CHA</option>
+                <option value="LUCK" data-18n="luck">LUCK</option>
+                <option value="COR" data-18n="cor">COR</option>
+            </select>
+        </div>
+        <div class="sheet-col-1-6">
+            <div class="sheet-label  sheet-center">Dice:</div>
+            <input type="number"
+                name="attr_action_damagedice_count_modifier"
+                value="1" />
+
+        </div>
+        <div class="sheet-col-1-8">
+            <div class="sheet-label  sheet-center">Dice:</div>
+            <select name="attr_action_damagedice_type_selector">
+                <option value="1d1" data-18n="1d1" checked="checked">1d1
+                </option>
+                <option value="1d2" data-18n="1d2">1d2</option>
+                <option value="1d4" data-18n="1d4">1d4</option>
+                <option value="1d6" data-18n="1d6">1d6</option>
+                <option value="1d8" data-18n="1d8">1d8</option>
+                <option value="1d10" data-18n="1d10">1d10</option>
+                <option value="1d12" data-18n="1d12">1d12</option>
+                <option value="1d20" data-18n="1d20">1d20</option>
+            </select>
+        </div>
+        <div class="sheet-col-1-3">
+            <div class="sheet-label sheet-center">Damage Type:</div>
+            <select class="sheet-col-1-8" name="attr_damageType">
+                <option value="Blunt" data-18n="blunt"
+                    checked="checked">Blunt</option>
+                <option value="Sharp" data-18n="sharp">Sharp</option>
+                <option value="Cold" data-18n="cold">Cold</option>
+                <option value="Corrosive" data-18n="corrosive">Corrosive
+                </option>
+                <option value="Fire" data-18n="fire">Fire</option>
+                <option value="Lightning" data-18n="lightning">Lightning
+                </option>
+                <option value="Toxic" data-18n="toxic">Toxic</option>
+                <option value="Necrotic" data-18n="necrotic">Necrotic
+                </option>
+                <option value="Psychic" data-18n="psychic">Psychic
+                </option>
+                <option value="Radiant" data-18n="radiant">Radiant
+                </option>
+                <option value="Sonic" data-18n="sonic">Sonic</option>
+            </select>
+        </div>
+
+
+
+        <div class="sheet-row sheet-action-point-configuraiton">
+            <div class="sheet-col-1-18">
+                <div class="sheet-label sheet-center">2<sup>nd</sup>
+                </div>
+                <input type="checkbox" name="attr_has_action2">
+            </div>
+            <div class="sheet-col-1-5">
+                <div class="sheet-label sheet-center">Stat:</div>
+                <select name="attr_action2_stat">
+                    <option value="--" data-18n="--" checked="checked">
+                        --</option>
+                    <option value="STR" data-18n="str">STR</option>
+                    <option value="DEX" data-18n="dex">DEX</option>
+                    <option value="END" data-18n="end">END</option>
+                    <option value="AWR" data-18n="awr">AWR</option>
+                    <option value="INT" data-18n="int">INT</option>
+                    <option value="CHA" data-18n="cha">CHA</option>
+                    <option value="LUCK" data-18n="luck">LUCK</option>
+                    <option value="COR" data-18n="cor">COR</option>
+                </select>
+            </div>
+            <div class="sheet-col-1-6">
+                <div class="sheet-label  sheet-center">Dice:</div>
+                <input type="number"
+                    name="attr_action2_damagedice_count_modifier"
+                    value="1" />
+
+            </div>
+            <div class="sheet-col-1-8">
+                <div class="sheet-label  sheet-center">Dice:</div>
+                <select name="attr_action2_damagedice_type_selector">
+                    <option value="1d1" data-18n="1d1"
+                        checked="checked">1d1</option>
+                    <option value="1d2" data-18n="1d2">1d2</option>
+                    <option value="1d4" data-18n="1d4">1d4</option>
+                    <option value="1d6" data-18n="1d6">1d6</option>
+                    <option value="1d8" data-18n="1d8">1d8</option>
+                    <option value="1d10" data-18n="1d10">1d10</option>
+                    <option value="1d12" data-18n="1d12">1d12</option>
+                    <option value="1d20" data-18n="1d20">1d20</option>
+                </select>
+            </div>
+            <div class="sheet-col-1-3">
+                <div class="sheet-label sheet-center">Damage Type:</div>
+                <select class="sheet-col-1-8"
+                    name="attr_action2_damageType">
+                    <option value="Blunt" data-18n="blunt"
+                        checked="checked">Blunt</option>
+                    <option value="Sharp" data-18n="sharp">Sharp
+                    </option>
+                    <option value="Cold" data-18n="cold">Cold</option>
+                    <option value="Corrosive" data-18n="corrosive">
+                        Corrosive</option>
+                    <option value="Fire" data-18n="fire">Fire</option>
+                    <option value="Lightning" data-18n="lightning">
+                        Lightning</option>
+                    <option value="Toxic" data-18n="toxic">Toxic
+                    </option>
+                    <option value="Necrotic" data-18n="necrotic">
+                        Necrotic</option>
+                    <option value="Psychic" data-18n="psychic">Psychic
+                    </option>
+                    <option value="Radiant" data-18n="radiant">Radiant
+                    </option>
+                    <option value="Sonic" data-18n="sonic">Sonic
+                    </option>
+                </select>
+            </div>
+        </div>
+        <div class="sheet-row sheet-action-point-configuraiton">
+            <div class="sheet-col-1-18">
+                <div class="sheet-label sheet-center">3<sup>rd</sup>
+                </div>
+                <input type="checkbox" name="attr_has_action3">
+            </div>
+            <div class="sheet-col-1-5">
+                <div class="sheet-label sheet-center">Stat:</div><select
+                    name="attr_action3_stat">
+                    <option value="--" data-18n="--" checked="checked">
+                        --</option>
+                    <option value="STR" data-18n="str">STR</option>
+                    <option value="DEX" data-18n="dex">DEX</option>
+                    <option value="END" data-18n="end">END</option>
+                    <option value="AWR" data-18n="awr">AWR</option>
+                    <option value="INT" data-18n="int">INT</option>
+                    <option value="CHA" data-18n="cha">CHA</option>
+                    <option value="LUCK" data-18n="luck">LUCK</option>
+                    <option value="COR" data-18n="cor">COR</option>
+                </select>
+            </div>
+            <div class="sheet-col-1-6">
+                <div class="sheet-label  sheet-center">Dice:</div>
+                <input type="number"
+                    name="attr_action3_damagedice_count_modifier"
+                    value="1" />
+
+            </div>
+            <div class="sheet-col-1-8">
+                <div class="sheet-label  sheet-center">Dice:</div>
+                <select name="attr_action3_damagedice_type_selector">
+                    <option value="1d1" data-18n="1d1"
+                        checked="checked">1d1</option>
+                    <option value="1d2" data-18n="1d2">1d2</option>
+                    <option value="1d4" data-18n="1d4">1d4</option>
+                    <option value="1d6" data-18n="1d6">1d6</option>
+                    <option value="1d8" data-18n="1d8">1d8</option>
+                    <option value="1d10" data-18n="1d10">1d10</option>
+                    <option value="1d12" data-18n="1d12">1d12</option>
+                    <option value="1d20" data-18n="1d20">1d20</option>
+                </select>
+            </div>
+            <div class="sheet-col-1-3">
+                <div class="sheet-label sheet-center">Damage Type:</div>
+                <select class="sheet-col-1-8"
+                    name="attr_action3_damageType">
+                    <option value="Blunt" data-18n="blunt"
+                        checked="checked">Blunt</option>
+                    <option value="Sharp" data-18n="sharp">Sharp
+                    </option>
+                    <option value="Cold" data-18n="cold">Cold</option>
+                    <option value="Corrosive" data-18n="corrosive">
+                        Corrosive</option>
+                    <option value="Fire" data-18n="fire">Fire</option>
+                    <option value="Lightning" data-18n="lightning">
+                        Lightning</option>
+                    <option value="Toxic" data-18n="toxic">Toxic
+                    </option>
+                    <option value="Necrotic" data-18n="necrotic">
+                        Necrotic</option>
+                    <option value="Psychic" data-18n="psychic">Psychic
+                    </option>
+                    <option value="Radiant" data-18n="radiant">Radiant
+                    </option>
+                    <option value="Sonic" data-18n="sonic">Sonic
+                    </option>
+                </select>
+            </div>
+        </div>
+
+    </div>
+
+</div>

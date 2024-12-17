@@ -1,302 +1,94 @@
 
-
-for (const key in mcStandardLneage) {
-	mcLoadedLineages.push([key, obj[key]]);
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    const countPreparedSpells = () => {
-      const doCalc = (level1IDs, level2IDs, level3IDs, level4IDs, level5IDs, level6IDs, level7IDs, level8IDs, level9IDs) => {
-        const attrs = [
-          ...level1IDs.map(id => `repeating_spellbooklevel1_${id}_spellisprepared`),
-          ...level2IDs.map(id => `repeating_spellbooklevel2_${id}_spellisprepared`),
-          ...level3IDs.map(id => `repeating_spellbooklevel3_${id}_spellisprepared`),
-          ...level4IDs.map(id => `repeating_spellbooklevel4_${id}_spellisprepared`),
-          ...level5IDs.map(id => `repeating_spellbooklevel5_${id}_spellisprepared`),
-          ...level6IDs.map(id => `repeating_spellbooklevel6_${id}_spellisprepared`),
-          ...level7IDs.map(id => `repeating_spellbooklevel7_${id}_spellisprepared`),
-          ...level8IDs.map(id => `repeating_spellbooklevel8_${id}_spellisprepared`),
-          ...level9IDs.map(id => `repeating_spellbooklevel9_${id}_spellisprepared`)
-        ];
-        getAttrs(attrs, v => {
-          values = Object.values(v).map(a=>(parseInt(a)));
-          const total = values.reduce((a,b) => a + b, 0);
-          setAttrs({
-            spells_prepared_count: total
-          });
-        });
-      };
-
-      getSectionIDs("repeating_spellbooklevel1", level1IDs => {
-        getSectionIDs("repeating_spellbooklevel2", level2IDs => {
-          getSectionIDs("repeating_spellbooklevel3", level3IDs => {
-            getSectionIDs("repeating_spellbooklevel4", level4IDs => {
-              getSectionIDs("repeating_spellbooklevel5", level5IDs => {
-                getSectionIDs("repeating_spellbooklevel6", level6IDs => {
-                  getSectionIDs("repeating_spellbooklevel7", level7IDs => {
-                    getSectionIDs("repeating_spellbooklevel8", level8IDs => {
-                      getSectionIDs("repeating_spellbooklevel9", level9IDs => doCalc(level1IDs, level2IDs, level3IDs, level4IDs, level5IDs, level6IDs, level7IDs, level8IDs, level9IDs));
-                    });
-                  });
-                });
-              });
-            });
-          });
-        });
-      });
-    };
-
-    on('sheet:opened',function(){
-      countPreparedSpells();
-    });
-
-    on("change:repeating_spellbooklevel1", function(eventInfo) {
-      if(eventInfo.sourceAttribute.match(/spellisprepared/)) {
-        countPreparedSpells();
-      }
-   });
-
-    on("change:repeating_spellbooklevel2", function(eventInfo) {
-      if(eventInfo.sourceAttribute.match(/spellisprepared/)) {
-        countPreparedSpells();
-      }
-   });
-
-    on("change:repeating_spellbooklevel3", function(eventInfo) {
-      if(eventInfo.sourceAttribute.match(/spellisprepared/)) {
-        countPreparedSpells();
-      }
-   });
-
-    on("change:repeating_spellbooklevel4", function(eventInfo) {
-      if(eventInfo.sourceAttribute.match(/spellisprepared/)) {
-        countPreparedSpells();
-      }
-   });
-
-    on("change:repeating_spellbooklevel5", function(eventInfo) {
-      if(eventInfo.sourceAttribute.match(/spellisprepared/)) {
-        countPreparedSpells();
-      }
-   });
-
-    on("change:repeating_spellbooklevel6", function(eventInfo) {
-      if(eventInfo.sourceAttribute.match(/spellisprepared/)) {
-        countPreparedSpells();
-      }
-   });
-
-    on("change:repeating_spellbooklevel7", function(eventInfo) {
-      if(eventInfo.sourceAttribute.match(/spellisprepared/)) {
-        countPreparedSpells();
-      }
-   });
-
-    on("change:repeating_spellbooklevel8", function(eventInfo) {
-      if(eventInfo.sourceAttribute.match(/spellisprepared/)) {
-        countPreparedSpells();
-      }
-   });
-
-    on("change:repeating_spellbooklevel9", function(eventInfo) {
-      if(eventInfo.sourceAttribute.match(/spellisprepared/)) {
-        countPreparedSpells();
-      }
-   });
-
-   
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-on("clicked:doUpdate", function() {
-	console.log("attemptingupdate");
-	let armorRating_AR =0;
-		let reflexes_REF =  0;
-		let fortitude_FORT =  0;
-		let anticipation_ANT =  0;
-		let logic_LOG= 0;
-		let willpower_WILL = 0;
-	getAttrs(["dexterity_dex","endurance_end","awareness_awr","intellegence_int","charisma_cha"], function(values) {
-		console.log("gort values");
-
-		reflexes_REF =  10 + values.dexterity_dex;
-		fortitude_FORT =  10 + values.endurance_end;
-		anticipation_ANT =  10 + values.awareness_awr;
-		logic_LOG= 10 + values.intellegence_int;
-		willpower_WILL = 10 + values.charisma_cha;
-		
-
-		console.log("armorRating_AR: " +  armorRating_AR);
-		console.log("values: " +  reflexes_REF + " | "+ values.dexterity_dex);
-		console.log("values: " +   fortitude_FORT  + " | "+  values.endurance_end);
-		console.log("values: " +   anticipation_ANT  + " | "+  values.awareness_awr);
-		console.log("values: " +   logic_LOG + " | "+  alues.intellegence_int);
-		console.log("values: " +   willpower_WILL  + " | "+   values.charisma_cha);
-
-		
-		setAttrs({                            
-			armor_rating_ar: armorRating_AR, 
-			reflexes_ref:reflexes_REF,
-			fortitude_for:fortitude_FORT,
-			anticipation_ant:anticipation_ANT,
-			logic_log = logic_LOG,
-			willpower_wil = willpower_WILL
-		
-		});
-	}); 
-});	
-
-
-
-
-
-
-
-const mcStandardSkills = [
-
-{name:"Animal Handling", requiresTool:false, attribute:"AWR",tag:"Survival", description: "You might use this skill when riding a mount or when trying to train an animal that views you as a friendly creature.",},
-{name:"Applied Force", requiresTool:false, attribute:"STR",tag:"Athleticism", description: "You can use this skill to break down doors, use a crowbar to leverage heavy weights, and similar applications of pure strength with or without a mechanism to assist you.",},
-{name:"Appraising", requiresTool:false, attribute:"INT",tag:"Observation", description: "This skill can help you determine how valuable something is or whether the materials are genuine. If you also have a Crafting skill, your MC might let you use that skill when appraising a particular craft, or even let you make an INT/ Appraising check and a skill check using that Crafting skill, taking the higher.",},
-{name:"Arcana", requiresTool:false, attribute:"INT",tag:"Knowledge", description: "You can use this skill when trying to recall information related to planar entities or factual information about any of the five Sources of Magic. You can also use this skill to manipulate magical devices.",},
-{name:"Art", requiresTool:false, attribute:"INT",tag:"Knowledge", description: "This skill can help you determine factual information about art, such as the materials used or the message that the artist was trying to convey. Your MC might also let you add 1⁄2 your Art skill when trying to produce art, although if you have any points in a Crafting skill, you are more likely to just use that skill.",},
-{name:"Astrology", requiresTool:false, attribute:"INT",tag:"Knowledge", description: "You can use this skill when recalling information about astrological symbols and their significance. Your MC might rule that you can make an INT/Astrology check to give you a circumstantial bonus on a CHA/Empathy check or an AWR/Intuiting check when interacting with someone, as your understanding of their astrological signs might lend you insight into their character or unconscious motives.",},
-{name:"Astronomy", requiresTool:false, attribute:"INT",tag:"Knowledge", description: "You might use this skill whenever you want to recall or infer information related to space and the orbit of planets, satellites, and the like. Your MC might let you add 1⁄2 your Astronomy when trying to navigate, although if you have the Navigating skill you are likely to use that instead.",},
-{name:"Athletics", requiresTool:false, attribute:"STR",tag:"Athleticism", description: "This skill represents your general athletic capacity. When climbing or swimming, and at your MC&apos;s discretion when jumping, you might use this skill. If you have a climb speed or a swim speed, this skill will not come up as often.",},
-{name:"Balancing", requiresTool:false, attribute:"DEX",tag:"Acrobatics", description: "You might use this skill when traversing tricky and narrow terrain, such as the lip of a cliff or the pinnacle of a rooftop.",},
-{name:"Biology", requiresTool:false, attribute:"INT",tag:"Knowledge", description: "This skill will help you to recall or research any information related to biological studies. Your MC may allow you to make an INT/Biology check to gain a circumstantial bonus when making an INT/Nature check or an AWR/Animal Handling check.",},
-{name:"Brewing", requiresTool:true, attribute:"INT",tag:"Crafting", description: "If you have the appropriate tools, you can attempt to brew craft beers, wines, or spirits. Your MC might also allow you to attempt to make potions, using 1⁄2 of your Brewing skill in place of Alchemy. You may use this skill when trying to recall or discern intellectual information about the practice of brewing, and doing so does not require any tools.",},
-{name:"Calligraphy", requiresTool:true, attribute:"INT",tag:"Crafting", description: "When you have the appropriate tools, you can use this skill to create beautiful calligraphic works.",},
-{name:"Carpentry", requiresTool:true, attribute:"INT",tag:"Crafting", description: "When equipped with the relevant tools, you can use this skill to build or repair houses and other structures made primarily of wood.",},
-{name:"Cartography", requiresTool:true, attribute:"INT",tag:"Crafting", description: "When equipped with the relevant tools, you can use this skill to accurately map out regions or cities.",},
-{name:"Chemistry", requiresTool:false, attribute:"INT",tag:"Knowledge", description: "You can use this skill to recall or research any information related to chemistry and chemical studies.",},
-{name:"Cobbling", requiresTool:true, attribute:"INT",tag:"Crafting", description: "If you have the appropriate time and tools, you can use this skill to repair shoes or make new ones.",},
-{name:"Contorting", requiresTool:false, attribute:"DEX",tag:"Acrobatics", description: "This skill allows you to contort your body and squeeze through spaces that would otherwise be too tight for a creature of your size. Especially tight contortions will be more difficult during combat.",},
-{name:"Cooking", requiresTool:true, attribute:"INT",tag:"Crafting", description: "Given the appropriate time and tools, you can use this skill to cook delicious food. You can also make checks to determine the quality or sourcing of food and similar cooking-related topics, regardless of whether you have tools.",},
-{name:"Dancing", requiresTool:false, attribute:"DEX",tag:"Performance", description: "You can use this skill to put on entertaining dance performances.",},
-{name:"Deceiving", requiresTool:false, attribute:"CHA",tag:"Influence", description: "You might use this skill when trying to mislead someone, tell half-truths, or outright lie in a convincing way.",},
-{name:"Disguising", requiresTool:true, attribute:"INT",tag:"Subterfuge", description: "Provided that you have the relevant tools, such as makeup, a costume, hair dye, a wig, or similar cosmetics, you can use this skill to disguise yourself. Disguises made under duress will be more difficult than disguises made in leisure.",},
-{name:"Distance Running", requiresTool:false, attribute:"END",tag:"Stamina", description: "This skill can help you keep up a steady running pace over a prolonged amount of time, allowing you to cover vast distances.",},
-{name:"Dungeoneering", requiresTool:false, attribute:"INT",tag:"Survival", description: "When exploring a dungeon or subterranean area, you might use this skill to recall information about the area, to make logical inferences, or to know how best to use your gear.",},
-{name:"Eavesdropping", requiresTool:false, attribute:"AWR",tag:"Observation", description: "You can use this skill when you want to overhear key information that other people are discussing without yourself being part of the conversation. After you succeed on an AWR/Eavesdropping check, your MC might award you a bonus to a check with the influence tag, given your better understanding of the social situation.",},
-{name:"Economics", requiresTool:false, attribute:"INT",tag:"Knowledge", description: "This skill can help you recall or deduce information about the economy in a settled area and to better understand economic theory.",},
-{name:"Empathy", requiresTool:false, attribute:"CHA",tag:"Influence", description: "You can use this skill to make other people feel seen and understood, as well as helping you understand what people are feeling.",},
-{name:"Engineering", requiresTool:false, attribute:"INT",tag:"Knowledge", description: "This skill allows you to improve your knowledge in various types of engineering (architectural, mechanical, etc).",},
-{name:"Entertaining", requiresTool:false, attribute:"CHA",tag:"Performance", description: "You can use this skill when you want to captivate a crowd by making a public performance of any kind.",},
-{name:"Evading", requiresTool:false, attribute:"INT",tag:"Subterfuge", description: "You can use this skill to practice the art of hiding in plain sight. By knowing what people look for, you can avoid detection by changing your gait, sticking to crowded areas, or otherwise throwing off those that look for you.",},
-{name:"Foraging", requiresTool:false, attribute:"AWR",tag:"Survival", description: "You might use this skill when looking for food in the wilderness or finding ingredients.",},
-{name:"Forced March", requiresTool:false, attribute:"END",tag:"Stamina", description: "You can use this skill when trying to push beyond the normal travel pace that you could manage in a day, whether by walking a greater distance or by walking a normal distance with a greater load.",},
-{name:"Forging", requiresTool:true, attribute:"INT",tag:"Subterfuge", description: "This skill can help you replicate signatures or create official- looking documents. If you do well on an INT/Forging check, then your MC will likely give you a circumstantial bonus to INT/Disguising or CHA/Savoir Faire checks.",},
-{name:"Fortuity", requiresTool:false, attribute:"Luck",tag:"", description: "Fortuity represents the likelihood that good things just happen to you. If your MC asks you to make a LUCK check to determine the likelihood of a positive outcome, you can add your Fortuity.",},
-{name:"Geography", requiresTool:false, attribute:"INT",tag:"Knowledge", description: "You can use this skill when trying to remember where you are in relation to somewhere else, or when you want to deduce information about common geographical patterns in an area.",},
-{name:"Glassblowing", requiresTool:true, attribute:"INT",tag:"Crafting", description: "When you have the appropriate tools, you can use this skill to create stunning artistic glasswork, such as dining plates and even glass musical instruments.",},
-{name:"Gossiping", requiresTool:false, attribute:"CHA",tag:"Influence", description: "You can use this skill to seed real or false information about a person, event, etc. among populated areas.",},
-{name:"History", requiresTool:false, attribute:"INT",tag:"Knowledge", description: "This skill reflects your capacity for remembering historical events and your ability to quickly research historical events when given access to a library, university, or the like. Your MC might let you use this skill in tandem with another Knowledge skill when researching a particular field of knowledge, making an INT/History check and an INT check of the relevant Knowledge type.",},
-{name:"Instrument", requiresTool:true, attribute:"CHA",tag:"Performance", description: "When you gain points in this skill, specify one type of instrument. When you have that instrument, you can use this skill to make better performances with that instrument. Your MC might rule that you can apply 1⁄2 of your Skill Points to related instruments; for example, if you have Instrument (Lute) +6, then your MC might allow you to play a banjo with a +3 bonus.",},
-{name:"Intimidating", requiresTool:false, attribute:"CHA",tag:"Influence", description: "You can use this skill when trying to peel back someone&apos;s psyche and frighten them into cooperating with you.",},
-{name:"Intuiting", requiresTool:false, attribute:"AWR",tag:"Observation", description: "This skill helps you assess when someone is being honest or if they might be hiding something.",},
-{name:"Investigating", requiresTool:false, attribute:"AWR",tag:"Observation", description: "You might use this skill when looking for physical clues at a crime scene, or when looking for a secret door or hidden compartment in a room.",},
-{name:"Jeweling", requiresTool:false, attribute:"INT",tag:"Crafting", description: "When you have the appropriate tools, this skill can help you create gorgeous works of jewelry. Your MC might allow you to use your Jeweling skill in place of Appraising when you want to assess the value of a piece of jewelry.",},
-{name:"Law", requiresTool:false, attribute:"INT",tag:"Knowledge", description: "You can use this skill when you want to recall or acquire information about the legal system in a settled area. You might also use this skill, along with the Entertaining and Persuading skills, to win a case in court.",},
-{name:"Leadership", requiresTool:false, attribute:"CHA",tag:"Influence", description: "You might use this skill to bolster the resolve of a discouraged person or group of people, or to exert your status and influence over various officials and convince them to follow your commands.",},
-{name:"Leatherworking", requiresTool:true, attribute:"INT",tag:"Crafting", description: "When you have the appropriate tools, you can use this skill to make leather goods such as clothes, bags, or even armor.",},
-{name:"Lockpicking", requiresTool:true, attribute:"INT",tag:"Subterfuge", description: "When you have a set of lock picks, you can use this skill to attempt picking any nonmagially sealed lock.",},
-{name:"Masonry", requiresTool:true, attribute:"INT",tag:"Crafting", description: "When you have the appropriate tools, you can use this skill to carve rock into sculptures or architectural stonework.",},
-{name:"Medicine", requiresTool:true, attribute:"INT",tag:"Knowledge", description: "You can use this skill when trying to recall factual information about medicines, diseases, and the like, which can help you diagnose someone&apos;s symptoms. If you have bandages, you can make an INT/Medicine check to remove the Bleeding condition from a creature. Attempting this costs 3 AP, and unless otherwise specified from the source of the Bleeding condition, the DC is 14 + the amount of Bleeding damage. If you have the proper medicines, you can attempt to treat someone with a disease. The DC for this treatment, as well as the types of medicine that you need, will be mentioned in the disease&apos;s description.",},
-{name:"Menacing", requiresTool:false, attribute:"STR",tag:"Stamina", description: "You can use this skill when trying to physically intimidate someone through a show of force.",},
-{name:"Military", requiresTool:false, attribute:"INT",tag:"Knowledge", description: "This skill will help you know the proper terminology when speaking with members of a military and can help you when trying to recall information about a military institution.",},
-{name:"Nature", requiresTool:false, attribute:"INT",tag:"Survival", description: "You might use this skill when trying to differentiate between edible and toxic mushrooms, recalling the behavior of wolf packs, or other information about the natural world.",},
-{name:"Navigating", requiresTool:true, attribute:"AWR",tag:"Survival", description: "If you have a compass, astrolabe, sextant, or even just a map, you can use this skill to find your way through an otherwise confusing area of wilderness. Your MC might rule that you can make this check without the relevant tools, but the DC will be higher.",},
-{name:"Painting", requiresTool:true, attribute:"INT",tag:"Crafting", description: "When you have the appropriate tools, you can use this skill to create beautiful paintings.",},
-{name:"Perceiving", requiresTool:false, attribute:"AWR",tag:"Observation", description: "You might make use of this skill when relying on sensory input such as scanning a tree line for enemies, looking for concealed weapons, listening for footsteps, or trying to identify a strange odor.",},
-{name:"Persuading", requiresTool:false, attribute:"CHA",tag:"Influence", description: "You can use this skill when trying to influence someone through sound arguments or emotional appeal.",},
-{name:"Politics", requiresTool:false, attribute:"INT",tag:"Knowledge", description: "When you take this skill, choose a specific region. Your MC will determine whether this should be a single city or a whole nation, based on the campaign they intend to run. When making INT checks related to the politics of that region, you can add this skill. When making INT checks related to the politics of another region, you can add 1⁄2 this skill.",},
-{name:"Pottery", requiresTool:true, attribute:"INT",tag:"Crafting", description: "When you have the appropriate clay and tools, you can use this skill to make decorative and functional pottery.",},
-{name:"Religion", requiresTool:false, attribute:"INT",tag:"Knowledge", description: "When you take this skill, choose a specific religion. You could pick one of the pantheons listed on Deities, or work with your MC to come up with another religious tradition. When making INT checks related to the customs and beliefs of that religion, you can add this skill. When making INT checks related to the customs and beliefs of any other religion, you can add 1⁄2 this skill.",},
-{name:"Savoir Faire", requiresTool:false, attribute:"CHA",tag:"Performance", description: "You can use this skill to fit into any sort of situation. You can appear at home both with peasants and with aristocrats.",},
-{name:"Scavenging", requiresTool:false, attribute:"Luck",tag:"", description: "You can use this skill when trying to find food or supplies in an abandoned area. Your MC might also allow you to use this skill to determine how much loot you find on a body.",},
-{name:"Sheltering", requiresTool:false, attribute:"AWR",tag:"Survival", description: "You might use this skill when you&apos;re in the wilderness to find a cave, hollow tree, or rocky bluff that can offer shelter from the elements.",},
-{name:"Sleight of Hand", requiresTool:false, attribute:"INT",tag:"Subterfuge", description: "You can use this skill when attempting to pickpocket someone, or when trying to keep an item undiscovered as you are patted down.",},
-{name:"Smithing", requiresTool:true, attribute:"INT",tag:"Crafting", description: "When you have the appropriate metal and tools, you can use this skill to make wrought iron artistic works or to repair metal tools, weapons, and armor.",},
-{name:"Sneaking", requiresTool:false, attribute:"DEX",tag:"Survival", description: "You could use this skill when skulking about and trying to remain physically out of sight.",},
-{name:"Sprinting", requiresTool:false, attribute:"STR",tag:"Athleticism", description: "You can use this skill when attempting to cover a small distance in an incredibly short amount of time. This is usually not applicable in normal combat, but might be used in a chase sequence.",},
-{name:"Tracking", requiresTool:false, attribute:"AWR",tag:"Survival", description: "You can use this skill when you are trying to follow a creature&apos;s trail.",},
-{name:"Tumbling", requiresTool:false, attribute:"DEX",tag:"Acrobatics", description: "This skill helps you fall in such a way that you don&apos;t get hurt. In addition to allowing you to add dramatic flair to any performance you might put on, if you fall 40 ft or less, you can make a Tumbling check with a DC equal to the amount of feet you fell. If you succeed, halve the damage you would take and move 5 ft in a direction of your choice when you land.",},
-{name:"Vehicles (Land)", requiresTool:true, attribute:"INT",tag:"Knowledge", description: "You can use this skill to efficiently use land vehicles such as carriages or war carts.",},
-{name:"Vehicles (Water)", requiresTool:true, attribute:"INT",tag:"Knowledge", description: "You can use this skill to operate water vehicles, such as sailboats or galleons, with greater efficiency.",},
-{name:"Weaving", requiresTool:true, attribute:"INT",tag:"Crafting", description: "When you have the appropriate tools, you can use this skill to make textile goods such as clothing and blankets.",},
-{name:"Woodcarving", requiresTool:true, attribute:"INT",tag:"Crafting", description: "When you have the appropriate tools, you can use this skill to whittle toys, fletch arrows, repair a wagon wheel, and the like.",},
+• Athleticism. Applied Force, Athletics, Sprinting
+• Influence. Intimidating, Leadership
+• Knowledge. Geography, History, Medicine*, Military Vehicles* [land]
+• Luck. Fortuity, Scavenging
+• Stamina. Forced March, Menacing, Distance Running, Swimming
+• Survival. Animal Handling, Dungeoneering, Navigating*, Sheltering
+
+Occult power is the total number of talent points you have spent on occult talents as a result of leveling up, in addition to the number of talent points you have spent in certain classes or stacks. These classes or stacks will specify that they contribute to Occult Power.
+
+
+
+
+
+PLAINS ELF
+Many elves were drawn to wide open plains and deserts where the sky stretched from horizon to horizon. Here, nomadic elven tribes hunted and gathered and built powerful connections with the herds of wild horses, camels, and the like that frequented these places. They also came into regular, and often bloody, contact with brutish raiders and brigands, perfecting the arts of open combat across generations. Elves hailing from the desert or plains gain the following two features at 1st level. 
+
+
+
+
+"Animal Handling",,,,,,,,,false, attribute:"AWR",tag:"Survival", description: "You might use this skill when riding a mount or when trying to train an animal that views you as a friendly creature.",},
+"Applied Force", requiresTool:false, attribute:"STR",tag:"Athleticism", description: "You can use this skill to break down doors, use a crowbar to leverage heavy weights, and similar applications of pure strength with or without a mechanism to assist you.",},
+"Appraising", requiresTool:false, attribute:"INT",tag:"Observation", description: "This skill can help you determine how valuable something is or whether the materials are genuine. If you also have a Crafting skill, your MC might let you use that skill when appraising a particular craft, or even let you make an INT/ Appraising check and a skill check using that Crafting skill, taking the higher.",},
+"Arcana", requiresTool:false, attribute:"INT",tag:"Knowledge", description: "You can use this skill when trying to recall information related to planar entities or factual information about any of the five Sources of Magic. You can also use this skill to manipulate magical devices.",},
+"Art", requiresTool:false, attribute:"INT",tag:"Knowledge", description: "This skill can help you determine factual information about art, such as the materials used or the message that the artist was trying to convey. Your MC might also let you add 1⁄2 your Art skill when trying to produce art, although if you have any points in a Crafting skill, you are more likely to just use that skill.",},
+"Astrology", requiresTool:false, attribute:"INT",tag:"Knowledge", description: "You can use this skill when recalling information about astrological symbols and their significance. Your MC might rule that you can make an INT/Astrology check to give you a circumstantial bonus on a CHA/Empathy check or an AWR/Intuiting check when interacting with someone, as your understanding of their astrological signs might lend you insight into their character or unconscious motives.",},
+"Astronomy", requiresTool:false, attribute:"INT",tag:"Knowledge", description: "You might use this skill whenever you want to recall or infer information related to space and the orbit of planets, satellites, and the like. Your MC might let you add 1⁄2 your Astronomy when trying to navigate, although if you have the Navigating skill you are likely to use that instead.",},
+"Athletics", requiresTool:false, attribute:"STR",tag:"Athleticism", description: "This skill represents your general athletic capacity. When climbing or swimming, and at your MC&apos;s discretion when jumping, you might use this skill. If you have a climb speed or a swim speed, this skill will not come up as often.",},
+"Balancing", requiresTool:false, attribute:"DEX",tag:"Acrobatics", description: "You might use this skill when traversing tricky and narrow terrain, such as the lip of a cliff or the pinnacle of a rooftop.",},
+"Biology", requiresTool:false, attribute:"INT",tag:"Knowledge", description: "This skill will help you to recall or research any information related to biological studies. Your MC may allow you to make an INT/Biology check to gain a circumstantial bonus when making an INT/Nature check or an AWR/Animal Handling check.",},
+"Brewing", requiresTool:true, attribute:"INT",tag:"Crafting", description: "If you have the appropriate tools, you can attempt to brew craft beers, wines, or spirits. Your MC might also allow you to attempt to make potions, using 1⁄2 of your Brewing skill in place of Alchemy. You may use this skill when trying to recall or discern intellectual information about the practice of brewing, and doing so does not require any tools.",},
+"Calligraphy", requiresTool:true, attribute:"INT",tag:"Crafting", description: "When you have the appropriate tools, you can use this skill to create beautiful calligraphic works.",},
+"Carpentry", requiresTool:true, attribute:"INT",tag:"Crafting", description: "When equipped with the relevant tools, you can use this skill to build or repair houses and other structures made primarily of wood.",},
+"Cartography", requiresTool:true, attribute:"INT",tag:"Crafting", description: "When equipped with the relevant tools, you can use this skill to accurately map out regions or cities.",},
+"Chemistry", requiresTool:false, attribute:"INT",tag:"Knowledge", description: "You can use this skill to recall or research any information related to chemistry and chemical studies.",},
+"Cobbling", requiresTool:true, attribute:"INT",tag:"Crafting", description: "If you have the appropriate time and tools, you can use this skill to repair shoes or make new ones.",},
+"Contorting", requiresTool:false, attribute:"DEX",tag:"Acrobatics", description: "This skill allows you to contort your body and squeeze through spaces that would otherwise be too tight for a creature of your size. Especially tight contortions will be more difficult during combat.",},
+"Cooking", requiresTool:true, attribute:"INT",tag:"Crafting", description: "Given the appropriate time and tools, you can use this skill to cook delicious food. You can also make checks to determine the quality or sourcing of food and similar cooking-related topics, regardless of whether you have tools.",},
+"Dancing", requiresTool:false, attribute:"DEX",tag:"Performance", description: "You can use this skill to put on entertaining dance performances.",},
+"Deceiving", requiresTool:false, attribute:"CHA",tag:"Influence", description: "You might use this skill when trying to mislead someone, tell half-truths, or outright lie in a convincing way.",},
+"Disguising", requiresTool:true, attribute:"INT",tag:"Subterfuge", description: "Provided that you have the relevant tools, such as makeup, a costume, hair dye, a wig, or similar cosmetics, you can use this skill to disguise yourself. Disguises made under duress will be more difficult than disguises made in leisure.",},
+"Distance Running", requiresTool:false, attribute:"END",tag:"Stamina", description: "This skill can help you keep up a steady running pace over a prolonged amount of time, allowing you to cover vast distances.",},
+"Dungeoneering", requiresTool:false, attribute:"INT",tag:"Survival", description: "When exploring a dungeon or subterranean area, you might use this skill to recall information about the area, to make logical inferences, or to know how best to use your gear.",},
+"Eavesdropping", requiresTool:false, attribute:"AWR",tag:"Observation", description: "You can use this skill when you want to overhear key information that other people are discussing without yourself being part of the conversation. After you succeed on an AWR/Eavesdropping check, your MC might award you a bonus to a check with the influence tag, given your better understanding of the social situation.",},
+"Economics", requiresTool:false, attribute:"INT",tag:"Knowledge", description: "This skill can help you recall or deduce information about the economy in a settled area and to better understand economic theory.",},
+"Empathy", requiresTool:false, attribute:"CHA",tag:"Influence", description: "You can use this skill to make other people feel seen and understood, as well as helping you understand what people are feeling.",},
+"Engineering", requiresTool:false, attribute:"INT",tag:"Knowledge", description: "This skill allows you to improve your knowledge in various types of engineering (architectural, mechanical, etc).",},
+"Entertaining", requiresTool:false, attribute:"CHA",tag:"Performance", description: "You can use this skill when you want to captivate a crowd by making a public performance of any kind.",},
+"Evading", requiresTool:false, attribute:"INT",tag:"Subterfuge", description: "You can use this skill to practice the art of hiding in plain sight. By knowing what people look for, you can avoid detection by changing your gait, sticking to crowded areas, or otherwise throwing off those that look for you.",},
+"Foraging", requiresTool:false, attribute:"AWR",tag:"Survival", description: "You might use this skill when looking for food in the wilderness or finding ingredients.",},
+"Forced March", requiresTool:false, attribute:"END",tag:"Stamina", description: "You can use this skill when trying to push beyond the normal travel pace that you could manage in a day, whether by walking a greater distance or by walking a normal distance with a greater load.",},
+"Forging", requiresTool:true, attribute:"INT",tag:"Subterfuge", description: "This skill can help you replicate signatures or create official- looking documents. If you do well on an INT/Forging check, then your MC will likely give you a circumstantial bonus to INT/Disguising or CHA/Savoir Faire checks.",},
+"Fortuity", requiresTool:false, attribute:"Luck",tag:"", description: "Fortuity represents the likelihood that good things just happen to you. If your MC asks you to make a LUCK check to determine the likelihood of a positive outcome, you can add your Fortuity.",},
+"Geography", requiresTool:false, attribute:"INT",tag:"Knowledge", description: "You can use this skill when trying to remember where you are in relation to somewhere else, or when you want to deduce information about common geographical patterns in an area.",},
+"Glassblowing", requiresTool:true, attribute:"INT",tag:"Crafting", description: "When you have the appropriate tools, you can use this skill to create stunning artistic glasswork, such as dining plates and even glass musical instruments.",},
+"Gossiping", requiresTool:false, attribute:"CHA",tag:"Influence", description: "You can use this skill to seed real or false information about a person, event, etc. among populated areas.",},
+"History", requiresTool:false, attribute:"INT",tag:"Knowledge", description: "This skill reflects your capacity for remembering historical events and your ability to quickly research historical events when given access to a library, university, or the like. Your MC might let you use this skill in tandem with another Knowledge skill when researching a particular field of knowledge, making an INT/History check and an INT check of the relevant Knowledge type.",},
+"Instrument", requiresTool:true, attribute:"CHA",tag:"Performance", description: "When you gain points in this skill, specify one type of instrument. When you have that instrument, you can use this skill to make better performances with that instrument. Your MC might rule that you can apply 1⁄2 of your Skill Points to related instruments; for example, if you have Instrument (Lute) +6, then your MC might allow you to play a banjo with a +3 bonus.",},
+"Intimidating", requiresTool:false, attribute:"CHA",tag:"Influence", description: "You can use this skill when trying to peel back someone&apos;s psyche and frighten them into cooperating with you.",},
+"Intuiting", requiresTool:false, attribute:"AWR",tag:"Observation", description: "This skill helps you assess when someone is being honest or if they might be hiding something.",},
+"Investigating", requiresTool:false, attribute:"AWR",tag:"Observation", description: "You might use this skill when looking for physical clues at a crime scene, or when looking for a secret door or hidden compartment in a room.",},
+"Jeweling", requiresTool:false, attribute:"INT",tag:"Crafting", description: "When you have the appropriate tools, this skill can help you create gorgeous works of jewelry. Your MC might allow you to use your Jeweling skill in place of Appraising when you want to assess the value of a piece of jewelry.",},
+"Law", requiresTool:false, attribute:"INT",tag:"Knowledge", description: "You can use this skill when you want to recall or acquire information about the legal system in a settled area. You might also use this skill, along with the Entertaining and Persuading skills, to win a case in court.",},
+"Leadership", requiresTool:false, attribute:"CHA",tag:"Influence", description: "You might use this skill to bolster the resolve of a discouraged person or group of people, or to exert your status and influence over various officials and convince them to follow your commands.",},
+"Leatherworking", requiresTool:true, attribute:"INT",tag:"Crafting", description: "When you have the appropriate tools, you can use this skill to make leather goods such as clothes, bags, or even armor.",},
+"Lockpicking", requiresTool:true, attribute:"INT",tag:"Subterfuge", description: "When you have a set of lock picks, you can use this skill to attempt picking any nonmagially sealed lock.",},
+"Masonry", requiresTool:true, attribute:"INT",tag:"Crafting", description: "When you have the appropriate tools, you can use this skill to carve rock into sculptures or architectural stonework.",},
+"Medicine", requiresTool:true, attribute:"INT",tag:"Knowledge", description: "You can use this skill when trying to recall factual information about medicines, diseases, and the like, which can help you diagnose someone&apos;s symptoms. If you have bandages, you can make an INT/Medicine check to remove the Bleeding condition from a creature. Attempting this costs 3 AP, and unless otherwise specified from the source of the Bleeding condition, the DC is 14 + the amount of Bleeding damage. If you have the proper medicines, you can attempt to treat someone with a disease. The DC for this treatment, as well as the types of medicine that you need, will be mentioned in the disease&apos;s description.",},
+"Menacing", requiresTool:false, attribute:"STR",tag:"Stamina", description: "You can use this skill when trying to physically intimidate someone through a show of force.",},
+"Military", requiresTool:false, attribute:"INT",tag:"Knowledge", description: "This skill will help you know the proper terminology when speaking with members of a military and can help you when trying to recall information about a military institution.",},
+"Nature", requiresTool:false, attribute:"INT",tag:"Survival", description: "You might use this skill when trying to differentiate between edible and toxic mushrooms, recalling the behavior of wolf packs, or other information about the natural world.",},
+"Navigating", requiresTool:true, attribute:"AWR",tag:"Survival", description: "If you have a compass, astrolabe, sextant, or even just a map, you can use this skill to find your way through an otherwise confusing area of wilderness. Your MC might rule that you can make this check without the relevant tools, but the DC will be higher.",},
+"Painting", requiresTool:true, attribute:"INT",tag:"Crafting", description: "When you have the appropriate tools, you can use this skill to create beautiful paintings.",},
+"Perceiving", requiresTool:false, attribute:"AWR",tag:"Observation", description: "You might make use of this skill when relying on sensory input such as scanning a tree line for enemies, looking for concealed weapons, listening for footsteps, or trying to identify a strange odor.",},
+"Persuading", requiresTool:false, attribute:"CHA",tag:"Influence", description: "You can use this skill when trying to influence someone through sound arguments or emotional appeal.",},
+"Politics", requiresTool:false, attribute:"INT",tag:"Knowledge", description: "When you take this skill, choose a specific region. Your MC will determine whether this should be a single city or a whole nation, based on the campaign they intend to run. When making INT checks related to the politics of that region, you can add this skill. When making INT checks related to the politics of another region, you can add 1⁄2 this skill.",},
+"Pottery", requiresTool:true, attribute:"INT",tag:"Crafting", description: "When you have the appropriate clay and tools, you can use this skill to make decorative and functional pottery.",},
+"Religion", requiresTool:false, attribute:"INT",tag:"Knowledge", description: "When you take this skill, choose a specific religion. You could pick one of the pantheons listed on Deities, or work with your MC to come up with another religious tradition. When making INT checks related to the customs and beliefs of that religion, you can add this skill. When making INT checks related to the customs and beliefs of any other religion, you can add 1⁄2 this skill.",},
+"Savoir Faire", requiresTool:false, attribute:"CHA",tag:"Performance", description: "You can use this skill to fit into any sort of situation. You can appear at home both with peasants and with aristocrats.",},
+"Scavenging", requiresTool:false, attribute:"Luck",tag:"", description: "You can use this skill when trying to find food or supplies in an abandoned area. Your MC might also allow you to use this skill to determine how much loot you find on a body.",},
+"Sheltering", requiresTool:false, attribute:"AWR",tag:"Survival", description: "You might use this skill when you&apos;re in the wilderness to find a cave, hollow tree, or rocky bluff that can offer shelter from the elements.",},
+"Sleight of Hand", requiresTool:false, attribute:"INT",tag:"Subterfuge", description: "You can use this skill when attempting to pickpocket someone, or when trying to keep an item undiscovered as you are patted down.",},
+"Smithing", requiresTool:true, attribute:"INT",tag:"Crafting", description: "When you have the appropriate metal and tools, you can use this skill to make wrought iron artistic works or to repair metal tools, weapons, and armor.",},
+"Sneaking", requiresTool:false, attribute:"DEX",tag:"Survival", description: "You could use this skill when skulking about and trying to remain physically out of sight.",},
+"Sprinting", requiresTool:false, attribute:"STR",tag:"Athleticism", description: "You can use this skill when attempting to cover a small distance in an incredibly short amount of time. This is usually not applicable in normal combat, but might be used in a chase sequence.",},
+"Tracking", requiresTool:false, attribute:"AWR",tag:"Survival", description: "You can use this skill when you are trying to follow a creature&apos;s trail.",},
+"Tumbling", requiresTool:false, attribute:"DEX",tag:"Acrobatics", description: "This skill helps you fall in such a way that you don&apos;t get hurt. In addition to allowing you to add dramatic flair to any performance you might put on, if you fall 40 ft or less, you can make a Tumbling check with a DC equal to the amount of feet you fell. If you succeed, halve the damage you would take and move 5 ft in a direction of your choice when you land.",},
+"Vehicles (Land)", requiresTool:true, attribute:"INT",tag:"Knowledge", description: "You can use this skill to efficiently use land vehicles such as carriages or war carts.",},
+"Vehicles (Water)", requiresTool:true, attribute:"INT",tag:"Knowledge", description: "You can use this skill to operate water vehicles, such as sailboats or galleons, with greater efficiency.",},
+"Weaving", requiresTool:true, attribute:"INT",tag:"Crafting", description: "When you have the appropriate tools, you can use this skill to make textile goods such as clothing and blankets.",},
+"Woodcarving", requiresTool:true, attribute:"INT",tag:"Crafting", description: "When you have the appropriate tools, you can use this skill to whittle toys, fletch arrows, repair a wagon wheel, and the like.",},
 ];
 
 

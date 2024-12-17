@@ -325,7 +325,7 @@ input[type=number]:disabled {
 
 .sheet-charmancer .sheet-step.sheet-cancel:hover,
 .sheet-charmancer .sheet-nav.sheet-cancel:hover {
-	color: #FC6543;
+	color: #29878C;
 }
 
 .sheet-charmancer .sheet-steps.sheet-center {
@@ -667,8 +667,8 @@ input[type="submit"].repcontrol .btn {
 
 .repcontrol .repcontrol_edit:hover:after,
 .repcontrol .repcontrol_add:hover:before {
-	color: #FEEBB3;
-	border-color: #FEEBB3;
+	color: #29878C;
+	border-color: #29878C;
 }
 
 .repcontainer .repitem .itemcontrol {
@@ -1688,13 +1688,14 @@ input[type=number] {
 	text-align: center;
 }
 
+.sheet-bio-underlined>input,
 input[type=text].sheet-underlined {
 	border: none;
 	border-bottom: 1px solid black;
 	outline: none;
 	box-shadow: 0px -1px 0px 0px #000000 inset;
 }
-
+.sheet-bio-underlined>input,
 input[type=number].sheet-underlined {
 	box-shadow: 0px -2px 0px 0px #000000 inset;
 }
@@ -2053,7 +2054,9 @@ input.sheet-ro-checkbox {
 	line-height: 28px;
 	text-align: center;
 }
-
+.sheet-ro-checkbox:hover{
+	color:#29878C;
+}
 span.sheet-ro-label {
 	display: inline-block;
 	font-size: 15px;
@@ -2591,6 +2594,12 @@ span.sheet-ignored-roll {
 .sheet-rolltemplate-mythcraft .sheet-col-1-3-minus {
 	display: inline-block;
 	width: 32%;
+}
+
+.sheet-col-2-3-minus,
+.sheet-rolltemplate-mythcraft .sheet-col-2-3-minus{
+	display: inline-block;
+	width: 65%;
 }
 
 
@@ -3153,7 +3162,8 @@ span.sheet-ignored-roll {
 
 .sheet-col-10-13,
 .sheet-rolltemplate-mythcraft .sheet-col-10-13 {
-	width: 76.92308%;
+	/* width: 76.92308%;*/
+	width: 76%;
 }
 
 .sheet-offset-10-13,
@@ -4972,12 +4982,17 @@ Y88b. .d88P 888 d88P Y88b.  888 Y88..88P 888  888      X88
 .sheet-options-talents-flag + span,
 .sheet-options-lnbop-flag + span,
 .sheet-options-debug-flag + span,
+.sheet-options-condition-flag + span,
+.sheet-options-ritual-flag + span,
+.sheet-options-spell-flag + span,
+.sheet-options-sourcelevel-flag + span,
+.sheet-options-source-flag + span,
 .sheet-options-flag + span { 
     width: 16px;
     height: 16px;
     font-size: 16px;
     font-family: pictos;
-    color: #BBBBBB;
+    color: #29878C;
     cursor: pointer;
     margin-top: 0px;
     display: none;
@@ -4992,8 +5007,13 @@ Y88b. .d88P 888 d88P Y88b.  888 Y88..88P 888  888      X88
 .sheet-options-talents-flag:hover + span,
 .sheet-options-lnbop-flag:hover + span,
 .sheet-options-debug-flag:hover + span,
+.sheet-options-condition-flag:hover + span,
+.sheet-options-ritual-flag:hover + span,
+.sheet-options-spell-flag:hover + span,
+.sheet-options-sourcelevel-flag:hover + span,
+.sheet-options-source-flag:hover + span,
 .sheet-options-flag:checked + span {
-    color: #C3996B;
+    color: #BBBBBB;
     display: block;
 } 
 .sheet-options-skill-flag + span,
@@ -5003,6 +5023,11 @@ Y88b. .d88P 888 d88P Y88b.  888 Y88..88P 888  888      X88
 .sheet-options-talents-flag + span,
 .sheet-options-lnbop-flag + span,
 .sheet-options-debug-flag + span,
+.sheet-options-condition-flag + span,
+.sheet-options-ritual-flag + span,
+.sheet-options-spell-flag + span,
+.sheet-options-sourcelevel-flag + span,
+.sheet-options-source-flag + span,
 .sheet-options-flag + span
 {
     display: block;
@@ -5014,10 +5039,15 @@ Y88b. .d88P 888 d88P Y88b.  888 Y88..88P 888  888      X88
 .sheet-options-globals-flag:checked + span, .sheet-options-globals-flag:hover + span, .sheet-options-hidden-globals-flag:checked + span, 
 .sheet-options-talents-flag:checked + span, .sheet-options-talents-flag:hover + span, .sheet-options-hidden-talents-flag:checked + span, 
 .sheet-options-lnbop-flag:checked + span,   .sheet-options-lnbop-flag:hover + span,   .sheet-options-hidden-lnbop-flag:checked + span , 
-.sheet-options-debug-flag:checked + span,   .sheet-options-debug-flag:hover + span,   .sheet-options-hidden-debug-flag:checked + span 
+.sheet-options-debug-flag:checked + span,   .sheet-options-debug-flag:hover + span,   .sheet-options-hidden-debug-flag:checked + span, 
+.sheet-options-condition-flag:checked + span,   .sheet-options-condition-flag:hover + span,   .sheet-options-hidden-condition-flag:checked + span, 
+.sheet-options-ritual-flag:checked + span,   .sheet-options-ritual-flag:hover + span,   .sheet-options-hidden-ritual-flag:checked + span, 
+.sheet-options-spell-flag:checked + span,   .sheet-options-spell-flag:hover + span,   .sheet-options-hidden-spell-flag:checked + span, 
+.sheet-options-sourcelevel-flag:checked + span,   .sheet-options-sourcelevel-flag:hover + span,   .sheet-options-hidden-sourcelevel-flag:checked + span,
+.sheet-options-source-flag:checked + span,   .sheet-options-source-flag:hover + span,   .sheet-options-hidden-source-flag:checked + span
  
  {
-    color: #C3996B;
+    color: #BBBBBB;
     display: block;
 }
 .sheet-options-skill,   .sheet-options-hidden-skill-flag,
@@ -5027,6 +5057,11 @@ Y88b. .d88P 888 d88P Y88b.  888 Y88..88P 888  888      X88
 .sheet-options-talents, .sheet-options-hidden-talents-flag,
 .sheet-options-lnbop, .sheet-options-hidden-lnbop-flag,
 .sheet-options-debug, .sheet-options-hidden-debug-flag,
+.sheet-options-condition, .sheet-options-hidden-condition-flag,
+.sheet-options-ritual, .sheet-options-hidden-ritual-flag,
+.sheet-options-spell, .sheet-options-hidden-spell-flag,
+.sheet-options-sourcelevel, .sheet-options-hidden-sourcelevel-flag,
+.sheet-options-source, .sheet-options-hidden-source-flag,
 .sheet-options {
    display: none; 
     margin-top: 2px;
@@ -5046,7 +5081,12 @@ Y88b. .d88P 888 d88P Y88b.  888 Y88..88P 888  888      X88
 .sheet-options-globals,
 .sheet-options-talents,
 .sheet-options-lnbop,
-.sheet-options-debug
+.sheet-options-debug,
+.sheet-options-condition,
+.sheet-options-ritual,
+.sheet-options-spell,
+.sheet-options-sourcelevel,
+.sheet-options-source
 {
     display: block;
 }
@@ -5057,7 +5097,12 @@ Y88b. .d88P 888 d88P Y88b.  888 Y88..88P 888  888      X88
 .sheet-options-globals-flag:checked ~ .sheet-options-globals, .sheet-options-hidden-globals-flag:checked  ~ .sheet-options-globals,
 .sheet-options-talents-flag:checked ~ .sheet-options-talents, .sheet-options-hidden-talents-flag:checked  ~ .sheet-options-talents,
 .sheet-options-lnbop-flag:checked ~ .sheet-options-lnbop, .sheet-options-hidden-lnbop-flag:checked  ~ .sheet-options-lnbop,
-.sheet-options-debug-flag:checked ~ .sheet-options-debug, .sheet-options-hidden-debug-flag:checked  ~ .sheet-options-debug
+.sheet-options-debug-flag:checked ~ .sheet-options-debug, .sheet-options-hidden-debug-flag:checked  ~ .sheet-options-debug,
+.sheet-options-condition-flag:checked ~ .sheet-options-condition, .sheet-options-hidden-condition-flag:checked  ~ .sheet-options-condition,
+.sheet-options-ritual-flag:checked ~ .sheet-options-ritual, .sheet-options-hidden-ritual-flag:checked  ~ .sheet-options-ritual,
+.sheet-options-spell-flag:checked ~ .sheet-options-spell, .sheet-options-hidden-spell-flag:checked  ~ .sheet-options-spell,
+.sheet-options-sourcelevel-flag:checked ~ .sheet-options-sourcelevel, .sheet-options-hidden-sourcelevel-flag:checked  ~ .sheet-options-sourcelevel,
+.sheet-options-source-flag:checked ~ .sheet-options-source, .sheet-options-hidden-source-flag:checked  ~ .sheet-options-source
 {
     display: none;
 }
@@ -5075,7 +5120,137 @@ Y88b. .d88P 888 d88P Y88b.  888 Y88..88P 888  888      X88
 }
 
 
+.sheet-bio-header{
+	vertical-align: middle;
+	font-family: Desmond,'Yeseva One',cursive;
+	font-size: 12px;
+	text-transform: capitalize;
+}
+.sheet-bio-underlined{
+    border-bottom: 1px solid black;
+	font-size: 1.03em; 
+	font-family:Charter,'Noto Serif',serif;
+
+}
 
 
+/* -------------------------------------------------------------------------
 
-
+8888888b.          888 888      88888888888                              888          888                     
+888   Y88b         888 888          888                                  888          888                     
+888    888         888 888          888                                  888          888                     
+888   d88P .d88b.  888 888          888   .d88b.  88888b.d88b.  88888b.  888  8888b.  888888 .d88b.  .d8888b  
+8888888P" d88""88b 888 888          888  d8P  Y8b 888 "888 "88b 888 "88b 888     "88b 888   d8P  Y8b 88K      
+888 T88b  888  888 888 888          888  88888888 888  888  888 888  888 888 .d888888 888   88888888 "Y8888b. 
+888  T88b Y88..88P 888 888          888  Y8b.     888  888  888 888 d88P 888 888  888 Y88b. Y8b.          X88 
+888   T88b "Y88P"  888 888          888   "Y8888  888  888  888 88888P"  888 "Y888888  "Y888 "Y8888   88888P' 
+                                                                888                                           
+                                                                888                                           
+                                                                888                                           
+ ------------------------------------------------------------------------- */
+ .sheet-rolltemplate-actionattack {
+	margin-left: -37px;
+  }
+  .withoutavatars .sheet-rolltemplate-actionattack {
+	margin-left: -7px;
+  }
+  .sheet-rolltemplate-actionattack .sheet-container {
+	border: 3px solid black;
+	border-radius: 3px;
+  }
+  
+  .sheet-rolltemplate-actionattack .sheet-header {
+	background-color: var(--header-bg-color);
+	color: var(--header-text-color);
+	text-align: left;
+	text-transform: capitalize;
+	padding: 5px;
+	border-bottom: 2px solid black;
+  }
+  
+  .sheet-rolltemplate-actionattack .sheet-title {
+	font-size: 1.2em;
+	font-weight: bold;
+	text-align: center;
+  }
+  
+  .sheet-rolltemplate-actionattack .sheet-title img.sheet-lillogo {
+	width: 21.2px;
+	height: 33px;
+	float: right;
+  }
+  
+  .sheet-rolltemplate-actionattack .sheet-subtitle {
+	
+	font-size: 0.9em;
+	text-align: center;
+  }
+  .sheet-rolltemplate-actionattack .sheet-damagetype {
+	display: inline-block;
+	font-size: 0.9em;
+	width: 50%;
+  }
+  .sheet-rolltemplate-actionattack .sheet-action-attack-details-tohit,
+  .sheet-rolltemplate-actionattack .sheet-action-attack-details-damage{
+	
+	text-align: center;
+  }
+  .sheet-rolltemplate-actionattack .sheet-action-attack-details-tohit{
+	border-right: 2px solid black;
+    display: grid;
+    align-items: center;
+}
+  .sheet-rolltemplate-actionattack .sheet-action-attack-details-damage{
+	border-left: 2px solid black;
+	 
+  }
+  .sheet-attack-dmg-result{
+	width:100%;
+	display:inline-block;
+  }
+  
+  div.sheet-rolltemplate-actionattack > div > div.sheet-content > div.sheet-action-attack-details-tohit > span.inlinerollresult.showtip.tipsy-n-right.fullcrit{
+	
+	width: 33%;
+  }
+  .sheet-rolltemplate-actionattack .sheet-container {
+	--header-bg-color: #FEEBB3;
+	--header-text-color: #174345;
+  }
+  .sheet-rolltemplate-actionattack .sheet-container.sheet-color-green {
+	--header-bg-color: #008000;
+  }
+  .sheet-rolltemplate-actionattack .sheet-container.sheet-color-black {
+	--header-bg-color: #000;
+  }
+  .sheet-rolltemplate-actionattack .sheet-container.sheet-color-white {
+	--header-bg-color: #FFF;
+	--header-text-color: #000;
+  }
+  
+  .sheet-rolltemplate-actionattack .sheet-content {
+	display: grid;
+	background: #FFF;
+	grid-template-columns: auto auto;
+	line-height: 1.4em;
+  }
+  
+  .sheet-rolltemplate-actionattack .sheet-content > div {
+	padding: 5px;
+  }
+  
+  .sheet-rolltemplate-actionattack .sheet-content .sheet-key {
+	font-weight: bold;
+	padding-right: 10px;
+	text-align: right;
+  }
+  
+  .sheet-rolltemplate-actionattack .sheet-content :nth-child(4n+3),
+  .sheet-rolltemplate-actionattack .sheet-content :nth-child(4n) {
+	background: #EEE;
+  }
+  
+  .sheet-rolltemplate-actionattack .sheet-desc {
+	grid-column: span 2;
+	padding: 5px;
+	text-align: center;
