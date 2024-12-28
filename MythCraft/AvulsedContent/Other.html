@@ -180,6 +180,7 @@
 
 
 		<div class="sheet-player "> <!-- Player Master Sheet -->
+			<div class="sheet-col-1-4"></div>
 			<input type="radio" name="attr_tab" class="sheet-tab sheet-tab1" value="1" title="Combat"
 				checked="checked" />
 			<span class="sheet-tab sheet-tab1 sheet-imperator">Combat</span>
@@ -194,6 +195,7 @@
 
 			<span class="sheet-spacer"></span>
 
+			<!-- <div class="sheet-section-combat sheet-mythcraft-border section__container"> <!-- HP, AR, DP AP, SAP -->
 				<div class="sheet-section-combat section__container"> <!-- HP, AR, DP AP, SAP -->
 				<div class="sheet-row">
 					<div class="sheet-col-3-18  "><!--  HP & Shield display  -->
@@ -342,111 +344,112 @@
 				</div>
 
 				<div class="sheet-row sheet-attribute-bubbles"> <!-- Attributes -->
-					
 					<div class="sheet-col-1-8"><!-- STR -->
-						<div class="sheet-attribute-bubble">
-							<div class="sheet-core-attribute">
-								<input type="number" class="sheet-row sheet-core-attribute-content" name="attr_strength_str" />
-							</div>
-							<span class="sheet-core-attribute-label">STR</span>
-							<button type="roll" class="sheet-roll-stat" name="roll_STR"
-								value="&{template:default} {{name=Strength Check (@{character_name}) }} {{Roll=[[d20 +@{strength_str} ]]}}"></button>
-							<div class="sheet-no-derived-attribute"> </div>
+						<div class="sheet-core-attribute">
+							<input type="number" class="sheet-row sheet-core-attribute-content"
+								name="attr_strength_str" />
 						</div>
+						<span class="sheet-core-attribute-label">STR</span>
+						<button type="roll" class="sheet-roll-stat" name="roll_STR"
+							value="&{template:default} {{name=Strength Check (@{character_name}) }} {{Roll=[[d20 +@{strength_str} ]]}}"></button>
+						<div class="sheet-no-derived-attribute"> </div>
 					</div>
 					<div class="sheet-col-1-8"><!-- DEX -->
-						<div class="sheet-attribute-bubble">
-							<div class="sheet-core-attribute">
-								<input type="number" class="sheet-row sheet-core-attribute-content" name="attr_dexterity_dex" />
-							</div>
-							<span class="sheet-core-attribute-label">DEX</span>
-							<button type="roll" class="sheet-roll-stat" name="roll_DEX"
-								value="&{template:default} {{name=Dexterity Check (@{character_name}) }} {{Roll=[[d20 +@{dexterity_dex} ]]}}"></button>
-							<div class="sheet-forceBreak  sheet-derived-attribute">
-								<input type="number" class="sheet-row sheet-derived-attribute-content" name="attr_reflexes_ref" />
-							</div>
-							<span class="sheet-derived-attribute-label">REF</span>
+						<div class="sheet-core-attribute">
+							<input type="number" class="sheet-row sheet-core-attribute-content"
+								name="attr_dexterity_dex" />
 						</div>
+						<span class="sheet-core-attribute-label">DEX</span>
+						<button type="roll" class="sheet-roll-stat" name="roll_DEX"
+							value="&{template:default} {{name=Dexterity Check (@{character_name}) }} {{Roll=[[d20 +@{dexterity_dex} ]]}}"></button>
+						<div class="sheet-forceBreak  sheet-derived-attribute">
+							<input type="number" class="sheet-row sheet-derived-attribute-content"
+								name="attr_reflexes_ref" />
+						</div>
+						<span class="sheet-derived-attribute-label">REF</span>
+
 					</div>
 					<div class="sheet-col-1-8"><!-- END -->
-						<div class="sheet-attribute-bubble">
-							<div class="sheet-core-attribute">
-								<input type="number" class="sheet-row sheet-core-attribute-content" name="attr_endurance_end" />
-							</div>
-							<span class="sheet-core-attribute-label">END</span>
-							<button type="roll" class="sheet-roll-stat" name="roll_END"
-								value="&{template:default} {{name=Endurance Check (@{character_name}) }} {{Roll=[[d20 +@{endurance_end} ]]}}"></button>
-							<div class="sheet-forceBreak  sheet-derived-attribute">
-								<input type="number" class="sheet-row sheet-derived-attribute-content" name="attr_fortitude_for" />
-							</div>
-							<span class="sheet-derived-attribute-label">FOR</span>
+						<div class="sheet-core-attribute">
+							<input type="number" class="sheet-row sheet-core-attribute-content"
+								name="attr_endurance_end" />
 						</div>
+						<span class="sheet-core-attribute-label">END</span>
+						<button type="roll" class="sheet-roll-stat" name="roll_END"
+							value="&{template:default} {{name=Endurance Check (@{character_name}) }} {{Roll=[[d20 +@{endurance_end} ]]}}"></button>
+						<div class="sheet-forceBreak  sheet-derived-attribute">
+							<input type="number" class="sheet-row sheet-derived-attribute-content"
+								name="attr_fortitude_for" />
+						</div>
+
+						<span class="sheet-derived-attribute-label">FOR</span>
+
 					</div>
 					<div class="sheet-col-1-8"><!-- AWR -->
-						<div class="sheet-attribute-bubble">
-							<div class="sheet-core-attribute">
-								<input type="number" class="sheet-row sheet-core-attribute-content" name="attr_awareness_awr" />
-							</div>
-							<span class="sheet-core-attribute-label">AWR</span>
-					
-							<button type="roll" class="sheet-roll-stat" name="roll_AWR"
-								value="&{template:default} {{name=Awareness Check (@{character_name}) }} {{Roll=[[d20 +@{awareness_awr} ]]}}"></button>
-							<div class="sheet-forceBreak  sheet-derived-attribute">
-								<input type="number" class="sheet-row sheet-derived-attribute-content" name="attr_anticipation_ant" />
-							</div>
-					
-							<span class="sheet-derived-attribute-label">ANT</span>
+						<div class="sheet-core-attribute">
+							<input type="number" class="sheet-row sheet-core-attribute-content"
+								name="attr_awareness_awr" />
 						</div>
+						<span class="sheet-core-attribute-label">AWR</span>
+
+						<button type="roll" class="sheet-roll-stat" name="roll_AWR"
+							value="&{template:default} {{name=Awareness Check (@{character_name}) }} {{Roll=[[d20 +@{awareness_awr} ]]}}"></button>
+						<div class="sheet-forceBreak  sheet-derived-attribute">
+							<input type="number" class="sheet-row sheet-derived-attribute-content"
+								name="attr_anticipation_ant" />
+						</div>
+
+						<span class="sheet-derived-attribute-label">ANT</span>
+
 					</div>
 					<div class="sheet-col-1-8"><!-- INT -->
-						<div class="sheet-attribute-bubble">
-							<div class="sheet-core-attribute">
-								<input type="number" class="sheet-row sheet-core-attribute-content" name="attr_intellegence_int" />
-							</div>
-							<span class="sheet-core-attribute-label">INT</span>
-							<button type="roll" class="sheet-roll-stat" name="roll_INT"
-								value="&{template:default} {{name=Intellegence Check (@{character_name}) }} {{Roll=[[d20 +@{intellegence_int} ]]}}"></button>
-							<div class="sheet-forceBreak  sheet-derived-attribute">
-								<input type="number" class="sheet-row sheet-derived-attribute-content" name="attr_Logic_log" />
-							</div>
-							<span class="sheet-derived-attribute-label">LOG</span>
+						<div class="sheet-core-attribute">
+							<input type="number" class="sheet-row sheet-core-attribute-content"
+								name="attr_intellegence_int" />
 						</div>
+						<span class="sheet-core-attribute-label">INT</span>
+						<button type="roll" class="sheet-roll-stat" name="roll_INT"
+							value="&{template:default} {{name=Intellegence Check (@{character_name}) }} {{Roll=[[d20 +@{intellegence_int} ]]}}"></button>
+						<div class="sheet-forceBreak  sheet-derived-attribute">
+							<input type="number" class="sheet-row sheet-derived-attribute-content"
+								name="attr_Logic_log" />
+						</div>
+						<span class="sheet-derived-attribute-label">LOG</span>
+
 					</div>
 					<div class="sheet-col-1-8"><!-- CHA -->
-						<div class="sheet-attribute-bubble">
-							<div class="sheet-core-attribute">
-								<input type="number" class="sheet-row sheet-core-attribute-content" name="attr_charisma_cha" />
-							</div>
-							<span class="sheet-core-attribute-label">CHA</span>
-							<button type="roll" class="sheet-roll-stat" name="roll_CHA"
-								value="&{template:default} {{name=Charisma Check (@{character_name}) }} {{Roll=[[d20 +@{charisma_cha} ]]}}"></button>
-							<div class="sheet-forceBreak  sheet-derived-attribute">
-								<input type="number" class="sheet-row sheet-derived-attribute-content" name="attr_willpower_wil" />
-							</div>
-							<span class="sheet-derived-attribute-label">WIL</span>
+						<div class="sheet-core-attribute">
+							<input type="number" class="sheet-row sheet-core-attribute-content"
+								name="attr_charisma_cha" />
 						</div>
+						<span class="sheet-core-attribute-label">CHA</span>
+						<button type="roll" class="sheet-roll-stat" name="roll_CHA"
+							value="&{template:default} {{name=Charisma Check (@{character_name}) }} {{Roll=[[d20 +@{charisma_cha} ]]}}"></button>
+						<div class="sheet-forceBreak  sheet-derived-attribute">
+							<input type="number" class="sheet-row sheet-derived-attribute-content"
+								name="attr_willpower_wil" />
+						</div>
+						<span class="sheet-derived-attribute-label">WIL</span>
+
 					</div>
 					<div class="sheet-col-1-8"><!-- LUCK -->
-						<div class="sheet-attribute-bubble">
-							<div class="sheet-core-attribute">
-								<input type="number" class="sheet-row sheet-core-attribute-content" name="attr_luck_luck" />
-							</div>
-							<span class="sheet-core-attribute-label">LUCK</span>
-							<button type="roll" class="sheet-roll-stat" name="roll_LUCK"
-								value="&{template:default} {{name=Luck Check (@{character_name}) }} {{Roll=[[d20 +@{luck_luck} ]]}}"></button>
-							<div class="sheet-no-derived-attribute"></div>
+						<div class="sheet-core-attribute">
+							<input type="number" class="sheet-row sheet-core-attribute-content" name="attr_luck_luck" />
 						</div>
+						<span class="sheet-core-attribute-label">LUCK</span>
+						<button type="roll" class="sheet-roll-stat" name="roll_LUCK"
+							value="&{template:default} {{name=Luck Check (@{character_name}) }} {{Roll=[[d20 +@{luck_luck} ]]}}"></button>
+						<div class="sheet-no-derived-attribute"></div>
 					</div>
 					<div class="sheet-col-1-8"><!-- COR -->
-						<div class="sheet-attribute-bubble">
-							<div class="sheet-core-attribute">
-								<input type="number" class="sheet-row sheet-core-attribute-content" name="attr_coordination_cor" />
-							</div>
-							<span class="sheet-core-attribute-label">COR</span>
-							<button type="roll" class="sheet-roll-stat" name="roll_COR"
-								value="&{template:default} {{name=Coordination Check (@{character_name}) }} {{Roll=[[d20 +@{coordination_cor} ]]}}"></button>
-							<div class="sheet-no-derived-attribute"></div>
+						<div class="sheet-core-attribute">
+							<input type="number" class="sheet-row sheet-core-attribute-content"
+								name="attr_coordination_cor" />
 						</div>
+						<span class="sheet-core-attribute-label">COR</span>
+						<button type="roll" class="sheet-roll-stat" name="roll_COR"
+							value="&{template:default} {{name=Coordination Check (@{character_name}) }} {{Roll=[[d20 +@{coordination_cor} ]]}}"></button>
+						<div class="sheet-no-derived-attribute"></div>
 					</div>
 				</div>
 				<div class="sheet-row"><!-- Actions & Skills -->
